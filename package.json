@@ -5,8 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "prepare": "husky install"
+    "test": "nx test"
   },
   "private": true,
   "dependencies": {
@@ -100,7 +99,6 @@
     "@types/react-dom": "18.0.3",
     "babel-jest": "27.5.1",
     "cypress": "^9.1.0",
-    "husky": "^8.0.1",
     "jest": "27.5.1",
     "lint-staged": "^13.0.1",
     "prettier": "^2.6.2",

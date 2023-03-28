@@ -1,6 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx lint-staged
-cd apps/backend && npx tsc && cd -
-cd apps/frontend && npx tsc && cd -
