@@ -1,2 +1,5 @@
-# uspec
- my blog
+# uSPEC
+
+This is my blog
+
+WorkInProgress
