@@ -2,7 +2,6 @@ apps/frontend/tsconfig.tsbuildinfo
 dist
 .env
 apps/frontend/.env
-yarn.lock
 .sentryclirc
 node_modules
 *.pem

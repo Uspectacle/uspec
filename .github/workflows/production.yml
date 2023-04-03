@@ -64,10 +64,6 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      - name: test
-        run: ls
-      - name: test 2
-        run: pwd
       - name: Dependencies installation
         run: yarn install
       - name: Add env variables
