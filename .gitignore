@@ -5,3 +5,4 @@ apps/frontend/.env
 yarn.lock
 .sentryclirc
 node_modules
+*.pem

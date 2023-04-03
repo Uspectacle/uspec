@@ -1,12 +1,12 @@
 import { MantineProvider } from "@mantine/core";
-import "dayjs/locale/fr";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "dayjs/locale/fr";
 import "./styles.css";
-
+import "../lang/i18n";
 
 function CustomApp({ Component, pageProps }: AppProps) {
   if (
@@ -42,7 +42,3 @@ function CustomApp({ Component, pageProps }: AppProps) {
 }
 
 export default CustomApp;
-function useStyles(): { classes: any; } {
-  throw new Error("Function not implemented.");
-}
-

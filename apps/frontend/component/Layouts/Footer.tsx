@@ -1,16 +1,18 @@
-import { createStyles } from "@mantine/core";
+import { createStyles, Image } from "@mantine/core";
 import { GREEN_LIGHT, PURPLE_INTENSE } from "../../utils/constants";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
   const { classes } = useStyles();
+  const { t } = useTranslation();
 
   const links = [
-    { href: "/cv", label: "CV", newTab: false },
+    { href: "/resume", label: t("footer.resume"), newTab: false },
     {
       href: "https://github.com/Uspectacle",
-      label: "GitHub/Uspectacle",
+      label: "/Uspectacle",
       newTab: true,
     },
     {
@@ -23,19 +25,17 @@ export function Footer() {
   return (
     <footer className={classes.footer}>
       Contact-me :
-      {links.map((link) => (
-        <Link href={link.href} key={link.label} passHref>
-          <a
-            key={link.label}
-            href={link.href}
-            className={classes.link}
-            target={link.newTab ? "_blank" : undefined}
-            rel={link.newTab ? "noreferrer" : undefined}
-          >
-            {link.label}
-          </a>
-        </Link>
-      ))}
+      <Link 
+        href={"https://github.com/Uspectacle"}
+        target={"_blank"}
+        rel={"noreferrer"}
+        passHref
+      >
+        <div className={classes.link}>
+        <Image alt="Github" src="/svg/github.svg" width={"1.2em"}/>
+          /Uspectacle
+        </div>
+      </Link>
     </footer>
   );
 }
@@ -56,7 +56,8 @@ const useStyles = createStyles((theme) => ({
     color: GREEN_LIGHT,
   },
   link: {
-    display: "block",
+    display: "flex",
+    alignItems: "center",
     paddingTop: 5,
     paddingBottom: 5,
     paddingLeft: 10,
