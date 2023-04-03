@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v1
-        - name: Load Yarn cache
+      - name: Load Yarn cache
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
