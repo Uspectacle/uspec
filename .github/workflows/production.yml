@@ -64,11 +64,18 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      - name: update node to 16
+      - name: node version
+        run: node --version
+      - name: download nvm
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+      - name: reload
+        run: |
+          source ~/.bashrc
+      - name: update node
+        run: |
           nvm install 16
-      - name: test
+      - name: node version
         run: node --version
       - name: Print System Info
         run: |
