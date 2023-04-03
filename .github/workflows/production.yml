@@ -59,13 +59,13 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v1
-      - name: Load npm cache
+        - name: Load Yarn cache
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Dependencies installation
-        run: npm install
+        run: yarn install
       - name: Add env variables
         run: |
           echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
