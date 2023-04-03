@@ -64,9 +64,9 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      - name: Print Ubuntu Version
+      - name: update node to 16
         run: |
-          echo "Ubuntu Version: ${{ env.ACTIONS_OS_VERSION }}"
+          nvm install 16
       - name: test
         run: node --version
       - name: Print System Info
