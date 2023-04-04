@@ -64,7 +64,6 @@ jobs:
       - name: Remove unnecessary files
         run: |
           sudo rm -rf /usr/share/dotnet
-          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
       - name: Checkout source code
         uses: actions/checkout@v3
       - name: Use node js

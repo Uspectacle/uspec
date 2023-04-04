@@ -5,3 +5,4 @@ apps/frontend/.env
 .sentryclirc
 node_modules
 *.pem
+.ssh
