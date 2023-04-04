@@ -60,7 +60,6 @@ jobs:
       NEXT_PUBLIC_NODE_ENV: production
       NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}
     steps:
-    steps:
       - name: Remove unnecessary files
         run: |
           sudo rm -rf /usr/share/dotnet
