@@ -73,7 +73,7 @@ jobs:
       - name: Use node js
         uses: actions/setup-node@v1
         with:
-        node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node-version }}
       - name: node version
         run: node --version
       - name: Print System Info
