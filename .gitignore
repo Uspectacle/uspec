@@ -1,8 +1,6 @@
 apps/frontend/tsconfig.tsbuildinfo
-dist
-.env
 apps/frontend/.env
-.sentryclirc
 node_modules
-*.pem
+dist
 .ssh
+.env
