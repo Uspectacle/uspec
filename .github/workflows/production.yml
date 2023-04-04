@@ -83,15 +83,15 @@ jobs:
         run: mv Procfile_Frontend ./dist/apps/frontend/Procfile
       - name: Generate deployment package
         run: cd dist/apps/frontend && zip -r deployfrontend.zip . -x '*.git*'
-      # - name: Deploy to EB
-      #   uses: einaregilsson/beanstalk-deploy@v13
-      #   env:
-      #     VERSION_LABEL: uspec-frontend-staging-${{ github.run_number }}
-      #   with:
-      #     aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     application_name: production-frontend
-      #     environment_name: production-frontend
-      #     version_label: ${{ env.VERSION_LABEL }}
-      #     region: eu-west-3
-      #     deployment_package: dist/apps/frontend/deployfrontend.zip
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        env:
+          VERSION_LABEL: uspec-eb-front-${{ github.run_number }}
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: uspec-eb-front
+          environment_name: uspec-eb-front
+          version_label: ${{ env.VERSION_LABEL }}
+          region: eu-west-3
+          deployment_package: dist/apps/frontend/deployfrontend.zip
