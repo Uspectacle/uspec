@@ -52,7 +52,7 @@ jobs:
   #         deployment_package: deploy.zip
 
   frontend:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.x]
