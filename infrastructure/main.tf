@@ -23,7 +23,7 @@ provider "aws" {
 module "frontend_certificate" {
   source = "./modules/aws-acm-certificate"
 
-  domain_name = "${terraform.workspace == "staging" ? "staging." : ""}uspec.fr"
+  domain_name = "${terraform.workspace == "staging" ? "staging." : ""}uspec.click"
 
   tags = {
     Terraform   = "true"
@@ -35,7 +35,7 @@ module "frontend_certificate" {
 module "backend_certificate" {
   source = "./modules/aws-acm-certificate"
 
-  domain_name = "${terraform.workspace == "staging" ? "staging." : ""}backend.uspec.fr"
+  domain_name = "${terraform.workspace == "staging" ? "staging." : ""}backend.uspec.click"
 
   tags = {
     Terraform   = "true"
@@ -105,12 +105,12 @@ module "database" {
 
 # data "aws_acm_certificate" "frontend" {
 #   provider = aws.useast1
-#   domain   = "${terraform.workspace == "staging" ? "staging." : ""}uspec.fr"
+#   domain   = "${terraform.workspace == "staging" ? "staging." : ""}uspec.click"
 #   statuses = ["ISSUED"]
 # }
 
 # data "aws_acm_certificate" "backend" {
 #   provider = aws.useast1
-#   domain   = "${terraform.workspace == "staging" ? "staging." : ""}backend.uspec.fr"
+#   domain   = "${terraform.workspace == "staging" ? "staging." : ""}backend.uspec.click"
 #   statuses = ["ISSUED"]
 # }

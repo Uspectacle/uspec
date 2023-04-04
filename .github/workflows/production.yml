@@ -1,56 +1,11 @@
 name: Deploy production 
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the staging branch
   push:
     branches: [main]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # backend:
-  #   runs-on: self-hosted
-  #   env:
-  #     DATABASE_URL: ${{ secrets.DATABASE_URL }}
-  #   steps:
-  #     - name: Checkout source code
-  #       uses: actions/checkout@v1
-  #     - name: Load npm cache
-  #       uses: actions/cache@v2
-  #       with:
-  #         path: '**/node_modules'
-  #         key: ${{ runner.os }}-modules
-  #     - name: Dependencies installation
-  #       run: npm install
-  #     - name: Add env variables
-  #       run: |
-  #         echo "    DATABASE_URL: ${{ secrets.DATABASE_URL }}" >> .ebextensions/options.config
-  #         echo "    NODE_ENV: production" >> .ebextensions/options.config
-  #     - name: Prisma generate
-  #       run: npx prisma generate
-  #     - name: database migration
-  #       run: npx prisma migrate deploy
-  #     - name: Generate build
-  #       run: npx nx build backend --prod
-  #     - name: Pick Procfile
-  #       run: mv Procfile_Backend Procfile
-  #     - name: Generate deployment package
-  #       run: zip -r deploy.zip . -x '*.git*'
-  #     - name: Deploy to EB
-  #       uses: einaregilsson/beanstalk-deploy@v13
-  #       env:
-  #         VERSION_LABEL: uspec-backend-staging-${{ github.run_number }}
-  #       with:
-  #         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         application_name: production-backend
-  #         environment_name: production-backend
-  #         version_label: ${{ env.VERSION_LABEL }}
-  #         region: eu-west-3
-  #         deployment_package: deploy.zip
-
   frontend:
     runs-on: ubuntu-latest
     strategy:
@@ -95,3 +50,44 @@ jobs:
           version_label: ${{ env.VERSION_LABEL }}
           region: eu-west-3
           deployment_package: dist/apps/frontend/deployfrontend.zip
+
+  # backend:
+  #   runs-on: self-hosted
+  #   env:
+  #     DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  #   steps:
+  #     - name: Checkout source code
+  #       uses: actions/checkout@v1
+  #     - name: Load npm cache
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: '**/node_modules'
+  #         key: ${{ runner.os }}-modules
+  #     - name: Dependencies installation
+  #       run: npm install
+  #     - name: Add env variables
+  #       run: |
+  #         echo "    DATABASE_URL: ${{ secrets.DATABASE_URL }}" >> .ebextensions/options.config
+  #         echo "    NODE_ENV: production" >> .ebextensions/options.config
+  #     - name: Prisma generate
+  #       run: npx prisma generate
+  #     - name: database migration
+  #       run: npx prisma migrate deploy
+  #     - name: Generate build
+  #       run: npx nx build backend --prod
+  #     - name: Pick Procfile
+  #       run: mv Procfile_Backend Procfile
+  #     - name: Generate deployment package
+  #       run: zip -r deploy.zip . -x '*.git*'
+  #     - name: Deploy to EB
+  #       uses: einaregilsson/beanstalk-deploy@v13
+  #       env:
+  #         VERSION_LABEL: uspec-backend-staging-${{ github.run_number }}
+  #       with:
+  #         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         application_name: production-backend
+  #         environment_name: production-backend
+  #         version_label: ${{ env.VERSION_LABEL }}
+  #         region: eu-west-3
+  #         deployment_package: deploy.zip

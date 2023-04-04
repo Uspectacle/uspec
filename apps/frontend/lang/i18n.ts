@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import appEn from "./en/app.json";
-import appFr from "./fr/app.json";
+import appEn from "./en.json";
+import appFr from "./fr.json";
 
 i18n.use(initReactI18next).init({
   compatibilityJSON: "v3",

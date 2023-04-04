@@ -24,15 +24,16 @@ export function Footer() {
 
   return (
     <footer className={classes.footer}>
-      Contact-me :
+      {t("footer.contact-me")}
       <Link 
         href={"https://github.com/Uspectacle"}
         target={"_blank"}
         rel={"noreferrer"}
+        className={classes.link}
         passHref
       >
-        <div className={classes.link}>
-        <Image alt="Github" src="/svg/github.svg" width={"1.2em"}/>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Image alt="Github" src="/svg/github.svg" width={"1.2em"}/>
           /Uspectacle
         </div>
       </Link>

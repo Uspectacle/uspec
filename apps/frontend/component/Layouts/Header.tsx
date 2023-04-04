@@ -14,33 +14,30 @@ export function Header() {
 
   return (
     <div className={classes.header}>
-      <Link href={"/"}>
+      <Link href={"/"} className={classes.link}>
         <Image alt="logo" src="/logo.png" width={160} className={classes.logo}/>
       </Link>
-      <Link href={"/"} passHref>
+      <Link href={"/"} className={classes.link} passHref>
         <div
-          className={classes.link}
           style={"/" === router.pathname ? { color: GREEN_LIGHT } : {}}
         >
           {t("header.blog")}
         </div>
       </Link>
-      <Link href={"/games"} passHref>
+      {/* <Link href={"/games"} className={classes.link} passHref>
         <div
-          className={classes.link}
           style={"/games" === router.pathname ? { color: GREEN_LIGHT } : {}}
         >
           {t("header.games")}
         </div>
       </Link>
-      <Link href={"/tools"} passHref>
+      <Link href={"/tools"} className={classes.link} passHref>
         <div
-          className={classes.link}
           style={"/tools" === router.pathname ? { color: GREEN_LIGHT } : {}}
         >
           {t("header.tools")}
         </div>
-      </Link>
+      </Link> */}
       <div
           key={"lang"}
           className={classes.lang}
