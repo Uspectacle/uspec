@@ -25,7 +25,7 @@ export function Header() {
         </div>
       </Link>
       {/* <Link href={"/games"} className={classes.link} passHref>
-        <div 
+        <div
           style={"/games" === router.pathname ? { color: GREEN_LIGHT } : {}}
         >
           {t("header.games")}
