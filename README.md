@@ -6,4 +6,4 @@ WorkInProgress
 
 to run the project:
 
-`nx run frontend:serve:development --openssl-legacy-provider --verbose`
+nx run frontend:serve:development --openssl-legacy-provider --verbose
