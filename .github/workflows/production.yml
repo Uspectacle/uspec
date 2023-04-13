@@ -8,9 +8,6 @@ on:
 jobs:
   frontend:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     node-version: [16.x]
     env:
       NEXT_PUBLIC_NODE_ENV: production
       NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}
