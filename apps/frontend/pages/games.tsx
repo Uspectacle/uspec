@@ -1,19 +1,14 @@
-import { createStyles } from "@mantine/core";
-import { NextPage } from "next";
-import { Layout } from "../component/Layouts/Layout";
-import React from "react";
-
+import { createStyles } from '@mantine/core'
+import { NextPage } from 'next'
+import { Layout } from '../component/Layouts/Layout'
+import React from 'react'
 
 const Games: NextPage = () => {
-  const { classes } = useStyles();
+  const { classes } = useStyles()
 
-  return (
-    <Layout>
-    </Layout>
-  );
-};
+  return <Layout></Layout>
+}
 
-const useStyles = createStyles((theme) => ({
-}));
+const useStyles = createStyles((theme) => ({}))
 
-export default Games;
+export default Games

@@ -1,6 +1,5 @@
-
-export const BACKGROUND_COLOR = "#F1D8F8";
-export const PURPLE_INTENSE = "#9933CC";
-export const GREEN_LIGHT = "#72ff9c";
-export const WHITE = "#ffffff";
-export const BLACK = "#ffffff";
+export const BACKGROUND_COLOR = '#F1D8F8'
+export const PURPLE_INTENSE = '#9933CC'
+export const GREEN_LIGHT = '#72ff9c'
+export const WHITE = '#ffffff'
+export const BLACK = '#ffffff'

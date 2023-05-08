@@ -1,71 +1,90 @@
-import { createStyles, Image } from "@mantine/core";
-import { GREEN_LIGHT, PURPLE_INTENSE } from "../../utils/constants";
-import Link from "next/link";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { createStyles, Image } from '@mantine/core'
+import { GREEN_LIGHT, PURPLE_INTENSE } from '../../utils/constants'
+import Link from 'next/link'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function Footer() {
-  const { classes } = useStyles();
-  const { t } = useTranslation();
-
-  const links = [
-    { href: "/resume", label: t("footer.resume"), newTab: false },
-    {
-      href: "https://github.com/Uspectacle",
-      label: "/Uspectacle",
-      newTab: true,
-    },
-    {
-      href: "mailto:uspectacle@gmail.com",
-      label: "uspectacle@gmail.com",
-      newTab: true,
-    },
-  ];
+  const { classes } = useStyles()
+  const { t } = useTranslation()
 
   return (
     <footer className={classes.footer}>
-      {t("footer.contact-me")}
-      <Link 
-        href={"https://github.com/Uspectacle"}
-        target={"_blank"}
-        rel={"noreferrer"}
-        className={classes.link}
-        passHref
-      >
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Image alt="Github" src="/svg/github.svg" width={"1.2em"}/>
-          /Uspectacle
-        </div>
-      </Link>
+      {t('footer.contact-me')}
+      <div className={classes.links}>
+        <Link href={'/resume'} className={classes.link}>
+          {t('footer.resume')}
+        </Link>
+        <Link
+          href={'mailto:uspectacle@gmail.com'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.link}
+          passHref
+        >
+          uspectacle@gmail.com
+        </Link>
+        <Link
+          href={'https://github.com/Uspectacle'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.link}
+          passHref
+        >
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Image alt="Github" src="/svg/github.svg" width={'1.2em'} />
+            /Uspectacle
+          </div>
+        </Link>
+      </div>
     </footer>
-  );
+  )
 }
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    position: "relative",
+    position: 'relative',
     left: 0,
     bottom: 0,
-    width: "100%",
+    width: '100vw',
     background: PURPLE_INTENSE,
-    flexShrink: 0,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 22,
-    color: GREEN_LIGHT,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: GREEN_LIGHT
+  },
+  links: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingLeft: 20,
+    paddingRight: 20,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    borderRadius: 10,
+    [theme.fn.smallerThan('xs')]: {
+      flexDirection: 'column',
+      width: 200,
+      padding: 10
+    }
   },
   link: {
-    display: "flex",
-    alignItems: "center",
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    textDecoration: "none",
-    color: "white",
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    padding: 10,
+    textDecoration: 'none',
+    color: 'white',
     fontSize: 15,
+    height: 30,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     fontWeight: 500,
-  },
-}));
+    borderRadius: 10,
+    [theme.fn.smallerThan('xs')]: {
+      width: '90%',
+      padding: 5
+    }
+  }
+}))

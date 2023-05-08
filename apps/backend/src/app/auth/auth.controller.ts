@@ -6,12 +6,12 @@ import { LocalAuthGuard } from './local-auth.gard'
 
 @Controller('auth')
 export class AuthController {
-  constructor (private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService) {}
 
   @UseGuards(LocalAuthGuard)
   @Public()
   @Post('login')
-  async login (@Request() req): Promise<UserPayload> {
+  async login(@Request() req): Promise<UserPayload> {
     return req.user
   }
 }

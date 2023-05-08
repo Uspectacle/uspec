@@ -1,21 +1,21 @@
-import { MantineProvider } from "@mantine/core";
-import { AppProps } from "next/app";
-import Head from "next/head";
-import React from "react";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "dayjs/locale/fr";
-import "./styles.css";
-import "../lang/i18n";
+import { MantineProvider } from '@mantine/core'
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import React from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import 'dayjs/locale/fr'
+import './styles.css'
+import '../lang/i18n'
 
 function CustomApp({ Component, pageProps }: AppProps) {
   if (
-    process.env.NEXT_PUBLIC_NODE_ENV === "staging" ||
-    process.env.NEXT_PUBLIC_NODE_ENV === "production"
+    process.env.NEXT_PUBLIC_NODE_ENV === 'staging' ||
+    process.env.NEXT_PUBLIC_NODE_ENV === 'production'
   ) {
-    console.log = () => {};
-    console.error = () => {};
-    console.debug = () => {};
+    console.log = () => {}
+    console.error = () => {}
+    console.debug = () => {}
   }
 
   return (
@@ -38,7 +38,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         />
       </main>
     </MantineProvider>
-  );
+  )
 }
 
-export default CustomApp;
+export default CustomApp

@@ -1,16 +1,12 @@
-
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
 import { Logger, ValidationPipe } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { json, urlencoded } from 'express'
 import { AppModule } from './app/app.module'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config()
 
-async function bootstrap () {
+async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: true,
     logger: ['error', 'warn', 'log']

@@ -5,7 +5,7 @@ import { jwtConstants } from './constants'
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
-  constructor () {
+  constructor() {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
@@ -13,7 +13,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     })
   }
 
-  async validate (payload: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async validate(payload: any) {
     return { userId: payload.sub, userType: payload.userType }
   }
 }

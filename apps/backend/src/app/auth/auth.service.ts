@@ -6,12 +6,12 @@ import passwordUtil from '../../utils/password'
 
 @Injectable()
 export class AuthService {
-  constructor (
+  constructor(
     private readonly prismaService: PrismaService,
     private readonly jwtService: JwtService
   ) {}
 
-  async validateUser (
+  async validateUser(
     email: string,
     password: string
   ): Promise<UserPayload | null> {

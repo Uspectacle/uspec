@@ -1,8 +1,9 @@
-{    
+{
   "header.blog": "Blog",
   "header.games": "Games",
   "header.tools": "Tools",
+  "header.switchTo": "Passer en",
   "footer.contact-me": "Contact-me :",
-  "footer.resume": "resume",
+  "footer.resume": "My Resume",
   "coming-soon": "Coming Soon"
 }

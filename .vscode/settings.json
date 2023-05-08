@@ -1,5 +1,6 @@
 {
     "search.useGlobalIgnoreFiles": false,
     "search.useIgnoreFiles": true,
-    "files.eol": "\n"
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
 }

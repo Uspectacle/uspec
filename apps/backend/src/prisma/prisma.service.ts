@@ -9,12 +9,13 @@ import {
 @Injectable()
 export class PrismaService
   extends PrismaClient
-  implements OnModuleInit, OnModuleDestroy {
-  async onModuleInit () {
+  implements OnModuleInit, OnModuleDestroy
+{
+  async onModuleInit() {
     await this.$connect()
   }
 
-  enableShutdownHooks (app: INestApplication) {
+  enableShutdownHooks(app: INestApplication) {
     this.$on('beforeExit', () => {
       void (async () => {
         await app.close()
@@ -22,7 +23,7 @@ export class PrismaService
     })
   }
 
-  async onModuleDestroy () {
+  async onModuleDestroy() {
     await this.$disconnect()
   }
 }
