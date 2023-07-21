@@ -1,149 +1,498 @@
 import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
 import { Layout } from '../component/Layouts/Layout'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
+import { GREEN_WHITE, PURPLE_INTENSE, WHITE } from '../utils/constants'
+import { useTranslation } from 'react-i18next'
+import { MyImage } from '../component/Utils/MyImage'
+import { RotatingWords } from '../component/Utils/RotatingWords'
 
-const CV: NextPage = () => {
+const Resume: NextPage = () => {
   const { classes } = useStyles()
+  const { t } = useTranslation()
+
+  const summary = (
+    <>
+      {t('resume.summary')} <br /> <br />
+      <Link
+        download={'LARSEN_Mario_resume_EN_2023.pdf'}
+        href={'doc/LARSEN_Mario_resume_EN_2023.pdf'}
+        target={'_blank'}
+        rel={'noreferrer'}
+        className={classes.button}
+        passHref
+      >
+        <MyImage alt="pdf" src="/svg/pdf.svg" width={'1.2em'} />
+        &nbsp;{t('resume.downloadAsPDF')}
+      </Link>
+    </>
+  )
+
+  const Education = () => (
+    <ul className={classes.list}>
+      <li>
+        <Link
+          href={'https://www.ensea.fr/en'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage alt="ensea" src="/image/ensea.png" width={'5em'} />
+          <div className={classes.infos}>
+            <div className={classes.years}>2018 - 2022</div>
+            <div className={classes.name}>{t('resume.ensea.name')}</div>
+            <div className={classes.subname}>{t('resume.ensea.subName')}</div>
+            <div className={classes.city}>{t('resume.ensea.city')}</div>
+          </div>
+        </Link>
+        <div className={classes.text}>
+          {t('resume.ensea.text')}
+          <br />
+          <strong>{t('resume.result')}</strong>
+          {t('resume.ensea.result')}
+        </div>
+      </li>
+      <li>
+        <Link
+          href={'http://prepa.civfrance.com/prépas-scientifiques/'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage alt="civ" src="/image/civ.png" width={'5em'} />
+          <div className={classes.infos}>
+            <div className={classes.years}>2016 - 2018</div>
+            <div className={classes.name}>{t('resume.civ.name')}</div>
+            <div className={classes.subname}>{t('resume.civ.subName')}</div>
+            <div className={classes.city}>{t('resume.civ.city')}</div>
+          </div>
+        </Link>
+        <div className={classes.text}>
+          {t('resume.civ.text')}
+          <br />
+          <strong>{t('resume.result')}</strong>
+          {t('resume.civ.result')}
+        </div>
+      </li>
+      <li>
+        <Link
+          href={'https://www.leparcimperial.fr/lycee/'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage alt="parc" src="/image/parc.png" width={'5em'} />
+          <div className={classes.infos}>
+            <div className={classes.years}>2013 - 2016</div>
+            <div className={classes.name}>{t('resume.parc.name')}</div>
+            <div className={classes.subname}>{t('resume.parc.subName')}</div>
+            <div className={classes.city}>{t('resume.parc.city')}</div>
+          </div>
+        </Link>
+
+        <div className={classes.text}>
+          <strong>{t('resume.result')}</strong>
+          {t('resume.parc.result')}
+        </div>
+      </li>
+    </ul>
+  )
+
+  const Experience = () => (
+    <ul className={classes.list}>
+      <li>
+        <Link
+          href={'https://galadrim.fr/'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage alt="galadrim" src="/image/galadrim.jfif" width={'5em'} />
+          <div className={classes.infos}>
+            <div className={classes.years}>2022 - 2023</div>
+            <div className={classes.name}>{t('resume.galadrim.name')}</div>
+            <div className={classes.subname}>
+              {t('resume.galadrim.subName')}
+            </div>
+            <div className={classes.city}>{t('resume.galadrim.city')}</div>
+          </div>
+        </Link>
+        <div className={classes.text}>
+          <strong>{t('resume.activity')}</strong>
+          {t('resume.galadrim.activity')}
+          <br />
+          <strong>{t('resume.result')}</strong>
+          {t('resume.galadrim.result')}
+        </div>
+      </li>
+      <li>
+        <Link
+          href={'https://list.cea.fr/fr'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage alt="cea" src="/image/cea.jpg" width={'5em'} />
+          <div className={classes.infos}>
+            <div className={classes.years}>2021</div>
+            <div className={classes.name}>{t('resume.cea.name')}</div>
+            <div className={classes.subname}>{t('resume.cea.subName')}</div>
+            <div className={classes.city}>{t('resume.cea.city')}</div>
+          </div>
+        </Link>
+        <div className={classes.text}>
+          <strong>{t('resume.objective')}</strong>
+          {t('resume.cea.objective')}
+          <br />
+          <strong>{t('resume.result')}</strong>
+          {t('resume.cea.result')}
+        </div>
+      </li>
+      <li>
+        <Link
+          href={'https://www.uni-lj.si/eng/'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage
+            alt="Uni-ljubljana"
+            src="/image/Uni-ljubljana.png"
+            width={'5em'}
+          />
+          <div className={classes.infos}>
+            <div className={classes.years}>2020</div>
+            <div className={classes.name}>{t('resume.ljubljana.name')}</div>
+            <div className={classes.subname}>
+              {t('resume.ljubljana.subName')}
+            </div>
+            <div className={classes.city}>{t('resume.ljubljana.city')}</div>
+          </div>
+        </Link>
+        <div className={classes.text}>
+          <strong>{t('resume.objective')}</strong>
+          {t('resume.ljubljana.objective')}
+          <br />
+          <strong>{t('resume.result')}</strong>
+          {t('resume.ljubljana.result')}
+        </div>
+      </li>
+      <li>
+        <Link
+          href={'http://www-reynal.ensea.fr/?page_id=303'}
+          target={'_blank'}
+          rel={'noreferrer'}
+          className={classes.item}
+          passHref
+        >
+          <MyImage alt="ensea" src="/image/ensea.png" width={'5em'} />
+          <div className={classes.infos}>
+            <div className={classes.years}>2019 - 2020</div>
+            <div className={classes.name}>{t('resume.themis.name')}</div>
+            <div className={classes.subname}>{t('resume.themis.subName')}</div>
+            <div className={classes.city}>{t('resume.themis.city')}</div>
+          </div>
+        </Link>
+        <div className={classes.text}>
+          {t('resume.themis.text')}
+          <br />
+          <strong>{t('resume.objective')}</strong>
+          {t('resume.themis.objective')}
+          <br />
+          <strong>{t('resume.result')}</strong>
+          {t('resume.themis.result')}
+        </div>
+      </li>
+    </ul>
+  )
+
+  const ForeignLanguages = () => (
+    <ul className={classes.gridLang}>
+      <li>
+        {t('resume.french.name')}
+        <MyImage alt={`lang-fr`} src={`svg/flag-fr.svg`} width={'3em'} />
+        ★★★★★
+        <br />
+        {t('resume.french.level')}
+      </li>
+      <li>
+        {t('resume.english.name')}
+        <MyImage alt={`lang-en`} src={`svg/flag-en.svg`} width={'3em'} />
+        ★★★★★
+        <br />
+        {t('resume.english.level')}
+        <br />
+        <div className={classes.bonusInfo}>{t('resume.english.bonus')}</div>
+      </li>
+      <li>
+        {t('resume.spanish.name')}
+        <MyImage alt={`lang-es`} src={`svg/flag-es.svg`} width={'3em'} />
+        ★★★☆☆
+        <br />
+        {t('resume.spanish.level')}
+      </li>
+    </ul>
+  )
+
+  const Skills = () => (
+    <RotatingWords text={t('resume.skill.i-am-good-at')} words={skills} />
+  )
+  const skillsList = [
+    t('resume.skill.deep-learning'),
+    t('resume.skill.machine-learning'),
+    t('resume.skill.chip-design'),
+    t('resume.skill.board-design'),
+    t('resume.skill.schematic-design'),
+    t('resume.skill.image-processing'),
+    t('resume.skill.audio-processing'),
+    t('resume.skill.signal-processing'),
+    t('resume.skill.video-processing'),
+    t('resume.skill.telecommunication'),
+    t('resume.skill.modeling-languages'),
+    t('resume.skill.optimization'),
+    t('resume.skill.noise-reduction'),
+    t('resume.skill.database-handling'),
+    t('resume.skill.git-handling'),
+    t('resume.skill.web-development'),
+    t('resume.skill.mobile-development'),
+    t('resume.skill.agile-methods'),
+    t('resume.skill.managing-a-team'),
+    t('resume.skill.managing-a-project'),
+    t('resume.skill.app-deployment')
+  ]
+  const [skills, setSkills] = useState(skillsList)
+
+  useEffect(() => {
+    setSkills(skillsList.sort(() => Math.random() - 0.5))
+  }, [])
+
+  const ProgrammingLanguages = () => (
+    <ul className={classes.grid}>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Python" src="/image/python.png" width={'3em'} />
+        </div>
+        {t('resume.skill.python')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Matlab" src="/image/matlab.png" width={'3em'} />
+        </div>
+        {t('resume.skill.matlab')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Java" src="/image/java.png" width={'3em'} />
+        </div>
+        {t('resume.skill.java')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="JavaScript" src="/image/js.png" width={'3em'} />
+        </div>
+        JavaScript
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="HTML" src="/image/html.png" width={'3em'} />
+        </div>
+        HTML
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="CSS" src="/image/css.png" width={'3em'} />
+        </div>
+        CSS
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="C" src="/image/c.png" width={'3em'} />
+        </div>
+        C
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="C#" src="/image/csharp.png" width={'3em'} />
+        </div>
+        C#
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="VHDL" src="/image/vhdl.png" width={'3em'} />
+        </div>
+        VHDL
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Bash" src="/image/bash.png" width={'3em'} />
+        </div>
+        {t('resume.skill.bash-unix')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage
+            alt="Mathematica"
+            src="/image/mathematica.png"
+            width={'3em'}
+          />
+        </div>
+        {t('resume.skill.mathematica')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Assembly" src="/image/assembly.png" width={'3em'} />
+        </div>
+        {t('resume.skill.assembly')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="React" src="/image/react.png" width={'3em'} />
+        </div>
+        {t('resume.skill.react')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage
+            alt="React Native"
+            src="/image/reactnative.png"
+            width={'3em'}
+          />
+        </div>
+        {t('resume.skill.react-native')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="AWS console" src="/image/aws.png" width={'3em'} />
+        </div>
+        {t('resume.skill.aws-console')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="TypeScript" src="/image/ts.png" width={'3em'} />
+        </div>
+        TypeScript
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="SQL" src="/image/sql.png" width={'3em'} />
+        </div>
+        SQL
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Docker" src="/image/docker.png" width={'3em'} />
+        </div>
+        {t('resume.skill.docker')}
+      </li>
+      <li>
+        <div className={classes.logo}>
+          <MyImage alt="Excel" src="/image/excel.png" width={'3em'} />
+        </div>
+        {t('resume.skill.excel')}
+      </li>
+    </ul>
+  )
+
+  const intrestsList = [
+    t('resume.intrestsList.courses'),
+    t('resume.intrestsList.implementation'),
+    t('resume.intrestsList.development'),
+    t('resume.intrestsList.psl'),
+    t('resume.intrestsList.film'),
+    t('resume.intrestsList.delegate'),
+    t('resume.intrestsList.running'),
+    t('resume.intrestsList.association')
+  ]
+
+  const [randomIntrest, setRandomIntrest] = useState(intrestsList[0])
+  const [intrestSeen, setIntrestSeen] = useState(false)
+  const intrestRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!intrestRef.current) return
+      if (
+        window.scrollY + window.innerHeight <
+        intrestRef.current.offsetTop + 10
+      ) {
+        if (intrestSeen) {
+          setIntrestSeen(false)
+          setRandomIntrest(
+            intrestsList[Math.floor(Math.random() * intrestsList.length)]
+          )
+        }
+      } else if (!intrestSeen) setIntrestSeen(true)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [intrestSeen])
+
+  const Intrests = () => (
+    <div className={classes.intrest} ref={intrestRef}>
+      <strong>Look at it again</strong> but I love to learn stuffs, do stuffs
+      and share stuffs like <span>{randomIntrest}</span>
+    </div>
+  )
 
   return (
-    <Layout>
-      Download my resume : PDFLogo Contact-me : 07 82 96 24 30 or
-      mario.larsen@ensea.fr
-      <div className={classes.title}>MARIO LARSEN</div>
-      <div className={classes.subTitle}>
-        Young and talented French Engineer looking for an interesting job in the
-        field of AI research, Web and Mobile development or Electronic design.
+    <Layout summary={summary}>
+      <div className={classes.container}>
+        <div className={classes.title}>MARIO LARSEN</div>
+        <div className={classes.subTitle}>{t('resume.subTitle')}</div>
+        <MyImage
+          alt="myself"
+          src="/image/selfi.jpg"
+          hash={'L*MQq+RPx]%g~qWBWBtRX9WBj[V['}
+          aspectRatio={'3941/2556'}
+        />
+        <div className={classes.listTitle}>{t('resume.education')}</div>
+        <Education />
+        <div className={classes.listTitle}>{t('resume.experience')}</div>
+        <Experience />
+        <div className={classes.dualContainer}>
+          <div className={classes.columnContainer}>
+            <div className={classes.listTitle}>{t('resume.foreign')}</div>
+            <ForeignLanguages />
+            <div className={classes.listTitle}>{t('resume.skills')}</div>
+            <Skills />
+          </div>
+          <div className={classes.columnContainer}>
+            <div className={classes.listTitle}>{t('resume.programming')}</div>
+            <ProgrammingLanguages />
+          </div>
+        </div>
+        <div className={classes.listTitle}>{t('resume.intrests')}</div>
+        <Intrests />
       </div>
-      <div className={classes.listTitle}>EXPERIENCES</div>
-      <ul className={classes.list}>
-        <li>
-          2022–2023 GALADRIM — 6 month contract France, Paris Activity:
-          Web-Devolper Full-Stack Web Mobile Result : 7 web and mobile
-          application built and deployed
-        </li>
-        <li>
-          2021 CEA-LIST / DIASI: AI Department in Laboratory — 6 month
-          internship France, Saclay Objective : Unifying detection and
-          re-identification in a single deep network architecture for multiple
-          object tracking Result : Our new visual transformer algorithm
-          simplifies current approaches while performing better than the
-          baseline model.
-        </li>
-        <li>
-          2020 University of Ljubljana — 4 month internship Slovenia, Ljubljana
-          Objective : Virtual Try-On Networks independent study and
-          implementation Result : Technical and popularized report around
-          CP-VTON failure, quality, measurement, dataset, and update.
-        </li>
-        <li>
-          2020 ENSEA Laboratories, Themis — 7 month research project France,
-          Cergy Themis is a collaborative project theme proposed to a group of
-          about a dozen ENSEA students from the 3 years of the engineering
-          cycle. Objective : Design from A to Z an electronic musical instrument
-          of synthesizer/drum-machine type. Result : 3 PCB designs of the
-          synthesizer main board realized and printed in autonomy.
-        </li>
-      </ul>
-      <div className={classes.listTitle}>EDUCATION</div>
-      <ul className={classes.list}>
-        <li>
-          2018 - 2022 ENSEA, École Nationale Supérieur de l'Électronique et de
-          ses applications — 3-year Master's program France, Cergy Leading
-          French graduate school in electrical engineering, computer science and
-          communication network. More than 10 school professional projects were
-          completed, such as Reinforcement Learning Solver or Relation Network
-          Video Classifier. Result : Graduated in major signal and artificial
-          intelligence;
-        </li>
-        <li>
-          2016 - 2018 CIV, Centre International de Valbonne — 2-year France,
-          Valbonne Intensive courses to prepare nationwide competitive exams for
-          the top French engineering schools (GEs) Result : Qualified for
-          Centrale-Supélec, Mines-Télécom and Concours Communs Polytechniques
-          schools.{' '}
-        </li>
-        <li>
-          2013 - 2016 Parc Impérial — High-School France, Nice Baccalaureate
-          specialized in sciences - equivalent A-levels in math with honors
-        </li>
-      </ul>
-      <div className={classes.listTitle}>IT SKILLS</div>
-      <ul className={classes.list}>
-        <li>Deep Learning</li>
-        <li>Machine Learning</li>
-        <li>Schematic, board, and chip design</li>
-        <li>Image, audio, signal and video processing</li>
-        <li>Telecommunication</li>
-        <li>Modeling languages</li>
-        <li>Optimization and noise reduction</li>
-        <li>Database related skills</li>
-        <li>Git handling</li>
-        <li>Web development</li>
-        <li>Mobile development</li>
-        <li>Agile Methods</li>
-        <li>Team Leader and project management</li>
-        <li>App Deployment</li>
-      </ul>
-      <div className={classes.listTitle}>Programming languages</div>
-      <ul className={classes.list}>
-        <li>Python</li>
-        <li>Matlab</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>C</li>
-        <li>C#</li>
-        <li>VHDL</li>
-        <li>Mathematica</li>
-        <li>primary assembler</li>
-        <li>React</li>
-        <li>React Native</li>
-        <li>AWS console</li>
-        <li>TypeScript</li>
-        <li>SQL</li>
-        <li>Docker</li>
-        <li>prompt engineering</li>
-        <li>Excel</li>
-      </ul>
-      <div className={classes.listTitle}>FOREIGN LANGUAGES</div>
-      <ul className={classes.list}>
-        <li>French : ★★★★★ native speaker </li>
-        <li>English : ★★★★★ fluent speaker with TOEIC - jan. 2019 </li>
-        <li>Spanish : ★★★☆☆ intermediate level</li>
-      </ul>
-      <div className={classes.listTitle}>PERSONAL INTERESTS</div>
-      <ul className={classes.list}>
-        <li>
-          Following advanced courses from neurology, advanced math and
-          philosophy to fundamental physic, poetry, and epistemology
-        </li>
-        <li>AI implementation</li>
-        <li>Mobile game and web-app design and development</li>
-        <li>Weekly PSL presentation and vulgarization</li>
-        <li>
-          Film directing, making and writing for school and personal interest
-        </li>
-        <li>School delegate and secretary</li>
-        <li>Running</li>
-        <li>
-          Various association key members such as president, team manager,
-          events organization and debate master for student life, international
-          film festival, gaming festival, public debate, international meeting
-          and hackathon
-        </li>
-      </ul>
     </Layout>
   )
 }
 
 const useStyles = createStyles((theme) => ({
+  container: {
+    maxWidth: 1000,
+    backgroundColor: WHITE,
+    borderRadius: 10,
+    margin: 10,
+    display: 'flex',
+    flexDirection: 'column'
+  },
   title: {
     textAlign: 'center',
     fontSize: '2em',
     fontWeight: 'bold',
-    marginTop: 10
+    marginTop: 10,
+    color: PURPLE_INTENSE
   },
   subTitle: {
     textAlign: 'center',
@@ -151,8 +500,129 @@ const useStyles = createStyles((theme) => ({
     fontStyle: 'italic',
     marginTop: 10
   },
-  listTitle: {},
-  list: {}
+  dualContainer: {
+    [theme.fn.largerThan(760)]: {
+      display: 'flex',
+      flexDirection: 'row-reverse'
+    }
+  },
+  columnContainer: {
+    [theme.fn.largerThan(760)]: {
+      width: '50%'
+    }
+  },
+  listTitle: {
+    backgroundColor: PURPLE_INTENSE,
+    color: WHITE,
+    textAlign: 'center',
+    fontSize: '1.5em'
+  },
+  list: {
+    listStyleType: 'none',
+    '& > li': {
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  },
+  grid: {
+    listStyleType: 'none',
+    padding: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'wrap',
+    '& > li': {
+      display: 'flex',
+      textAlign: 'center',
+      flexDirection: 'column',
+      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
+      width: 100,
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: 5,
+      borderRadius: 5,
+      margin: 5
+    }
+  },
+  gridLang: {
+    listStyleType: 'none',
+    padding: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'wrap',
+    '& > li': {
+      display: 'flex',
+      textAlign: 'center',
+      flexDirection: 'column',
+      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
+      width: 130,
+      alignItems: 'center',
+      padding: 5,
+      borderRadius: 5,
+      margin: 5
+    }
+  },
+  logo: {
+    display: 'flex',
+    height: '4em',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  item: {
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+    paddingTop: 10,
+    width: '100%'
+  },
+  infos: {
+    marginLeft: 20,
+    color: 'black'
+  },
+  years: {},
+  name: {
+    fontWeight: 'bold',
+    color: PURPLE_INTENSE
+  },
+  subname: {},
+  city: {},
+  text: {
+    width: '90%',
+    alignSelf: 'center',
+    backgroundColor: GREEN_WHITE,
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 10,
+    marginBottom: 20,
+    fontSize: '0.9em'
+  },
+  button: {
+    alignSelf: 'flex-start',
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    padding: 10,
+    textDecoration: 'none',
+    fontSize: 15,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontWeight: 500,
+    borderRadius: 10,
+    backgroundColor: WHITE
+  },
+  bonusInfo: {
+    fontSize: '0.8em',
+    fontStyle: 'italic'
+  },
+  intrest: {
+    flex: 1,
+    alignSelf: 'center',
+    textAlign: 'center',
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 30,
+    marginRight: 30,
+    strong: { color: PURPLE_INTENSE },
+    span: { fontWeight: 500 }
+  }
 }))
 
-export default CV
+export default Resume

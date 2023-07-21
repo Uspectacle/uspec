@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className={classes.footer}>
-      {t('footer.contact-me')}
+      <strong>{t('footer.contactMe')}</strong>
       <div className={classes.links}>
         <Link href={'/resume'} className={classes.link}>
           {t('footer.resume')}
@@ -46,7 +46,7 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     left: 0,
     bottom: 0,
-    width: '100vw',
+    width: '100%',
     background: PURPLE_INTENSE,
     display: 'flex',
     flexDirection: 'row',
@@ -64,7 +64,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderRadius: 10,
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan(600)]: {
       flexDirection: 'column',
       width: 200,
       padding: 10
@@ -82,7 +82,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     fontWeight: 500,
     borderRadius: 10,
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan(600)]: {
       width: '90%',
       padding: 5
     }

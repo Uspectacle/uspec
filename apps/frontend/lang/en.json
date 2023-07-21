@@ -1,9 +1,134 @@
 {
-  "header.blog": "Blog",
-  "header.games": "Games",
-  "header.tools": "Tools",
-  "header.switchTo": "Passer en",
-  "footer.contact-me": "Contact-me :",
-  "footer.resume": "My Resume",
-  "coming-soon": "Coming Soon"
+  "header": {
+    "blog": "Blog",
+    "games": "Games",
+    "tools": "Tools",
+    "switchTo": "Passer en"
+  },
+  "footer": {
+    "contactMe": "Contact-me :",
+    "resume": "My Resume"
+  },
+  "coming-soon": "Coming Soon",
+  "resume": {
+    "summary": "Hi, my name is Mario Larsen.\nThis is my blog.\nWant to know more about me ?",
+    "downloadAsPDF": "Download as PDF",
+    "subTitle": "Young and talented French Engineer\nlooking for an interesting job in the field of AI research,\nWeb and Mobile development or Electronic design",
+    "activity": "Activity : ",
+    "objective": "Objective : ",
+    "result": "Result : ",
+    "education": "EDUCATION",
+    "ensea": {
+      "name": "ENSEA, École Nationale Supérieur de l'Électronique et de ses applications",
+      "subName": "3-year Master's program",
+      "city": "France, Cergy",
+      "text": "Leading French graduate school in electrical engineering, computer science and communication network.\nMore than 10 school professional projects were completed, such as Reinforcement Learning Solver or Relation Network Video Classifier",
+      "result": "Graduated in major signal and artificial intelligence"
+    },
+    "civ": {
+      "name": "CIV, Centre International de Valbonne",
+      "subName": "2-year preparatory class",
+      "city": "France, Valbonne",
+      "text": "Intensive courses to prepare nationwide competitive exams for the top French engineering schools (GEs)",
+      "result": "Qualified for Centrale-Supélec, Mines-Télécom and Concours Communs Polytechniques schools"
+    },
+    "parc": {
+      "name": "Parc Impérial",
+      "subName": "High-School",
+      "city": "France, Nice",
+      "result": "Baccalaureate specialized in sciences - equivalent A-levels in math with honors"
+    },
+    "experience": "EXPERIENCES",
+    "galadrim": {
+      "name": "GALADRIM",
+      "subName": "6 month contract",
+      "city": "France, Paris",
+      "activity": "Web-Devolper Full-Stack Web Mobile",
+      "result": "7 web and mobile application built and deployed"
+    },
+    "cea": {
+      "name": "CEA-LIST / DIASI: AI Department in Laboratory",
+      "subName": "6 month internship",
+      "city": "France, Saclay",
+      "objective": "Unifying detection and re-identification in a single deep network architecture for multiple object tracking",
+      "result": "Our new visual transformer algorithm simplifies current approaches while performing better than the baseline model"
+    },
+    "ljubljana": {
+      "name": "University of Ljubljana",
+      "subName": "4 month internship",
+      "city": "Slovenia, Ljubljana",
+      "objective": "Virtual Try-On Networks independent study and implementation",
+      "result": "Technical and popularized report around CP-VTON failure, quality, measurement, dataset, and update"
+    },
+    "themis": {
+      "name": "ENSEA Laboratories, Themis",
+      "subName": "7 month research project",
+      "city": "France, Cergy",
+      "text": "Themis is a collaborative project theme proposed to a group of about a dozen ENSEA students from the 3 years of the engineering cycle",
+      "objective": "Design from A to Z an electronic musical instrument of synthesizer/drum-machine type",
+      "result": "3 PCB designs of the synthesizer main board realized and printed in autonomy"
+    },
+    "foreign": "FOREIGN LANGUAGES",
+    "french": {
+      "name": "French",
+      "level": "native speaker"
+    },
+    "english": {
+      "name": "English",
+      "level": "fluent speaker",
+      "bonus": "TOEIC - Jan. 2019"
+    },
+    "spanish": {
+      "name": "Spanish",
+      "level": "intermediate"
+    },
+    "skills": "IT SKILLS",
+    "programming": "PROGRAMMING LANGUAGES",
+    "intrests": "PERSONAL INTERESTS",
+    "intrestsList": {
+      "courses": "following advanced courses from neurology, advanced math and philosophy to fundamental physic, poetry, and epistemology",
+      "implementation": "AI implementation and doomsday prediction",
+      "development": "mobile game and web-app design and development",
+      "psl": "weekly PSL presentation and vulgarization",
+      "film": "film directing, making, reviewing and writing for school and friends",
+      "delegate": "school delegate and secretary",
+      "running": "running a lot as well as cycling",
+      "association": "association key members such as president, team manager, events organization and debate master for student life, international film festival, gaming festival, public debate, international meeting and hackathon"
+    },
+    "skill": {
+      "excel": "Excel",
+      "docker": "Docker",
+      "python": "Python",
+      "matlab": "Matlab",
+      "java": "Java",
+      "bash-unix": "Bash - Unix",
+      "mathematica": "Mathematica",
+      "assembly": "Assembly",
+      "react": "React",
+      "react-native": "React Native",
+      "aws-console": "AWS console",
+      "i-am-good-at": "I am good at",
+      "deep-learning": "Deep Learning",
+      "machine-learning": "Machine Learning",
+      "chip-design": "Chip design",
+      "board-design": "Board design",
+      "schematic-design": "Schematic design",
+      "image-processing": "Image processing",
+      "audio-processing": "Audio processing",
+      "signal-processing": "Signal processing",
+      "telecommunication": "Telecommunication",
+      "optimization": "Optimization",
+      "noise-reduction": "Noise reduction",
+      "modeling-languages": "Modeling languages",
+      "database-handling": "Database handling",
+      "git-handling": "Git handling",
+      "web-development": "Web development",
+      "mobile-development": "Mobile development",
+      "agile-methods": "Agile Methods",
+      "app-deployment": "App Deployment",
+      "managing-a-team": "Managing a team",
+      "managing-a-project": "Managing a project",
+      "video-processing": "Video processing"
+    }
+  }
 }

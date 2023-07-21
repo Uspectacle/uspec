@@ -1,61 +1,78 @@
 import { createStyles, Image } from '@mantine/core'
-import { GREEN_LIGHT, PURPLE_INTENSE } from '../../utils/constants'
+import { GREEN_LIGHT, GREEN_WHITE, PURPLE_INTENSE } from '../../utils/constants'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import i18n from '../../lang/i18n'
 import { useTranslation } from 'react-i18next'
 
-export function Header() {
+export function Header({ children }) {
   const { classes } = useStyles()
   const router = useRouter()
   const { t } = useTranslation()
-  const otherLanguage = i18n.language === 'en' ? 'fr' : 'en'
+  const otherLanguage = i18n.language.slice(0, 2) === 'en' ? 'fr' : 'en'
 
   return (
     <div className={classes.header}>
-      <Link href={'/'} className={classes.logo}>
-        <Image alt="logo" src="/logo.png" width={160} />
-      </Link>
-      <div className={classes.links}>
-        <Link href={'/'} className={classes.link} passHref>
-          <div style={'/' === router.pathname ? { color: GREEN_LIGHT } : {}}>
-            {t('header.blog')}
-          </div>
+      <div className={classes.menu}>
+        <Link href={'/'} className={classes.logo}>
+          <Image alt="logo" src="/logo.png" width={160} />
         </Link>
-        <Link href={'/games'} className={classes.link} passHref>
+        <div className={classes.links}>
+          <Link href={'/'} className={classes.link} passHref>
+            <div style={'/' === router.pathname ? { color: GREEN_LIGHT } : {}}>
+              {t('header.blog')}
+            </div>
+          </Link>
+          <Link href={'/games'} className={classes.link} passHref>
+            <div
+              style={'/games' === router.pathname ? { color: GREEN_LIGHT } : {}}
+            >
+              {t('header.games')}
+            </div>
+          </Link>
+          <Link href={'/tools'} className={classes.link} passHref>
+            <div
+              style={'/tools' === router.pathname ? { color: GREEN_LIGHT } : {}}
+            >
+              {t('header.tools')}
+            </div>
+          </Link>
           <div
-            style={'/games' === router.pathname ? { color: GREEN_LIGHT } : {}}
+            key={`lang-${otherLanguage}`}
+            className={classes.lang}
+            onClick={() => {
+              i18n.changeLanguage(otherLanguage)
+              localStorage.setItem('currentLanguage', otherLanguage)
+            }}
           >
-            {t('header.games')}
+            {t('header.switchTo')}
+            <Image
+              alt={`lang-${otherLanguage}`}
+              src={`svg/flag-${otherLanguage}.svg`}
+              width={'2em'}
+            />
           </div>
-        </Link>
-        <Link href={'/tools'} className={classes.link} passHref>
-          <div
-            style={'/tools' === router.pathname ? { color: GREEN_LIGHT } : {}}
-          >
-            {t('header.tools')}
-          </div>
-        </Link>
-        <div
-          key={'lang'}
-          className={classes.lang}
-          onClick={() => i18n.changeLanguage(otherLanguage)}
-        >
-          {t('header.switchTo')}
-          <Image
-            alt={`lang-${otherLanguage}`}
-            src={`/svg/flag-${otherLanguage}.svg`}
-            width={'2em'}
-          />
         </div>
       </div>
+      {!!children && <div className={classes.summary}>{children}</div>}
     </div>
   )
 }
 
 const useStyles = createStyles((theme) => ({
   header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    alignSelf: 'center',
+    width: '90%',
+    [theme.fn.smallerThan(950)]: {
+      flexDirection: 'column'
+    }
+  },
+  menu: {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -64,23 +81,25 @@ const useStyles = createStyles((theme) => ({
     marginTop: 20,
     marginLeft: 20,
     marginRight: 20,
-    gap: 20,
-    [theme.fn.smallerThan('xs')]: {
-      alignSelf: 'center'
+    [theme.fn.smallerThan(600)]: {
+      alignSelf: 'center',
+      justifyContent: 'space-around',
+      width: '100%'
     }
   },
   links: {
     background: PURPLE_INTENSE,
     boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
     display: 'flex',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderRadius: 10,
-    [theme.fn.smallerThan('xs')]: {
+    width: 320,
+    [theme.fn.smallerThan(600)]: {
       flexDirection: 'column',
       width: 160,
       padding: 10
@@ -98,7 +117,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     fontWeight: 500,
     borderRadius: 10,
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan(600)]: {
       width: '90%',
       padding: 5
     }
@@ -117,7 +136,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
     cursor: 'pointer',
     borderRadius: 10,
-    [theme.fn.smallerThan('xs')]: {
+    [theme.fn.smallerThan(600)]: {
       width: '90%',
       padding: 5
     }
@@ -130,5 +149,15 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     fontWeight: 500
+  },
+  summary: {
+    backgroundColor: GREEN_WHITE,
+    borderRadius: 10,
+    margin: 10,
+    padding: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    alignSelf: 'flex-end',
+    width: 300
   }
 }))

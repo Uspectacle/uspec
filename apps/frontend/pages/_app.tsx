@@ -1,12 +1,15 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { MantineProvider } from '@mantine/core'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
+import { I18nextProvider } from 'react-i18next'
 import 'react-toastify/dist/ReactToastify.css'
 import 'dayjs/locale/fr'
 import './styles.css'
-import '../lang/i18n'
+import i18n from '../lang/i18n'
 
 function CustomApp({ Component, pageProps }: AppProps) {
   if (
@@ -18,25 +21,32 @@ function CustomApp({ Component, pageProps }: AppProps) {
     console.debug = () => {}
   }
 
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('currentLanguage')
+    if (storedLanguage) i18n.changeLanguage(storedLanguage)
+  }, [i18n])
+
   return (
     <MantineProvider>
-      <Head>
-        <title>uSPEC</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-        <ToastContainer
-          position="bottom-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss={false}
-          draggable
-          pauseOnHover={false}
-        />
-      </main>
+      <I18nextProvider i18n={i18n}>
+        <Head>
+          <title>uSPEC</title>
+        </Head>
+        <main className="app">
+          <Component {...pageProps} />
+          <ToastContainer
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable
+            pauseOnHover={false}
+          />
+        </main>
+      </I18nextProvider>
     </MantineProvider>
   )
 }

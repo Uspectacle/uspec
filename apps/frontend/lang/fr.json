@@ -1,9 +1,104 @@
 {
-  "header.blog": "Blog",
-  "header.games": "Jeux",
-  "header.tools": "Outils",
-  "header.switchTo": "Switch to",
-  "footer.contact-me": "Contactez-moi :",
-  "footer.resume": "Mon CV",
-  "coming-soon": "Bientôt disponible"
+  "header": {
+    "blog": "Blog",
+    "games": "Jeux",
+    "tools": "Outils",
+    "switchTo": "Switch to"
+  },
+  "footer": {
+    "contactMe": "Contactez-moi :",
+    "resume": "Mon CV"
+  },
+  "coming-soon": "Bientôt disponible",
+  "resume": {
+    "summary": "Bonjour, je m'appelle Mario Larsen.\nCeci est mon blog.\nVous voulez en savoir plus sur moi ?",
+    "downloadAsPDF": "Télécharger en PDF",
+    "subTitle": "Jeune ingénieur français talentueux à la recherche\nd'un emploi intéressant dans le domaine de la recherche en IA,\ndu développement Web et mobile ou de la conception électronique",
+    "result": "Résultat : ",
+    "education": "EDUCATION",
+    "ensea": {
+      "name": "ENSEA, École Nationale Supérieur de l'Électronique et de ses applications",
+      "subName": "Master en 3 ans",
+      "city": "France, Cergy",
+      "text": "Première école française d'études supérieures en ingénierie électrique, informatique et réseaux de communication.\nPlus de 10 projets professionnels ont été réalisés, tels qu'un bot de Reinforcement Learning ou un classifieur vidéo Relation Network",
+      "result": "Diplômé avec majeur en signal et intelligence artificielle"
+    },
+    "civ": {
+      "name": "CIV, Centre International de Valbonne",
+      "subName": "Classe préparatoire en 2 ans",
+      "city": "France, Valbonne",
+      "text": "Cours intensifs de préparation aux concours nationaux des grandes écoles d'ingénieurs françaises (GEs)",
+      "result": "Qualifié pour les écoles Centrale-Supélec, Mines-Télécom et Concours Communs Polytechniques"
+    },
+    "parc": {
+      "name": "Parc Impérial",
+      "subName": "Lycée",
+      "city": "France, Nice",
+      "result": "Baccalauréat spécialisé en mathématiques avec mention"
+    },
+    "experience": "EXPERIENCES",
+    "galadrim": {
+      "name": "GALADRIM",
+      "subName": "Contrat de 6 mois",
+      "city": "France, Paris",
+      "activity": "Web-Devolper Full-Stack Web Mobile",
+      "result": "7 applications web et mobiles construites et déployées"
+    },
+    "cea": {
+      "name": "CEA-LIST / DIASI : Département IA en Laboratoire",
+      "subName": "Stage de 6 mois",
+      "city": "France, Saclay",
+      "objective": "Unifier la détection et la ré-identification dans une seule architecture de réseau profond pour le suivi d'objets multiples",
+      "result": "Notre nouvel algorithme de transformation visuelle simplifie les approches actuelles tout en étant plus performant que le modèle de base"
+    },
+    "ljubljana": {
+      "name": "Université de Ljubljana",
+      "subName": "Stage de 4 mois",
+      "city": "Slovénie, Ljubljana",
+      "objective": "Étude et implémentation de réseaux cabine d'essayage virtuelle Networks",
+      "result": "Rapport technique et vulgarisé sur les défaillances, les qualités, les mesures, les ensembles des données et les mises à jours potentielles de CP-VTON"
+    },
+    "themis": {
+      "name": "Laboratoires ENSEA, Themis",
+      "subName": "Projet de recherche de 7 mois",
+      "city": "France, Cergy",
+      "text": "Themis est un thème de projet collaboratif proposé à un groupe d'une douzaine d'étudiants de l'ENSEA issus des 3 années du cycle ingénieur",
+      "objective": "Concevoir de A à Z un instrument de musique électronique de type synthétiseur/batterie",
+      "result": "3 designs de PCB de la carte principale du synthétiseur réalisés et imprimés en autonomie"
+    },
+    "foreign": "LANGUES ÉTRANGÈRES",
+    "french": {
+      "name": "Français",
+      "level": "natif"
+    },
+    "english": {
+      "name": "Anglais",
+      "level": "bilingue",
+      "bonus": "TOEIC - jan. 2019"
+    },
+    "spanish": {
+      "name": "Espagnol",
+      "level": "intermédiaire"
+    },
+    "skills": "COMPÉTENCES",
+    "programming": "LANGAGES DE PROGRAMMATION",
+    "intrests": "INTÉRÊTS PERSONNELS",
+    "intrestsLists": [
+      "Suivre des cours avancés allant de la neurologie, des mathématiques avancées et de la philosophie à la physique fondamentale, la poésie et l'épistémologie,",
+      "Implémentation de l'IA,",
+      "Conception et développement de jeux mobiles et d'applications web,",
+      "Présentation et vulgarisation hebdomadaire de PSL,",
+      "Réalisation, fabrication et écriture de films pour l'école et l'intérêt personnel, ",
+      "Délégué et secrétaire de l'école,",
+      "Course à pied,",
+      "Divers membres clés de l'association tels que le président, le chef d'équipe, l'organisation d'événements et le maître du débat pour la vie étudiante, le festival international du film, le festival du jeu, le débat public, la rencontre internationale et le hackathon",
+      "..."
+    ],
+    "skill": {
+      "excel": "Excel",
+      "docker": "Docker",
+      "assembly": "Assembleur",
+      "aws-console": "console AWS"
+    }
+  }
 }
