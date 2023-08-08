@@ -82,8 +82,8 @@
     },
     "skills": "COMPÉTENCES",
     "programming": "LANGAGES DE PROGRAMMATION",
-    "intrests": "INTÉRÊTS PERSONNELS",
-    "intrestsLists": [
+    "interests": "INTÉRÊTS PERSONNELS",
+    "interestsLists": [
       "Suivre des cours avancés allant de la neurologie, des mathématiques avancées et de la philosophie à la physique fondamentale, la poésie et l'épistémologie,",
       "Implémentation de l'IA,",
       "Conception et développement de jeux mobiles et d'applications web,",

@@ -1,35 +1,49 @@
-import { Image as ImageMantine, ImageProps } from '@mantine/core'
-import { Blurhash } from 'react-blurhash'
-import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 
-type PropsMyImage = ImageProps & {
-  hash?: string | undefined
-  aspectRatio?: string | undefined
+import { Blurhash } from 'react-blurhash'
+import React, { useState } from 'react'
+
+type PropsMyImage = React.ComponentProps<typeof Image> & {
+  blurhash?: string | undefined
 }
 
 export const MyImage = ({
-  hash,
+  blurhash,
   alt,
   src,
   width,
-  aspectRatio
+  height,
+  style
 }: PropsMyImage) => {
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(true)
 
-  useEffect(() => {
-    if (!src) return
-    const image = new Image()
-    image.onload = () => setImageLoaded(true)
-    image.src = src
-  }, [src])
+  const containerStyle: React.CSSProperties = {
+    ...(!!width && !!height ? { aspectRatio: `${width} / ${height}` } : {}),
+    ...style
+  }
+
+  if (!blurhash) {
+    return (
+      <div style={containerStyle}>
+        <Image
+          src={src || ''}
+          alt={alt || ''}
+          width={width}
+          fill={!width}
+          height={height}
+          onLoad={() => setImageLoaded(true)}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
+    )
+  }
 
   return (
-    <div
-      style={{
-        width,
-        aspectRatio
-      }}
-    >
+    <div style={containerStyle}>
       <div
         style={{
           display: imageLoaded ? 'none' : 'block',
@@ -38,11 +52,12 @@ export const MyImage = ({
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: 1
+          zIndex: 1,
+          objectFit: 'cover'
         }}
       >
         <Blurhash
-          hash={hash || 'cZRC[6j[~qRjj[%M?bfQ9F-;j[D%%Mj[WB'}
+          hash={blurhash || 'cZRC[6j[~qRjj[%M?bfQ9F-;j[D%%Mj[WB'}
           width={'100%'}
           height={'100%'}
         />
@@ -58,7 +73,19 @@ export const MyImage = ({
           zIndex: 2
         }}
       >
-        <ImageMantine alt={alt} src={src} onLoad={() => setImageLoaded(true)} />
+        <Image
+          src={src || ''}
+          alt={alt || ''}
+          width={width}
+          fill={!width}
+          height={height}
+          onLoad={() => setImageLoaded(true)}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
       </div>
     </div>
   )

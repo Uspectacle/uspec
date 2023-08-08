@@ -84,9 +84,8 @@
     },
     "skills": "IT SKILLS",
     "programming": "PROGRAMMING LANGUAGES",
-    "intrests": "PERSONAL INTERESTS",
-    "intrestsList": {
-      "courses": "following advanced courses from neurology, advanced math and philosophy to fundamental physic, poetry, and epistemology",
+    "interests": "PERSONAL INTERESTS",
+    "interestsList": {
       "implementation": "AI implementation and doomsday prediction",
       "development": "mobile game and web-app design and development",
       "psl": "weekly PSL presentation and vulgarization",
@@ -130,5 +129,6 @@
       "managing-a-project": "Managing a project",
       "video-processing": "Video processing"
     }
-  }
+  },
+  "interestsList": "following advanced courses from neurology, advanced math and philosophy to fundamental physic, poetry, and epistemology"
 }

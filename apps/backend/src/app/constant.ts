@@ -1,1 +1,1 @@
-export const appConstants = { gameDelai: 10 }
+export const appConstants = {}

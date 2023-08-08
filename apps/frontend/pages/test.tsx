@@ -1,6 +1,7 @@
 import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
+import { MyImage } from '../component/Utils/MyImage'
 
 // let prevRatio = 0.0
 // const increasingColor = 'rgba(40, 40, 190, ratio)'
@@ -10,18 +11,30 @@ const Test: NextPage = () => {
   const { classes } = useStyles()
   //   const boxElementRef = useRef<HTMLDivElement | null>(null)
 
-  const [scrollPosition, setScrollPosition] = useState(0)
-  console.log(window.scrollY)
-  const handleScroll = () => setScrollPosition(window.scrollY)
+  const test = (
+    <MyImage
+      alt="myself"
+      src="/image/selfie.jpg"
+      width={3941}
+      height={2556}
+      blurhash={'L%MQq+M{x]%g~qWBWBtRX9WBj[V['}
+      style={{ width: '100%' }}
+    />
+  )
+  return test
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
+  // const [scrollPosition, setScrollPosition] = useState(0)
+  // console.log(window.scrollY)
+  // const handleScroll = () => setScrollPosition(window.scrollY)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll, { passive: true })
 
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
+  // [Uspec.blursize]: editor/inlineCompletions/actions is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["inlineCompletionsAdditions"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api Uspec.blursize
   //   useEffect(() => {
   //     if (boxElementRef.current) {
   //       const numSteps = 50
@@ -80,7 +93,7 @@ const Test: NextPage = () => {
   return <div className={classes.box} id="box"></div>
 }
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   box: {
     backgroundColor: 'rgba(40, 40, 190, 1)',
     border: '4px solid rgb(20, 20, 120)',

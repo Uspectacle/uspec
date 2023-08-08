@@ -1,8 +1,9 @@
-import { createStyles, Image } from '@mantine/core'
+import { createStyles } from '@mantine/core'
 import { GREEN_LIGHT, PURPLE_INTENSE } from '../../utils/constants'
 import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { MyImage } from '../Utils/MyImage'
 
 export function Footer() {
   const { classes } = useStyles()
@@ -32,7 +33,14 @@ export function Footer() {
           passHref
         >
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <Image alt="Github" src="/svg/github.svg" width={'1.2em'} />
+            <MyImage
+              alt="Github"
+              src="/svg/github.svg"
+              width={24}
+              height={24}
+              blurhash={'U00000fQfQfQfQfQfQfQfQfQfQfQfQfQfQfQ'}
+              style={{ width: '1.2em', height: '1.2em' }}
+            />
             /Uspectacle
           </div>
         </Link>

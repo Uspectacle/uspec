@@ -2,131 +2,206 @@ import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
 import { Layout } from '../component/Layouts/Layout'
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 import { GREEN_WHITE, PURPLE_INTENSE, WHITE } from '../utils/constants'
 import Link from 'next/link'
 import { MyImage } from '../component/Utils/MyImage'
 
-const posts = []
+const posts = [
+  {
+    title: 'My Resume',
+    text: 'If you want to know me or even hire me.\nYou can find more about me here.\nExperiences - Education - Skills.',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="myself"
+        src="/image/resumeImage.jpg"
+        width={420}
+        height={310}
+        style={{
+          objectFit: 'cover',
+          width: '100%',
+          height: '100%'
+        }}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  },
+  {
+    title: 'New article coming soon',
+    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
+    href: '/resume',
+    image: (
+      <MyImage
+        alt="html"
+        src="/image/comingsoon.jpeg"
+        width={548}
+        height={550}
+      />
+    )
+  }
+]
 
 const Home: NextPage = () => {
   const { classes } = useStyles()
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   return (
     <Layout summary={undefined}>
       <ul className={classes.list}>
-        <li>
-          <Link
-            href={'https://www.ensea.fr/en'}
-            target={'_blank'}
-            rel={'noreferrer'}
-            className={classes.item}
-            passHref
-          >
-            <MyImage alt="ensea" src="/image/ensea.png" width={'5em'} />
-            <div className={classes.infos}>
-              <div className={classes.years}>2018 - 2022</div>
-              <div className={classes.name}>{t('resume.ensea.name')}</div>
-              <div className={classes.subname}>{t('resume.ensea.subName')}</div>
-              <div className={classes.city}>{t('resume.ensea.city')}</div>
-            </div>
-          </Link>
-          <div className={classes.text}>
-            {t('resume.ensea.text')}
-            <br />
-            <strong>{t('resume.result')}</strong>
-            {t('resume.ensea.result')}
-          </div>
-        </li>
-        <li>
-          <Link
-            href={'http://prepa.civfrance.com/prépas-scientifiques/'}
-            target={'_blank'}
-            rel={'noreferrer'}
-            className={classes.item}
-            passHref
-          >
-            <MyImage alt="civ" src="/image/civ.png" width={'5em'} />
-            <div className={classes.infos}>
-              <div className={classes.years}>2016 - 2018</div>
-              <div className={classes.name}>{t('resume.civ.name')}</div>
-              <div className={classes.subname}>{t('resume.civ.subName')}</div>
-              <div className={classes.city}>{t('resume.civ.city')}</div>
-            </div>
-          </Link>
-          <div className={classes.text}>
-            {t('resume.civ.text')}
-            <br />
-            <strong>{t('resume.result')}</strong>
-            {t('resume.civ.result')}
-          </div>
-        </li>
-        <li>
-          <Link
-            href={'https://www.leparcimperial.fr/lycee/'}
-            target={'_blank'}
-            rel={'noreferrer'}
-            className={classes.item}
-            passHref
-          >
-            <MyImage alt="parc" src="/image/parc.png" width={'5em'} />
-            <div className={classes.infos}>
-              <div className={classes.years}>2013 - 2016</div>
-              <div className={classes.name}>{t('resume.parc.name')}</div>
-              <div className={classes.subname}>{t('resume.parc.subName')}</div>
-              <div className={classes.city}>{t('resume.parc.city')}</div>
-            </div>
-          </Link>
-
-          <div className={classes.text}>
-            <strong>{t('resume.result')}</strong>
-            {t('resume.parc.result')}
-          </div>
-        </li>
+        {posts.map(({ title, text, href, image }) => (
+          <li>
+            <Link
+              href={href}
+              rel={'noreferrer'}
+              className={classes.item}
+              passHref
+            >
+              <div className={classes.image}>{image}</div>
+              <div className={classes.infos}>
+                <div className={classes.title}>{title}</div>
+                <div className={classes.text}>{text}</div>
+              </div>
+            </Link>
+          </li>
+        ))}
       </ul>
     </Layout>
   )
 }
 
 const useStyles = createStyles(() => ({
+  grid: {
+    listStyleType: 'none'
+  },
   list: {
     listStyleType: 'none',
+    padding: 10,
+    margin: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'wrap',
     '& > li': {
       display: 'flex',
+      textAlign: 'center',
       flexDirection: 'column',
+      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
+      width: 400,
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      margin: 10,
       backgroundColor: WHITE,
       borderRadius: 10,
-      margin: 10
+      overflow: 'hidden'
     }
   },
   item: {
     display: 'flex',
     alignItems: 'center',
     textDecoration: 'none',
-    paddingTop: 10,
     width: '100%'
   },
-  infos: {
-    marginLeft: 20,
-    color: 'black'
+  image: {
+    width: 100,
+    height: 100,
+    objectFit: 'cover'
   },
-  years: {},
-  name: {
+  infos: {
+    boxSizing: 'border-box',
+    padding: 10,
+    height: 100,
+    width: 300,
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column'
+  },
+  title: {
+    fontSize: '1.2em',
     fontWeight: 'bold',
     color: PURPLE_INTENSE
   },
-  subname: {},
-  city: {},
   text: {
-    width: '90%',
-    alignSelf: 'center',
-    backgroundColor: GREEN_WHITE,
-    padding: 10,
-    borderRadius: 10,
+    fontSize: '0.8em',
     marginTop: 10,
-    marginBottom: 20,
-    fontSize: '0.9em'
+    textAlign: 'justify',
+    alignSelf: 'start'
   }
 }))
 

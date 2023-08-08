@@ -1,10 +1,11 @@
-import { createStyles, Image } from '@mantine/core'
+import { createStyles } from '@mantine/core'
 import { GREEN_LIGHT, GREEN_WHITE, PURPLE_INTENSE } from '../../utils/constants'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import i18n from '../../lang/i18n'
 import { useTranslation } from 'react-i18next'
+import { MyImage } from '../Utils/MyImage'
 
 export function Header({ children }) {
   const { classes } = useStyles()
@@ -16,7 +17,14 @@ export function Header({ children }) {
     <div className={classes.header}>
       <div className={classes.menu}>
         <Link href={'/'} className={classes.logo}>
-          <Image alt="logo" src="/logo.png" width={160} />
+          <MyImage
+            alt="logo"
+            src="/logo.png"
+            width={201}
+            height={154}
+            blurhash={'U8BV41GyGyCCI80c#0#I0c+o;EROu2.9TlP0'}
+            style={{ width: 160 }}
+          />
         </Link>
         <div className={classes.links}>
           <Link href={'/'} className={classes.link} passHref>
@@ -47,10 +55,13 @@ export function Header({ children }) {
             }}
           >
             {t('header.switchTo')}
-            <Image
+            <MyImage
               alt={`lang-${otherLanguage}`}
               src={`svg/flag-${otherLanguage}.svg`}
-              width={'2em'}
+              width={24}
+              height={24}
+              blurhash={'U00000fQfQfQfQfQfQfQfQfQfQfQfQfQfQfQ'}
+              style={{ width: '2em' }}
             />
           </div>
         </div>
