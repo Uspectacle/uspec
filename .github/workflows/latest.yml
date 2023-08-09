@@ -29,6 +29,12 @@ jobs:
         with:
           node-version: 19
 
+      - name: print pwd
+        run: pwd
+
+      - name: print ls
+        run: ls
+
       - name: Load Yarn cache
         uses: actions/cache@v3
         with:
@@ -37,11 +43,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: print data
-        run: |
-          echo "this is a test"
-          pwd
-          ls
+      - name: print pwd
+        run: pwd
+
+      - name: print ls
+        run: ls
 
       - name: Install Node Module
         run: yarn
