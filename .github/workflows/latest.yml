@@ -16,9 +16,6 @@ jobs:
     env:
       NEXT_PUBLIC_NODE_ENV: stagging
       NEXT_PUBLIC_API_URL:
-    defaults:
-      run:
-        working-directory: apps/frontend
 
     steps:
       - name: Checkout
@@ -35,8 +32,8 @@ jobs:
       - name: test ls
         run: ls
 
-      - name: Install Yarn, PM2
-        run: npm install -g yarn pm2
+      #   - name: Install Yarn, PM2
+      #     run: npm install -g yarn pm2
 
       - name: Load Yarn cache
         uses: actions/cache@v3
@@ -54,5 +51,12 @@ jobs:
           echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
           echo "    NEXT_PUBLIC_API_URL: " >> .ebextensions/options.config
 
-    #   - name: Build,Start and Restart Web Application
-    #     run: RUNNER_TRACKING_ID="" && yarn build && pm2 start yarn -- start && pm2 restart yarn
+      - name: Change directory
+        run:
+        working-directory: apps/frontend
+
+      - name: ls
+        run: ls
+
+      - name: Build,Start and Restart Web Application
+        run: RUNNER_TRACKING_ID="" && yarn build && pm2 start yarn -- start && pm2 restart yarn
