@@ -37,6 +37,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: print data
+        run: |
+          echo "this is a test"
+          pwd
+          ls
+
       - name: Install Node Module
         run: yarn
 
