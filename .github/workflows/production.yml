@@ -1,21 +1,15 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions /language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Deploy frontend stagging to EC2 Instance
+name: Deploy production
 
 on:
   push:
     branches: ['main']
 
-env:
-  test: test
-
 jobs:
   frontend:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_NODE_ENV: stagging
-      NEXT_PUBLIC_API_URL:
+      NEXT_PUBLIC_NODE_ENV: production
+      NEXT_PUBLIC_API_URL: ${{ secrets.PRODUCTION_API_URL }}
 
     steps:
       - name: Checkout
@@ -31,8 +25,7 @@ jobs:
         with:
           path: 'node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install Node Module
         run: yarn
@@ -50,9 +43,6 @@ jobs:
 
       - name: Generate deployment package
         run: cd dist/apps/frontend && zip -r deployfrontend.zip . -x '*.git*'
-
-      - name: ls
-        run: ls
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
