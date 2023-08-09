@@ -63,4 +63,4 @@ jobs:
           environment_name: Uspec-env
           version_label: uspec-${{ github.run_number }}
           region: eu-west-3
-          deployment_package: deployfrontend.zip
+          deployment_package: dist/apps/frontend/deployfrontend.zip
