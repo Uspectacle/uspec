@@ -32,7 +32,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}
@@ -45,7 +45,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}
@@ -58,7 +58,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}
@@ -71,7 +71,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}
@@ -84,7 +84,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}
@@ -97,7 +97,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}
@@ -110,7 +110,7 @@ const posts = [
     href: '/resume',
     image: (
       <MyImage
-        alt="html"
+        alt="comingsoon"
         src="/image/comingsoon.jpeg"
         width={548}
         height={550}

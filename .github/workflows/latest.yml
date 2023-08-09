@@ -1,0 +1,57 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions /language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Deploy frontend stagging to EC2 Instance
+
+on:
+  push:
+    branches: ['main']
+
+env:
+  test: test
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_NODE_ENV: stagging
+      NEXT_PUBLIC_API_URL:
+    defaults:
+      run:
+        working-directory: frontend
+
+    strategy:
+      matrix:
+        node-version: [19.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/ releases/
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Yarn, PM2
+        run: npm install -g yarn pm2
+
+      - name: Load Yarn cache
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Node Module
+        run: yarn
+
+      - name: Add env variables
+        run: |
+          echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
+          echo "    NEXT_PUBLIC_API_URL: " >> .ebextensions/options.config
+
+      - name: Build,Start and Restart Web Application
+        run: RUNNER_TRACKING_ID="" && yarn build && pm2 start yarn -- start && pm2 restart yarn

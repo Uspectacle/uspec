@@ -7,45 +7,45 @@ on:
 
 jobs:
   frontend:
-    runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_NODE_ENV: production
-      NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}
-    defaults:
-      run:
-        working-directory: frontend
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 19
-      - name: Load Yarn cache
-        uses: actions/cache@v3
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Dependencies installation
-        run: yarn
-      - name: Add env variables
-        run: |
-          echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
-          echo "    NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}" >> .ebextensions/options.config
-      - name: Generate build
-        run: npx nx build frontend --prod
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-west-3
-      - name: Deploy Website
-        run: aws s3 sync ./dist s3://default-uspec-webapp --delete
-      - name: Invalidate Cloudfront
-        run: aws cloudfront create-invalidation --distribution-id E3QRLIMP7LHEA3 --paths "/*"
+    # runs-on: ubuntu-latest
+    # env:
+    #   NEXT_PUBLIC_NODE_ENV: production
+    #   NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}
+    # defaults:
+    #   run:
+    #     working-directory: frontend
+    # steps:
+    #   - name: Checkout
+    #     uses: actions/checkout@v3
+    #   - name: Use Node.js
+    #     uses: actions/setup-node@v3
+    #     with:
+    #       node-version: 19
+    #   - name: Load Yarn cache
+    #     uses: actions/cache@v3
+    #     with:
+    #       path: '**/node_modules'
+    #       key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+    #       restore-keys: |
+    #         ${{ runner.os }}-yarn-
+    #   - name: Dependencies installation
+    #     run: yarn
+    #   - name: Add env variables
+    #     run: |
+    #       echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
+    #       echo "    NEXT_PUBLIC_API_URL: ${{ secrets.API_URL }}" >> .ebextensions/options.config
+    #   - name: Generate build
+    #     run: npx nx build frontend --prod
+    #   - name: Configure AWS Credentials
+    #     uses: aws-actions/configure-aws-credentials@v2
+    #     with:
+    #       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #       aws-region: eu-west-3
+    #   - name: Deploy Website
+    #     run: aws s3 sync ./dist s3://default-uspec-webapp --delete
+    #   - name: Invalidate Cloudfront
+    #     run: aws cloudfront create-invalidation --distribution-id E3QRLIMP7LHEA3 --paths "/*"
 
   # backend:
   #   runs-on: self-hosted
