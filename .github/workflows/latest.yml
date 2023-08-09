@@ -51,11 +51,21 @@ jobs:
           echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
           echo "    NEXT_PUBLIC_API_URL: " >> .ebextensions/options.config
 
-      #   - name: Change directory
-      #     run: cd apps/frontend
+      - name: Generate build
+        run: npx nx build frontend --prod
 
-      #   - name: ls
-      #     run: ls
+      - name: Pick Procfile
+        run: mv Procfile_Frontend ./dist/apps/frontend/Procfile
 
-      - name: Build,Start and Restart Web Application
-        run: RUNNER_TRACKING_ID="" && yarn build && pm2 start yarn -- start && pm2 restart yarn
+      - name: Generate deployment package
+        run: cd dist/apps/frontend && zip -r deployfrontend.zip . -x '*.git*'
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-3
+
+      - name: Deploy to Elastic Beanstalk
+        run: eb deploy Uspec-env
