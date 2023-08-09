@@ -26,17 +26,11 @@ jobs:
         with:
           node-version: 19
 
-      - name: test echo
-        run: echo 'hello'
-
-      - name: test ls
-        run: ls
-
       - name: Load Yarn cache
         uses: actions/cache@v3
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: 'node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
 
@@ -56,6 +50,9 @@ jobs:
 
       - name: Generate deployment package
         run: cd dist/apps/frontend && zip -r deployfrontend.zip . -x '*.git*'
+
+      - name: ls
+        run: ls
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
