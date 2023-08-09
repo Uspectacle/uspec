@@ -29,24 +29,30 @@ jobs:
         with:
           node-version: 19
 
-      - name: Install Yarn, PM2
-        run: npm install -g yarn pm2
+      - name: test echo
+        run: echo 'hello'
 
-      - name: Load Yarn cache
-        uses: actions/cache@v3
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+      - name: test ls
+        run: ls
 
-      - name: Install Node Module
-        run: yarn
+    #   - name: Install Yarn, PM2
+    #     run: npm install -g yarn pm2
 
-      - name: Add env variables
-        run: |
-          echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
-          echo "    NEXT_PUBLIC_API_URL: " >> .ebextensions/options.config
+    #   - name: Load Yarn cache
+    #     uses: actions/cache@v3
+    #     with:
+    #       path: '**/node_modules'
+    #       key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+    #       restore-keys: |
+    #         ${{ runner.os }}-yarn-
 
-      - name: Build,Start and Restart Web Application
-        run: RUNNER_TRACKING_ID="" && yarn build && pm2 start yarn -- start && pm2 restart yarn
+    #   - name: Install Node Module
+    #     run: yarn
+
+    #   - name: Add env variables
+    #     run: |
+    #       echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
+    #       echo "    NEXT_PUBLIC_API_URL: " >> .ebextensions/options.config
+
+    #   - name: Build,Start and Restart Web Application
+    #     run: RUNNER_TRACKING_ID="" && yarn build && pm2 start yarn -- start && pm2 restart yarn
