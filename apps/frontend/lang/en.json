@@ -1,4 +1,7 @@
 {
+  "404": {
+    "text": "Damn, this page doesn't exist !\nI will have to make it"
+  },
   "header": {
     "blog": "Blog",
     "games": "Games",

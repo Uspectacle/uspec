@@ -1,4 +1,7 @@
 {
+  "404": {
+    "text": "Mince, cette page n'existe pas !\nJe vais devoir la faire"
+  },
   "header": {
     "blog": "Blog",
     "games": "Jeux",

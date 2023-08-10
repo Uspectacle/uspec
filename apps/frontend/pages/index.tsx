@@ -1,16 +1,11 @@
 import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
-import { Layout } from '../component/Layouts/Layout'
+import { Layout } from '../src/Layouts/Layout'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import {
-  GREEN_LIGHT,
-  GREEN_WHITE,
-  PURPLE_INTENSE,
-  WHITE
-} from '../utils/constants'
+import { GREEN_LIGHT, PURPLE_INTENSE, WHITE } from '../utils/constants'
 import Link from 'next/link'
-import { MyImage } from '../component/Utils/MyImage'
+import { MyImage } from '../src/Utils/MyImage'
 
 const Home: NextPage = () => {
   const { classes } = useStyles()

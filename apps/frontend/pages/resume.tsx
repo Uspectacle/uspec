@@ -1,14 +1,14 @@
 import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
-import { Layout } from '../component/Layouts/Layout'
+import { Layout } from '../src/Layouts/Layout'
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { GREEN_WHITE, PURPLE_INTENSE, WHITE } from '../utils/constants'
 import { useTranslation } from 'react-i18next'
-import { MyImage } from '../component/Utils/MyImage'
-import { RotatingWords } from '../component/Utils/RotatingWords'
-import { lookAgain } from '../component/Utils/LookAgain'
-import i18n from '../lang/i18n'
+import { MyImage } from '../src/Utils/MyImage'
+import { RotatingWords } from '../src/Utils/RotatingWords'
+import { lookAgain } from '../src/Utils/LookAgain'
+import i18n from '../utils/i18n'
 
 const Resume: NextPage = () => {
   const { classes } = useStyles()

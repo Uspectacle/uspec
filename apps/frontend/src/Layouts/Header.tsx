@@ -8,7 +8,7 @@ import {
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
-import i18n from '../../lang/i18n'
+import i18n from '../../utils/i18n'
 import { useTranslation } from 'react-i18next'
 import { MyImage } from '../Utils/MyImage'
 
@@ -29,7 +29,7 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
             height={154}
             blurhash={'U8BV41GyGyCCI80c#0#I0c+o;EROu2.9TlP0'}
             priority
-            style={{ width: 160 }}
+            style={{ width: 201, position: 'absolute' }}
           />
         </Link>
         <div className={classes.links}>
@@ -153,24 +153,26 @@ const useStyles = createStyles((theme) => ({
     padding: 10,
     height: '2em',
     textDecoration: 'none',
-    color: 'white',
     fontSize: 15,
     fontWeight: 500,
     cursor: 'pointer',
     borderRadius: 10,
+    color: WHITE,
+    transition: 'color 0.3s',
+    '&:hover': {
+      color: GREEN_LIGHT
+    },
     [theme.fn.smallerThan(600)]: {
       width: '90%',
       padding: 5
     }
   },
   logo: {
-    padding: 10,
+    width: 201,
+    height: 120,
     textDecoration: 'none',
-    color: 'white',
-    fontSize: 15,
     display: 'flex',
-    alignItems: 'center',
-    fontWeight: 500
+    alignItems: 'center'
   },
   summary: {
     backgroundColor: GREEN_WHITE,

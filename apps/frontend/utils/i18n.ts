@@ -1,12 +1,12 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import appEn from './en.json'
-import appFr from './fr.json'
+import appEn from '../lang/en.json'
+import appFr from '../lang/fr.json'
 
 i18n.use(initReactI18next).init({
   compatibilityJSON: 'v3',
   resources: { en: { app: appEn }, fr: { app: appFr } },
-  debug: true, // TODO only for testing
+  debug: !(process.env.NEXT_PUBLIC_NODE_ENV === 'production'),
   ns: ['app'],
   fallbackLng: 'en',
   lng: global?.navigator?.language || '',

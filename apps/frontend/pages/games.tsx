@@ -1,6 +1,6 @@
 // import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
-import { Layout } from '../component/Layouts/Layout'
+import { Layout } from '../src/Layouts/Layout'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
