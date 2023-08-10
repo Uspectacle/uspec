@@ -18,7 +18,7 @@ api.interceptors.request.use(
       `${config.method?.toUpperCase() || ''} - ${config.baseURL || ''}/${
         config.url || ''
       }`
-    ) // TODO only for testing
+    )
     delete api.defaults.headers.common.Authorization
     return config
   },

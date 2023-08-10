@@ -40,4 +40,3 @@ export const socials = (link: string, title: string, text: string) => [
     icon: '/icon/sms.svg'
   }
 ]
-// TODO
