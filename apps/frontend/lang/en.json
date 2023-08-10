@@ -27,7 +27,7 @@
     "summary": "Greetings, I am Mario Larsen.\nWelcome to my online blog.\nWould you like to gain deeper insights into my journey ?",
     "downloadAsPDF": "Download as PDF",
     "mario-larsen": "MARIO LARSEN",
-    "subTitle": "Youthful and accomplished French Engineer,\nactively seeking enriching opportunities in AI research\n Web and Mobile Development, and Electronic Design",
+    "subTitle": "Youthful and accomplished French Engineer,\nactively seeking enriching opportunities in AI research,\nWeb and Mobile Development, and Electronic Design",
     "activity": "Activity: ",
     "objective": "Objective: ",
     "result": "Result: ",
@@ -78,7 +78,7 @@
       "name": "ENSEA Laboratories, Themis",
       "subName": "7-Month Research Project",
       "city": "France, Cergy",
-      "text": "Distinguished collaborative project assigned to an cohort of ENSEA students across three years of the engineering cycle",
+      "text": "Distinguished collaborative project assigned to a cohort of ENSEA students across three years of the engineering cycle",
       "objective": "Championed the end-to-end design of an innovative electronic musical instrument, encompassing synthesizer and drum-machine functionalities",
       "result": "Independently executed three PCB designs for the synthesizer's core board, demonstrating technical prowess and autonomous initiative"
     },
@@ -101,10 +101,10 @@
     "interest": "PERSONAL INTERESTS",
     "interests": {
       "look-at-it-again": "Look at it again ",
-      "text": "but passionate about continuous learning, proactive creation, and effective knowledge sharing, my diverse interests include "
+      "text": "yet passionate about continuous learning, proactive creation, and effective knowledge sharing, my diverse interests include "
     },
     "interestsList": {
-      "implementation": "AI implementation, futurism and doomsday prediction",
+      "implementation": "AI implementation, futurism, and doomsday prediction",
       "development": "Mobile game and web-app design, development, and innovation",
       "psl": "Conducting engaging and enlightening PSL presentations",
       "film": "Engaging in film direction, production, critique, and collaboration for academic and personal projects",

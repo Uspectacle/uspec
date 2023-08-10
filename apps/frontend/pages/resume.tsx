@@ -715,7 +715,8 @@ const useStyles = createStyles((theme) => ({
       alignItems: 'center',
       padding: 5,
       borderRadius: 5,
-      margin: 5
+      margin: 5,
+      fontSize: '0.9em'
     }
   },
   gridLang: {
