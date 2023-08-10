@@ -1,5 +1,5 @@
 import { createStyles } from '@mantine/core'
-import { GREEN_LIGHT, PURPLE_INTENSE } from '../../utils/constants'
+import { GREEN_LIGHT, PURPLE_INTENSE, WHITE } from '../../utils/constants'
 import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
@@ -82,7 +82,6 @@ const useStyles = createStyles((theme) => ({
     boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
     padding: 10,
     textDecoration: 'none',
-    color: 'white',
     fontSize: 15,
     height: 30,
     display: 'flex',
@@ -90,6 +89,11 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     fontWeight: 500,
     borderRadius: 10,
+    color: WHITE,
+    transition: 'color 0.3s',
+    '&:hover': {
+      color: GREEN_LIGHT
+    },
     [theme.fn.smallerThan(600)]: {
       width: '90%',
       padding: 5

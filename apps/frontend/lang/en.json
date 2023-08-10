@@ -6,95 +6,112 @@
     "switchTo": "Passer en"
   },
   "footer": {
-    "contactMe": "Contact-me :",
-    "resume": "My Resume"
+    "contactMe": "Contact Me:",
+    "resume": "Resume"
   },
   "coming-soon": "Coming Soon",
+  "posts": {
+    "my-resume": {
+      "title": "My Resume",
+      "text": "For an in-depth exploration of my background and potential as a professional candidate, delve into my detailed experiences, education, and skills"
+    },
+    "coming-soon": {
+      "title": "Upcoming Content",
+      "text": "Stay tuned for an array of engaging articles on games, tools, and more! Anticipate new content, possibly delivered on a weekly basis"
+    }
+  },
   "resume": {
-    "summary": "Hi, my name is Mario Larsen.\nThis is my blog.\nWant to know more about me ?",
+    "summary": "Greetings, I am Mario Larsen.\nWelcome to my online blog.\nWould you like to gain deeper insights into my journey ?",
     "downloadAsPDF": "Download as PDF",
-    "subTitle": "Young and talented French Engineer\nlooking for an interesting job in the field of AI research,\nWeb and Mobile development or Electronic design",
-    "activity": "Activity : ",
-    "objective": "Objective : ",
-    "result": "Result : ",
+    "mario-larsen": "MARIO LARSEN",
+    "subTitle": "Youthful and accomplished French Engineer,\nactively seeking enriching opportunities in AI research\n Web and Mobile Development, and Electronic Design",
+    "activity": "Activity: ",
+    "objective": "Objective: ",
+    "result": "Result: ",
     "education": "EDUCATION",
     "ensea": {
-      "name": "ENSEA, École Nationale Supérieur de l'Électronique et de ses applications",
-      "subName": "3-year Master's program",
+      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses applications",
+      "subName": "3-year Master's Program",
       "city": "France, Cergy",
-      "text": "Leading French graduate school in electrical engineering, computer science and communication network.\nMore than 10 school professional projects were completed, such as Reinforcement Learning Solver or Relation Network Video Classifier",
-      "result": "Graduated in major signal and artificial intelligence"
+      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded over 10 ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
+      "result": "Graduated with honors, majoring in signal processing and artificial intelligence"
     },
     "civ": {
       "name": "CIV, Centre International de Valbonne",
-      "subName": "2-year preparatory class",
+      "subName": "2-year Preparatory Program",
       "city": "France, Valbonne",
-      "text": "Intensive courses to prepare nationwide competitive exams for the top French engineering schools (GEs)",
-      "result": "Qualified for Centrale-Supélec, Mines-Télécom and Concours Communs Polytechniques schools"
+      "text": "Intensive preparatory program dedicated for competitive exams at top-tier French engineering schools (Grandes Écoles)",
+      "result": "Attained qualification for Centrale-Supélec, Mines-Télécom, and Concours Communs Polytechniques schools"
     },
     "parc": {
       "name": "Parc Impérial",
-      "subName": "High-School",
+      "subName": "High School",
       "city": "France, Nice",
-      "result": "Baccalaureate specialized in sciences - equivalent A-levels in math with honors"
+      "result": "Received Baccalaureate specializing in sciences with an emphasis on advanced mathematics, achieving honors equivalent to A-levels"
     },
-    "experience": "EXPERIENCES",
+    "experience": "EXPERIENCE",
     "galadrim": {
       "name": "GALADRIM",
-      "subName": "6 month contract",
+      "subName": "6-Month Contract",
       "city": "France, Paris",
-      "activity": "Web-Devolper Full-Stack Web Mobile",
-      "result": "7 web and mobile application built and deployed"
+      "activity": "Full-Stack Web and Mobile Developer",
+      "result": "Developed and deployed 7 sophisticated web and mobile applications, showcasing versatility and proficiency"
     },
     "cea": {
       "name": "CEA-LIST / DIASI: AI Department in Laboratory",
-      "subName": "6 month internship",
+      "subName": "6-Month Internship",
       "city": "France, Saclay",
-      "objective": "Unifying detection and re-identification in a single deep network architecture for multiple object tracking",
-      "result": "Our new visual transformer algorithm simplifies current approaches while performing better than the baseline model"
+      "objective": "Led the unification of detection and re-identification within an innovative deep network architecture for multifaceted object tracking",
+      "result": "Championed a groundbreaking visual transformer algorithm, surpassing baseline models in performance"
     },
     "ljubljana": {
       "name": "University of Ljubljana",
-      "subName": "4 month internship",
+      "subName": "4-Month Internship",
       "city": "Slovenia, Ljubljana",
-      "objective": "Virtual Try-On Networks independent study and implementation",
-      "result": "Technical and popularized report around CP-VTON failure, quality, measurement, dataset, and update"
+      "objective": "Conducted an independent, comprehensive study and implementation of Virtual Try-On Networks",
+      "result": "Generated a meticulously detailed technical report addressing CP-VTON failures, quality assessments, dataset analyses, and innovative updates"
     },
     "themis": {
       "name": "ENSEA Laboratories, Themis",
-      "subName": "7 month research project",
+      "subName": "7-Month Research Project",
       "city": "France, Cergy",
-      "text": "Themis is a collaborative project theme proposed to a group of about a dozen ENSEA students from the 3 years of the engineering cycle",
-      "objective": "Design from A to Z an electronic musical instrument of synthesizer/drum-machine type",
-      "result": "3 PCB designs of the synthesizer main board realized and printed in autonomy"
+      "text": "Distinguished collaborative project assigned to an cohort of ENSEA students across three years of the engineering cycle",
+      "objective": "Championed the end-to-end design of an innovative electronic musical instrument, encompassing synthesizer and drum-machine functionalities",
+      "result": "Independently executed three PCB designs for the synthesizer's core board, demonstrating technical prowess and autonomous initiative"
     },
     "foreign": "FOREIGN LANGUAGES",
     "french": {
       "name": "French",
-      "level": "native speaker"
+      "level": "Native Speaker"
     },
     "english": {
       "name": "English",
-      "level": "fluent speaker",
+      "level": "Fluent Speaker",
       "bonus": "TOEIC - Jan. 2019"
     },
     "spanish": {
       "name": "Spanish",
-      "level": "intermediate"
+      "level": "Intermediate"
     },
-    "skills": "IT SKILLS",
+    "skills": "TECHNICAL SKILLS",
     "programming": "PROGRAMMING LANGUAGES",
-    "interests": "PERSONAL INTERESTS",
+    "interest": "PERSONAL INTERESTS",
+    "interests": {
+      "look-at-it-again": "Look at it again ",
+      "text": "but passionate about continuous learning, proactive creation, and effective knowledge sharing, my diverse interests include "
+    },
     "interestsList": {
-      "implementation": "AI implementation and doomsday prediction",
-      "development": "mobile game and web-app design and development",
-      "psl": "weekly PSL presentation and vulgarization",
-      "film": "film directing, making, reviewing and writing for school and friends",
-      "delegate": "school delegate and secretary",
-      "running": "running a lot as well as cycling",
-      "association": "association key members such as president, team manager, events organization and debate master for student life, international film festival, gaming festival, public debate, international meeting and hackathon"
+      "implementation": "AI implementation, futurism and doomsday prediction",
+      "development": "Mobile game and web-app design, development, and innovation",
+      "psl": "Conducting engaging and enlightening PSL presentations",
+      "film": "Engaging in film direction, production, critique, and collaboration for academic and personal projects",
+      "delegate": "Exemplifying leadership as a dedicated school delegate and secretary",
+      "running": "Maintaining a rigorous routine of running and cycling",
+      "association": "Active participation in pivotal roles for various associations, spanning president, team manager, event organizer, and debate master for student life, international film festivals, gaming events, public debates, international conferences, and hackathons",
+      "courses": "Pursuing advanced coursework ranging from neurology and advanced mathematics to fundamental physics, poetry, and epistemology"
     },
     "skill": {
+      "i-am-good-at": "I excel at",
       "excel": "Excel",
       "docker": "Docker",
       "python": "Python",
@@ -105,30 +122,36 @@
       "assembly": "Assembly",
       "react": "React",
       "react-native": "React Native",
-      "aws-console": "AWS console",
-      "i-am-good-at": "I am good at",
+      "aws-console": "AWS Console",
       "deep-learning": "Deep Learning",
       "machine-learning": "Machine Learning",
-      "chip-design": "Chip design",
-      "board-design": "Board design",
-      "schematic-design": "Schematic design",
-      "image-processing": "Image processing",
-      "audio-processing": "Audio processing",
-      "signal-processing": "Signal processing",
+      "chip-design": "Chip Design",
+      "board-design": "Board Design",
+      "schematic-design": "Schematic Design",
+      "image-processing": "Image Processing",
+      "audio-processing": "Audio Processing",
+      "signal-processing": "Signal Processing",
       "telecommunication": "Telecommunication",
       "optimization": "Optimization",
-      "noise-reduction": "Noise reduction",
-      "modeling-languages": "Modeling languages",
-      "database-handling": "Database handling",
-      "git-handling": "Git handling",
-      "web-development": "Web development",
-      "mobile-development": "Mobile development",
-      "agile-methods": "Agile Methods",
-      "app-deployment": "App Deployment",
-      "managing-a-team": "Managing a team",
-      "managing-a-project": "Managing a project",
-      "video-processing": "Video processing"
+      "noise-reduction": "Noise Reduction",
+      "modeling-languages": "Modeling Languages",
+      "database-handling": "Database Management",
+      "git-handling": "Git Proficiency",
+      "web-development": "Web Development",
+      "mobile-development": "Mobile App Development",
+      "agile-methods": "Agile Methodologies",
+      "app-deployment": "App Deployment Strategies",
+      "managing-a-team": "Team Leadership",
+      "managing-a-project": "Project Management",
+      "video-processing": "Video Processing",
+      "SQL": "SQL",
+      "TypeScript": "TypeScript",
+      "VHDL": "VHDL",
+      "C": "C",
+      "CSS": "CSS",
+      "HTML": "HTML",
+      "JavaScript": "JavaScript",
+      "Csharp": "C#"
     }
-  },
-  "interestsList": "following advanced courses from neurology, advanced math and philosophy to fundamental physic, poetry, and epistemology"
+  }
 }

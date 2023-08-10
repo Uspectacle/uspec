@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { MyImage } from '../component/Utils/MyImage'
 import { RotatingWords } from '../component/Utils/RotatingWords'
 import { lookAgain } from '../component/Utils/LookAgain'
+import i18n from '../lang/i18n'
 
 const Resume: NextPage = () => {
   const { classes } = useStyles()
@@ -311,34 +312,35 @@ const Resume: NextPage = () => {
   const Skills = () => (
     <RotatingWords text={t('resume.skill.i-am-good-at')} words={skills} />
   )
-  const skillsList = [
-    t('resume.skill.deep-learning'),
-    t('resume.skill.machine-learning'),
-    t('resume.skill.chip-design'),
-    t('resume.skill.board-design'),
-    t('resume.skill.schematic-design'),
-    t('resume.skill.image-processing'),
-    t('resume.skill.audio-processing'),
-    t('resume.skill.signal-processing'),
-    t('resume.skill.video-processing'),
-    t('resume.skill.telecommunication'),
-    t('resume.skill.modeling-languages'),
-    t('resume.skill.optimization'),
-    t('resume.skill.noise-reduction'),
-    t('resume.skill.database-handling'),
-    t('resume.skill.git-handling'),
-    t('resume.skill.web-development'),
-    t('resume.skill.mobile-development'),
-    t('resume.skill.agile-methods'),
-    t('resume.skill.managing-a-team'),
-    t('resume.skill.managing-a-project'),
-    t('resume.skill.app-deployment')
-  ]
-  const [skills, setSkills] = useState(skillsList)
+
+  const [skills, setSkills] = useState<string[]>([])
 
   useEffect(() => {
+    const skillsList = [
+      t('resume.skill.deep-learning'),
+      t('resume.skill.machine-learning'),
+      t('resume.skill.chip-design'),
+      t('resume.skill.board-design'),
+      t('resume.skill.schematic-design'),
+      t('resume.skill.image-processing'),
+      t('resume.skill.audio-processing'),
+      t('resume.skill.signal-processing'),
+      t('resume.skill.video-processing'),
+      t('resume.skill.telecommunication'),
+      t('resume.skill.modeling-languages'),
+      t('resume.skill.optimization'),
+      t('resume.skill.noise-reduction'),
+      t('resume.skill.database-handling'),
+      t('resume.skill.git-handling'),
+      t('resume.skill.web-development'),
+      t('resume.skill.mobile-development'),
+      t('resume.skill.agile-methods'),
+      t('resume.skill.managing-a-team'),
+      t('resume.skill.managing-a-project'),
+      t('resume.skill.app-deployment')
+    ]
     setSkills(skillsList.sort(() => Math.random() - 0.5))
-  }, [])
+  }, [i18n.language])
 
   const imageStyle: React.CSSProperties = { height: '100%', aspectRatio: 1 }
 
@@ -347,7 +349,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Python"
+            alt={t('resume.skill.python')}
             src="/image/python.png"
             width={935}
             height={1024}
@@ -360,7 +362,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Matlab"
+            alt={t('resume.skill.matlab')}
             src="/image/matlab.png"
             width={897}
             height={806}
@@ -373,7 +375,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Java"
+            alt={t('resume.skill.java')}
             src="/image/java.png"
             width={512}
             height={512}
@@ -386,19 +388,19 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="JavaScript"
+            alt={t('resume.skill.JavaScript')}
             src="/image/js.png"
             width={1052}
             height={1052}
             style={imageStyle}
           />
         </div>
-        JavaScript
+        {t('resume.skill.JavaScript')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="HTML"
+            alt={t('resume.skill.HTML')}
             src="/image/html.png"
             width={512}
             height={512}
@@ -406,12 +408,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        HTML
+        {t('resume.skill.HTML')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="CSS"
+            alt={t('resume.skill.CSS')}
             src="/image/css.png"
             width={800}
             height={800}
@@ -419,12 +421,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        CSS
+        {t('resume.skill.CSS')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="C"
+            alt={t('resume.skill.C')}
             src="/image/c.png"
             width={360}
             height={405}
@@ -432,12 +434,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        C
+        {t('resume.skill.C')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="C#"
+            alt={t('resume.skill.Csharp')}
             src="/image/csharp.png"
             width={1200}
             height={1350}
@@ -445,12 +447,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        C#
+        {t('resume.skill.Csharp')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="VHDL"
+            alt={t('resume.skill.VHDL')}
             src="/image/vhdl.png"
             width={128}
             height={128}
@@ -458,12 +460,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        VHDL
+        {t('resume.skill.VHDL')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Bash"
+            alt={t('resume.skill.bash-unix')}
             src="/image/bash.png"
             width={2048}
             height={2048}
@@ -476,7 +478,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Mathematica"
+            alt={t('resume.skill.mathematica')}
             src="/image/mathematica.png"
             width={1965}
             height={2048}
@@ -489,7 +491,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Assembly"
+            alt={t('resume.skill.assembly')}
             src="/image/assembly.png"
             width={512}
             height={512}
@@ -502,7 +504,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="React"
+            alt={t('resume.skill.react')}
             src="/image/react.png"
             width={2300}
             height={2000}
@@ -515,7 +517,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="React Native"
+            alt={t('resume.skill.react-native')}
             src="/image/reactnative.png"
             width={256}
             height={300}
@@ -528,7 +530,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="AWS console"
+            alt={t('resume.skill.aws-console')}
             src="/image/aws.png"
             width={1024}
             height={613}
@@ -541,7 +543,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="TypeScript"
+            alt={t('resume.skill.TypeScript')}
             src="/image/ts.png"
             width={2048}
             height={2048}
@@ -549,12 +551,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        TypeScript
+        {t('resume.skill.TypeScript')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="SQL"
+            alt={t('resume.skill.SQL')}
             src="/image/sql.png"
             width={320}
             height={394}
@@ -562,12 +564,12 @@ const Resume: NextPage = () => {
             style={imageStyle}
           />
         </div>
-        SQL
+        {t('resume.skill.SQL')}
       </li>
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Docker"
+            alt={t('resume.skill.docker')}
             src="/image/docker.png"
             width={256}
             height={256}
@@ -580,7 +582,7 @@ const Resume: NextPage = () => {
       <li>
         <div className={classes.logo}>
           <MyImage
-            alt="Excel"
+            alt={t('resume.skill.excel')}
             src="/image/excel.png"
             width={1101}
             height={1024}
@@ -594,7 +596,7 @@ const Resume: NextPage = () => {
   )
 
   const interestsList = [
-    t('interestsList'),
+    t('resume.interestsList.courses'),
     t('resume.interestsList.implementation'),
     t('resume.interestsList.development'),
     t('resume.interestsList.psl'),
@@ -608,15 +610,16 @@ const Resume: NextPage = () => {
 
   const Interests = () => (
     <div className={classes.interest} ref={interestRef}>
-      <strong>Look at it again</strong> but I love to learn stuffs, do stuffs
-      and share stuffs like <span>{lookAgain(interestRef, interestsList)}</span>
+      <strong>{t('resume.interests.look-at-it-again')}</strong>
+      {t('resume.interests.text')}
+      <span>{lookAgain(interestRef, interestsList)}</span>
     </div>
   )
 
   return (
     <Layout summary={summary}>
       <div className={classes.container}>
-        <div className={classes.title}>MARIO LARSEN</div>
+        <div className={classes.title}>{t('resume.mario-larsen')}</div>
         <div className={classes.subTitle}>{t('resume.subTitle')}</div>
         <MyImage
           alt="myself"
@@ -643,7 +646,7 @@ const Resume: NextPage = () => {
             <ProgrammingLanguages />
           </div>
         </div>
-        <div className={classes.listTitle}>{t('resume.interests')}</div>
+        <div className={classes.listTitle}>{t('resume.interest')}</div>
         <Interests />
       </div>
     </Layout>
@@ -673,13 +676,13 @@ const useStyles = createStyles((theme) => ({
     marginTop: 10
   },
   dualContainer: {
-    [theme.fn.largerThan(760)]: {
+    [theme.fn.largerThan(1000)]: {
       display: 'flex',
       flexDirection: 'row-reverse'
     }
   },
   columnContainer: {
-    [theme.fn.largerThan(760)]: {
+    [theme.fn.largerThan(1000)]: {
       width: '50%'
     }
   },

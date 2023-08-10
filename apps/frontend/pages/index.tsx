@@ -2,126 +2,148 @@ import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
 import { Layout } from '../component/Layouts/Layout'
 import React from 'react'
-// import { useTranslation } from 'react-i18next'
-import { PURPLE_INTENSE, WHITE } from '../utils/constants'
+import { useTranslation } from 'react-i18next'
+import {
+  GREEN_LIGHT,
+  GREEN_WHITE,
+  PURPLE_INTENSE,
+  WHITE
+} from '../utils/constants'
 import Link from 'next/link'
 import { MyImage } from '../component/Utils/MyImage'
 
-const posts = [
-  {
-    title: 'My Resume',
-    text: 'If you want to know me or even hire me.\nYou can find more about me here.\nExperiences - Education - Skills.',
-    href: '/resume',
-    image: (
-      <MyImage
-        alt="myself"
-        src="/image/resumeImage.jpg"
-        width={420}
-        height={310}
-        objectFit={'cover'}
-        style={{
-          width: '100%',
-          height: '100%'
-        }}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  },
-  {
-    title: 'New article coming soon',
-    text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/',
-    image: (
-      <MyImage
-        alt="comingsoon"
-        src="/image/comingsoon.jpeg"
-        width={548}
-        height={550}
-      />
-    )
-  }
-]
-
 const Home: NextPage = () => {
   const { classes } = useStyles()
-  // const { t } = useTranslation()
+  const { t } = useTranslation()
+
+  const posts = [
+    {
+      title: t('posts.my-resume.title'),
+      text: t('posts.my-resume.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="myself"
+          src="/image/resumeImage.jpg"
+          width={420}
+          height={310}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="comingsoon"
+          src="/image/comingsoon.jpeg"
+          width={548}
+          height={550}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="comingsoon"
+          src="/image/comingsoon.jpeg"
+          width={548}
+          height={550}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="comingsoon"
+          src="/image/comingsoon.jpeg"
+          width={548}
+          height={550}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="comingsoon"
+          src="/image/comingsoon.jpeg"
+          width={548}
+          height={550}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="comingsoon"
+          src="/image/comingsoon.jpeg"
+          width={548}
+          height={550}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/resume',
+      image: (
+        <MyImage
+          alt="comingsoon"
+          src="/image/comingsoon.jpeg"
+          width={548}
+          height={550}
+          objectFit={'cover'}
+          style={{
+            width: '100%',
+            height: '100%'
+          }}
+        />
+      )
+    }
+  ]
 
   return (
     <Layout summary={undefined}>
@@ -163,11 +185,12 @@ const useStyles = createStyles(() => ({
       textAlign: 'center',
       flexDirection: 'column',
       boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
-      width: 400,
+      height: 120,
+      width: 450,
       justifyContent: 'space-between',
       alignItems: 'center',
       margin: 10,
-      backgroundColor: WHITE,
+      backgroundColor: GREEN_LIGHT,
       borderRadius: 10,
       overflow: 'hidden'
     }
@@ -176,18 +199,26 @@ const useStyles = createStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     textDecoration: 'none',
-    width: '100%'
+    height: '100%',
+    width: '100%',
+    backgroundColor: WHITE,
+    opacity: 1,
+    transition: 'opacity 0.3s',
+    '&:hover': {
+      opacity: 0.9
+    }
   },
   image: {
-    width: 100,
-    height: 100,
+    aspectRatio: '1',
+    height: '100%',
     objectFit: 'cover'
   },
   infos: {
     boxSizing: 'border-box',
     padding: 10,
-    height: 100,
-    width: 300,
+    height: '100%',
+    width: '100%',
+    justifyContent: 'space-between',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column'
