@@ -7,7 +7,7 @@ import i18n from '../../lang/i18n'
 import { useTranslation } from 'react-i18next'
 import { MyImage } from '../Utils/MyImage'
 
-export function Header({ children }) {
+export function Header({ children }: { children?: JSX.Element | undefined }) {
   const { classes } = useStyles()
   const router = useRouter()
   const { t } = useTranslation()
@@ -19,10 +19,11 @@ export function Header({ children }) {
         <Link href={'/'} className={classes.logo}>
           <MyImage
             alt="logo"
-            src="/logo.png"
+            src="/image/logo.png"
             width={201}
             height={154}
             blurhash={'U8BV41GyGyCCI80c#0#I0c+o;EROu2.9TlP0'}
+            priority
             style={{ width: 160 }}
           />
         </Link>
@@ -32,7 +33,7 @@ export function Header({ children }) {
               {t('header.blog')}
             </div>
           </Link>
-          <Link href={'/games'} className={classes.link} passHref>
+          {/* <Link href={'/games'} className={classes.link} passHref>
             <div
               style={'/games' === router.pathname ? { color: GREEN_LIGHT } : {}}
             >
@@ -45,7 +46,7 @@ export function Header({ children }) {
             >
               {t('header.tools')}
             </div>
-          </Link>
+          </Link> */}
           <div
             key={`lang-${otherLanguage}`}
             className={classes.lang}
@@ -109,7 +110,8 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderRadius: 10,
-    width: 320,
+    marginLeft: 20,
+    // width: 320,
     [theme.fn.smallerThan(600)]: {
       flexDirection: 'column',
       width: 160,

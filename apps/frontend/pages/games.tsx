@@ -1,16 +1,20 @@
-import { createStyles } from '@mantine/core'
+// import { createStyles } from '@mantine/core'
 import { NextPage } from 'next'
 import { Layout } from '../component/Layouts/Layout'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 const Games: NextPage = () => {
-  const { classes } = useStyles()
+  // const { classes } = useStyles()
   const { t } = useTranslation()
 
-  return <Layout summary={undefined}>🛠️ {t('coming-soon')} 🛠️</Layout>
+  return (
+    <Layout>
+      <>🛠️ {t('coming-soon')} 🛠️</>
+    </Layout>
+  )
 }
 
-const useStyles = createStyles((theme) => ({}))
+// const useStyles = createStyles((theme) => ({}))
 
 export default Games

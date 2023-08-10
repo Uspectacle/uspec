@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { Layout } from '../component/Layouts/Layout'
 import React from 'react'
 // import { useTranslation } from 'react-i18next'
-import { GREEN_WHITE, PURPLE_INTENSE, WHITE } from '../utils/constants'
+import { PURPLE_INTENSE, WHITE } from '../utils/constants'
 import Link from 'next/link'
 import { MyImage } from '../component/Utils/MyImage'
 
@@ -18,8 +18,8 @@ const posts = [
         src="/image/resumeImage.jpg"
         width={420}
         height={310}
+        objectFit={'cover'}
         style={{
-          objectFit: 'cover',
           width: '100%',
           height: '100%'
         }}
@@ -55,7 +55,7 @@ const posts = [
   {
     title: 'New article coming soon',
     text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
+    href: '/',
     image: (
       <MyImage
         alt="comingsoon"
@@ -68,7 +68,7 @@ const posts = [
   {
     title: 'New article coming soon',
     text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
+    href: '/',
     image: (
       <MyImage
         alt="comingsoon"
@@ -81,7 +81,7 @@ const posts = [
   {
     title: 'New article coming soon',
     text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
+    href: '/',
     image: (
       <MyImage
         alt="comingsoon"
@@ -94,7 +94,7 @@ const posts = [
   {
     title: 'New article coming soon',
     text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
+    href: '/',
     image: (
       <MyImage
         alt="comingsoon"
@@ -107,7 +107,7 @@ const posts = [
   {
     title: 'New article coming soon',
     text: 'Soon you will see games, tools and more ! \nA new article every week maybe',
-    href: '/resume',
+    href: '/',
     image: (
       <MyImage
         alt="comingsoon"
@@ -126,8 +126,8 @@ const Home: NextPage = () => {
   return (
     <Layout summary={undefined}>
       <ul className={classes.list}>
-        {posts.map(({ title, text, href, image }) => (
-          <li>
+        {posts.map(({ title, text, href, image }, index) => (
+          <li key={`post-${index}`}>
             <Link
               href={href}
               rel={'noreferrer'}

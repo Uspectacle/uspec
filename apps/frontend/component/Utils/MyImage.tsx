@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 
 type PropsMyImage = React.ComponentProps<typeof Image> & {
   blurhash?: string | undefined
+  objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | undefined
 }
 
 export const MyImage = ({
@@ -13,7 +14,9 @@ export const MyImage = ({
   src,
   width,
   height,
-  style
+  style,
+  priority,
+  objectFit = 'contain'
 }: PropsMyImage) => {
   const [imageLoaded, setImageLoaded] = useState(true)
 
@@ -32,10 +35,11 @@ export const MyImage = ({
           fill={!width}
           height={height}
           onLoad={() => setImageLoaded(true)}
+          priority={priority}
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover'
+            objectFit
           }}
         />
       </div>
@@ -53,7 +57,7 @@ export const MyImage = ({
           width: '100%',
           height: '100%',
           zIndex: 1,
-          objectFit: 'cover'
+          objectFit
         }}
       >
         <Blurhash
@@ -80,10 +84,11 @@ export const MyImage = ({
           fill={!width}
           height={height}
           onLoad={() => setImageLoaded(true)}
+          priority={priority}
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover'
+            objectFit
           }}
         />
       </div>

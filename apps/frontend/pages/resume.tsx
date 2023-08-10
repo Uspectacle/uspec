@@ -340,6 +340,8 @@ const Resume: NextPage = () => {
     setSkills(skillsList.sort(() => Math.random() - 0.5))
   }, [])
 
+  const imageStyle: React.CSSProperties = { height: '100%', aspectRatio: 1 }
+
   const ProgrammingLanguages = () => (
     <ul className={classes.grid}>
       <li>
@@ -350,7 +352,7 @@ const Resume: NextPage = () => {
             width={935}
             height={1024}
             blurhash={'UPIOH{0?04It1AIv~0t304^Zi]jE=;$_4?Rk'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.python')}
@@ -363,7 +365,7 @@ const Resume: NextPage = () => {
             width={897}
             height={806}
             blurhash={'UMEw~:3W1O}U9_M|,.$~56+GICEkxbTJx[o|'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.matlab')}
@@ -376,7 +378,7 @@ const Resume: NextPage = () => {
             width={512}
             height={512}
             blurhash={'U89jAjNb01-5_#R*2_%06ASh]$$%1iR*}9w['}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.java')}
@@ -388,7 +390,7 @@ const Resume: NextPage = () => {
             src="/image/js.png"
             width={1052}
             height={1052}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         JavaScript
@@ -401,7 +403,7 @@ const Resume: NextPage = () => {
             width={512}
             height={512}
             blurhash={'UNQPmCt700rr}skC+^niHXaycsbH;gi_o0kX'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         HTML
@@ -414,7 +416,7 @@ const Resume: NextPage = () => {
             width={800}
             height={800}
             blurhash={'UJE3l,Mz00-;%QWBR?t602t6?XIpR?t5j]Rn'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         CSS
@@ -427,7 +429,7 @@ const Resume: NextPage = () => {
             width={360}
             height={405}
             blurhash={'UPF%DX?b00Iq%%j]Ria}00D%r:%1ogWBRij['}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         C
@@ -440,7 +442,7 @@ const Resume: NextPage = () => {
             width={1200}
             height={1350}
             blurhash={'UUJR5%?I00RV?Kj]R$f84mE0Imt6t7WVRij['}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         C#
@@ -453,7 +455,7 @@ const Resume: NextPage = () => {
             width={128}
             height={128}
             blurhash={'UHFiR{xm03WGD*?YIJ054rxt-,M}~nD+%F--'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         VHDL
@@ -466,7 +468,7 @@ const Resume: NextPage = () => {
             width={2048}
             height={2048}
             blurhash={'UaJ[I-~q004n?bM{IU%M4n9ZWBxuIUt7t7M{'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.bash-unix')}
@@ -479,7 +481,7 @@ const Resume: NextPage = () => {
             width={1965}
             height={2048}
             blurhash={'UALdlysn00oLxGfQWpbH00WpdBWVoLf6XSj['}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.mathematica')}
@@ -492,7 +494,7 @@ const Resume: NextPage = () => {
             width={512}
             height={512}
             blurhash={'U00000fQfQfQfQfQfQfQfQfQfQfQfQfQfQfQ'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.assembly')}
@@ -505,7 +507,7 @@ const Resume: NextPage = () => {
             width={2300}
             height={2000}
             blurhash={'U28aj6uP00k?t-fjadfk00kDD4f+o}fkaKjt'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.react')}
@@ -518,7 +520,7 @@ const Resume: NextPage = () => {
             width={256}
             height={300}
             blurhash={'UACP@g~q0000_3-;Rj0000D%D%-;4nayIU~q'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.react-native')}
@@ -531,7 +533,7 @@ const Resume: NextPage = () => {
             width={1024}
             height={613}
             blurhash={'UYCE:joLazj[15WXoKa}}ooJR-js9^ayxFay'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.aws-console')}
@@ -544,7 +546,7 @@ const Resume: NextPage = () => {
             width={2048}
             height={2048}
             blurhash={'UDC[3F4=0MWZ03-.%KfR02of-.of~oIpIVWC'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         TypeScript
@@ -557,7 +559,7 @@ const Resume: NextPage = () => {
             width={320}
             height={394}
             blurhash={'UX4OTyflpffladfQkDfQaIfPkEfRe.fQkDfQ'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         SQL
@@ -570,7 +572,7 @@ const Resume: NextPage = () => {
             width={256}
             height={256}
             blurhash={'UJAAYB%P4mIT%CoYN3Rp00M^-@t69SRs%Dxr'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.docker')}
@@ -583,7 +585,7 @@ const Resume: NextPage = () => {
             width={1101}
             height={1024}
             blurhash={'UO6w;[z{ofM{qCZ*jIafIUIBVtxHbtayafjG'}
-            style={{ width: '5em' }}
+            style={imageStyle}
           />
         </div>
         {t('resume.skill.excel')}
@@ -622,6 +624,7 @@ const Resume: NextPage = () => {
           width={3941}
           height={2556}
           blurhash={'L*MQq+RPx]%g~qWBWBtRX9WBj[V['}
+          objectFit={'cover'}
           style={{ width: '100%' }}
         />
         <div className={classes.listTitle}>{t('resume.education')}</div>
@@ -734,7 +737,8 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     height: '4em',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingBottom: 5
   },
   item: {
     display: 'flex',

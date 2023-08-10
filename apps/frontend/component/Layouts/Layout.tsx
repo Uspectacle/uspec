@@ -4,7 +4,13 @@ import { createStyles } from '@mantine/core'
 import { BACKGROUND_COLOR } from '../../utils/constants'
 import React from 'react'
 
-export function Layout({ summary, children }) {
+export function Layout({
+  summary,
+  children
+}: {
+  summary?: JSX.Element | undefined
+  children?: JSX.Element | undefined
+}) {
   const { classes } = useStyles()
 
   return (

@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify'
 import { I18nextProvider } from 'react-i18next'
 import 'react-toastify/dist/ReactToastify.css'
 import 'dayjs/locale/fr'
-import './styles.css'
+import '../utils/styles.css'
 import i18n from '../lang/i18n'
 
 function CustomApp({ Component, pageProps }: AppProps) {
