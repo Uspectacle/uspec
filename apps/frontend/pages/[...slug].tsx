@@ -8,7 +8,7 @@ import { MyImage } from '../src/Utils/MyImage'
 import { createStyles } from '@mantine/core'
 import { PURPLE_INTENSE, WHITE } from '../utils/constants'
 
-const Tools: NextPage = () => {
+const Page404: NextPage = () => {
   const { t } = useTranslation()
   const { classes } = useStyles()
 
@@ -55,4 +55,4 @@ const useStyles = createStyles(() => ({
   }
 }))
 
-export default Tools
+export default Page404
