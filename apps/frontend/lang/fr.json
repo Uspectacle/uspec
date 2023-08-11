@@ -9,7 +9,7 @@
     "switchTo": "Switch to"
   },
   "footer": {
-    "contactMe": "Contactez Moi :",
+    "contactMe": "Contactez-Moi :",
     "resume": "Curriculum Vitae"
   },
   "coming-soon": "Bientôt Disponible",
@@ -36,7 +36,7 @@
       "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses applications",
       "subName": "Programme de Master de 3 ans",
       "city": "France, Cergy",
-      "text": "Institution prestigieuse spécialisée en génie électrique, informatique et réseaux de communication. J'ai dirigé plus de 10 projets ambitieux, dont un solver en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
+      "text": "Institution prestigieuse spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé plus de 10 projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
       "result": "Diplômé avec mention, spécialisation en traitement du signal et en intelligence artificielle"
     },
     "civ": {
@@ -65,7 +65,7 @@
       "subName": "Stage de 6 mois",
       "city": "France, Saclay",
       "objective": "Conduite de l'unification de la détection et de la ré-identification au sein d'une architecture innovante de réseau profond pour le suivi d'objets multifacettes",
-      "result": "Champion d'un algorithme de transformateur visuel révolutionnaire, surpassant les modèles de base à la fois en performance et en simplicité"
+      "result": "Réalisation d'un algorithme de transformer visuel révolutionnaire, surpassant les modèles de base en performance"
     },
     "ljubljana": {
       "name": "Université de Ljubljana",
@@ -79,39 +79,39 @@
       "subName": "Projet de Recherche de 7 mois",
       "city": "France, Cergy",
       "text": "Projet collaboratif distingué attribué à une cohorte d'étudiants ENSEA sur trois ans du cycle d'ingénierie",
-      "objective": "Porté l'élaboration d'un instrument musical électronique innovant, englobant les fonctionnalités de synthétiseur et de boîte à rythmes",
+      "objective": "Porté l'élaboration d'un instrument musical électronique innovant, englobant toutes les fonctionnalités des synthétiseurs",
       "result": "Réalisation autonome de trois conceptions de PCB pour la carte principale du synthétiseur, démontrant une maîtrise technique et une initiative autonome"
     },
     "foreign": "LANGUES ÉTRANGÈRES",
     "french": {
       "name": "Français",
-      "level": "Langue Maternelle"
+      "level": "Natif"
     },
     "english": {
       "name": "Anglais",
-      "level": "Parlant Couramment",
+      "level": "Bilingue",
       "bonus": "TOEIC - Janv. 2019"
     },
     "spanish": {
       "name": "Espagnol",
-      "level": "Compétence Intermédiaire"
+      "level": "Intermédiaire"
     },
     "skills": "COMPÉTENCES TECHNIQUES",
-    "programming": "Langages de Programmation",
+    "programming": "LANGAGES DE PROGRAMMATION",
     "interest": "INTÉRÊTS PERSONNELS",
     "interests": {
       "look-at-it-again": "Regardez y de nouveau ",
       "text": "mais passionné par l'apprentissage continu, la création proactive et le partage efficace des connaissances, mes intérêts diversifiés incluent "
     },
     "interestsList": {
-      "implementation": "Implémentation en IA, prospective futuriste et prédiction apocalyptique",
+      "implementation": "Implémentation d'IA, prospective futuriste et prédiction apocalyptique",
       "development": "Conception, développement et innovation de jeux mobiles et d'applications Web",
       "psl": "Présentations PSL engageantes et éclairantes",
       "film": "Participation à la réalisation, à la production, à la critique et à la collaboration cinématographiques pour des projets académiques et personnels",
       "delegate": "Leadership en tant que délégué scolaire dévoué et secrétaire",
       "running": "Maintien d'une routine rigoureuse de course à pied et de cyclisme",
-      "association": "Participation active à des rôles clés pour diverses associations, couvrant président, gestionnaire d'équipe, organisateur d'événements et maître de débats pour la vie étudiante, les festivals de cinéma internationaux, les événements de jeux, les débats publics, les conférences internationales et les hackathons",
-      "courses": "Poursuite de cours avancés allant de la neurologie et des mathématiques avancées à la physique fondamentale, à la poésie et à l'épistémologie"
+      "association": "Participation active à des rôles clés pour diverses associations, couvrant président, gestionnaire d'équipe, organisateur d'événements et maître de débats pour vie étudiante, festivals de cinéma internationaux, conventions, débats publics, conférences internationales et hackathons",
+      "courses": "Poursuite de cours avancés allant de la neurologie et des mathématiques avancées, à la physique fondamentale, à la poésie et à l'épistémologie"
     },
     "skill": {
       "i-am-good-at": "Je suis expert en",
@@ -128,8 +128,7 @@
       "aws-console": "Console AWS",
       "deep-learning": "Deep Learning",
       "machine-learning": "Machine Learning",
-      "chip-design": "Conception de Puces",
-      "board-design": "Conception de Cartes",
+      "chip-design": "Conception de PCB",
       "schematic-design": "Conception Schématique",
       "image-processing": "Traitement d'Image",
       "audio-processing": "Traitement Audio",
@@ -155,6 +154,7 @@
       "HTML": "HTML",
       "JavaScript": "JavaScript",
       "Csharp": "C#"
-    }
+    },
+    "pdf": "LARSEN_Mario_CV_FR_2023.pdf"
   }
 }

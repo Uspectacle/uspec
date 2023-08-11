@@ -128,8 +128,7 @@
       "aws-console": "AWS Console",
       "deep-learning": "Deep Learning",
       "machine-learning": "Machine Learning",
-      "chip-design": "Chip Design",
-      "board-design": "Board Design",
+      "chip-design": "PCB Design",
       "schematic-design": "Schematic Design",
       "image-processing": "Image Processing",
       "audio-processing": "Audio Processing",
@@ -155,6 +154,7 @@
       "HTML": "HTML",
       "JavaScript": "JavaScript",
       "Csharp": "C#"
-    }
+    },
+    "pdf": "LARSEN_Mario_resume_EN_2023.pdf"
   }
 }

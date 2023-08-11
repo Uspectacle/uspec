@@ -18,8 +18,8 @@ const Resume: NextPage = () => {
     <>
       {t('resume.summary')} <br /> <br />
       <Link
-        download={'LARSEN_Mario_resume_EN_2023.pdf'}
-        href={'doc/LARSEN_Mario_resume_EN_2023.pdf'}
+        download={t('resume.pdf')}
+        href={`doc/${t('resume.pdf')}`}
         target={'_blank'}
         rel={'noreferrer'}
         className={classes.button}
@@ -320,7 +320,6 @@ const Resume: NextPage = () => {
       t('resume.skill.deep-learning'),
       t('resume.skill.machine-learning'),
       t('resume.skill.chip-design'),
-      t('resume.skill.board-design'),
       t('resume.skill.schematic-design'),
       t('resume.skill.image-processing'),
       t('resume.skill.audio-processing'),

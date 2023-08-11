@@ -33,7 +33,7 @@ const Home: NextPage = () => {
     {
       title: t('posts.coming-soon.title'),
       text: t('posts.coming-soon.text'),
-      href: '/resume',
+      href: '/',
       image: (
         <MyImage
           alt="comingsoon"
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
     {
       title: t('posts.coming-soon.title'),
       text: t('posts.coming-soon.text'),
-      href: '/resume',
+      href: '/',
       image: (
         <MyImage
           alt="comingsoon"
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
     {
       title: t('posts.coming-soon.title'),
       text: t('posts.coming-soon.text'),
-      href: '/resume',
+      href: '/',
       image: (
         <MyImage
           alt="comingsoon"
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
     {
       title: t('posts.coming-soon.title'),
       text: t('posts.coming-soon.text'),
-      href: '/resume',
+      href: '/',
       image: (
         <MyImage
           alt="comingsoon"
@@ -105,7 +105,7 @@ const Home: NextPage = () => {
     {
       title: t('posts.coming-soon.title'),
       text: t('posts.coming-soon.text'),
-      href: '/resume',
+      href: '/',
       image: (
         <MyImage
           alt="comingsoon"
@@ -123,7 +123,7 @@ const Home: NextPage = () => {
     {
       title: t('posts.coming-soon.title'),
       text: t('posts.coming-soon.text'),
-      href: '/resume',
+      href: '/',
       image: (
         <MyImage
           alt="comingsoon"
