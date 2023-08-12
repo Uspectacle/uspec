@@ -20,12 +20,12 @@ jobs:
         with:
           node-version: 19
 
-      - name: Load Yarn cache
-        uses: actions/cache@v3
-        with:
-          path: 'node_modules'
-          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
+      # - name: Load Yarn cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: 'node_modules'
+      #     key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+      #     restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install Node Module
         run: yarn
