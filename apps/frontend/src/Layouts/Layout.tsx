@@ -22,7 +22,7 @@ export function Layout({
   )
 }
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -31,6 +31,12 @@ const useStyles = createStyles(() => ({
     justifyContent: 'space-between',
     whiteSpace: 'pre-wrap',
     alignItems: 'center',
-    backgroundColor: BACKGROUND_COLOR
+    backgroundColor: BACKGROUND_COLOR,
+    [theme.fn.smallerThan(500)]: {
+      fontSize: '0.9em'
+    },
+    [theme.fn.smallerThan(350)]: {
+      fontSize: '0.8em'
+    }
   }
 }))

@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { Layout } from '../src/Layouts/Layout'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { GREEN_LIGHT, PURPLE_INTENSE, WHITE } from '../utils/constants'
+import { GREEN_LIGHT, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants'
 import Link from 'next/link'
 import { MyImage } from '../src/Utils/MyImage'
 
@@ -164,14 +164,16 @@ const Home: NextPage = () => {
   )
 }
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   grid: {
     listStyleType: 'none'
   },
   list: {
     listStyleType: 'none',
-    padding: 10,
     margin: 0,
+    padding: 0,
+    paddingTop: 10,
+    paddingBottom: 10,
     display: 'flex',
     justifyContent: 'center',
     flexFlow: 'wrap',
@@ -179,15 +181,20 @@ const useStyles = createStyles(() => ({
       display: 'flex',
       textAlign: 'center',
       flexDirection: 'column',
-      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
-      height: 120,
-      width: 450,
+      boxShadow: SHADOW,
+      height: '8em',
+      width: '30em',
       justifyContent: 'space-between',
       alignItems: 'center',
       margin: 10,
       backgroundColor: GREEN_LIGHT,
       borderRadius: 10,
-      overflow: 'hidden'
+      overflow: 'hidden',
+      [theme.fn.smallerThan(550)]: {
+        width: '95%',
+        marginRight: 0,
+        marginLeft: 0
+      }
     }
   },
   item: {
@@ -213,7 +220,7 @@ const useStyles = createStyles(() => ({
     padding: 10,
     height: '100%',
     width: '100%',
-    justifyContent: 'space-between',
+    justifyContent: 'start',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column'
@@ -225,7 +232,7 @@ const useStyles = createStyles(() => ({
   },
   text: {
     fontSize: '0.8em',
-    marginTop: 10,
+    marginTop: '1.5em',
     textAlign: 'justify',
     alignSelf: 'start'
   }

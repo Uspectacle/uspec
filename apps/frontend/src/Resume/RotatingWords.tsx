@@ -47,12 +47,22 @@ const useStyles = createStyles((theme, { length }: { length: number }) => ({
     display: 'flex',
     width: '100%',
     height: '17em',
-    fontSize: '1.3em',
     fontWeight: 500,
     justifyContent: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: '1.2em',
+    [theme.fn.smallerThan(350)]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'start'
+    }
   },
-  text: { paddingTop: '1.5em' },
+  text: {
+    paddingTop: '1.5em',
+    [theme.fn.smallerThan(350)]: {
+      display: 'none'
+    }
+  },
   words: {
     animation: `${animation(length)} ${length * 1.5}s infinite`
   },

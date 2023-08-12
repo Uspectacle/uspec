@@ -1,5 +1,10 @@
 import { createStyles } from '@mantine/core'
-import { GREEN_LIGHT, PURPLE_INTENSE, WHITE } from '../../utils/constants'
+import {
+  GREEN_LIGHT,
+  PURPLE_INTENSE,
+  SHADOW,
+  WHITE
+} from '../../utils/constants'
 import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
@@ -38,7 +43,6 @@ export function Footer() {
               src="/svg/github.svg"
               width={24}
               height={24}
-              blurhash={'U00000fQfQfQfQfQfQfQfQfQfQfQfQfQfQfQ'}
               style={{ width: '1.2em', height: '1.2em' }}
             />
             /Uspectacle
@@ -61,42 +65,47 @@ const useStyles = createStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    color: GREEN_LIGHT
+    color: GREEN_LIGHT,
+    paddingTop: 10,
+    paddingBottom: 10,
+    [theme.fn.smallerThan(400)]: {
+      flexDirection: 'column'
+    }
   },
   links: {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingLeft: 20,
-    paddingRight: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderRadius: 10,
-    [theme.fn.smallerThan(600)]: {
-      flexDirection: 'column',
-      width: 200,
-      padding: 10
+    paddingLeft: 20,
+    paddingRight: 20,
+    [theme.fn.smallerThan(700)]: {
+      flexDirection: 'column'
     }
   },
   link: {
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    boxShadow: SHADOW,
     padding: 10,
+    margin: 5,
+    height: '2em',
     textDecoration: 'none',
-    fontSize: 15,
-    height: 30,
     display: 'flex',
+    cursor: 'pointer',
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 500,
     borderRadius: 10,
+    gap: 10,
     color: WHITE,
     transition: 'color 0.3s',
     '&:hover': {
       color: GREEN_LIGHT
     },
     [theme.fn.smallerThan(600)]: {
-      width: '90%',
-      padding: 5
+      padding: 5,
+      width: '12em'
     }
   }
 }))

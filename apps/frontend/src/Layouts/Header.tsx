@@ -3,6 +3,7 @@ import {
   GREEN_LIGHT,
   GREEN_WHITE,
   PURPLE_INTENSE,
+  SHADOW,
   WHITE
 } from '../../utils/constants'
 import Link from 'next/link'
@@ -11,12 +12,14 @@ import React from 'react'
 import i18n from '../../utils/i18n'
 import { useTranslation } from 'react-i18next'
 import { MyImage } from '../Utils/MyImage'
+import { getWindow } from '../Utils/GetWindow'
 
 export function Header({ children }: { children?: JSX.Element | undefined }) {
   const { classes } = useStyles()
   const router = useRouter()
   const { t } = useTranslation()
-  const otherLanguage = i18n.language.slice(0, 2) === 'en' ? 'fr' : 'en'
+
+  const { innerWidth } = getWindow()
 
   return (
     <div className={classes.header}>
@@ -29,7 +32,15 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
             height={154}
             blurhash={'U8BV41GyGyCCI80c#0#I0c+o;EROu2.9TlP0'}
             priority
-            style={{ width: 201, position: 'absolute' }}
+            style={{
+              height:
+                innerWidth < 500
+                  ? innerWidth < 330
+                    ? 154 / 2
+                    : (154 * 3) / 4
+                  : 154,
+              position: 'absolute'
+            }}
           />
         </Link>
         <div className={classes.links}>
@@ -53,20 +64,22 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
             </div>
           </Link> */}
           <div
-            key={`lang-${otherLanguage}`}
-            className={classes.lang}
+            key={t('header.otherLang.alt')}
+            className={classes.link}
             onClick={() => {
-              i18n.changeLanguage(otherLanguage)
-              localStorage.setItem('currentLanguage', otherLanguage)
+              i18n.changeLanguage(t('header.otherLang.lang') || 'en')
+              localStorage.setItem(
+                'currentLanguage',
+                t('header.otherLang.lang') || 'en'
+              )
             }}
           >
             {t('header.switchTo')}
             <MyImage
-              alt={`lang-${otherLanguage}`}
-              src={`svg/flag-${otherLanguage}.svg`}
+              alt={t('header.otherLang.alt')}
+              src={t('header.otherLang.flag')}
               width={24}
               height={24}
-              blurhash={'U00000fQfQfQfQfQfQfQfQfQfQfQfQfQfQfQ'}
               style={{ width: '2em' }}
             />
           </div>
@@ -102,69 +115,46 @@ const useStyles = createStyles((theme) => ({
       alignSelf: 'center',
       justifyContent: 'space-around',
       width: '100%'
+    },
+    [theme.fn.smallerThan(500)]: {
+      marginTop: 0
     }
   },
   links: {
     background: PURPLE_INTENSE,
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    boxShadow: SHADOW,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingLeft: 10,
-    paddingRight: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
     borderRadius: 10,
     marginLeft: 20,
-    // width: 320,
     [theme.fn.smallerThan(600)]: {
-      flexDirection: 'column',
-      width: 160,
-      padding: 10
+      flexDirection: 'column'
     }
   },
   link: {
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    boxShadow: SHADOW,
     padding: 10,
-    textDecoration: 'none',
-    fontSize: 15,
-    height: 30,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: 500,
-    borderRadius: 10,
-    color: WHITE,
-    transition: 'color 0.3s',
-    '&:hover': {
-      color: GREEN_LIGHT
-    },
-    [theme.fn.smallerThan(600)]: {
-      width: '90%',
-      padding: 5
-    }
-  },
-  lang: {
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 10,
-    padding: 10,
+    margin: 5,
     height: '2em',
     textDecoration: 'none',
-    fontSize: 15,
-    fontWeight: 500,
+    display: 'flex',
     cursor: 'pointer',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontWeight: 500,
     borderRadius: 10,
+    gap: 10,
     color: WHITE,
     transition: 'color 0.3s',
     '&:hover': {
       color: GREEN_LIGHT
     },
     [theme.fn.smallerThan(600)]: {
-      width: '90%',
-      padding: 5
+      padding: 5,
+      width: '10em'
     }
   },
   logo: {
@@ -182,6 +172,10 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignSelf: 'flex-end',
-    width: 300
+    width: 300,
+    maxWidth: '80%',
+    [theme.fn.smallerThan(400)]: {
+      alignSelf: 'center'
+    }
   }
 }))

@@ -3,16 +3,19 @@ import { NextPage } from 'next'
 import { Layout } from '../src/Layouts/Layout'
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { GREEN_WHITE, PURPLE_INTENSE, WHITE } from '../utils/constants'
+import { GREEN_WHITE, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants'
 import { useTranslation } from 'react-i18next'
 import { MyImage } from '../src/Utils/MyImage'
-import { RotatingWords } from '../src/Utils/RotatingWords'
-import { lookAgain } from '../src/Utils/LookAgain'
+import { RotatingWords } from '../src/Resume/RotatingWords'
+import { lookAgain } from '../src/Resume/LookAgain'
 import i18n from '../utils/i18n'
+import { getWindow } from '../src/Utils/GetWindow'
 
 const Resume: NextPage = () => {
   const { classes } = useStyles()
   const { t } = useTranslation()
+
+  const { innerWidth } = getWindow()
 
   const summary = (
     <>
@@ -268,8 +271,8 @@ const Resume: NextPage = () => {
       <li>
         {t('resume.french.name')}
         <MyImage
-          alt={`lang-fr`}
-          src={`svg/flag-fr.svg`}
+          alt="lang-fr"
+          src="/svg/flag-fr.svg"
           width={800}
           height={800}
           style={{ width: '5em' }}
@@ -281,8 +284,8 @@ const Resume: NextPage = () => {
       <li>
         {t('resume.english.name')}
         <MyImage
-          alt={`lang-en`}
-          src={`svg/flag-en.svg`}
+          alt="lang-en"
+          src="/svg/flag-en.svg"
           width={800}
           height={800}
           style={{ width: '5em' }}
@@ -296,8 +299,8 @@ const Resume: NextPage = () => {
       <li>
         {t('resume.spanish.name')}
         <MyImage
-          alt={`lang-es`}
-          src={`svg/flag-es.svg`}
+          alt="lang-es"
+          src="/svg/flag-es.svg"
           width={800}
           height={800}
           style={{ width: '5em' }}
@@ -494,7 +497,6 @@ const Resume: NextPage = () => {
             src="/image/assembly.png"
             width={512}
             height={512}
-            blurhash={'U00000fQfQfQfQfQfQfQfQfQfQfQfQfQfQfQ'}
             style={imageStyle}
           />
         </div>
@@ -619,7 +621,9 @@ const Resume: NextPage = () => {
     <Layout summary={summary}>
       <div className={classes.container}>
         <div className={classes.title}>{t('resume.mario-larsen')}</div>
-        <div className={classes.subTitle}>{t('resume.subTitle')}</div>
+        <div className={classes.subTitle}>
+          {innerWidth < 450 ? t('resume.subTitleFull') : t('resume.subTitle')}
+        </div>
         <MyImage
           alt="myself"
           src="/image/selfie.jpg"
@@ -673,7 +677,9 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
     fontSize: '1em',
     fontStyle: 'italic',
-    marginTop: 10
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10
   },
   dualContainer: {
     [theme.fn.largerThan(1000)]: {
@@ -694,6 +700,7 @@ const useStyles = createStyles((theme) => ({
   },
   list: {
     listStyleType: 'none',
+    paddingLeft: '5%',
     '& > li': {
       display: 'flex',
       flexDirection: 'column'
@@ -709,7 +716,7 @@ const useStyles = createStyles((theme) => ({
       display: 'flex',
       textAlign: 'center',
       flexDirection: 'column',
-      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
+      boxShadow: SHADOW,
       width: 100,
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -729,12 +736,15 @@ const useStyles = createStyles((theme) => ({
       display: 'flex',
       textAlign: 'center',
       flexDirection: 'column',
-      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)',
+      boxShadow: SHADOW,
       width: 130,
       alignItems: 'center',
       padding: 5,
       borderRadius: 5,
-      margin: 5
+      margin: 5,
+      [theme.fn.smallerThan(500)]: {
+        width: 100
+      }
     }
   },
   logo: {
@@ -774,7 +784,7 @@ const useStyles = createStyles((theme) => ({
   },
   button: {
     alignSelf: 'flex-start',
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    boxShadow: SHADOW,
     padding: 10,
     textDecoration: 'none',
     fontSize: 15,

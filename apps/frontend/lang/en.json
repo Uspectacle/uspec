@@ -6,7 +6,12 @@
     "blog": "Blog",
     "games": "Games",
     "tools": "Tools",
-    "switchTo": "Passer en"
+    "switchTo": "Passer en",
+    "otherLang": {
+      "flag": "/svg/flag-fr.svg",
+      "alt": "lang-fr",
+      "lang": "fr"
+    }
   },
   "footer": {
     "contactMe": "Contact Me:",
@@ -28,6 +33,7 @@
     "downloadAsPDF": "Download as PDF",
     "mario-larsen": "MARIO LARSEN",
     "subTitle": "Youthful and accomplished French Engineer,\nactively seeking enriching opportunities in AI research,\nWeb and Mobile Development, and Electronic Design",
+    "subTitleFull": "Youthful and accomplished French Engineer, actively seeking enriching opportunities in AI research, Web and Mobile Development, and Electronic Design",
     "activity": "Activity: ",
     "objective": "Objective: ",
     "result": "Result: ",

@@ -9,13 +9,7 @@ interface BackProps {
   handlerClick?: () => void
 }
 
-export const GoBack = ({
-  color,
-  width,
-  height,
-  url,
-  handlerClick
-}: BackProps) => {
+export const GoBack = ({ height, url, handlerClick }: BackProps) => {
   const { classes } = useStyles()
 
   return (

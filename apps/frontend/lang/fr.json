@@ -6,7 +6,12 @@
     "blog": "Blog",
     "games": "Jeux",
     "tools": "Outils",
-    "switchTo": "Switch to"
+    "switchTo": "Switch to",
+    "otherLang": {
+      "flag": "/svg/flag-en.svg",
+      "alt": "lang-en",
+      "lang": "en"
+    }
   },
   "footer": {
     "contactMe": "Contactez-Moi :",
@@ -28,6 +33,7 @@
     "downloadAsPDF": "Télécharger en PDF",
     "mario-larsen": "MARIO LARSEN",
     "subTitle": "Ingénieur français jeune et accompli, à la recherche\nd'opportunités enrichissantes en recherche en IA,\ndéveloppement Web et Mobile, et conception électronique",
+    "subTitleFull": "Ingénieur français jeune et accompli, à la recherche d'opportunités enrichissantes en recherche en IA, développement Web et Mobile, et conception électronique",
     "activity": "Activité : ",
     "objective": "Objectif : ",
     "result": "Résultat : ",

@@ -4,3 +4,5 @@ export const GREEN_LIGHT = '#72ff9c'
 export const GREEN_WHITE = '#D4FFE1'
 export const WHITE = '#ffffff'
 export const BLACK = '#ffffff'
+
+export const SHADOW = '0px 4px 12px rgba(0, 0, 0, 0.1)'
