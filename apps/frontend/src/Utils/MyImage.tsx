@@ -1,11 +1,12 @@
 import Image from 'next/image'
 
 import { Blurhash } from 'react-blurhash'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 type PropsMyImage = React.ComponentProps<typeof Image> & {
   blurhash?: string | undefined
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | undefined
+  src: string
 }
 
 export const MyImage = ({
@@ -18,7 +19,13 @@ export const MyImage = ({
   priority,
   objectFit = 'contain'
 }: PropsMyImage) => {
-  const [imageLoaded, setImageLoaded] = useState(true)
+  const [imageLoaded, setImageLoaded] = useState(false)
+
+  useEffect(() => {
+    const image = document.createElement('img')
+    image.onload = () => setImageLoaded(true)
+    image.src = src
+  }, [src])
 
   const containerStyle: React.CSSProperties = {
     ...(!!width && !!height ? { aspectRatio: `${width} / ${height}` } : {}),
@@ -29,12 +36,11 @@ export const MyImage = ({
     return (
       <div style={containerStyle}>
         <Image
-          src={src || ''}
+          src={src}
           alt={alt || ''}
           width={width}
           fill={!width}
           height={height}
-          onLoad={() => setImageLoaded(true)}
           priority={priority}
           style={{
             width: '100%',
@@ -78,12 +84,11 @@ export const MyImage = ({
         }}
       >
         <Image
-          src={src || ''}
+          src={src}
           alt={alt || ''}
           width={width}
           fill={!width}
           height={height}
-          onLoad={() => setImageLoaded(true)}
           priority={priority}
           style={{
             width: '100%',

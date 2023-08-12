@@ -623,6 +623,7 @@ const Resume: NextPage = () => {
         <MyImage
           alt="myself"
           src="/image/selfie.jpg"
+          priority
           width={3941}
           height={2556}
           blurhash={'L*MQq+RPx]%g~qWBWBtRX9WBj[V['}
