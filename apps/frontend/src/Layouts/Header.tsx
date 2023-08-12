@@ -1,25 +1,25 @@
-import { createStyles } from '@mantine/core'
+import { createStyles } from '@mantine/core';
 import {
   GREEN_LIGHT,
   GREEN_WHITE,
   PURPLE_INTENSE,
   SHADOW,
   WHITE
-} from '../../utils/constants'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import React from 'react'
-import i18n from '../../utils/i18n'
-import { useTranslation } from 'react-i18next'
-import { MyImage } from '../Utils/MyImage'
-import { getWindow } from '../Utils/GetWindow'
+} from '../../utils/constants';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
+import i18n from '../../utils/i18n';
+import { useTranslation } from 'react-i18next';
+import { MyImage } from '../Utils/MyImage';
+import { getWindow } from '../Utils/GetWindow';
 
 export function Header({ children }: { children?: JSX.Element | undefined }) {
-  const { classes } = useStyles()
-  const router = useRouter()
-  const { t } = useTranslation()
+  const { classes } = useStyles();
+  const router = useRouter();
+  const { t } = useTranslation();
 
-  const { innerWidth } = getWindow()
+  const { innerWidth } = getWindow();
 
   return (
     <div className={classes.header}>
@@ -67,11 +67,11 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
             key={t('header.otherLang.alt')}
             className={classes.link}
             onClick={() => {
-              i18n.changeLanguage(t('header.otherLang.lang') || 'en')
+              i18n.changeLanguage(t('header.otherLang.lang') || 'en');
               localStorage.setItem(
                 'currentLanguage',
                 t('header.otherLang.lang') || 'en'
-              )
+              );
             }}
           >
             {t('header.switchTo')}
@@ -87,7 +87,7 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
       </div>
       {!!children && <div className={classes.summary}>{children}</div>}
     </div>
-  )
+  );
 }
 
 const useStyles = createStyles((theme) => ({
@@ -178,4 +178,4 @@ const useStyles = createStyles((theme) => ({
       alignSelf: 'center'
     }
   }
-}))
+}));

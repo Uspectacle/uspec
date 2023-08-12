@@ -1,15 +1,15 @@
-import { createStyles } from '@mantine/core'
-import { NextPage } from 'next'
-import { Layout } from '../src/Layouts/Layout'
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { GREEN_LIGHT, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants'
-import Link from 'next/link'
-import { MyImage } from '../src/Utils/MyImage'
+import { createStyles } from '@mantine/core';
+import { NextPage } from 'next';
+import { Layout } from '../src/Layouts/Layout';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { GREEN_LIGHT, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants';
+import Link from 'next/link';
+import { MyImage } from '../src/Utils/MyImage';
 
-const Home: NextPage = () => {
-  const { classes } = useStyles()
-  const { t } = useTranslation()
+const Blog: NextPage = () => {
+  const { classes } = useStyles();
+  const { t } = useTranslation();
 
   const posts = [
     {
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
         />
       )
     }
-  ]
+  ];
 
   return (
     <Layout summary={undefined}>
@@ -161,8 +161,8 @@ const Home: NextPage = () => {
         ))}
       </ul>
     </Layout>
-  )
-}
+  );
+};
 
 const useStyles = createStyles((theme) => ({
   grid: {
@@ -236,6 +236,6 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'justify',
     alignSelf: 'start'
   }
-}))
+}));
 
-export default Home
+export default Blog;

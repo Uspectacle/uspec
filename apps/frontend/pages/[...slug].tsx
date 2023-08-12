@@ -1,18 +1,18 @@
 // import { createStyles } from '@mantine/core'
-import { NextPage } from 'next'
-import { Layout } from '../src/Layouts/Layout'
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { useRouter } from 'next/router'
-import { MyImage } from '../src/Utils/MyImage'
-import { createStyles } from '@mantine/core'
-import { PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants'
+import { NextPage } from 'next';
+import { Layout } from '../src/Layouts/Layout';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
+import { MyImage } from '../src/Utils/MyImage';
+import { createStyles } from '@mantine/core';
+import { PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants';
 
 const Page404: NextPage = () => {
-  const { t } = useTranslation()
-  const { classes } = useStyles()
+  const { t } = useTranslation();
+  const { classes } = useStyles();
 
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Layout>
@@ -35,8 +35,8 @@ const Page404: NextPage = () => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 const useStyles = createStyles(() => ({
   container: {
@@ -54,6 +54,6 @@ const useStyles = createStyles(() => ({
     overflow: 'wrap',
     strong: { color: PURPLE_INTENSE, wordBreak: 'break-all' }
   }
-}))
+}));
 
-export default Page404
+export default Page404;

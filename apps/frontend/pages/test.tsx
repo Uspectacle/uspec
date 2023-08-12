@@ -1,6 +1,6 @@
-import { NextPage } from 'next'
-import React from 'react'
-import { MyImage } from '../src/Utils/MyImage'
+import { NextPage } from 'next';
+import React from 'react';
+import { MyImage } from '../src/Utils/MyImage';
 
 const Test: NextPage = () => {
   return (
@@ -15,7 +15,7 @@ const Test: NextPage = () => {
         priority
       />
     </div>
-  )
-}
+  );
+};
 
-export default Test
+export default Test;

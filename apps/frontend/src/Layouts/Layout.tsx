@@ -1,17 +1,17 @@
-import { Footer } from './Footer'
-import { Header } from './Header'
-import { createStyles } from '@mantine/core'
-import { BACKGROUND_COLOR } from '../../utils/constants'
-import React from 'react'
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { createStyles } from '@mantine/core';
+import { BACKGROUND_COLOR } from '../../utils/constants';
+import React from 'react';
 
 export function Layout({
   summary,
   children
 }: {
-  summary?: JSX.Element | undefined
-  children?: JSX.Element | undefined
+  summary?: JSX.Element | undefined;
+  children?: JSX.Element | undefined;
 }) {
-  const { classes } = useStyles()
+  const { classes } = useStyles();
 
   return (
     <div className={classes.container}>
@@ -19,7 +19,7 @@ export function Layout({
       {children}
       <Footer />
     </div>
-  )
+  );
 }
 
 const useStyles = createStyles((theme) => ({
@@ -39,4 +39,4 @@ const useStyles = createStyles((theme) => ({
       fontSize: '0.8em'
     }
   }
-}))
+}));

@@ -17,4 +17,9 @@
         "svgr",
         "toastify"
     ],
+    "i18n-ally.extract.ignoredByFiles": {
+        "apps\\frontend\\src\\Layouts\\Header.tsx": [
+            "color 0.3s"
+        ]
+    },
 }

@@ -1,21 +1,21 @@
-import { createStyles } from '@mantine/core'
-import { NextPage } from 'next'
-import { Layout } from '../src/Layouts/Layout'
-import React, { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
-import { GREEN_WHITE, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants'
-import { useTranslation } from 'react-i18next'
-import { MyImage } from '../src/Utils/MyImage'
-import { RotatingWords } from '../src/Resume/RotatingWords'
-import { lookAgain } from '../src/Resume/LookAgain'
-import i18n from '../utils/i18n'
-import { getWindow } from '../src/Utils/GetWindow'
+import { createStyles } from '@mantine/core';
+import { NextPage } from 'next';
+import { Layout } from '../src/Layouts/Layout';
+import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { GREEN_WHITE, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants';
+import { useTranslation } from 'react-i18next';
+import { MyImage } from '../src/Utils/MyImage';
+import { RotatingWords } from '../src/Resume/RotatingWords';
+import { lookAgain } from '../src/Resume/LookAgain';
+import i18n from '../utils/i18n';
+import { getWindow } from '../src/Utils/GetWindow';
 
 const Resume: NextPage = () => {
-  const { classes } = useStyles()
-  const { t } = useTranslation()
+  const { classes } = useStyles();
+  const { t } = useTranslation();
 
-  const { innerWidth } = getWindow()
+  const { innerWidth } = getWindow();
 
   const summary = (
     <>
@@ -38,7 +38,7 @@ const Resume: NextPage = () => {
         &nbsp;{t('resume.downloadAsPDF')}
       </Link>
     </>
-  )
+  );
 
   const Education = () => (
     <ul className={classes.list}>
@@ -131,7 +131,7 @@ const Resume: NextPage = () => {
         </div>
       </li>
     </ul>
-  )
+  );
 
   const Experience = () => (
     <ul className={classes.list}>
@@ -264,7 +264,7 @@ const Resume: NextPage = () => {
         </div>
       </li>
     </ul>
-  )
+  );
 
   const ForeignLanguages = () => (
     <ul className={classes.gridLang}>
@@ -310,13 +310,13 @@ const Resume: NextPage = () => {
         {t('resume.spanish.level')}
       </li>
     </ul>
-  )
+  );
 
   const Skills = () => (
     <RotatingWords text={t('resume.skill.i-am-good-at')} words={skills} />
-  )
+  );
 
-  const [skills, setSkills] = useState<string[]>([])
+  const [skills, setSkills] = useState<string[]>([]);
 
   useEffect(() => {
     const skillsList = [
@@ -340,11 +340,11 @@ const Resume: NextPage = () => {
       t('resume.skill.managing-a-team'),
       t('resume.skill.managing-a-project'),
       t('resume.skill.app-deployment')
-    ]
-    setSkills(skillsList.sort(() => Math.random() - 0.5))
-  }, [i18n.language])
+    ];
+    setSkills(skillsList.sort(() => Math.random() - 0.5));
+  }, [i18n.language]);
 
-  const imageStyle: React.CSSProperties = { height: '100%', aspectRatio: 1 }
+  const imageStyle: React.CSSProperties = { height: '100%', aspectRatio: 1 };
 
   const ProgrammingLanguages = () => (
     <ul className={classes.grid}>
@@ -594,7 +594,7 @@ const Resume: NextPage = () => {
         {t('resume.skill.excel')}
       </li>
     </ul>
-  )
+  );
 
   const interestsList = [
     t('resume.interestsList.courses'),
@@ -605,9 +605,9 @@ const Resume: NextPage = () => {
     t('resume.interestsList.delegate'),
     t('resume.interestsList.running'),
     t('resume.interestsList.association')
-  ]
+  ];
 
-  const interestRef = useRef<HTMLDivElement | null>(null)
+  const interestRef = useRef<HTMLDivElement | null>(null);
 
   const Interests = () => (
     <div className={classes.interest} ref={interestRef}>
@@ -615,7 +615,7 @@ const Resume: NextPage = () => {
       {t('resume.interests.text')}
       <span>{lookAgain(interestRef, interestsList)}</span>
     </div>
-  )
+  );
 
   return (
     <Layout summary={summary}>
@@ -654,8 +654,8 @@ const Resume: NextPage = () => {
         <Interests />
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -810,6 +810,6 @@ const useStyles = createStyles((theme) => ({
     strong: { color: PURPLE_INTENSE },
     span: { fontWeight: 500 }
   }
-}))
+}));
 
-export default Resume
+export default Resume;

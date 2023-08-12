@@ -1,14 +1,14 @@
-import { createStyles, keyframes } from '@mantine/core'
-import { PURPLE_INTENSE } from 'apps/frontend/utils/constants'
+import { createStyles, keyframes } from '@mantine/core';
+import { PURPLE_INTENSE } from 'apps/frontend/utils/constants';
 
 export const RotatingWords = ({
   text,
   words
 }: {
-  text: string
-  words: string[]
+  text: string;
+  words: string[];
 }) => {
-  const { classes } = useStyles({ length: words.length })
+  const { classes } = useStyles({ length: words.length });
   return (
     <div className={classes.container}>
       <div className={classes.text}>{text}</div>
@@ -25,8 +25,8 @@ export const RotatingWords = ({
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const animation = (length: number) => {
   const jsonKeyframes = Array.from(
@@ -37,9 +37,9 @@ const animation = (length: number) => {
       }%": { "transform" : "translateY(-${
         index * 0.75 + (index % 2 ? 0.75 : 1.62)
       }em)"}`
-  )
-  return keyframes(JSON.parse(`{${jsonKeyframes.join(', ')}}`))
-}
+  );
+  return keyframes(JSON.parse(`{${jsonKeyframes.join(', ')}}`));
+};
 
 const useStyles = createStyles((theme, { length }: { length: number }) => ({
   container: {
@@ -72,4 +72,4 @@ const useStyles = createStyles((theme, { length }: { length: number }) => ({
     paddingLeft: 10,
     color: PURPLE_INTENSE
   }
-}))
+}));

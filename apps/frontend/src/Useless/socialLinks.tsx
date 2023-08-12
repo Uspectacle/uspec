@@ -39,4 +39,4 @@ export const socials = (link: string, title: string, text: string) => [
     label: 'Share via SMS',
     icon: '/icon/sms.svg'
   }
-]
+];

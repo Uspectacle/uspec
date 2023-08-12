@@ -1,13 +1,13 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import { Blurhash } from 'react-blurhash'
-import React, { useEffect, useState } from 'react'
+import { Blurhash } from 'react-blurhash';
+import React, { useEffect, useState } from 'react';
 
 type PropsMyImage = React.ComponentProps<typeof Image> & {
-  blurhash?: string | undefined
-  objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | undefined
-  src: string
-}
+  blurhash?: string | undefined;
+  objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | undefined;
+  src: string;
+};
 
 export const MyImage = ({
   blurhash,
@@ -19,18 +19,18 @@ export const MyImage = ({
   priority,
   objectFit = 'contain'
 }: PropsMyImage) => {
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    const image = document.createElement('img')
-    image.onload = () => setImageLoaded(true)
-    image.src = src
-  }, [src])
+    const image = document.createElement('img');
+    image.onload = () => setImageLoaded(true);
+    image.src = src;
+  }, [src]);
 
   const containerStyle: React.CSSProperties = {
     ...(!!width && !!height ? { aspectRatio: `${width} / ${height}` } : {}),
     ...style
-  }
+  };
 
   if (!blurhash) {
     return (
@@ -49,7 +49,7 @@ export const MyImage = ({
           }}
         />
       </div>
-    )
+    );
   }
 
   return (
@@ -98,5 +98,5 @@ export const MyImage = ({
         />
       </div>
     </div>
-  )
-}
+  );
+};

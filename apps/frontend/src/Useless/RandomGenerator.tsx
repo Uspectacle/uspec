@@ -1,19 +1,19 @@
 export const randomImage = async (): Promise<File> => {
-  const url = 'https://source.unsplash.com/random/800x800/?img=1'
-  const response = await fetch(url)
-  const data = await response.blob()
-  return new File([data], 'image')
-}
+  const url = 'https://source.unsplash.com/random/800x800/?img=1';
+  const response = await fetch(url);
+  const data = await response.blob();
+  return new File([data], 'image');
+};
 
 export const capFirst = (name: string): string => {
-  if (!String(name)?.charAt(0)) return String(name)
-  const firstletter = String(name).charAt(0)
-  return firstletter.toUpperCase() + String(name).slice(1)
-}
+  if (!String(name)?.charAt(0)) return String(name);
+  const firstletter = String(name).charAt(0);
+  return firstletter.toUpperCase() + String(name).slice(1);
+};
 
 export const getRandomInt = (min: number, max: number): number => {
-  return Math.floor(Math.random() * (max - min)) + min
-}
+  return Math.floor(Math.random() * (max - min)) + min;
+};
 
 export const randomFirstName = (): string => {
   const firstNameList = [
@@ -1365,10 +1365,10 @@ export const randomFirstName = (): string => {
     'zesty',
     'zigzag',
     'rocky'
-  ]
+  ];
 
-  return capFirst(firstNameList[getRandomInt(0, firstNameList.length)])
-}
+  return capFirst(firstNameList[getRandomInt(0, firstNameList.length)]);
+};
 
 export const randomLastName = (): string => {
   const lastNameList = [
@@ -2873,10 +2873,10 @@ export const randomLastName = (): string => {
     'Thomas',
     'Tom',
     'Lieuwe'
-  ]
+  ];
 
-  return capFirst(lastNameList[getRandomInt(0, lastNameList.length)])
-}
+  return capFirst(lastNameList[getRandomInt(0, lastNameList.length)]);
+};
 
 export const aBigText = (size: number): string =>
   `
@@ -2931,4 +2931,4 @@ Vis-à-vis de soi-même en garder le mérite,
 Bref, dédaignant d’être le lierre parasite,
 Lors même qu’on n’est pas le chêne ou le tilleul,
 Ne pas monter bien haut, peut-être, mais tout seul !
-`.slice(1, size)
+`.slice(1, size);

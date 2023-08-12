@@ -1,18 +1,18 @@
-import { createStyles } from '@mantine/core'
+import { createStyles } from '@mantine/core';
 import {
   GREEN_LIGHT,
   PURPLE_INTENSE,
   SHADOW,
   WHITE
-} from '../../utils/constants'
-import Link from 'next/link'
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { MyImage } from '../Utils/MyImage'
+} from '../../utils/constants';
+import Link from 'next/link';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { MyImage } from '../Utils/MyImage';
 
 export function Footer() {
-  const { classes } = useStyles()
-  const { t } = useTranslation()
+  const { classes } = useStyles();
+  const { t } = useTranslation();
 
   return (
     <footer className={classes.footer}>
@@ -50,7 +50,7 @@ export function Footer() {
         </Link>
       </div>
     </footer>
-  )
+  );
 }
 
 const useStyles = createStyles((theme) => ({
@@ -108,4 +108,4 @@ const useStyles = createStyles((theme) => ({
       width: '12em'
     }
   }
-}))
+}));

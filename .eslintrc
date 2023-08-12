@@ -13,7 +13,13 @@
   ],
   "rules": {
     "no-console": 1,     
-    "prettier/prettier": ["error",{ "endOfLine": "auto" }]
+    "prettier/prettier": [
+      "error",
+      { 
+        "semi": true,
+        "endOfLine": "auto"
+      }
+    ]
   }
 //   "overrides": [
 //     {

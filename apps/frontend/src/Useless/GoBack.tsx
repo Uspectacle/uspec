@@ -1,16 +1,16 @@
-import { createStyles } from '@mantine/core'
-import Link from 'next/link'
+import { createStyles } from '@mantine/core';
+import Link from 'next/link';
 
 interface BackProps {
-  width: string
-  height: string
-  color: string
-  url?: string
-  handlerClick?: () => void
+  width: string;
+  height: string;
+  color: string;
+  url?: string;
+  handlerClick?: () => void;
 }
 
 export const GoBack = ({ height, url, handlerClick }: BackProps) => {
-  const { classes } = useStyles()
+  const { classes } = useStyles();
 
   return (
     <div style={{ width: 'fit-content', height: `${height}px` }}>
@@ -20,17 +20,17 @@ export const GoBack = ({ height, url, handlerClick }: BackProps) => {
         <div
           className={classes.svgContainer}
           onClick={() => {
-            handlerClick()
+            handlerClick();
           }}
         ></div>
       )) ||
         null}
     </div>
-  )
-}
+  );
+};
 
 const useStyles = createStyles(() => ({
   svgContainer: {
     cursor: 'pointer'
   }
-}))
+}));
