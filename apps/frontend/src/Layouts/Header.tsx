@@ -30,7 +30,6 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
             src="/image/logo.png"
             width={201}
             height={154}
-            blurhash={'U8BV41GyGyCCI80c#0#I0c+o;EROu2.9TlP0'}
             priority
             style={{
               height:
