@@ -70,6 +70,19 @@ const Blog: NextPage = () => {
         />
       ),
     },
+    {
+      title: t('posts.coming-soon.title'),
+      text: t('posts.coming-soon.text'),
+      href: '/',
+      image: (
+        <MyImage
+          src="/image/comingsoon.png"
+          width={548}
+          height={550}
+          objectFit="cover"
+        />
+      ),
+    },
   ];
 
   return (

@@ -14,7 +14,11 @@ import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
 import { getWindow } from '../Utils/GetWindow';
 
-export function Header({ children }: { children?: JSX.Element | undefined }) {
+export const Header = ({
+  children,
+}: {
+  children?: JSX.Element | undefined;
+}) => {
   const { classes } = useStyles();
   const router = useRouter();
   const { t } = useTranslation();
@@ -82,7 +86,7 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
       {!!children && <div className={classes.summary}>{children}</div>}
     </div>
   );
-}
+};
 
 const useStyles = createStyles((theme) => ({
   header: {

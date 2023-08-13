@@ -10,7 +10,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
 
-export function Footer() {
+export const Footer = () => {
   const { classes } = useStyles();
   const { t } = useTranslation();
 
@@ -51,7 +51,7 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 const useStyles = createStyles((theme) => ({
   footer: {
