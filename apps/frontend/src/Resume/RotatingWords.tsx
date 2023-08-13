@@ -1,5 +1,5 @@
 import { createStyles, keyframes } from '@mantine/core';
-import { PURPLE_INTENSE } from 'apps/frontend/utils/DefaultStyle';
+import { PURPLE_INTENSE } from '../../utils/DefaultStyle';
 
 export const RotatingWords = ({
   text,
