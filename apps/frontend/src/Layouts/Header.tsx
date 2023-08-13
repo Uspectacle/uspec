@@ -4,8 +4,8 @@ import {
   GREEN_WHITE,
   PURPLE_INTENSE,
   SHADOW,
-  WHITE
-} from '../../utils/constants';
+  WHITE,
+} from '../../utils/DefaultStyle';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -24,23 +24,19 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
   return (
     <div className={classes.header}>
       <div className={classes.menu}>
-        <Link href={'/'} className={classes.logo}>
-          <MyImage
-            alt="logo"
-            src="/image/logo.png"
-            width={201}
-            height={154}
-            priority
-            style={{
-              height:
-                innerWidth < 500
-                  ? innerWidth < 330
-                    ? 154 / 2
-                    : (154 * 3) / 4
-                  : 154,
-              position: 'absolute'
-            }}
-          />
+        <Link
+          href={'/'}
+          className={classes.logo}
+          style={{
+            height:
+              innerWidth < 500
+                ? innerWidth < 330
+                  ? 154 / 2
+                  : (154 * 3) / 4
+                : 154,
+          }}
+        >
+          <MyImage src="/image/logo.png" width={201} height={154} />
         </Link>
         <div className={classes.links}>
           <Link href={'/'} className={classes.link} passHref>
@@ -75,7 +71,6 @@ export function Header({ children }: { children?: JSX.Element | undefined }) {
           >
             {t('header.switchTo')}
             <MyImage
-              alt={t('header.otherLang.alt')}
               src={t('header.otherLang.flag')}
               width={24}
               height={24}
@@ -98,8 +93,8 @@ const useStyles = createStyles((theme) => ({
     alignSelf: 'center',
     width: '90%',
     [theme.fn.smallerThan(950)]: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   menu: {
     display: 'flex',
@@ -113,11 +108,11 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan(600)]: {
       alignSelf: 'center',
       justifyContent: 'space-around',
-      width: '100%'
+      width: '100%',
     },
     [theme.fn.smallerThan(500)]: {
-      marginTop: 0
-    }
+      marginTop: 0,
+    },
   },
   links: {
     background: PURPLE_INTENSE,
@@ -130,8 +125,8 @@ const useStyles = createStyles((theme) => ({
     borderRadius: 10,
     marginLeft: 20,
     [theme.fn.smallerThan(600)]: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   link: {
     boxShadow: SHADOW,
@@ -149,19 +144,19 @@ const useStyles = createStyles((theme) => ({
     color: WHITE,
     transition: 'color 0.3s',
     '&:hover': {
-      color: GREEN_LIGHT
+      color: GREEN_LIGHT,
     },
     [theme.fn.smallerThan(600)]: {
       padding: 5,
-      width: '10em'
-    }
+      width: '10em',
+    },
   },
   logo: {
     width: 201,
     height: 120,
     textDecoration: 'none',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   summary: {
     backgroundColor: GREEN_WHITE,
@@ -174,7 +169,7 @@ const useStyles = createStyles((theme) => ({
     width: 300,
     maxWidth: '80%',
     [theme.fn.smallerThan(400)]: {
-      alignSelf: 'center'
-    }
-  }
+      alignSelf: 'center',
+    },
+  },
 }));

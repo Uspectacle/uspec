@@ -1,21 +1,26 @@
+import { createStyles } from '@mantine/core';
 import { NextPage } from 'next';
-import React from 'react';
 import { MyImage } from '../src/Utils/MyImage';
 
 const Test: NextPage = () => {
+  const { classes } = useStyles();
   return (
-    <div style={{ width: 400 }}>
-      <MyImage
-        alt="myself"
-        src="/image/selfie.jpg"
-        width={3941}
-        height={2556}
-        blurhash={'L*MQq+RPx]%g~qWBWBtRX9WBj[V['}
-        objectFit={'cover'}
-        priority
-      />
+    <div>
+      <div className={classes.image}>
+        <MyImage src="/image/selfie.jpg" width={3941} height={2556} />
+        <MyImage src="/image/selfie.jpg" width={3941} height={2556} />
+        <MyImage src="/image/selfie.jpg" width={3941} height={2556} />
+        <MyImage src="/image/selfie.jpg" width={3941} height={2556} />
+        <MyImage src="/image/selfie.jpg" width={3941} height={2556} />
+      </div>
     </div>
   );
 };
+
+const useStyles = createStyles(() => ({
+  image: {
+    width: 500,
+  },
+}));
 
 export default Test;

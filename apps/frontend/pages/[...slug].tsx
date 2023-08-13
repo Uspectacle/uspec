@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import { MyImage } from '../src/Utils/MyImage';
 import { createStyles } from '@mantine/core';
-import { PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants';
+import { PURPLE_INTENSE, SHADOW, WHITE } from '../utils/DefaultStyle';
 
 const Page404: NextPage = () => {
   const { t } = useTranslation();
@@ -18,12 +18,9 @@ const Page404: NextPage = () => {
     <Layout>
       <div className={classes.container}>
         <MyImage
-          alt="logo"
           src="/image/404.png"
           width={125}
           height={111}
-          blurhash={'UFA29=S[4AqUt2R6o|yo8wi%z$XxQ;V[VveC'}
-          priority
           style={{ width: 125 }}
         />
         <div>
@@ -52,8 +49,8 @@ const useStyles = createStyles(() => ({
     borderRadius: 10,
     maxWidth: '80%',
     overflow: 'wrap',
-    strong: { color: PURPLE_INTENSE, wordBreak: 'break-all' }
-  }
+    strong: { color: PURPLE_INTENSE, wordBreak: 'break-all' },
+  },
 }));
 
 export default Page404;

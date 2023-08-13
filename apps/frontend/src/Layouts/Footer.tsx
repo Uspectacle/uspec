@@ -3,8 +3,8 @@ import {
   GREEN_LIGHT,
   PURPLE_INTENSE,
   SHADOW,
-  WHITE
-} from '../../utils/constants';
+  WHITE,
+} from '../../utils/DefaultStyle';
 import Link from 'next/link';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -39,7 +39,6 @@ export function Footer() {
         >
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <MyImage
-              alt="Github"
               src="/svg/github.svg"
               width={24}
               height={24}
@@ -69,8 +68,8 @@ const useStyles = createStyles((theme) => ({
     paddingTop: 10,
     paddingBottom: 10,
     [theme.fn.smallerThan(400)]: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   links: {
     display: 'flex',
@@ -82,8 +81,8 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: 20,
     paddingRight: 20,
     [theme.fn.smallerThan(700)]: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   link: {
     boxShadow: SHADOW,
@@ -101,11 +100,11 @@ const useStyles = createStyles((theme) => ({
     color: WHITE,
     transition: 'color 0.3s',
     '&:hover': {
-      color: GREEN_LIGHT
+      color: GREEN_LIGHT,
     },
     [theme.fn.smallerThan(600)]: {
       padding: 5,
-      width: '12em'
-    }
-  }
+      width: '12em',
+    },
+  },
 }));

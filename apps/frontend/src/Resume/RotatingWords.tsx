@@ -1,9 +1,9 @@
 import { createStyles, keyframes } from '@mantine/core';
-import { PURPLE_INTENSE } from 'apps/frontend/utils/constants';
+import { PURPLE_INTENSE } from 'apps/frontend/utils/DefaultStyle';
 
 export const RotatingWords = ({
   text,
-  words
+  words,
 }: {
   text: string;
   words: string[];
@@ -54,22 +54,22 @@ const useStyles = createStyles((theme, { length }: { length: number }) => ({
     [theme.fn.smallerThan(350)]: {
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'start'
-    }
+      justifyContent: 'start',
+    },
   },
   text: {
     paddingTop: '1.5em',
     [theme.fn.smallerThan(350)]: {
-      display: 'none'
-    }
+      display: 'none',
+    },
   },
   words: {
-    animation: `${animation(length)} ${length * 1.5}s infinite`
+    animation: `${animation(length)} ${length * 1.5}s infinite`,
   },
   word: {
     display: 'block',
     height: '1.5em',
     paddingLeft: 10,
-    color: PURPLE_INTENSE
-  }
+    color: PURPLE_INTENSE,
+  },
 }));

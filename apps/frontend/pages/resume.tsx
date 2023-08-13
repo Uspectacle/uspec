@@ -3,7 +3,12 @@ import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { GREEN_WHITE, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants';
+import {
+  GREEN_WHITE,
+  PURPLE_INTENSE,
+  SHADOW,
+  WHITE,
+} from '../utils/DefaultStyle';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../src/Utils/MyImage';
 import { RotatingWords } from '../src/Resume/RotatingWords';
@@ -29,7 +34,6 @@ const Resume: NextPage = () => {
         passHref
       >
         <MyImage
-          alt="pdf"
           src="/svg/pdf.svg"
           width={800}
           height={800}
@@ -51,11 +55,9 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="ensea"
             src="/image/ensea.png"
             width={120}
             height={119}
-            blurhash={'U7O0iyiJ00d=00x]RPRP%goz.moz8wR5tRyD'}
             style={{ width: '5em' }}
           />
           <div className={classes.infos}>
@@ -81,11 +83,9 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="civ"
             src="/image/civ.png"
             width={202}
             height={69}
-            blurhash={'UC85Tc4TQ*xuDi.AVqI84T.AktV??^8wtn%i'}
             style={{ width: '5em' }}
           />
           <div className={classes.infos}>
@@ -111,7 +111,6 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="parc"
             src="/image/parc.png"
             width={475}
             height={106}
@@ -144,8 +143,7 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="galadrim"
-            src="/image/galadrim.jfif"
+            src="/image/galadrim.png"
             width={200}
             height={200}
             style={{ width: '5em' }}
@@ -176,7 +174,6 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="cea"
             src="/image/cea.jpg"
             width={400}
             height={400}
@@ -206,11 +203,9 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="Uni-ljubljana"
             src="/image/Uni-ljubljana.png"
             width={220}
             height={219}
-            blurhash={'UNC#V+a|0|jZ3Vjt|_ay;Na|PAjt-pfQR*ay'}
             style={{ width: '5em' }}
           />
           <div className={classes.infos}>
@@ -239,11 +234,9 @@ const Resume: NextPage = () => {
           passHref
         >
           <MyImage
-            alt="ensea"
             src="/image/ensea.png"
             width={120}
             height={119}
-            blurhash={'U7O0iyiJ00d=00x]RPRP%goz.moz8wR5tRyD'}
             style={{ width: '5em' }}
           />
           <div className={classes.infos}>
@@ -271,11 +264,10 @@ const Resume: NextPage = () => {
       <li>
         {t('resume.french.name')}
         <MyImage
-          alt="lang-fr"
           src="/svg/flag-fr.svg"
           width={800}
           height={800}
-          style={{ width: '5em' }}
+          style={{ height: '5em' }}
         />
         ★★★★★
         <br />
@@ -284,11 +276,10 @@ const Resume: NextPage = () => {
       <li>
         {t('resume.english.name')}
         <MyImage
-          alt="lang-en"
           src="/svg/flag-en.svg"
           width={800}
           height={800}
-          style={{ width: '5em' }}
+          style={{ height: '5em' }}
         />
         ★★★★★
         <br />
@@ -299,11 +290,10 @@ const Resume: NextPage = () => {
       <li>
         {t('resume.spanish.name')}
         <MyImage
-          alt="lang-es"
           src="/svg/flag-es.svg"
           width={800}
           height={800}
-          style={{ width: '5em' }}
+          style={{ height: '5em' }}
         />
         ★★★☆☆
         <br />
@@ -339,257 +329,126 @@ const Resume: NextPage = () => {
       t('resume.skill.agile-methods'),
       t('resume.skill.managing-a-team'),
       t('resume.skill.managing-a-project'),
-      t('resume.skill.app-deployment')
+      t('resume.skill.app-deployment'),
     ];
     setSkills(skillsList.sort(() => Math.random() - 0.5));
   }, [i18n.language]);
 
-  const imageStyle: React.CSSProperties = { height: '100%', aspectRatio: 1 };
+  // const imageStyle: React.CSSProperties = { objectFit: 'contain' };
 
   const ProgrammingLanguages = () => (
     <ul className={classes.grid}>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.python')}
-            src="/image/python.png"
-            width={935}
-            height={1024}
-            blurhash={'UPIOH{0?04It1AIv~0t304^Zi]jE=;$_4?Rk'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/python.png" width={935} height={1024} />
         </div>
         {t('resume.skill.python')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.matlab')}
-            src="/image/matlab.png"
-            width={897}
-            height={806}
-            blurhash={'UMEw~:3W1O}U9_M|,.$~56+GICEkxbTJx[o|'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/matlab.png" width={897} height={806} />
         </div>
         {t('resume.skill.matlab')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.java')}
-            src="/image/java.png"
-            width={512}
-            height={512}
-            blurhash={'U89jAjNb01-5_#R*2_%06ASh]$$%1iR*}9w['}
-            style={imageStyle}
-          />
+          <MyImage src="/image/java.png" width={512} height={512} />
         </div>
         {t('resume.skill.java')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.JavaScript')}
-            src="/image/js.png"
-            width={1052}
-            height={1052}
-            style={imageStyle}
-          />
+          <MyImage src="/image/js.png" width={1052} height={1052} />
         </div>
         {t('resume.skill.JavaScript')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.HTML')}
-            src="/image/html.png"
-            width={512}
-            height={512}
-            blurhash={'UNQPmCt700rr}skC+^niHXaycsbH;gi_o0kX'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/html.png" width={512} height={512} />
         </div>
         {t('resume.skill.HTML')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.CSS')}
-            src="/image/css.png"
-            width={800}
-            height={800}
-            blurhash={'UJE3l,Mz00-;%QWBR?t602t6?XIpR?t5j]Rn'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/css.png" width={800} height={800} />
         </div>
         {t('resume.skill.CSS')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.C')}
-            src="/image/c.png"
-            width={360}
-            height={405}
-            blurhash={'UPF%DX?b00Iq%%j]Ria}00D%r:%1ogWBRij['}
-            style={imageStyle}
-          />
+          <MyImage src="/image/c.png" width={360} height={405} />
         </div>
         {t('resume.skill.C')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.Csharp')}
-            src="/image/csharp.png"
-            width={1200}
-            height={1350}
-            blurhash={'UUJR5%?I00RV?Kj]R$f84mE0Imt6t7WVRij['}
-            style={imageStyle}
-          />
+          <MyImage src="/image/csharp.png" width={1200} height={1350} />
         </div>
         {t('resume.skill.Csharp')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.VHDL')}
-            src="/image/vhdl.png"
-            width={128}
-            height={128}
-            blurhash={'UHFiR{xm03WGD*?YIJ054rxt-,M}~nD+%F--'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/vhdl.png" width={128} height={128} />
         </div>
         {t('resume.skill.VHDL')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.bash-unix')}
-            src="/image/bash.png"
-            width={2048}
-            height={2048}
-            blurhash={'UaJ[I-~q004n?bM{IU%M4n9ZWBxuIUt7t7M{'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/bash.png" width={2048} height={2048} />
         </div>
         {t('resume.skill.bash-unix')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.mathematica')}
-            src="/image/mathematica.png"
-            width={1965}
-            height={2048}
-            blurhash={'UALdlysn00oLxGfQWpbH00WpdBWVoLf6XSj['}
-            style={imageStyle}
-          />
+          <MyImage src="/image/mathematica.png" width={1965} height={2048} />
         </div>
         {t('resume.skill.mathematica')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.assembly')}
-            src="/image/assembly.png"
-            width={512}
-            height={512}
-            style={imageStyle}
-          />
+          <MyImage src="/image/assembly.png" width={512} height={512} />
         </div>
         {t('resume.skill.assembly')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.react')}
-            src="/image/react.png"
-            width={2300}
-            height={2000}
-            blurhash={'U28aj6uP00k?t-fjadfk00kDD4f+o}fkaKjt'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/react.png" width={2300} height={2000} />
         </div>
         {t('resume.skill.react')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.react-native')}
-            src="/image/reactnative.png"
-            width={256}
-            height={300}
-            blurhash={'UACP@g~q0000_3-;Rj0000D%D%-;4nayIU~q'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/reactnative.png" width={256} height={300} />
         </div>
         {t('resume.skill.react-native')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.aws-console')}
-            src="/image/aws.png"
-            width={1024}
-            height={613}
-            blurhash={'UYCE:joLazj[15WXoKa}}ooJR-js9^ayxFay'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/aws.png" width={1024} height={613} />
         </div>
         {t('resume.skill.aws-console')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.TypeScript')}
-            src="/image/ts.png"
-            width={2048}
-            height={2048}
-            blurhash={'UDC[3F4=0MWZ03-.%KfR02of-.of~oIpIVWC'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/ts.png" width={2048} height={2048} />
         </div>
         {t('resume.skill.TypeScript')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.SQL')}
-            src="/image/sql.png"
-            width={320}
-            height={394}
-            blurhash={'UX4OTyflpffladfQkDfQaIfPkEfRe.fQkDfQ'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/sql.png" width={320} height={394} />
         </div>
         {t('resume.skill.SQL')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.docker')}
-            src="/image/docker.png"
-            width={256}
-            height={256}
-            blurhash={'UJAAYB%P4mIT%CoYN3Rp00M^-@t69SRs%Dxr'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/docker.png" width={256} height={256} />
         </div>
         {t('resume.skill.docker')}
       </li>
       <li>
         <div className={classes.logo}>
-          <MyImage
-            alt={t('resume.skill.excel')}
-            src="/image/excel.png"
-            width={1101}
-            height={1024}
-            blurhash={'UO6w;[z{ofM{qCZ*jIafIUIBVtxHbtayafjG'}
-            style={imageStyle}
-          />
+          <MyImage src="/image/excel.png" width={1101} height={1024} />
         </div>
         {t('resume.skill.excel')}
       </li>
@@ -604,7 +463,7 @@ const Resume: NextPage = () => {
     t('resume.interestsList.film'),
     t('resume.interestsList.delegate'),
     t('resume.interestsList.running'),
-    t('resume.interestsList.association')
+    t('resume.interestsList.association'),
   ];
 
   const interestRef = useRef<HTMLDivElement | null>(null);
@@ -625,13 +484,9 @@ const Resume: NextPage = () => {
           {innerWidth < 450 ? t('resume.subTitleFull') : t('resume.subTitle')}
         </div>
         <MyImage
-          alt="myself"
           src="/image/selfie.jpg"
-          priority
           width={3941}
           height={2556}
-          blurhash={'L*MQq+RPx]%g~qWBWBtRX9WBj[V['}
-          objectFit={'cover'}
           style={{ width: '100%' }}
         />
         <div className={classes.listTitle}>{t('resume.education')}</div>
@@ -664,14 +519,14 @@ const useStyles = createStyles((theme) => ({
     borderRadius: 10,
     margin: 10,
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   title: {
     textAlign: 'center',
     fontSize: '2em',
     fontWeight: 'bold',
     marginTop: 10,
-    color: PURPLE_INTENSE
+    color: PURPLE_INTENSE,
   },
   subTitle: {
     textAlign: 'center',
@@ -679,32 +534,32 @@ const useStyles = createStyles((theme) => ({
     fontStyle: 'italic',
     marginTop: 10,
     marginLeft: 10,
-    marginRight: 10
+    marginRight: 10,
   },
   dualContainer: {
     [theme.fn.largerThan(1000)]: {
       display: 'flex',
-      flexDirection: 'row-reverse'
-    }
+      flexDirection: 'row-reverse',
+    },
   },
   columnContainer: {
     [theme.fn.largerThan(1000)]: {
-      width: '50%'
-    }
+      width: '50%',
+    },
   },
   listTitle: {
     backgroundColor: PURPLE_INTENSE,
     color: WHITE,
     textAlign: 'center',
-    fontSize: '1.5em'
+    fontSize: '1.5em',
   },
   list: {
     listStyleType: 'none',
     paddingLeft: '5%',
     '& > li': {
       display: 'flex',
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   grid: {
     listStyleType: 'none',
@@ -723,8 +578,8 @@ const useStyles = createStyles((theme) => ({
       padding: 5,
       borderRadius: 5,
       margin: 5,
-      fontSize: '0.9em'
-    }
+      fontSize: '0.9em',
+    },
   },
   gridLang: {
     listStyleType: 'none',
@@ -743,32 +598,33 @@ const useStyles = createStyles((theme) => ({
       borderRadius: 5,
       margin: 5,
       [theme.fn.smallerThan(500)]: {
-        width: 100
-      }
-    }
+        width: 100,
+      },
+    },
   },
   logo: {
     display: 'flex',
     height: '4em',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 5
+    paddingBottom: 5,
+    aspectRatio: '1',
   },
   item: {
     display: 'flex',
     alignItems: 'center',
     textDecoration: 'none',
     paddingTop: 10,
-    width: '100%'
+    width: '100%',
   },
   infos: {
     marginLeft: 20,
-    color: 'black'
+    color: 'black',
   },
   years: {},
   name: {
     fontWeight: 'bold',
-    color: PURPLE_INTENSE
+    color: PURPLE_INTENSE,
   },
   subName: {},
   city: {},
@@ -780,7 +636,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: 10,
     marginTop: 10,
     marginBottom: 20,
-    fontSize: '0.9em'
+    fontSize: '0.9em',
   },
   button: {
     alignSelf: 'flex-start',
@@ -793,11 +649,11 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     fontWeight: 500,
     borderRadius: 10,
-    backgroundColor: WHITE
+    backgroundColor: WHITE,
   },
   bonusInfo: {
     fontSize: '0.8em',
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   interest: {
     flex: 1,
@@ -808,8 +664,8 @@ const useStyles = createStyles((theme) => ({
     marginLeft: 30,
     marginRight: 30,
     strong: { color: PURPLE_INTENSE },
-    span: { fontWeight: 500 }
-  }
+    span: { fontWeight: 500 },
+  },
 }));
 
 export default Resume;

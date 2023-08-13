@@ -1,102 +1,114 @@
-import Image from 'next/image';
-
-import { Blurhash } from 'react-blurhash';
-import React, { useEffect, useState } from 'react';
-
-type PropsMyImage = React.ComponentProps<typeof Image> & {
-  blurhash?: string | undefined;
-  objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | undefined;
+import React, { useEffect, useRef, useState } from 'react';
+import { createStyles, keyframes } from '@mantine/core';
+import { WHITE } from 'apps/frontend/utils/DefaultStyle';
+type PropsMyImage = {
   src: string;
+  width: number;
+  height: number;
+  objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | undefined;
+  style?: React.CSSProperties | undefined;
 };
 
 export const MyImage = ({
-  blurhash,
-  alt,
   src,
   width,
   height,
   style,
-  priority,
-  objectFit = 'contain'
+  objectFit,
 }: PropsMyImage) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
+  const { classes } = useStyles();
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    const image = document.createElement('img');
-    image.onload = () => setImageLoaded(true);
-    image.src = src;
-  }, [src]);
+    if (imgRef.current?.complete) setLoaded(true);
+    else imgRef.current?.addEventListener('load', () => setLoaded(true));
+  }, [imgRef, src]);
 
   const containerStyle: React.CSSProperties = {
-    ...(!!width && !!height ? { aspectRatio: `${width} / ${height}` } : {}),
-    ...style
+    aspectRatio: `${width} / ${height}`,
+    ...style,
   };
 
-  if (!blurhash) {
-    return (
-      <div style={containerStyle}>
-        <Image
-          src={src}
-          alt={alt || ''}
-          width={width}
-          fill={!width}
-          height={height}
-          priority={priority}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit
-          }}
-        />
-      </div>
-    );
-  }
-
   return (
-    <div style={containerStyle}>
-      <div
+    <div className={classes.container} style={containerStyle}>
+      <img
+        className={classes.blur}
+        src={`/small${src}`}
         style={{
-          display: imageLoaded ? 'none' : 'block',
-          position: 'relative',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 1,
-          objectFit
+          objectFit,
+          opacity: loaded || src.slice(src.length - 3) === 'svg' ? 0 : 1,
         }}
-      >
-        <Blurhash
-          hash={blurhash || 'cZRC[6j[~qRjj[%M?bfQ9F-;j[D%%Mj[WB'}
-          width={'100%'}
-          height={'100%'}
-        />
-      </div>
+        loading="lazy"
+        ref={imgRef}
+      />
       <div
+        className={classes.pulse}
+        style={loaded ? { animation: 'none', display: 'none' } : { objectFit }}
+      />
+      <img
+        className={classes.img}
+        src={src}
         style={{
-          display: !imageLoaded ? 'none' : 'block',
-          position: 'relative',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 2
+          objectFit,
+          opacity: loaded || src.slice(src.length - 3) === 'svg' ? 1 : 0,
         }}
-      >
-        <Image
-          src={src}
-          alt={alt || ''}
-          width={width}
-          fill={!width}
-          height={height}
-          priority={priority}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit
-          }}
-        />
-      </div>
+        loading="lazy"
+        ref={imgRef}
+      />
     </div>
   );
 };
+
+const pulse = keyframes({
+  '0%': { opacity: 0 },
+  '50%': { opacity: 0.1 },
+  '100%': { opacity: 0 },
+});
+
+const useStyles = createStyles(() => ({
+  container: {
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    objectFit: 'contain',
+  },
+
+  blur: {
+    transition: 'opacity 250ms ease-in-out',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+    zIndex: 1,
+  },
+
+  pulse: {
+    animation: `${pulse} 2.5s infinite`,
+    backgroundColor: WHITE,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+    zIndex: 2,
+  },
+
+  img: {
+    transition: 'opacity 250ms ease-in-out',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+    zIndex: 3,
+  },
+}));

@@ -3,7 +3,13 @@ import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { GREEN_LIGHT, PURPLE_INTENSE, SHADOW, WHITE } from '../utils/constants';
+import {
+  GREEN_LIGHT,
+  PURPLE_INTENSE,
+  SHADOW,
+  WHITE,
+  entranceClass,
+} from '../utils/DefaultStyle';
 import Link from 'next/link';
 import { MyImage } from '../src/Utils/MyImage';
 
@@ -18,17 +24,12 @@ const Blog: NextPage = () => {
       href: '/resume',
       image: (
         <MyImage
-          alt="myself"
           src="/image/resumeImage.jpg"
           width={420}
           height={310}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
+          objectFit="cover"
         />
-      )
+      ),
     },
     {
       title: t('posts.coming-soon.title'),
@@ -36,17 +37,12 @@ const Blog: NextPage = () => {
       href: '/',
       image: (
         <MyImage
-          alt="comingsoon"
-          src="/image/comingsoon.jpeg"
+          src="/image/comingsoon.png"
           width={548}
           height={550}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
+          objectFit="cover"
         />
-      )
+      ),
     },
     {
       title: t('posts.coming-soon.title'),
@@ -54,17 +50,12 @@ const Blog: NextPage = () => {
       href: '/',
       image: (
         <MyImage
-          alt="comingsoon"
-          src="/image/comingsoon.jpeg"
+          src="/image/comingsoon.png"
           width={548}
           height={550}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
+          objectFit="cover"
         />
-      )
+      ),
     },
     {
       title: t('posts.coming-soon.title'),
@@ -72,79 +63,20 @@ const Blog: NextPage = () => {
       href: '/',
       image: (
         <MyImage
-          alt="comingsoon"
-          src="/image/comingsoon.jpeg"
+          src="/image/comingsoon.png"
           width={548}
           height={550}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
+          objectFit="cover"
         />
-      )
+      ),
     },
-    {
-      title: t('posts.coming-soon.title'),
-      text: t('posts.coming-soon.text'),
-      href: '/',
-      image: (
-        <MyImage
-          alt="comingsoon"
-          src="/image/comingsoon.jpeg"
-          width={548}
-          height={550}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
-        />
-      )
-    },
-    {
-      title: t('posts.coming-soon.title'),
-      text: t('posts.coming-soon.text'),
-      href: '/',
-      image: (
-        <MyImage
-          alt="comingsoon"
-          src="/image/comingsoon.jpeg"
-          width={548}
-          height={550}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
-        />
-      )
-    },
-    {
-      title: t('posts.coming-soon.title'),
-      text: t('posts.coming-soon.text'),
-      href: '/',
-      image: (
-        <MyImage
-          alt="comingsoon"
-          src="/image/comingsoon.jpeg"
-          width={548}
-          height={550}
-          objectFit={'cover'}
-          style={{
-            width: '100%',
-            height: '100%'
-          }}
-        />
-      )
-    }
   ];
 
   return (
     <Layout summary={undefined}>
       <ul className={classes.list}>
         {posts.map(({ title, text, href, image }, index) => (
-          <li key={`post-${index}`}>
+          <li key={`post-${index}`} className={entranceClass(index / 4)}>
             <Link
               href={href}
               rel={'noreferrer'}
@@ -166,7 +98,7 @@ const Blog: NextPage = () => {
 
 const useStyles = createStyles((theme) => ({
   grid: {
-    listStyleType: 'none'
+    listStyleType: 'none',
   },
   list: {
     listStyleType: 'none',
@@ -193,9 +125,9 @@ const useStyles = createStyles((theme) => ({
       [theme.fn.smallerThan(550)]: {
         width: '95%',
         marginRight: 0,
-        marginLeft: 0
-      }
-    }
+        marginLeft: 0,
+      },
+    },
   },
   item: {
     display: 'flex',
@@ -207,13 +139,13 @@ const useStyles = createStyles((theme) => ({
     opacity: 1,
     transition: 'opacity 0.3s',
     '&:hover': {
-      opacity: 0.9
-    }
+      opacity: 0.9,
+    },
+    animation: 'parent',
   },
   image: {
     aspectRatio: '1',
     height: '100%',
-    objectFit: 'cover'
   },
   infos: {
     boxSizing: 'border-box',
@@ -223,19 +155,19 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'start',
     display: 'flex',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   title: {
     fontSize: '1.2em',
     fontWeight: 'bold',
-    color: PURPLE_INTENSE
+    color: PURPLE_INTENSE,
   },
   text: {
     fontSize: '0.8em',
     marginTop: '1.5em',
     textAlign: 'justify',
-    alignSelf: 'start'
-  }
+    alignSelf: 'start',
+  },
 }));
 
 export default Blog;

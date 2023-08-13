@@ -6,12 +6,12 @@ import appFr from '../lang/fr.json';
 i18n.use(initReactI18next).init({
   compatibilityJSON: 'v3',
   resources: { en: { app: appEn }, fr: { app: appFr } },
-  debug: !(process.env.NEXT_PUBLIC_NODE_ENV === 'production'),
+  debug: false,
   ns: ['app'],
   fallbackLng: 'en',
   lng: global?.navigator?.language || '',
   keySeparator: '.',
-  interpolation: { escapeValue: false, prefix: '{', suffix: '}' }
+  interpolation: { escapeValue: false, prefix: '{', suffix: '}' },
 });
 
 export default i18n;
