@@ -560,6 +560,7 @@ const useStyles = createStyles((theme) => ({
   list: {
     listStyleType: 'none',
     paddingLeft: '5%',
+    paddingRight: '5%',
     '& > li': {
       display: 'flex',
       flexDirection: 'column',

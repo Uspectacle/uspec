@@ -96,6 +96,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'row',
     alignSelf: 'center',
     width: '90%',
+    paddingTop: 10,
     [theme.fn.smallerThan(950)]: {
       flexDirection: 'column',
     },
@@ -180,12 +181,15 @@ const useStyles = createStyles((theme) => ({
     alignSelf: 'flex-end',
     width: 300,
     maxWidth: '80%',
-    [theme.fn.smallerThan(400)]: {
-      alignSelf: 'center',
-    },
+    overflow: 'warp',
     animation: `${keyframes({
       '0%': { opacity: 0, transform: 'translateX(100px)' },
       '100%': { opacity: 1, transform: 'translateX(0)' },
     })} 0.5s 0.5s both`,
+    [theme.fn.smallerThan(400)]: {
+      alignSelf: 'center',
+      animation: 'none',
+      width: '80%',
+    },
   },
 }));
