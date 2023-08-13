@@ -8,6 +8,7 @@ import {
   PURPLE_INTENSE,
   SHADOW,
   WHITE,
+  entranceAnimation,
 } from '../utils/DefaultStyle';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../src/Utils/MyImage';
@@ -472,6 +473,8 @@ const Resume: NextPage = () => {
     <div className={classes.interest} ref={interestRef}>
       <strong>{t('resume.interests.look-at-it-again')}</strong>
       {t('resume.interests.text')}
+      <br />
+      <br />
       <span>{lookAgain(interestRef, interestsList)}</span>
     </div>
   );
@@ -520,6 +523,7 @@ const useStyles = createStyles((theme) => ({
     margin: 10,
     display: 'flex',
     flexDirection: 'column',
+    animation: entranceAnimation(0.1),
   },
   title: {
     textAlign: 'center',

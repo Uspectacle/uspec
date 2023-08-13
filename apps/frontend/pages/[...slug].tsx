@@ -6,7 +6,12 @@ import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import { MyImage } from '../src/Utils/MyImage';
 import { createStyles } from '@mantine/core';
-import { PURPLE_INTENSE, SHADOW, WHITE } from '../utils/DefaultStyle';
+import {
+  PURPLE_INTENSE,
+  SHADOW,
+  WHITE,
+  entranceAnimation,
+} from '../utils/DefaultStyle';
 
 const Page404: NextPage = () => {
   const { t } = useTranslation();
@@ -50,6 +55,7 @@ const useStyles = createStyles(() => ({
     maxWidth: '80%',
     overflow: 'wrap',
     strong: { color: PURPLE_INTENSE, wordBreak: 'break-all' },
+    animation: entranceAnimation(0.1),
   },
 }));
 

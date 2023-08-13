@@ -127,6 +127,9 @@ const useStyles = createStyles((theme) => ({
         marginRight: 0,
         marginLeft: 0,
       },
+      '&:active': {
+        boxShadow: 'none',
+      },
     },
   },
   item: {
@@ -138,6 +141,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: WHITE,
     opacity: 1,
     transition: 'opacity 0.3s',
+    color: 'black',
     '&:hover': {
       opacity: 0.9,
     },

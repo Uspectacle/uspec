@@ -26,7 +26,7 @@ const useStyles = createStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    width: '100dvw',
+    width: '100%',
     minHeight: '100dvh',
     justifyContent: 'space-between',
     whiteSpace: 'pre-wrap',

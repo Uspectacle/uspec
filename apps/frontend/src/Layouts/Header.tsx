@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles, keyframes } from '@mantine/core';
 import {
   GREEN_LIGHT,
   GREEN_WHITE,
@@ -146,6 +146,9 @@ const useStyles = createStyles((theme) => ({
     '&:hover': {
       color: GREEN_LIGHT,
     },
+    '&:active': {
+      boxShadow: 'none',
+    },
     [theme.fn.smallerThan(600)]: {
       padding: 5,
       width: '10em',
@@ -157,6 +160,11 @@ const useStyles = createStyles((theme) => ({
     textDecoration: 'none',
     display: 'flex',
     alignItems: 'center',
+    animation: `${keyframes({
+      '0%': { transform: 'translateY(0)' },
+      '40%': { transform: 'translateY(-5px)' },
+      '100%': { transform: 'translateY(0)' },
+    })} 5s ease-in-out infinite`,
   },
   summary: {
     backgroundColor: GREEN_WHITE,
@@ -171,5 +179,9 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan(400)]: {
       alignSelf: 'center',
     },
+    animation: `${keyframes({
+      '0%': { opacity: 0, transform: 'translateX(100px)' },
+      '100%': { opacity: 1, transform: 'translateX(0)' },
+    })} 0.5s 0.5s both`,
   },
 }));

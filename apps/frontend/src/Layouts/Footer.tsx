@@ -18,17 +18,18 @@ export function Footer() {
     <footer className={classes.footer}>
       <strong>{t('footer.contactMe')}</strong>
       <div className={classes.links}>
-        <Link href={'/resume'} className={classes.link}>
-          {t('footer.resume')}
-        </Link>
         <Link
           href={'mailto:uspectacle@gmail.com'}
           target={'_blank'}
           rel={'noreferrer'}
           className={classes.link}
+          style={{ fontStyle: 'italic' }}
           passHref
         >
           uspectacle@gmail.com
+        </Link>
+        <Link href={'/resume'} className={classes.link}>
+          {t('footer.resume')}
         </Link>
         <Link
           href={'https://github.com/Uspectacle'}
@@ -101,6 +102,9 @@ const useStyles = createStyles((theme) => ({
     transition: 'color 0.3s',
     '&:hover': {
       color: GREEN_LIGHT,
+    },
+    '&:active': {
+      boxShadow: 'none',
     },
     [theme.fn.smallerThan(600)]: {
       padding: 5,
