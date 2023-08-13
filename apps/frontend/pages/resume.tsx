@@ -45,6 +45,10 @@ const Resume: NextPage = () => {
     </>
   );
 
+  const imageStyle = {
+    width: '5em',
+  };
+
   const Education = () => (
     <ul className={classes.list}>
       <li>
@@ -55,12 +59,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/ensea.png"
-            width={120}
-            height={119}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/ensea.png"
+              width={120}
+              height={119}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2018 - 2022</div>
             <div className={classes.name}>{t('resume.ensea.name')}</div>
@@ -83,12 +89,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/civ.png"
-            width={202}
-            height={69}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/civ.png"
+              width={202}
+              height={69}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2016 - 2018</div>
             <div className={classes.name}>{t('resume.civ.name')}</div>
@@ -111,12 +119,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/parc.png"
-            width={475}
-            height={106}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/parc.png"
+              width={475}
+              height={106}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2013 - 2016</div>
             <div className={classes.name}>{t('resume.parc.name')}</div>
@@ -143,12 +153,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/galadrim.png"
-            width={200}
-            height={200}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/galadrim.png"
+              width={200}
+              height={200}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2022 - 2023</div>
             <div className={classes.name}>{t('resume.galadrim.name')}</div>
@@ -174,12 +186,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/cea.jpg"
-            width={400}
-            height={400}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/cea.jpg"
+              width={400}
+              height={400}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2021</div>
             <div className={classes.name}>{t('resume.cea.name')}</div>
@@ -203,12 +217,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/Uni-ljubljana.png"
-            width={220}
-            height={219}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/Uni-ljubljana.png"
+              width={220}
+              height={219}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2020</div>
             <div className={classes.name}>{t('resume.ljubljana.name')}</div>
@@ -234,12 +250,14 @@ const Resume: NextPage = () => {
           className={classes.item}
           passHref
         >
-          <MyImage
-            src="/image/ensea.png"
-            width={120}
-            height={119}
-            style={{ width: '5em' }}
-          />
+          <div className={classes.itemImage}>
+            <MyImage
+              src="/image/ensea.png"
+              width={120}
+              height={119}
+              style={imageStyle}
+            />
+          </div>
           <div className={classes.infos}>
             <div className={classes.years}>2019 - 2020</div>
             <div className={classes.name}>{t('resume.themis.name')}</div>
@@ -621,6 +639,11 @@ const useStyles = createStyles((theme) => ({
     textDecoration: 'none',
     paddingTop: 10,
     width: '100%',
+    overflow: 'warp',
+  },
+  itemImage: {
+    width: '5em',
+    height: '5em',
   },
   infos: {
     marginLeft: 20,
@@ -648,7 +671,7 @@ const useStyles = createStyles((theme) => ({
     boxShadow: SHADOW,
     padding: 10,
     textDecoration: 'none',
-    fontSize: 15,
+    fontSize: '1em',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

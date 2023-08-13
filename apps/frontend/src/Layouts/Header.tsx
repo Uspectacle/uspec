@@ -32,12 +32,7 @@ export const Header = ({
           href={'/'}
           className={classes.logo}
           style={{
-            height:
-              innerWidth < 500
-                ? innerWidth < 330
-                  ? 154 / 2
-                  : (154 * 3) / 4
-                : 154,
+            height: innerWidth < 500 ? (154 * 3) / 4 : 154,
           }}
         >
           <MyImage src="/image/logo.png" width={201} height={154} />
@@ -117,6 +112,9 @@ const useStyles = createStyles((theme) => ({
     },
     [theme.fn.smallerThan(500)]: {
       marginTop: 0,
+    },
+    [theme.fn.smallerThan(360)]: {
+      flexDirection: 'column',
     },
   },
   links: {

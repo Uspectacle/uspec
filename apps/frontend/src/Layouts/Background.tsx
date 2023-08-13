@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { createStyles } from '@mantine/core';
 import { BACKGROUND_COLOR } from '../../utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
 
-export const Background = () => {
+export const Background = ({ length }: { length: number }) => {
   const { classes } = useStyles();
 
-  return (
-    <div className={classes.container}>
-      {Array.from({ length: 20 }, (_, index) => (
-        <RandomCircle key={index} />
-      ))}
-    </div>
-  );
+  const [circles, setCircles] = useState<JSX.Element[]>([]);
+
+  useEffect(() => {
+    setCircles(
+      Array.from({ length }, (_, index) => <RandomCircle key={index} />)
+    );
+  }, [length]);
+
+  return <div className={classes.container}>{circles}</div>;
 };
 
 const useStyles = createStyles(() => ({

@@ -86,7 +86,7 @@ const Blog: NextPage = () => {
   ];
 
   return (
-    <Layout summary={undefined}>
+    <Layout>
       <ul className={classes.list}>
         {posts.map(({ title, text, href, image }, index) => (
           <li key={`post-${index}`} className={entranceClass(index / 4)}>
@@ -127,7 +127,7 @@ const useStyles = createStyles((theme) => ({
       textAlign: 'center',
       flexDirection: 'column',
       boxShadow: SHADOW,
-      height: '8em',
+      height: 130,
       width: '30em',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -139,6 +139,9 @@ const useStyles = createStyles((theme) => ({
         width: '95%',
         marginRight: 0,
         marginLeft: 0,
+      },
+      [theme.fn.smallerThan(420)]: {
+        height: 'auto',
       },
       '&:active': {
         boxShadow: 'none',
@@ -155,6 +158,9 @@ const useStyles = createStyles((theme) => ({
     opacity: 1,
     transition: 'opacity 0.3s',
     color: 'black',
+    [theme.fn.smallerThan(420)]: {
+      flexDirection: 'column',
+    },
     '&:hover': {
       opacity: 0.9,
     },
@@ -163,6 +169,11 @@ const useStyles = createStyles((theme) => ({
   image: {
     aspectRatio: '1',
     height: '100%',
+    [theme.fn.smallerThan(420)]: {
+      height: 'auto',
+      width: '50%',
+      boxShadow: SHADOW,
+    },
   },
   infos: {
     boxSizing: 'border-box',
@@ -173,6 +184,9 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
+    [theme.fn.smallerThan(420)]: {
+      height: 'auto',
+    },
   },
   title: {
     fontSize: '1.2em',

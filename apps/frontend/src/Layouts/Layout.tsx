@@ -15,7 +15,7 @@ export const Layout = ({
 
   return (
     <div className={classes.container}>
-      <Background />
+      <Background length={20} />
       <Header>{summary}</Header>
       {children}
       <Footer />
