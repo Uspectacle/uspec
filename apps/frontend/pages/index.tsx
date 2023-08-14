@@ -89,7 +89,7 @@ const Blog: NextPage = () => {
     <Layout>
       <ul className={classes.list}>
         {posts.map(({ title, text, href, image }, index) => (
-          <li key={`post-${index}`} className={entranceClass(index / 4)}>
+          <li key={`post-${index}`} className={entranceClass(index * 0.25)}>
             <Link
               href={href}
               rel={'noreferrer'}

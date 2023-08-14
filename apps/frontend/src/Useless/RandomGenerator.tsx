@@ -1364,7 +1364,7 @@ export const randomFirstName = (): string => {
     'zealous',
     'zesty',
     'zigzag',
-    'rocky'
+    'rocky',
   ];
 
   return capFirst(firstNameList[getRandomInt(0, firstNameList.length)]);
@@ -2872,7 +2872,7 @@ export const randomLastName = (): string => {
     'yesterday',
     'Thomas',
     'Tom',
-    'Lieuwe'
+    'Lieuwe',
   ];
 
   return capFirst(lastNameList[getRandomInt(0, lastNameList.length)]);
