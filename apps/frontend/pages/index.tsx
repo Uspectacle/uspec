@@ -3,15 +3,9 @@ import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  GREEN_LIGHT,
-  PURPLE_INTENSE,
-  SHADOW,
-  WHITE,
-  entranceClass,
-} from '../utils/DefaultStyle';
-import Link from 'next/link';
+import { GREEN_LIGHT, SHADOW, entranceClass } from '../utils/DefaultStyle';
 import { MyImage } from '../src/Utils/MyImage';
+import { Post } from '../src/Layouts/Post';
 
 const Blog: NextPage = () => {
   const { classes } = useStyles();
@@ -90,18 +84,7 @@ const Blog: NextPage = () => {
       <ul className={classes.list}>
         {posts.map(({ title, text, href, image }, index) => (
           <li key={`post-${index}`} className={entranceClass(index * 0.25)}>
-            <Link
-              href={href}
-              rel={'noreferrer'}
-              className={classes.item}
-              passHref
-            >
-              <div className={classes.image}>{image}</div>
-              <div className={classes.infos}>
-                <div className={classes.title}>{title}</div>
-                <div className={classes.text}>{text}</div>
-              </div>
-            </Link>
+            <Post title={title} text={text} href={href} image={image} />
           </li>
         ))}
       </ul>
@@ -147,57 +130,6 @@ const useStyles = createStyles((theme) => ({
         boxShadow: 'none',
       },
     },
-  },
-  item: {
-    display: 'flex',
-    alignItems: 'center',
-    textDecoration: 'none',
-    height: '100%',
-    width: '100%',
-    backgroundColor: WHITE,
-    opacity: 1,
-    transition: 'opacity 0.3s',
-    color: 'black',
-    [theme.fn.smallerThan(420)]: {
-      flexDirection: 'column',
-    },
-    '&:hover': {
-      opacity: 0.9,
-    },
-    animation: 'parent',
-  },
-  image: {
-    aspectRatio: '1',
-    height: '100%',
-    [theme.fn.smallerThan(420)]: {
-      height: 'auto',
-      width: '50%',
-      boxShadow: SHADOW,
-    },
-  },
-  infos: {
-    boxSizing: 'border-box',
-    padding: 10,
-    height: '100%',
-    width: '100%',
-    justifyContent: 'start',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    [theme.fn.smallerThan(420)]: {
-      height: 'auto',
-    },
-  },
-  title: {
-    fontSize: '1.2em',
-    fontWeight: 'bold',
-    color: PURPLE_INTENSE,
-  },
-  text: {
-    fontSize: '0.8em',
-    marginTop: '1.5em',
-    textAlign: 'justify',
-    alignSelf: 'start',
   },
 }));
 

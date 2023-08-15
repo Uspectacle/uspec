@@ -43,7 +43,8 @@
       "subName": "3-year Master's Program",
       "city": "France, Cergy",
       "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded over 10 ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
-      "result": "Graduated with honors, majoring in signal processing and artificial intelligence"
+      "result": "Graduated with honors, majoring in signal processing and artificial intelligence",
+      "href": "https://www.ensea.fr/en"
     },
     "civ": {
       "name": "CIV, Centre International de Valbonne",
@@ -71,7 +72,8 @@
       "subName": "6-Month Internship",
       "city": "France, Saclay",
       "objective": "Led the unification of detection and re-identification within an innovative deep network architecture for multifaceted object tracking",
-      "result": "Championed a groundbreaking visual transformer algorithm, surpassing baseline models in performance"
+      "result": "Championed a groundbreaking visual transformer algorithm, surpassing baseline models in performance",
+      "href": "https://list.cea.fr/en/"
     },
     "ljubljana": {
       "name": "University of Ljubljana",

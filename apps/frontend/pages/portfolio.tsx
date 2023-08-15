@@ -39,6 +39,15 @@ const Resume: NextPage = () => {
           <Note index={5}>
             <div className={classes.text}>{'Hello'}</div>
           </Note>
+          <Note index={6}>
+            <div className={classes.text}>{'Hello'}</div>
+          </Note>
+          <Note index={7}>
+            <div className={classes.text}>{'Hello'}</div>
+          </Note>
+          <Note index={8}>
+            <div className={classes.text}>{'Hello'}</div>
+          </Note>
         </div>
       </Board>
     </Layout>
