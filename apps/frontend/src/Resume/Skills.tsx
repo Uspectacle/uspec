@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RotatingWords } from './RotatingWords';
-import i18n from 'apps/frontend/utils/i18n';
+import i18n from '../Utils/i18n';
 
 export const Skills = () => {
   const { t } = useTranslation();

@@ -7,7 +7,7 @@ import {
   SHADOW,
   WHITE,
   entranceAnimation,
-} from '../utils/DefaultStyle';
+} from '../src/Utils/DefaultStyle';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../src/Utils/MyImage';
 import { getWindow } from '../src/Utils/GetWindow';

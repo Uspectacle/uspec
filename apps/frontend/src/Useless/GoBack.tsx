@@ -31,6 +31,6 @@ export const GoBack = ({ height, url, handlerClick }: BackProps) => {
 
 const useStyles = createStyles(() => ({
   svgContainer: {
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 }));

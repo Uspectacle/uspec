@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
-import { SHADOW, entranceAnimation } from '../../utils/DefaultStyle';
+import { SHADOW, entranceAnimation } from '../Utils/DefaultStyle';
 
 export const Board = ({ children }: { children?: JSX.Element | undefined }) => {
   const { classes } = useStyles();

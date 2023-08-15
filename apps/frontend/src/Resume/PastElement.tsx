@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { PURPLE_INTENSE, GREEN_WHITE, SHADOW } from '../../utils/DefaultStyle';
+import { PURPLE_INTENSE, GREEN_WHITE, SHADOW } from '../Utils/DefaultStyle';
 
 interface Props {
   href: string;

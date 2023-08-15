@@ -1,4 +1,3 @@
-// import { createStyles } from '@mantine/core'
 import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
@@ -11,7 +10,7 @@ import {
   SHADOW,
   WHITE,
   entranceAnimation,
-} from '../utils/DefaultStyle';
+} from '../src/Utils/DefaultStyle';
 
 const Page404: NextPage = () => {
   const { t } = useTranslation();

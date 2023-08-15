@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createStyles } from '@mantine/core';
-import { BACKGROUND_COLOR } from '../../utils/DefaultStyle';
+import { BACKGROUND_COLOR } from '../Utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
 
 export const Background = ({ length }: { length: number }) => {

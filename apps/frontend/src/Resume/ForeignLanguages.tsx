@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
-import { SHADOW } from '../../utils/DefaultStyle';
+import { SHADOW } from '../Utils/DefaultStyle';
 
 export const ForeignLanguages = () => {
   const { classes } = useStyles();

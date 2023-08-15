@@ -8,8 +8,8 @@ import { ToastContainer } from 'react-toastify';
 import { I18nextProvider } from 'react-i18next';
 import 'react-toastify/dist/ReactToastify.css';
 import 'dayjs/locale/fr';
-import '../utils/styles.css';
-import i18n from '../utils/i18n';
+import '../src/Utils/styles.css';
+import i18n from '../src/Utils/i18n';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   if (

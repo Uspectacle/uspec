@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
 import { randomPop, randomize } from '../Utils/Random';
-import { entranceAnimation } from '../../utils/DefaultStyle';
+import { entranceAnimation } from '../Utils/DefaultStyle';
 
 export const Note = ({
   index,

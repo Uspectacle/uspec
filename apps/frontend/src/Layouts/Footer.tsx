@@ -4,7 +4,7 @@ import {
   PURPLE_INTENSE,
   SHADOW,
   WHITE,
-} from '../../utils/DefaultStyle';
+} from '../Utils/DefaultStyle';
 import Link from 'next/link';
 import React from 'react';
 import { useTranslation } from 'react-i18next';

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { MyImage } from '../Utils/MyImage';
 import { createStyles } from '@mantine/core';
-import { SHADOW, WHITE } from '../../utils/DefaultStyle';
 import { useTranslation } from 'react-i18next';
+import { SHADOW, WHITE } from '../Utils/DefaultStyle';
 
 export const Summary = () => {
   const { classes } = useStyles();

@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import { BACKGROUND_COLOR } from '../utils/DefaultStyle';
+import { BACKGROUND_COLOR } from '../src/Utils/DefaultStyle';
 
 export default function Document() {
   return (

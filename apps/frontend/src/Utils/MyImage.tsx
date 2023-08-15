@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createStyles, keyframes } from '@mantine/core';
-import { WHITE } from '../../utils/DefaultStyle';
+import { WHITE } from '../Utils/DefaultStyle';
 type PropsMyImage = {
   src: string;
   width: number;

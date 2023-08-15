@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, keyframes } from '@mantine/core';
-import { PURPLE_INTENSE } from '../../utils/DefaultStyle';
+import { PURPLE_INTENSE } from '../Utils/DefaultStyle';
 
 export const RandomCircle = () => {
   const { classes } = useStyles();
