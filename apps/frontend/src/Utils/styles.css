@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
 
+@font-face {
+  font-family: 'Crayons';
+  src: url('/font/colored-crayons/ColoredCrayons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   font-family: 'Inter';

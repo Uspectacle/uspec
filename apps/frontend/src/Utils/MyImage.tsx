@@ -86,7 +86,7 @@ const useStyles = createStyles(() => ({
     width: '100%',
     height: '100%',
     objectFit: 'contain',
-    zIndex: 1,
+    zIndex: 0.1,
   },
 
   pulse: {
@@ -98,7 +98,7 @@ const useStyles = createStyles(() => ({
     width: '100%',
     height: '100%',
     objectFit: 'contain',
-    zIndex: 2,
+    zIndex: 0.2,
   },
 
   img: {
@@ -109,6 +109,6 @@ const useStyles = createStyles(() => ({
     width: '100%',
     height: '100%',
     objectFit: 'contain',
-    zIndex: 3,
+    zIndex: 0.3,
   },
 }));

@@ -27,7 +27,6 @@ const useStyles = createStyles(() => ({
     borderRadius: 3,
   },
   board: {
-    minWidth: '50vw',
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: '#602409',
