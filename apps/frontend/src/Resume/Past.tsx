@@ -14,7 +14,7 @@ export const Education = () => {
         href={t('resume.ensea.href')}
         image={
           <MyImage
-            src="/image/ensea.png"
+            src="/image/Resume/ensea.png"
             width={120}
             height={119}
             style={imageStyle}
@@ -31,7 +31,7 @@ export const Education = () => {
         href={'http://prepa.civfrance.com/prépas-scientifiques/'}
         image={
           <MyImage
-            src="/image/civ.png"
+            src="/image/Resume/civ.png"
             width={202}
             height={69}
             style={imageStyle}
@@ -48,7 +48,7 @@ export const Education = () => {
         href={'https://www.leparcimperial.fr/lycee/'}
         image={
           <MyImage
-            src="/image/parc.png"
+            src="/image/Resume/parc.png"
             width={475}
             height={106}
             style={imageStyle}
@@ -74,7 +74,7 @@ export const Experience = () => {
         href={'https://galadrim.fr/'}
         image={
           <MyImage
-            src="/image/galadrim.png"
+            src="/image/Resume/galadrim.png"
             width={200}
             height={200}
             style={imageStyle}
@@ -91,7 +91,7 @@ export const Experience = () => {
         href={t('resume.cea.href')}
         image={
           <MyImage
-            src="/image/cea.jpg"
+            src="/image/Resume/cea.jpg"
             width={400}
             height={400}
             style={imageStyle}
@@ -108,7 +108,7 @@ export const Experience = () => {
         href={'https://www.uni-lj.si/eng/'}
         image={
           <MyImage
-            src="/image/Uni-ljubljana.png"
+            src="/image/Resume/Uni-ljubljana.png"
             width={220}
             height={219}
             style={imageStyle}
@@ -125,7 +125,7 @@ export const Experience = () => {
         href={'http://www-reynal.ensea.fr/?page_id=303'}
         image={
           <MyImage
-            src="/image/ensea.png"
+            src="/image/Resume/ensea.png"
             width={120}
             height={119}
             style={imageStyle}

@@ -13,7 +13,7 @@ export const ResumePost = ({ index }: { index: number }) => {
       href={'/resume'}
       image={
         <MyImage
-          src="/image/resumeImage.jpg"
+          src="/image/Resume/resumeImage.jpg"
           width={420}
           height={310}
           objectFit="cover"

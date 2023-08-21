@@ -106,7 +106,7 @@
     },
     "skills": "COMPÉTENCES TECHNIQUES",
     "programming": "LANGAGES DE PROGRAMMATION",
-    "interest": "INTÉRÊTS PERSONNELS",
+    "interest": "INTÉRÊT PERSONNEL",
     "interests": {
       "look-at-it-again": "Regardez y de nouveau ",
       "text": "car passionné par l'apprentissage continu, la création proactive et le partage efficace des connaissances, mes intérêts diversifiés incluent :"
@@ -163,8 +163,8 @@
       "JavaScript": "JavaScript",
       "Csharp": "C#"
     },
-    "pdf": "LARSEN_Mario_CV_FR_2023.pdf",
-    "intrest": "Passionné d'apprentissage continu, IA, création cinématographique, développement d'applications, neurologie, mathématiques, poésie, associations"
+    "pdf": "/doc/Resume/LARSEN_Mario_CV_FR_2023.pdf",
+    "interestText": "Passionné d'apprentissage continu, IA, création cinématographique, développement d'applications, neurologie, mathématiques, poésie, associations"
   },
   "portfolio": {
     "summary": "J'ai fait beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\nÀ un moment donné, certains peuvent recevoir leur propre page"

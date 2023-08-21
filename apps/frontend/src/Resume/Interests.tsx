@@ -23,7 +23,7 @@ export const Interests = () => {
 
   return (
     <div className={classes.container} ref={interestRef}>
-      {t('resume.intrest')}
+      {t('resume.interestText')}
       {/* <strong>{t('resume.interests.look-at-it-again')}</strong> */}
       {/* {t('resume.interests.text')}
       <br />

@@ -32,6 +32,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     whiteSpace: 'pre-wrap',
     alignItems: 'center',
+    overflow: 'hidden',
     [theme.fn.smallerThan(500)]: {
       fontSize: '0.9em',
     },

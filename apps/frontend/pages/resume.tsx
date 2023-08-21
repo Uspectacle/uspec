@@ -32,7 +32,7 @@ const Resume: NextPage = () => {
           {innerWidth < 450 ? t('resume.subTitleFull') : t('resume.subTitle')}
         </div>
         <MyImage
-          src="/image/selfie.jpg"
+          src="/image/Resume/selfie.jpg"
           width={3941}
           height={2556}
           style={{ width: '100%' }}

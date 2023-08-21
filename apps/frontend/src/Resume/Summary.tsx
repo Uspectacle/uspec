@@ -11,8 +11,7 @@ export const Summary = () => {
     <>
       {t('resume.summary')} <br /> <br />
       <Link
-        download={t('resume.pdf')}
-        href={`doc/${t('resume.pdf')}`}
+        href={t('resume.pdf')}
         target={'_blank'}
         rel={'noreferrer'}
         className={classes.button}

@@ -3,17 +3,15 @@ import React from 'react';
 import { randomPop, randomize } from '../Utils/Random';
 import { entranceAnimation } from '../Utils/DefaultStyle';
 
-export const Note = ({
-  seed,
-  children,
-  delay,
-  actionable,
-}: {
+interface Props {
   seed: number;
   children?: JSX.Element | undefined;
   delay: number;
   actionable?: boolean | undefined;
-}) => {
+  margin?: string | number | undefined;
+}
+
+export const Note = ({ seed, children, delay, actionable, margin }: Props) => {
   const { classes } = useStyles({
     seed,
     delay,
@@ -21,7 +19,7 @@ export const Note = ({
   });
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} style={{ margin: margin ?? 5 }}>
       <div className={classes.note}>
         <div className={classes.pin} />
         {children}
@@ -30,24 +28,23 @@ export const Note = ({
   );
 };
 
-const noteColors = ['#f1f58f', '#ffa930', '#ff66c4', '#a9edf1', '#74ed4b'];
+const noteColors = ['#f1f58f', '#ffa930', '#ff78cb', '#a9edf1', '#74ed4b'];
 const pinColors = ['#e4cb2e', '#1b835f', '#db2a21', '#4141e7', '#e4dbd2'];
 
+interface StyleProps {
+  seed: number;
+  delay: number;
+  actionable: boolean;
+}
+
 const useStyles = createStyles(
-  (
-    theme,
-    {
-      seed,
-      delay,
-      actionable,
-    }: { seed: number; delay: number; actionable: boolean }
-  ) => {
-    const noteRotate = (randomize(seed * 26) - 0.5) / 30;
-    const noteTranslate = `translate(${(randomize(seed * 3) - 0.5) * 2}em, ${
-      (randomize(seed * 4) - 0.5) * 2
+  (theme, { seed, delay, actionable }: StyleProps) => {
+    const noteRotate = (randomize(seed * 26) - 0.5) / 40;
+    const noteTranslate = `translate(${(randomize(seed * 3) - 0.5) * 1.5}em, ${
+      (randomize(seed * 4) - 0.5) * 1.5
     }em)`;
     const noteTransform = `rotate(${noteRotate}turn) ${noteTranslate}`;
-    const noteTransformHover = `rotate(${noteRotate / 2}turn) ${noteTranslate}`;
+    const noteTransformHover = `rotate(${noteRotate / 3}turn) ${noteTranslate}`;
     const pinTransform = `translate(${
       (randomize(seed * 5) - 0.5) * 200 - 50
     }%, ${(randomize(seed * 6) - 0.5) * 50}%)`;
