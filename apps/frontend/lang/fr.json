@@ -39,10 +39,10 @@
     "result": "Résultat : ",
     "education": "ÉDUCATION",
     "ensea": {
-      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses applications",
+      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses Applications",
       "subName": "Programme de Master de 3 ans",
       "city": "France, Cergy",
-      "text": "Institution prestigieuse spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé plus de 10 projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
+      "text": "Institution prestigieuse spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé de nombreux projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
       "result": "Diplômé avec mention, spécialisation en traitement du signal et en intelligence artificielle",
       "href": "https://www.ensea.fr"
     },
@@ -163,6 +163,10 @@
       "JavaScript": "JavaScript",
       "Csharp": "C#"
     },
-    "pdf": "LARSEN_Mario_CV_FR_2023.pdf"
+    "pdf": "LARSEN_Mario_CV_FR_2023.pdf",
+    "intrest": "Passionné d'apprentissage continu, IA, création cinématographique, développement d'applications, neurologie, mathématiques, poésie, associations"
+  },
+  "portfolio": {
+    "summary": "J'ai fait beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\nÀ un moment donné, certains peuvent recevoir leur propre page"
   }
 }

@@ -2,16 +2,16 @@ import { createStyles, keyframes } from '@mantine/core';
 import { PURPLE_INTENSE } from '../Utils/DefaultStyle';
 
 export const RotatingWords = ({
-  text,
+  // text,
   words,
 }: {
-  text: string;
+  // text: string;
   words: string[];
 }) => {
   const { classes } = useStyles({ length: words.length });
   return (
     <div className={classes.container}>
-      <div className={classes.text}>{text}</div>
+      {/* <div className={classes.text}>{text}</div> */}
       <div className={classes.words}>
         {words.map((word, index) => (
           <div className={classes.word} key={'word_' + index}>
@@ -57,12 +57,12 @@ const useStyles = createStyles((theme, { length }: { length: number }) => ({
       justifyContent: 'start',
     },
   },
-  text: {
-    paddingTop: '1.5em',
-    [theme.fn.smallerThan(350)]: {
-      display: 'none',
-    },
-  },
+  // text: {
+  //   paddingTop: '1.5em',
+  //   [theme.fn.smallerThan(350)]: {
+  //     display: 'none',
+  //   },
+  // },
   words: {
     animation: `${animation(length)} ${length * 1.5}s infinite`,
   },

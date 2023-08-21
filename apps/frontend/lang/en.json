@@ -39,10 +39,10 @@
     "result": "Result: ",
     "education": "EDUCATION",
     "ensea": {
-      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses applications",
+      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses Applications",
       "subName": "3-year Master's Program",
       "city": "France, Cergy",
-      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded over 10 ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
+      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded lots of ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
       "result": "Graduated with honors, majoring in signal processing and artificial intelligence",
       "href": "https://www.ensea.fr/en"
     },
@@ -163,9 +163,10 @@
       "JavaScript": "JavaScript",
       "Csharp": "C#"
     },
-    "pdf": "LARSEN_Mario_resume_EN_2023.pdf"
+    "pdf": "LARSEN_Mario_resume_EN_2023.pdf",
+    "intrest": "Passionate about continuous learning, AI implementation, filmmaking, app development, neurology, mathematics, poetry, and associations"
   },
   "portfolio": {
-    "summary": "I have done lots of projects before this blog and I will try to list them all here. At some point, some may received there own page"
+    "summary": "I have done lots of projects before this blog and I will try to list them all here. \nAt some point, some may received there own page"
   }
 }

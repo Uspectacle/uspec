@@ -18,7 +18,7 @@ export const Skills = () => {
     t('resume.skill.signal-processing'),
     t('resume.skill.video-processing'),
     t('resume.skill.telecommunication'),
-    t('resume.skill.modeling-languages'),
+    // t('resume.skill.modeling-languages'),
     t('resume.skill.optimization'),
     t('resume.skill.noise-reduction'),
     t('resume.skill.database-handling'),
@@ -26,7 +26,7 @@ export const Skills = () => {
     t('resume.skill.web-development'),
     t('resume.skill.mobile-development'),
     t('resume.skill.agile-methods'),
-    t('resume.skill.managing-a-team'),
+    // t('resume.skill.managing-a-team'),
     t('resume.skill.managing-a-project'),
     t('resume.skill.app-deployment'),
   ];
@@ -35,5 +35,5 @@ export const Skills = () => {
     setSkills(skillsList.sort(() => Math.random() - 0.5));
   }, [i18n.language]);
 
-  return <RotatingWords text={t('resume.skill.i-am-good-at')} words={skills} />;
+  return <RotatingWords words={skills} />;
 };
