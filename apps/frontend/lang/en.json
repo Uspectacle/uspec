@@ -223,7 +223,7 @@
       "text": "Small project carried out in pairs during half a semester. Among the most elementary manipulations of sound are amplification and attenuation. Our project is to produce such a system with the LM1971 M chip. The work is divided into four parts: - A computer phase allowing to control the chip via an Arduino card - An electronic phase for the PCB to communicate the composing - A do-it-yourself phase by ordering, printing, drilling, welding - A test phase to ensure efficiency and report improvements"
     },
     "minesolver": {
-      "title": "Mineseeper Solver",
+      "title": "Minesweeper Solver",
       "context": "Home Project in TS"
     },
     "snake": {
@@ -234,14 +234,14 @@
     "sudoku": {
       "title": "Solver Sudoku",
       "context": "Home Project in Python",
-      "text": "This is my first ever programm made during free time. I also made other related stuff around the general idear of solving the game of Sudoku."
+      "text": "This is my first ever program made during free time. I also made other related stuff around the general idea of solving the game of Sudoku."
     },
     "solitaire": {
       "title": "Solver Solitaire",
       "context": "Home Project in Jupyter",
-      "text": "To find the probability that a given randomly generated game of Solitaire was winable, I made a simple program to solve them."
+      "text": "To find the probability that a given randomly generated game of Solitaire was winnable, I made a simple program to solve them."
     },
-    "nonograme": {
+    "nonogram": {
       "title": "Solver Nonogram",
       "text": "The objective of this project is to find a way to solve every nonogram and to generate new ones.",
       "context": "Home Project in Jupyter"
@@ -259,7 +259,7 @@
     "wikimpostor": {
       "title": "Wikimpostor",
       "context": "Home Game in C#",
-      "text": "App to play the Wikimpostor game on Android. It's basicaly Two of this people are lying from The Technical Difficulties channel."
+      "text": "App to play the Wikimpostor game on Android. It's basically Two of this people are lying from The Technical Difficulties channel."
     },
     "tetris": {
       "title": "Tetris Mode",
@@ -273,7 +273,7 @@
     },
     "findwater": {
       "title": "Find Water - The Game",
-      "text": "Learn geography with a quizz game app in 3D. For now you can only tell if it's water or not but one day it'll be better, I swear... Since the begining of this project I discovered Sebastian Lague, I just have to ripe of his latest game and make it worst.",
+      "text": "Learn geography with a quiz game app in 3D. For now you can only tell if it's water or not but one day it'll be better, I swear... Since the beginning of this project I discovered Sebastian Lague, I just have to ripe of his latest game and make it worst.",
       "context": "Home Project in C#"
     },
     "zeta": {

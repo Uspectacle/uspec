@@ -16,6 +16,7 @@ const Portfolio: NextPage = () => {
           {ProjectList(t).map(
             ({ title, date, location, context, image, text, links }, index) => (
               <Project
+                key={`project-${index}`}
                 index={index}
                 title={title}
                 date={date}
