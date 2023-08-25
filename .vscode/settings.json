@@ -12,10 +12,35 @@
         "}"
     ],
     "cSpell.words": [
+        "Centrale",
+        "coinflip",
         "comingsoon",
+        "Communs",
+        "Concours",
+        "DIASI",
+        "École",
+        "Écoles",
+        "Enseack",
+        "findwater",
+        "Grandes",
+        "Impérial",
+        "l'Électronique",
+        "minesolver",
+        "mslab",
+        "Nationale",
+        "nonogram",
+        "nonograme",
+        "Polytechniques",
         "reactnative",
+        "Supélec",
         "svgr",
-        "toastify"
+        "Télécom",
+        "Tetris",
+        "TIPE",
+        "toastify",
+        "VTON",
+        "wikimpostor",
+        "youtubesubs"
     ],
     "i18n-ally.extract.ignoredByFiles": {
         "apps\\frontend\\src\\Layouts\\Header.tsx": [

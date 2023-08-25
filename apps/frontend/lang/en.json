@@ -39,11 +39,12 @@
     "result": "Result: ",
     "education": "EDUCATION",
     "ensea": {
-      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses applications",
+      "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses Applications",
       "subName": "3-year Master's Program",
       "city": "France, Cergy",
-      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded over 10 ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
-      "result": "Graduated with honors, majoring in signal processing and artificial intelligence"
+      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded lots of ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
+      "result": "Graduated with honors, majoring in signal processing and artificial intelligence",
+      "href": "https://www.ensea.fr/en"
     },
     "civ": {
       "name": "CIV, Centre International de Valbonne",
@@ -71,7 +72,8 @@
       "subName": "6-Month Internship",
       "city": "France, Saclay",
       "objective": "Led the unification of detection and re-identification within an innovative deep network architecture for multifaceted object tracking",
-      "result": "Championed a groundbreaking visual transformer algorithm, surpassing baseline models in performance"
+      "result": "Championed a groundbreaking visual transformer algorithm, surpassing baseline models in performance",
+      "href": "https://list.cea.fr/en/"
     },
     "ljubljana": {
       "name": "University of Ljubljana",
@@ -104,7 +106,7 @@
     },
     "skills": "TECHNICAL SKILLS",
     "programming": "PROGRAMMING LANGUAGES",
-    "interest": "PERSONAL INTERESTS",
+    "interestText": "Passionate about continuous learning, AI implementation, filmmaking, app development, neurology, mathematics, poetry, and associations",
     "interests": {
       "look-at-it-again": "Look at it again ",
       "text": "because passionate about continuous learning, proactive creation, and effective knowledge sharing, my diverse interests include :"
@@ -161,6 +163,128 @@
       "JavaScript": "JavaScript",
       "Csharp": "C#"
     },
-    "pdf": "LARSEN_Mario_resume_EN_2023.pdf"
+    "pdf": "/doc/Resume/LARSEN_Mario_resume_EN_2023.pdf",
+    "interest": "PERSONAL INTERESTS"
+  },
+  "portfolio": {
+    "summary": "I have done lots of projects before this blog and I will try to list them all here. \nAt some point, some may received there own page",
+    "read-report": "Read Report",
+    "see-slides": "See Slides",
+    "mslab": {
+      "title": "MS4'S NEEDLE SERVO-CONTROL FOR DEPTH",
+      "location": "MS Laboratory, Osny",
+      "context": "R&D internship",
+      "text": "First real professional experience, this internship allowed me to discover in-depth the operation of a company.\\nThe chance I had to be completely immersed in the role of an R&D engineer.\\nThe project was to design, building and test a board to control the sampling needle depth for their MS4 blood analyzer.\\nIn autonomy for 5 weeks, I was able to provide a functional analysis report, an Eagle board, a Spice simulation, a functional prototype and a test report.",
+      "product-website": "Product Website"
+    },
+    "themis": {
+      "title": "THEMIS FULL ANALOG BOARD",
+      "location": "ENSEA, Cergy",
+      "context": "Collective school project",
+      "text": "Themis is a collaborative project theme proposed to a group of about twenty ENSEA students from the 3 years of the engineering cycle. The aim is to design from A to Z an electronic musical instrument of synthesizer/drum-machine type. During one semester, I worked autonomously on the synthesizer main board design. In the end, I provided 3 PCB designs compiling the research of many team members. The final designs was assemble and tested during the pandemic. More information about the Themis project : http://www-reynal.ensea.fr/?page_id=303",
+      "project-website": "Project Website"
+    },
+    "virtualTryOn": {
+      "title": "VIRTUAL TRY-ON NETWORKS STUDY",
+      "location": "University of Ljubljana, Slovenia",
+      "context": "Laboratory Internship",
+      "text": "The university laboratory of Ljubljana studies artificial intelligence applied to visual processing. My goal during this internship was to reimplement some Virtual Try-On Networks and study them. I was asked to learn and report about their failures, quality measurement, dataset and updates be made. In autonomy for 15 weeks, I was able to compile more than 30 research papers and implement a lot of them in python and matlab."
+    },
+    "pacman": {
+      "title": "AUTO PAC-MAN",
+      "location": "ENSEA, Cergy",
+      "context": "Personal School Project",
+      "text": "To progress in AI, I develop 12 version of Pac-Man python environment. Some are adapted for human player and other for open ai training. Since I also wanted to understand deeply reinforcement learning, I rewrite the integrality of the code in tensorflow. Looking at the model behavior thanks to the render function of the environment, it successfully learn to avoid lots of walls and the ghost but I can see the limits."
+    },
+    "sorting": {
+      "title": "SORTING ASSISTANT",
+      "location": "Enseack, Cergy",
+      "context": "24h Hackathon Group Project",
+      "text": "Project carried out with a team of 4. Our prototype built for less than 2 € makes recycling simple and fun. A camera with a deep learning algorithm recognizes the waste kind and its materials and then displays the procedure to follow. An arduino controls the opening of the garbage cans concerned. We won the jury's prize for our fully functional prototype.",
+      "event-website": "Event Website"
+    },
+    "cloudModel": {
+      "title": "CLOUD FORMATION AND MODELING",
+      "location": "CIV, Sophia Antipolis",
+      "context": "Supervised self-initiative work (TIPE)",
+      "text": "Preparatory school project carried out to pass the national exams. 'What are the conditions of cloud formation?' a python program to represent in a new way a macro water particle evolving from the sea to the stratosphere. Score obtained : 19.5/20"
+    },
+    "tyo": {
+      "title": "TEAM MANAGEMENT, FESTIVAL ORGANIZATION AND POSTER DESIGN",
+      "location": "TYO, Cergy",
+      "context": "International short films festival, 29th edition",
+      "text": "Since its creation in 1991, TYO has been organizing every year a two-days short films festival. As a student association of the ENSEA, the team change every time. During 2019, we invited more than 40 international art school and 4 guests of honour. I was personally in charge of creating the poster with photoshop but I was also in the management, organization and communication team. I also used to screen three film a month for a year at the school in TYO name.",
+      "festival-website": "Festival Website"
+    },
+    "attenuator": {
+      "title": "AUDIO ATTENUATOR",
+      "location": "ENSEA, Cergy",
+      "context": "Small 1st year project",
+      "text": "Small project carried out in pairs during half a semester. Among the most elementary manipulations of sound are amplification and attenuation. Our project is to produce such a system with the LM1971 M chip. The work is divided into four parts: - A computer phase allowing to control the chip via an Arduino card - An electronic phase for the PCB to communicate the composing - A do-it-yourself phase by ordering, printing, drilling, welding - A test phase to ensure efficiency and report improvements"
+    },
+    "minesolver": {
+      "title": "Minesweeper Solver",
+      "context": "Home Project in TS"
+    },
+    "snake": {
+      "title": "Snake Multiplayer",
+      "context": "Home Project in JS",
+      "text": "Play Snake online with a friend. Made from HungryTurtleCode tutorial."
+    },
+    "sudoku": {
+      "title": "Solver Sudoku",
+      "context": "Home Project in Python",
+      "text": "This is my first ever program made during free time. I also made other related stuff around the general idea of solving the game of Sudoku."
+    },
+    "solitaire": {
+      "title": "Solver Solitaire",
+      "context": "Home Project in Jupyter",
+      "text": "To find the probability that a given randomly generated game of Solitaire was winnable, I made a simple program to solve them."
+    },
+    "nonogram": {
+      "title": "Solver Nonogram",
+      "text": "The objective of this project is to find a way to solve every nonogram and to generate new ones.",
+      "context": "Home Project in Jupyter"
+    },
+    "mastermind": {
+      "context": "Home Project in Python",
+      "title": "Solver MasterMind",
+      "text": "MasterMind is a code-breaking game. The objective of this project is to find the best strategy to this game."
+    },
+    "coinflip": {
+      "title": "Solver Coin Flip Cheaters",
+      "text": "Bot to win Coin Flip Cheaters: A game from Primer. It worked well but I think the game updated since last time I tried. Note that I was Number One for a few days thanks to this bot I made all by myself!",
+      "context": "Home Project in Jupyter"
+    },
+    "wikimpostor": {
+      "title": "Wikimpostor",
+      "context": "Home Game in C#",
+      "text": "App to play the Wikimpostor game on Android. It's basically Two of this people are lying from The Technical Difficulties channel."
+    },
+    "tetris": {
+      "title": "Tetris Mode",
+      "context": "Home Game in JS",
+      "text": "Play Tetris online but now with MODE you can check and uncheck to pimp up your game"
+    },
+    "minecraft": {
+      "title": "MineCraft Rhombic Dodecahedron",
+      "text": "A new iteration of Minecraft but with rhombic dodecahedron instead of cubes.",
+      "context": "Home Project in C#"
+    },
+    "findwater": {
+      "title": "Find Water - The Game",
+      "text": "Learn geography with a quiz game app in 3D. For now you can only tell if it's water or not but one day it'll be better, I swear... Since the beginning of this project I discovered Sebastian Lague, I just have to ripe of his latest game and make it worst.",
+      "context": "Home Project in C#"
+    },
+    "zeta": {
+      "title": "Draw Zeta Riemann",
+      "text": "Generate a picture of the Riemann Zeta function",
+      "context": "Home Project in Jupyter"
+    },
+    "youtubesubs": {
+      "title": "Draw Youtube Subs",
+      "text": "Generate a mosaic out of your subs",
+      "context": "Home Project in Jupyter"
+    }
   }
 }
