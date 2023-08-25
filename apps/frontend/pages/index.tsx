@@ -1,8 +1,47 @@
+import { createStyles } from '@mantine/core';
 import { NextPage } from 'next';
+import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
+import { UpcomingPost } from '../src/Blog/UpcomingPost';
+import { ResumePost } from '../src/Resume/ResumePost';
 
 const Blog: NextPage = () => {
-  return <>Blog in maintenance, please come back in an hour</>;
+  const { classes } = useStyles();
+
+  const Posts = [
+    ResumePost,
+    UpcomingPost,
+    UpcomingPost,
+    UpcomingPost,
+    UpcomingPost,
+    UpcomingPost,
+  ];
+
+  return (
+    <Layout>
+      <ul className={classes.container}>
+        {Posts.map((Post, index) => (
+          <React.Fragment key={`post-${index}`}>
+            {Post({ index })}
+          </React.Fragment>
+        ))}
+      </ul>
+    </Layout>
+  );
 };
+
+const useStyles = createStyles(() => ({
+  container: {
+    listStyleType: 'none',
+    counterReset: 'post-index',
+    margin: 0,
+    padding: 0,
+    paddingTop: 10,
+    paddingBottom: 10,
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'wrap',
+  },
+}));
 
 export default Blog;
