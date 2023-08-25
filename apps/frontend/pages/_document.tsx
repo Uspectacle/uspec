@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { BACKGROUND_COLOR } from '../src/Utils/DefaultStyle';
 
 export default function Document() {
   return (
@@ -6,7 +7,7 @@ export default function Document() {
       <Head>
         <link rel="shortcut icon" href="favicon.ico" />
       </Head>
-      <body>
+      <body style={{ backgroundColor: BACKGROUND_COLOR }}>
         <Main />
         <NextScript />
       </body>
