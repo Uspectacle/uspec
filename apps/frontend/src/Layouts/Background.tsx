@@ -3,7 +3,13 @@ import { createStyles } from '@mantine/core';
 import { BACKGROUND_COLOR } from '../Utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
 
-export const Background = ({ length }: { length: number }) => {
+export const Background = ({
+  length,
+  style,
+}: {
+  length: number;
+  style?: React.CSSProperties | undefined;
+}) => {
   const { classes } = useStyles();
 
   const [circles, setCircles] = useState<JSX.Element[]>([]);
@@ -14,7 +20,11 @@ export const Background = ({ length }: { length: number }) => {
     );
   }, [length]);
 
-  return <div className={classes.container}>{circles}</div>;
+  return (
+    <div className={classes.container} style={style}>
+      {circles}
+    </div>
+  );
 };
 
 const useStyles = createStyles(() => ({

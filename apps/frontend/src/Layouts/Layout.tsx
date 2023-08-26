@@ -7,15 +7,17 @@ import { Background } from './Background';
 export const Layout = ({
   summary,
   children,
+  backgroundStyle,
 }: {
   summary?: JSX.Element | undefined;
   children?: JSX.Element | undefined;
+  backgroundStyle?: React.CSSProperties | undefined;
 }) => {
   const { classes } = useStyles();
 
   return (
     <div className={classes.container}>
-      <Background length={20} />
+      <Background length={20} style={backgroundStyle} />
       <Header>{summary}</Header>
       {children}
       <Footer />
