@@ -35,7 +35,6 @@ export const Header = ({
           ? {
               opacity: 0,
               transform: 'translateY(-100%)',
-              position: 'absolute',
             }
           : {}
       }

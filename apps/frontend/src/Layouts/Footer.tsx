@@ -22,7 +22,6 @@ export const Footer = ({ reduced }: { reduced?: boolean | undefined }) => {
           ? {
               opacity: 0,
               transform: 'translateY(100%)',
-              display: 'none',
             }
           : {}
       }
