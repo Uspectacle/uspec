@@ -185,38 +185,38 @@
       "title": "Simulation de formation de nuages"
     },
     "coinflip": {
-      "context": "Projet de maison personnelle à Jupyter",
+      "context": "Projet personnelle à Jupyter",
       "text": "Présentation d'un bot Coin Flip Cheaters conçu pour remporter des victoires dans la compétition du jeu Primer. \nMa création indépendante a brièvement remporté la première place, grâce à ses prouesses dans le jeu.",
       "title": "Bot tricheur à tirage de pièces de monnaie"
     },
     "findwater": {
-      "context": "Projet de maison personnelle en C",
+      "context": "Projet personnelle en C",
       "text": "Participez à une application de jeu de quiz en 3D, conçue pour améliorer vos connaissances géographiques. \nBien qu’actuellement axée sur l’identification des plans d’eau, l’évolution de l’application est prometteuse.",
       "title": "Trouver de l'eau - Le géo-quiz"
     },
     "mastermind": {
-      "context": "Projet de maison personnelle en Python",
+      "context": "Projet personnelle en Python",
       "text": "Plongeant dans le domaine du décryptage, cette initiative se concentre sur la conception de stratégies optimales pour le jeu de MasterMind.",
       "title": "Solveur de stratégie MasterMind"
     },
     "minecraft": {
-      "context": "Projet de maison personnelle en C",
+      "context": "Projet personnelle en C",
       "text": "Embarquez pour une nouvelle itération de Minecraft, où les cubes traditionnels sont remplacés par d'intrigants dodécaèdres rhombiques.",
       "title": "Minecraft avec dodécaèdres rhombiques"
     },
     "minesolver": {
-      "context": "Projet de maison personnelle en TS",
+      "context": "Projet personnelle en TS",
       "title": "Solveur de dragueur de mines automatisé"
     },
     "mslab": {
-      "context": "R.",
-      "location": "Laboratoire MS, Osny",
+      "context": "Stage de R&D",
+      "location": "MS Laboratoires, Osny",
       "product-website": "Site Web du produit",
-      "text": "Lors de ma première expérience professionnelle, un stage, j'ai acquis une connaissance approfondie du fonctionnement d'une entreprise. \nImmergé dans le rôle d'un R",
+      "text": "Pendant ma première expérience professionnelle, un stage, j'ai acquis de profondes perspectives sur les opérations d'une entreprise. Plongé dans le rôle d'un ingénieur en recherche et développement, j'ai entrepris un projet visant à concevoir, construire et tester une carte de contrôle pour ajuster la profondeur de l'aiguille d'échantillonnage dans leur analyseur sanguin MS4. Sur une période de 5 semaines, j'ai de manière autonome réalisé un rapport d'analyse fonctionnelle, une carte Eagle, une simulation Spice, un prototype fonctionnel et un rapport de test complet.",
       "title": "Servocommande de profondeur d'aiguille du MS4"
     },
     "nonogram": {
-      "context": "Projet de maison personnelle à Jupyter",
+      "context": "Projet personnelle à Jupyter",
       "text": "Dédié au décodage des énigmes Nonogram, ce projet vise à démêler leurs modèles et à construire de nouveaux défis.",
       "title": "Résolveur d'énigmes Nonogram"
     },
@@ -229,24 +229,24 @@
     "read-report": "Lire le rapport",
     "see-slides": "Voir les diapositives",
     "snake": {
-      "context": "Projet de maison personnelle en JS",
+      "context": "Projet personnelle en JS",
       "text": "Profitez d'une version multijoueur du jeu Snake classique, permettant de jouer en ligne avec un ami. \nDéveloppé sur la base du projet HungryTurtleCode.",
       "title": "Jeu de serpent multijoueur"
     },
     "solitaire": {
-      "context": "Projet de maison personnelle à Jupyter",
+      "context": "Projet personnelle à Jupyter",
       "text": "Pour vérifier la possibilité de gagner des jeux de Solitaire générés aléatoirement, j'ai conçu un programme pour calculer les probabilités de gain, facilitant ainsi les analyses stratégiques.",
       "title": "Évaluateur de probabilité de gain au solitaire"
     },
     "sorting": {
       "context": "Projet d'équipe Hackathon 24h",
-      "event-website": "Site Web de l'événement",
+      "event-website": "Site Web de l'evenement",
       "location": "Enseack, Cergy",
       "text": "Un effort de collaboration au sein d'une équipe de quatre personnes a donné naissance à un prototype qui révolutionne le recyclage en le rendant attrayant et convivial. \nNotre innovation comprend une caméra équipée d'un algorithme de deep learning, capable d'identifier le type et la matière des déchets. \nDes instructions claires d’élimination sont ensuite présentées. \nUne unité Arduino orchestre l’ouverture des bacs concernés. \nNotre prototype entièrement fonctionnel nous a valu la reconnaissance et les distinctions du jury.",
       "title": "Assistant de recyclage interactif"
     },
     "sudoku": {
-      "context": "Projet de maison personnelle en Python",
+      "context": "Projet personnelle en Python",
       "text": "Mon premier projet de loisirs, le Sudoku Solver, a ouvert la voie à des efforts ultérieurs centrés sur la résolution de ce jeu de réflexion captivant.",
       "title": "Solveur de puzzles Sudoku"
     },
@@ -281,13 +281,13 @@
       "title": "Application de jeu Wikimpostor"
     },
     "youtubesubs": {
-      "context": "Projet de maison personnelle à Jupyter",
+      "context": "Projet personnelle à Jupyter",
       "text": "Libérez le potentiel créatif de vos abonnements YouTube en générant des images mosaïques captivantes à l'aide de cet utilitaire.",
       "title": "Générateur de mosaïque d'abonnements Youtube"
     },
     "zeta": {
-      "context": "Projet de maison personnelle à Jupyter",
-      "text": "Découvrez la beauté de la fonction Riemann Zeta à travers les visualisations dynamiques générées par ce projet de maison.",
+      "context": "Projet personnelle à Jupyter",
+      "text": "Découvrez la beauté de la fonction Riemann Zeta à travers les visualisations dynamiques générées par ce Projet.",
       "title": "Visualisation de la fonction Zeta Riemann"
     }
   }

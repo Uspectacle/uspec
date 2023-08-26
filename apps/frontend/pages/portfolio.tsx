@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const Portfolio: NextPage = () => {
   const { t } = useTranslation();
+
   return (
     <Layout summary={<Summary />}>
       <Board>

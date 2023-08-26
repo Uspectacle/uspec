@@ -24,7 +24,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const storedLanguage = localStorage.getItem('currentLanguage');
     if (storedLanguage) i18n.changeLanguage(storedLanguage);
-  }, [i18n]);
+  }, [i18n.language]);
 
   return (
     <MantineProvider>

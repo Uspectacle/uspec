@@ -1,7 +1,6 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
 import { randomPop, randomize } from '../Utils/Random';
-import { entranceAnimation } from '../Utils/DefaultStyle';
 
 interface Props {
   seed: number;
@@ -37,49 +36,49 @@ interface StyleProps {
   actionable: boolean;
 }
 
-const useStyles = createStyles(
-  (theme, { seed, delay, actionable }: StyleProps) => {
-    const noteRotate = (randomize(seed * 26) - 0.5) / 40;
-    const noteTranslate = `translate(${(randomize(seed * 3) - 0.5) * 1.5}em, ${
-      (randomize(seed * 4) - 0.5) * 1.5
-    }em)`;
-    const noteTransform = `rotate(${noteRotate}turn) ${noteTranslate}`;
-    const noteTransformHover = `rotate(${noteRotate / 3}turn) ${noteTranslate}`;
-    const pinTransform = `translate(${
-      (randomize(seed * 5) - 0.5) * 200 - 50
-    }%, ${(randomize(seed * 6) - 0.5) * 50}%)`;
+const useStyles = createStyles((theme, { seed, actionable }: StyleProps) => {
+  const noteRotate = (randomize(seed * 26) - 0.5) / 40;
+  const noteTranslate = `translate(${(randomize(seed * 3) - 0.5) * 1.5}em, ${
+    (randomize(seed * 4) - 0.5) * 1.5
+  }em)`;
+  const noteTransform = `rotate(${noteRotate}turn) ${noteTranslate}`;
+  const noteTransformHover = `rotate(${noteRotate / 3}turn) ${noteTranslate}`;
+  const pinTransform = `translate(${(randomize(seed * 5) - 0.5) * 200 - 50}%, ${
+    (randomize(seed * 6) - 0.5) * 50
+  }%)`;
 
-    const pinColor = randomPop(pinColors, seed * 15);
-    const shadowPosition = `${(randomize(seed * 11) - 0.5) * 8}px ${
-      randomize(seed * 10) * 4
-    }px`;
-    return {
-      container: { animation: entranceAnimation(delay) },
-      note: {
-        backgroundColor: randomPop(noteColors, seed),
-        transform: noteTransform,
-        boxShadow: '2px 4px 7px 1px rgba(0, 0, 0, 0.4)',
-        transition: 'transform 0.3s',
-        borderRadius: '-5px',
-        '&:hover': !!actionable && {
-          transform: noteTransformHover,
-        },
-        '&:active': !!actionable && {
-          boxShadow: 'none',
-        },
+  const pinColor = randomPop(pinColors, seed * 15);
+  const shadowPosition = `${(randomize(seed * 11) - 0.5) * 8}px ${
+    randomize(seed * 10) * 4
+  }px`;
+  return {
+    container: {
+      // animation: entranceAnimation(delay)
+    },
+    note: {
+      backgroundColor: randomPop(noteColors, seed),
+      transform: noteTransform,
+      boxShadow: '2px 4px 7px 1px rgba(0, 0, 0, 0.4)',
+      transition: 'transform 0.3s',
+      borderRadius: '-5px',
+      '&:hover': !!actionable && {
+        transform: noteTransformHover,
       },
-      pin: {
-        position: 'absolute',
-        left: '50%',
-        top: 0,
-        transform: pinTransform,
-        backgroundColor: pinColor,
-        width: 10,
-        zIndex: 10,
-        aspectRatio: '1',
-        borderRadius: '50%',
-        boxShadow: `${shadowPosition} 2px 0.5px rgba(0, 0, 0, 0.4), ${shadowPosition} 0px 1.5px ${pinColor}, ${shadowPosition} 3px 2px rgba(0, 0, 0, 0.2)`,
+      '&:active': !!actionable && {
+        boxShadow: 'none',
       },
-    };
-  }
-);
+    },
+    pin: {
+      position: 'absolute',
+      left: '50%',
+      top: 0,
+      transform: pinTransform,
+      backgroundColor: pinColor,
+      width: 10,
+      zIndex: 10,
+      aspectRatio: '1',
+      borderRadius: '50%',
+      boxShadow: `${shadowPosition} 2px 0.5px rgba(0, 0, 0, 0.4), ${shadowPosition} 0px 1.5px ${pinColor}, ${shadowPosition} 3px 2px rgba(0, 0, 0, 0.2)`,
+    },
+  };
+});
