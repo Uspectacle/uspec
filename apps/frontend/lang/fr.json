@@ -46,7 +46,7 @@
       "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses Applications",
       "subName": "Programme de Master de 3 ans",
       "city": "France, Cergy",
-      "text": "Institution prestigieuse spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé de nombreux projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
+      "text": "Institution spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé de nombreux projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
       "result": "Diplômé avec mention, spécialisation en traitement du signal et en intelligence artificielle",
       "href": "https://www.ensea.fr"
     },
@@ -76,7 +76,7 @@
       "subName": "Stage de 6 mois",
       "city": "France, Saclay",
       "objective": "Conduite de l'unification de la détection et de la ré-identification au sein d'une architecture innovante de réseau profond pour le suivi d'objets multifacettes",
-      "result": "Réalisation d'un algorithme de transformer visuel révolutionnaire, surpassant les modèles de base en performance",
+      "result": "Réalisation d'un algorithme de 'transformer visuel' révolutionnaire, surpassant les modèles de base en performance",
       "href": "https://list.cea.fr/fr/"
     },
     "ljubljana": {
@@ -91,7 +91,7 @@
       "subName": "Projet de Recherche de 7 mois",
       "city": "France, Cergy",
       "text": "Projet collaboratif distingué attribué à une cohorte d'étudiants ENSEA sur trois ans du cycle d'ingénierie",
-      "objective": "Porté l'élaboration d'un instrument musical électronique innovant, englobant toutes les fonctionnalités des synthétiseurs",
+      "objective": "Élaboration d'un instrument musical électronique innovant, englobant toutes les fonctionnalités des synthétiseurs",
       "result": "Réalisation autonome de trois conceptions de PCB pour la carte principale du synthétiseur, démontrant une maîtrise technique et une initiative autonome"
     },
     "foreign": "LANGUES ÉTRANGÈRES",
@@ -185,27 +185,27 @@
       "title": "Simulation de formation de nuages"
     },
     "coinflip": {
-      "context": "Projet personnelle à Jupyter",
+      "context": "Projet personnel à Jupyter",
       "text": "Présentation d'un bot Coin Flip Cheaters conçu pour remporter des victoires dans la compétition du jeu Primer. \nMa création indépendante a brièvement remporté la première place, grâce à ses prouesses dans le jeu.",
       "title": "Bot tricheur à tirage de pièces de monnaie"
     },
     "findwater": {
-      "context": "Projet personnelle en C",
+      "context": "Projet personnel en C",
       "text": "Participez à une application de jeu de quiz en 3D, conçue pour améliorer vos connaissances géographiques. \nBien qu’actuellement axée sur l’identification des plans d’eau, l’évolution de l’application est prometteuse.",
       "title": "Trouver de l'eau - Le géo-quiz"
     },
     "mastermind": {
-      "context": "Projet personnelle en Python",
+      "context": "Projet personnel en Python",
       "text": "Plongeant dans le domaine du décryptage, cette initiative se concentre sur la conception de stratégies optimales pour le jeu de MasterMind.",
       "title": "Solveur de stratégie MasterMind"
     },
     "minecraft": {
-      "context": "Projet personnelle en C",
+      "context": "Projet personnel en C",
       "text": "Embarquez pour une nouvelle itération de Minecraft, où les cubes traditionnels sont remplacés par d'intrigants dodécaèdres rhombiques.",
       "title": "Minecraft avec dodécaèdres rhombiques"
     },
     "minesolver": {
-      "context": "Projet personnelle en TS",
+      "context": "Projet personnel en TS",
       "title": "Solveur de dragueur de mines automatisé"
     },
     "mslab": {
@@ -216,7 +216,7 @@
       "title": "Servocommande de profondeur d'aiguille du MS4"
     },
     "nonogram": {
-      "context": "Projet personnelle à Jupyter",
+      "context": "Projet personnel à Jupyter",
       "text": "Dédié au décodage des énigmes Nonogram, ce projet vise à démêler leurs modèles et à construire de nouveaux défis.",
       "title": "Résolveur d'énigmes Nonogram"
     },
@@ -229,12 +229,12 @@
     "read-report": "Lire le rapport",
     "see-slides": "Voir les diapositives",
     "snake": {
-      "context": "Projet personnelle en JS",
+      "context": "Projet personnel en JS",
       "text": "Profitez d'une version multijoueur du jeu Snake classique, permettant de jouer en ligne avec un ami. \nDéveloppé sur la base du projet HungryTurtleCode.",
       "title": "Jeu de serpent multijoueur"
     },
     "solitaire": {
-      "context": "Projet personnelle à Jupyter",
+      "context": "Projet personnel à Jupyter",
       "text": "Pour vérifier la possibilité de gagner des jeux de Solitaire générés aléatoirement, j'ai conçu un programme pour calculer les probabilités de gain, facilitant ainsi les analyses stratégiques.",
       "title": "Évaluateur de probabilité de gain au solitaire"
     },
@@ -246,7 +246,7 @@
       "title": "Assistant de recyclage interactif"
     },
     "sudoku": {
-      "context": "Projet personnelle en Python",
+      "context": "Projet personnel en Python",
       "text": "Mon premier projet de loisirs, le Sudoku Solver, a ouvert la voie à des efforts ultérieurs centrés sur la résolution de ce jeu de réflexion captivant.",
       "title": "Solveur de puzzles Sudoku"
     },
@@ -281,12 +281,12 @@
       "title": "Application de jeu Wikimpostor"
     },
     "youtubesubs": {
-      "context": "Projet personnelle à Jupyter",
+      "context": "Projet personnel à Jupyter",
       "text": "Libérez le potentiel créatif de vos abonnements YouTube en générant des images mosaïques captivantes à l'aide de cet utilitaire.",
       "title": "Générateur de mosaïque d'abonnements Youtube"
     },
     "zeta": {
-      "context": "Projet personnelle à Jupyter",
+      "context": "Projet personnel à Jupyter",
       "text": "Découvrez la beauté de la fonction Riemann Zeta à travers les visualisations dynamiques générées par ce Projet.",
       "title": "Visualisation de la fonction Zeta Riemann"
     }
