@@ -21,3 +21,16 @@ export const entranceClass = (delay: number) => {
   }));
   return entranceStyle({ delay }).classes.anime;
 };
+
+export const exitAnimation = (delay: number) =>
+  `${keyframes({
+    '00%': { opacity: 1, transform: 'translateY(0)' },
+    '100%': { opacity: 0, transform: 'translateY(100px)' },
+  })} 0.5s ${delay}s both`;
+
+export const exitClass = (delay: number) => {
+  const exitStyle = createStyles((theme, { delay }: { delay: number }) => ({
+    anime: { animation: exitAnimation(delay) },
+  }));
+  return exitStyle({ delay }).classes.anime;
+};

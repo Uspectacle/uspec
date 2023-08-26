@@ -10,12 +10,23 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
 
-export const Footer = () => {
+export const Footer = ({ reduced }: { reduced?: boolean | undefined }) => {
   const { classes } = useStyles();
   const { t } = useTranslation();
 
   return (
-    <footer className={classes.footer}>
+    <footer
+      className={classes.footer}
+      style={
+        reduced
+          ? {
+              opacity: 0,
+              transform: 'translateY(100%)',
+              display: 'none',
+            }
+          : {}
+      }
+    >
       <strong>{t('footer.contactMe')}</strong>
       <div className={classes.links}>
         <Link
@@ -66,6 +77,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     color: LIGHT_ADDITIONAL_COLOR,
+    transition: 'opacity 0.3s, transform 0.3s',
     paddingTop: 10,
     paddingBottom: 10,
     [theme.fn.smallerThan(400)]: {

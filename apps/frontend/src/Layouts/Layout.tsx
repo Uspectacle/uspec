@@ -8,19 +8,21 @@ export const Layout = ({
   summary,
   children,
   backgroundStyle,
+  reduced,
 }: {
   summary?: JSX.Element | undefined;
   children?: JSX.Element | undefined;
   backgroundStyle?: React.CSSProperties | undefined;
+  reduced?: boolean | undefined;
 }) => {
   const { classes } = useStyles();
 
   return (
     <div className={classes.container}>
       <Background length={20} style={backgroundStyle} />
-      <Header>{summary}</Header>
+      <Header reduced={reduced}>{summary}</Header>
       {children}
-      <Footer />
+      <Footer reduced={reduced} />
     </div>
   );
 };

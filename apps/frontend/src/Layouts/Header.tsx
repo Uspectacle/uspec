@@ -16,8 +16,10 @@ import { getWindow } from '../Utils/GetWindow';
 
 export const Header = ({
   children,
+  reduced,
 }: {
   children?: JSX.Element | undefined;
+  reduced?: boolean | undefined;
 }) => {
   const { classes } = useStyles();
   const router = useRouter();
@@ -26,7 +28,18 @@ export const Header = ({
   const { innerWidth } = getWindow();
 
   return (
-    <div className={classes.header}>
+    <div
+      className={classes.header}
+      style={
+        reduced
+          ? {
+              opacity: 0,
+              transform: 'translateY(-100%)',
+              position: 'absolute',
+            }
+          : {}
+      }
+    >
       <div className={classes.menu}>
         <Link
           href={'/'}
@@ -96,6 +109,7 @@ const useStyles = createStyles((theme) => ({
     alignSelf: 'center',
     width: '90%',
     paddingTop: 10,
+    transition: 'opacity 0.3s, transform 0.3s',
     [theme.fn.smallerThan(950)]: {
       flexDirection: 'column',
     },

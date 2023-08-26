@@ -6,10 +6,12 @@ import Head from 'next/head';
 import React, { useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { I18nextProvider } from 'react-i18next';
+import { Provider } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import 'dayjs/locale/fr';
 import '../src/Utils/styles.css';
 import i18n from '../src/Utils/i18n';
+import { store } from '../src/Utils/Store';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   if (
@@ -28,25 +30,27 @@ function CustomApp({ Component, pageProps }: AppProps) {
 
   return (
     <MantineProvider>
-      <I18nextProvider i18n={i18n}>
-        <Head>
-          <title>uSPEC</title>
-        </Head>
-        <main className="app">
-          <Component {...pageProps} />
-          <ToastContainer
-            position="bottom-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss={false}
-            draggable
-            pauseOnHover={false}
-          />
-        </main>
-      </I18nextProvider>
+      <Provider store={store}>
+        <I18nextProvider i18n={i18n}>
+          <Head>
+            <title>uSPEC</title>
+          </Head>
+          <main className="app">
+            <Component {...pageProps} />
+            <ToastContainer
+              position="bottom-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss={false}
+              draggable
+              pauseOnHover={false}
+            />
+          </main>
+        </I18nextProvider>
+      </Provider>
     </MantineProvider>
   );
 }
