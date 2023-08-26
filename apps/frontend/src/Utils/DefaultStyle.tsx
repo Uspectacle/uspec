@@ -3,7 +3,7 @@ import { createStyles, keyframes } from '@mantine/core';
 export const BACKGROUND_COLOR = '#F1D8F8';
 export const MAIN_COLOR = '#9933CC';
 export const LIGHT_ADDITIONAL_COLOR = '#ffcc00';
-export const WHITE_ADDITIONAL_COLOR = '#fff065';
+export const WHITE_ADDITIONAL_COLOR = '#ffc251';
 export const WHITE = '#ffffff';
 export const BLACK = '#000000';
 

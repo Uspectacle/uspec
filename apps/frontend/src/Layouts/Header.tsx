@@ -174,6 +174,7 @@ const useStyles = createStyles((theme) => ({
     })} 5s ease-in-out infinite`,
   },
   summary: {
+    boxShadow: SHADOW,
     backgroundColor: WHITE_ADDITIONAL_COLOR,
     borderRadius: 10,
     margin: 10,
