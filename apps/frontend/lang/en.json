@@ -26,6 +26,10 @@
     "coming-soon": {
       "title": "Upcoming Content",
       "text": "Stay tuned for an array of engaging articles on games, tools, and more! Anticipate new content, possibly delivered on a weekly basis"
+    },
+    "portfolio": {
+      "title": "My Portfolio",
+      "text": "I have done lots of projects before this blog and I will try to list them all here.\nCarfull, I'm not proud of all of them"
     }
   },
   "resume": {
@@ -167,124 +171,124 @@
     "interest": "PERSONAL INTERESTS"
   },
   "portfolio": {
-    "summary": "I have done lots of projects before this blog and I will try to list them all here. \nAt some point, some may received there own page",
+    "summary": "I have done lots of projects before this blog and I will try to list them all here. \n\nAt some point, some may received there own page\n\nUntil then, be carefull, I'm not proud of all of them",
     "read-report": "Read Report",
     "see-slides": "See Slides",
     "mslab": {
-      "title": "MS4'S NEEDLE SERVO-CONTROL FOR DEPTH",
+      "title": "MS4's Needle Depth Servo-Control",
       "location": "MS Laboratory, Osny",
-      "context": "R&D internship",
-      "text": "First real professional experience, this internship allowed me to discover in-depth the operation of a company.\\nThe chance I had to be completely immersed in the role of an R&D engineer.\\nThe project was to design, building and test a board to control the sampling needle depth for their MS4 blood analyzer.\\nIn autonomy for 5 weeks, I was able to provide a functional analysis report, an Eagle board, a Spice simulation, a functional prototype and a test report.",
+      "context": "R&D Internship",
+      "text": "During my first professional experience, an internship, I gained profound insights into a company's operations. Immersed in the role of an R&D engineer, I undertook a project to design, construct, and test a control board for adjusting the sampling needle depth in their MS4 blood analyzer. Over a span of 5 weeks, I autonomously produced a functional analysis report, an Eagle board, a Spice simulation, a functional prototype, and a comprehensive test report.",
       "product-website": "Product Website"
     },
     "themis": {
-      "title": "THEMIS FULL ANALOG BOARD",
+      "title": "Themis Analog Synthesizer Board",
       "location": "ENSEA, Cergy",
-      "context": "Collective school project",
-      "text": "Themis is a collaborative project theme proposed to a group of about twenty ENSEA students from the 3 years of the engineering cycle. The aim is to design from A to Z an electronic musical instrument of synthesizer/drum-machine type. During one semester, I worked autonomously on the synthesizer main board design. In the end, I provided 3 PCB designs compiling the research of many team members. The final designs was assemble and tested during the pandemic. More information about the Themis project : http://www-reynal.ensea.fr/?page_id=303",
+      "context": "Group School Project",
+      "text": "Themis, a collaborative project, engaged a team of around twenty ENSEA students across different engineering years. Our objective was to design a complete electronic musical instrument with features of a synthesizer and a drum machine. My focus during a semester was on the main board design for the synthesizer. The culmination was the delivery of 3 meticulously crafted PCB designs that synthesized the contributions of numerous team members. The final designs were assembled and rigorously tested even amid the challenges of a pandemic.",
       "project-website": "Project Website"
     },
     "virtualTryOn": {
-      "title": "VIRTUAL TRY-ON NETWORKS STUDY",
+      "title": "Exploration of Virtual Try-On Networks",
       "location": "University of Ljubljana, Slovenia",
       "context": "Laboratory Internship",
-      "text": "The university laboratory of Ljubljana studies artificial intelligence applied to visual processing. My goal during this internship was to reimplement some Virtual Try-On Networks and study them. I was asked to learn and report about their failures, quality measurement, dataset and updates be made. In autonomy for 15 weeks, I was able to compile more than 30 research papers and implement a lot of them in python and matlab."
+      "text": "Embedded in the AI-focused research environment of the University of Ljubljana, I delved into the realm of artificial intelligence applied to visual processing. My internship concentrated on the study, reimplementation, and analysis of Virtual Try-On Networks. I researched their shortcomings, devised quality assessment measures, explored datasets, and implemented over 30 approaches using both Python and MATLAB, thus contributing significantly to the ongoing research."
     },
     "pacman": {
-      "title": "AUTO PAC-MAN",
+      "title": "AI-Driven Pac-Man",
       "location": "ENSEA, Cergy",
       "context": "Personal School Project",
-      "text": "To progress in AI, I develop 12 version of Pac-Man python environment. Some are adapted for human player and other for open ai training. Since I also wanted to understand deeply reinforcement learning, I rewrite the integrality of the code in tensorflow. Looking at the model behavior thanks to the render function of the environment, it successfully learn to avoid lots of walls and the ghost but I can see the limits."
+      "text": "As part of my pursuit of AI expertise, I developed 12 iterations of a Python-based Pac-Man environment. These iterations catered to human players and facilitated OpenAI training. To gain a profound understanding of reinforcement learning, I reengineered the entire codebase using TensorFlow. Through environment rendering, I observed successful learning outcomes, as the AI adeptly avoided obstacles and ghosts, albeit with certain limitations."
     },
     "sorting": {
-      "title": "SORTING ASSISTANT",
+      "title": "Interactive Recycling Assistant",
       "location": "Enseack, Cergy",
-      "context": "24h Hackathon Group Project",
-      "text": "Project carried out with a team of 4. Our prototype built for less than 2 € makes recycling simple and fun. A camera with a deep learning algorithm recognizes the waste kind and its materials and then displays the procedure to follow. An arduino controls the opening of the garbage cans concerned. We won the jury's prize for our fully functional prototype.",
+      "context": "24h Hackathon Team Project",
+      "text": "A collaborative effort among a team of four yielded a prototype that revolutionizes recycling by making it engaging and user-friendly. Our innovation comprises a camera equipped with a deep learning algorithm, capable of identifying the type and material of waste. Clear disposal instructions are then presented. An Arduino unit orchestrates the opening of relevant bins. Our fully functional prototype earned us recognition and accolades from the judging panel.",
       "event-website": "Event Website"
     },
     "cloudModel": {
-      "title": "CLOUD FORMATION AND MODELING",
+      "title": "Cloud Formation Simulation",
       "location": "CIV, Sophia Antipolis",
-      "context": "Supervised self-initiative work (TIPE)",
-      "text": "Preparatory school project carried out to pass the national exams. 'What are the conditions of cloud formation?' a python program to represent in a new way a macro water particle evolving from the sea to the stratosphere. Score obtained : 19.5/20"
+      "context": "Supervised Independent Project (TIPE)",
+      "text": "A pivotal project during my preparatory school tenure involved exploring the intricacies of cloud formation. Through a Python program, I introduced a novel perspective on the evolution of macro water particles as they traverse from the sea to the stratosphere. This effort earned me a commendable score in national exams."
     },
     "tyo": {
-      "title": "TEAM MANAGEMENT, FESTIVAL ORGANIZATION AND POSTER DESIGN",
+      "title": "Team Management and Festival Leadership",
       "location": "TYO, Cergy",
-      "context": "International short films festival, 29th edition",
-      "text": "Since its creation in 1991, TYO has been organizing every year a two-days short films festival. As a student association of the ENSEA, the team change every time. During 2019, we invited more than 40 international art school and 4 guests of honour. I was personally in charge of creating the poster with photoshop but I was also in the management, organization and communication team. I also used to screen three film a month for a year at the school in TYO name.",
+      "context": "International Short Films Festival (29th Edition)",
+      "text": "Since its inception in 1991, TYO has annually orchestrated a two-day short film extravaganza. Operating as an ENSEA student association, each year brought fresh faces to the team. In 2019, I undertook diverse responsibilities, including poster design using Photoshop, management, organization, and communication coordination. Additionally, I curated monthly film screenings under the TYO banner at the school.",
       "festival-website": "Festival Website"
     },
     "attenuator": {
-      "title": "AUDIO ATTENUATOR",
+      "title": "LM1971 M Audio Attenuator",
       "location": "ENSEA, Cergy",
-      "context": "Small 1st year project",
-      "text": "Small project carried out in pairs during half a semester. Among the most elementary manipulations of sound are amplification and attenuation. Our project is to produce such a system with the LM1971 M chip. The work is divided into four parts: - A computer phase allowing to control the chip via an Arduino card - An electronic phase for the PCB to communicate the composing - A do-it-yourself phase by ordering, printing, drilling, welding - A test phase to ensure efficiency and report improvements"
+      "context": "Initial Year Project",
+      "text": "A brief yet insightful endeavor, this project involved a pair of students collaborating over half a semester. Our mission centered around fundamental sound manipulations – amplification and attenuation. Using the LM1971 M chip, we developed a system divided into phases: computer-controlled chip manipulation via Arduino, PCB communication setup, DIY fabrication encompassing ordering, printing, drilling, and welding, and finally, rigorous testing accompanied by iterative enhancements."
     },
     "minesolver": {
-      "title": "Minesweeper Solver",
-      "context": "Home Project in TS"
+      "title": "Automated Minesweeper Solver",
+      "context": "Personal Home Project in TS"
     },
     "snake": {
-      "title": "Snake Multiplayer",
-      "context": "Home Project in JS",
-      "text": "Play Snake online with a friend. Made from HungryTurtleCode tutorial."
+      "title": "Multiplayer Snake Game",
+      "context": "Personal Home Project in JS",
+      "text": "Enjoy a multiplayer rendition of the classic Snake game, allowing online play with a friend. Developed based on the HungryTurtleCode project."
     },
     "sudoku": {
-      "title": "Solver Sudoku",
-      "context": "Home Project in Python",
-      "text": "This is my first ever program made during free time. I also made other related stuff around the general idea of solving the game of Sudoku."
+      "title": "Sudoku Puzzle Solver",
+      "context": "Personal Home Project in Python",
+      "text": "My inaugural leisure project, the Sudoku Solver, paved the way for subsequent endeavors centered around solving this engaging puzzle game."
     },
     "solitaire": {
-      "title": "Solver Solitaire",
-      "context": "Home Project in Jupyter",
-      "text": "To find the probability that a given randomly generated game of Solitaire was winnable, I made a simple program to solve them."
+      "title": "Solitaire Winning Probability Evaluator",
+      "context": "Personal Home Project in Jupyter",
+      "text": "To ascertain the winnability of randomly generated Solitaire games, I engineered a program to calculate winning probabilities, thereby facilitating strategic insights."
     },
     "nonogram": {
-      "title": "Solver Nonogram",
-      "text": "The objective of this project is to find a way to solve every nonogram and to generate new ones.",
-      "context": "Home Project in Jupyter"
+      "title": "Nonogram Enigma Resolver",
+      "text": "Dedicated to decoding Nonogram puzzles, this project aims to unravel their patterns and construct new challenges.",
+      "context": "Personal Home Project in Jupyter"
     },
     "mastermind": {
-      "context": "Home Project in Python",
-      "title": "Solver MasterMind",
-      "text": "MasterMind is a code-breaking game. The objective of this project is to find the best strategy to this game."
+      "context": "Personal Home Project in Python",
+      "title": "MasterMind Strategy Solver",
+      "text": "Delving into the realm of code-breaking, this initiative centers on devising optimal strategies for the game of MasterMind."
     },
     "coinflip": {
-      "title": "Solver Coin Flip Cheaters",
-      "text": "Bot to win Coin Flip Cheaters: A game from Primer. It worked well but I think the game updated since last time I tried. Note that I was Number One for a few days thanks to this bot I made all by myself!",
-      "context": "Home Project in Jupyter"
+      "title": "Coin Flip Cheaters Bot",
+      "text": "Presenting a Coin Flip Cheaters bot designed to secure victories in the Primer game competition. My independent creation briefly claimed the top spot, thanks to its prowess in the game.",
+      "context": "Personal Home Project in Jupyter"
     },
     "wikimpostor": {
-      "title": "Wikimpostor",
-      "context": "Home Game in C#",
-      "text": "App to play the Wikimpostor game on Android. It's basically Two of this people are lying from The Technical Difficulties channel."
+      "title": "Wikimpostor Gaming App",
+      "context": "Personal Home Game in C#",
+      "text": "Introducing the Wikimpostor app, bringing the 'Two of these people are lying' game from The Technical Difficulties channel to the realm of Android gaming."
     },
     "tetris": {
-      "title": "Tetris Mode",
-      "context": "Home Game in JS",
-      "text": "Play Tetris online but now with MODE you can check and uncheck to pimp up your game"
+      "title": "Enhanced Tetris Experience",
+      "context": "Personal Home Game in JS",
+      "text": "Elevate your Tetris gameplay with the enhanced MODE feature, providing the option to customize your gaming experience."
     },
     "minecraft": {
-      "title": "MineCraft Rhombic Dodecahedron",
-      "text": "A new iteration of Minecraft but with rhombic dodecahedron instead of cubes.",
-      "context": "Home Project in C#"
+      "title": "Minecraft with Rhombic Dodecahedra",
+      "text": "Embark on a novel iteration of Minecraft, where the traditional cubes are replaced with intriguing rhombic dodecahedra.",
+      "context": "Personal Home Project in C#"
     },
     "findwater": {
-      "title": "Find Water - The Game",
-      "text": "Learn geography with a quiz game app in 3D. For now you can only tell if it's water or not but one day it'll be better, I swear... Since the beginning of this project I discovered Sebastian Lague, I just have to ripe of his latest game and make it worst.",
-      "context": "Home Project in C#"
+      "title": "Find Water - The Geo Quiz",
+      "text": "Engage in a 3D quiz game app, primed for enhancing your geographical knowledge. While currently focused on identifying bodies of water, the app's evolution is promising.",
+      "context": "Personal Home Project in C#"
     },
     "zeta": {
-      "title": "Draw Zeta Riemann",
-      "text": "Generate a picture of the Riemann Zeta function",
-      "context": "Home Project in Jupyter"
+      "title": "Visualizing Zeta Riemann Function",
+      "text": "Experience the beauty of the Riemann Zeta function through dynamic visualizations generated by this home project.",
+      "context": "Personal Home Project in Jupyter"
     },
     "youtubesubs": {
-      "title": "Draw Youtube Subs",
-      "text": "Generate a mosaic out of your subs",
-      "context": "Home Project in Jupyter"
+      "title": "Youtube Subs Mosaic Generator",
+      "text": "Unleash the creative potential of your YouTube subscriptions by generating captivating mosaic images using this utility.",
+      "context": "Personal Home Project in Jupyter"
     }
   }
 }

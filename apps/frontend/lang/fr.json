@@ -26,6 +26,10 @@
     "coming-soon": {
       "title": "Contenu à Venir",
       "text": "Restez à l'écoute pour une gamme d'articles captivants sur les jeux, les outils et bien plus encore ! Attendez-vous à de nouveaux contenus, potentiellement publiés chaque semaine"
+    },
+    "portfolio": {
+      "text": "J'ai réalisé beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\nAttention, je ne suis pas fier de tous",
+      "title": "Mon Portfolio"
     }
   },
   "resume": {
@@ -167,6 +171,124 @@
     "interestText": "Passionné d'apprentissage continu, IA, création cinématographique, développement d'applications, neurologie, mathématiques, poésie, associations"
   },
   "portfolio": {
-    "summary": "J'ai fait beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\nÀ un moment donné, certains peuvent recevoir leur propre page"
+    "summary": "J'ai réalisé beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\n\nUn jour, certains recevront leur propre page\n\nEn attendant, attention, je ne suis pas fier de tous",
+    "attenuator": {
+      "context": "Projet de première année",
+      "location": "ENSEA, Cergy",
+      "text": "Entreprise brève mais perspicace, ce projet a impliqué deux étudiants collaborant pendant un demi-semestre. \nNotre mission était centrée sur les manipulations sonores fondamentales – amplification et atténuation. \nÀ l'aide de la puce LM1971 M, nous avons développé un système divisé en phases : manipulation de la puce contrôlée par ordinateur via Arduino, configuration de la communication PCB, fabrication DIY englobant la commande, l'impression, le perçage et le soudage, et enfin, des tests rigoureux accompagnés d'améliorations itératives.",
+      "title": "Atténuateur audio LM1971 M"
+    },
+    "cloudModel": {
+      "context": "Projet Indépendant Encadré (TIPE)",
+      "location": "CIV, Sophia Antipolis",
+      "text": "Un projet crucial au cours de mon mandat à l’école préparatoire consistait à explorer les subtilités de la formation des nuages. \nGrâce à un programme Python, j'ai introduit une nouvelle perspective sur l'évolution des macroparticules d'eau lors de leur passage de la mer à la stratosphère. \nCet effort m'a valu une note louable aux examens nationaux.",
+      "title": "Simulation de formation de nuages"
+    },
+    "coinflip": {
+      "context": "Projet de maison personnelle à Jupyter",
+      "text": "Présentation d'un bot Coin Flip Cheaters conçu pour remporter des victoires dans la compétition du jeu Primer. \nMa création indépendante a brièvement remporté la première place, grâce à ses prouesses dans le jeu.",
+      "title": "Bot tricheur à tirage de pièces de monnaie"
+    },
+    "findwater": {
+      "context": "Projet de maison personnelle en C",
+      "text": "Participez à une application de jeu de quiz en 3D, conçue pour améliorer vos connaissances géographiques. \nBien qu’actuellement axée sur l’identification des plans d’eau, l’évolution de l’application est prometteuse.",
+      "title": "Trouver de l'eau - Le géo-quiz"
+    },
+    "mastermind": {
+      "context": "Projet de maison personnelle en Python",
+      "text": "Plongeant dans le domaine du décryptage, cette initiative se concentre sur la conception de stratégies optimales pour le jeu de MasterMind.",
+      "title": "Solveur de stratégie MasterMind"
+    },
+    "minecraft": {
+      "context": "Projet de maison personnelle en C",
+      "text": "Embarquez pour une nouvelle itération de Minecraft, où les cubes traditionnels sont remplacés par d'intrigants dodécaèdres rhombiques.",
+      "title": "Minecraft avec dodécaèdres rhombiques"
+    },
+    "minesolver": {
+      "context": "Projet de maison personnelle en TS",
+      "title": "Solveur de dragueur de mines automatisé"
+    },
+    "mslab": {
+      "context": "R.",
+      "location": "Laboratoire MS, Osny",
+      "product-website": "Site Web du produit",
+      "text": "Lors de ma première expérience professionnelle, un stage, j'ai acquis une connaissance approfondie du fonctionnement d'une entreprise. \nImmergé dans le rôle d'un R",
+      "title": "Servocommande de profondeur d'aiguille du MS4"
+    },
+    "nonogram": {
+      "context": "Projet de maison personnelle à Jupyter",
+      "text": "Dédié au décodage des énigmes Nonogram, ce projet vise à démêler leurs modèles et à construire de nouveaux défis.",
+      "title": "Résolveur d'énigmes Nonogram"
+    },
+    "pacman": {
+      "context": "Projet scolaire personnel",
+      "location": "ENSEA, Cergy",
+      "text": "Dans le cadre de ma recherche d'expertise en IA, j'ai développé 12 itérations d'un environnement Pac-Man basé sur Python. \nCes itérations s'adressaient aux joueurs humains et facilitaient la formation OpenAI. \nPour acquérir une compréhension approfondie de l'apprentissage par renforcement, j'ai réorganisé l'intégralité de la base de code à l'aide de TensorFlow. \nGrâce au rendu de l'environnement, j'ai observé des résultats d'apprentissage réussis, car l'IA évitait habilement les obstacles et les fantômes, bien qu'avec certaines limites.",
+      "title": "Pac-Man piloté par l'IA"
+    },
+    "read-report": "Lire le rapport",
+    "see-slides": "Voir les diapositives",
+    "snake": {
+      "context": "Projet de maison personnelle en JS",
+      "text": "Profitez d'une version multijoueur du jeu Snake classique, permettant de jouer en ligne avec un ami. \nDéveloppé sur la base du projet HungryTurtleCode.",
+      "title": "Jeu de serpent multijoueur"
+    },
+    "solitaire": {
+      "context": "Projet de maison personnelle à Jupyter",
+      "text": "Pour vérifier la possibilité de gagner des jeux de Solitaire générés aléatoirement, j'ai conçu un programme pour calculer les probabilités de gain, facilitant ainsi les analyses stratégiques.",
+      "title": "Évaluateur de probabilité de gain au solitaire"
+    },
+    "sorting": {
+      "context": "Projet d'équipe Hackathon 24h",
+      "event-website": "Site Web de l'événement",
+      "location": "Enseack, Cergy",
+      "text": "Un effort de collaboration au sein d'une équipe de quatre personnes a donné naissance à un prototype qui révolutionne le recyclage en le rendant attrayant et convivial. \nNotre innovation comprend une caméra équipée d'un algorithme de deep learning, capable d'identifier le type et la matière des déchets. \nDes instructions claires d’élimination sont ensuite présentées. \nUne unité Arduino orchestre l’ouverture des bacs concernés. \nNotre prototype entièrement fonctionnel nous a valu la reconnaissance et les distinctions du jury.",
+      "title": "Assistant de recyclage interactif"
+    },
+    "sudoku": {
+      "context": "Projet de maison personnelle en Python",
+      "text": "Mon premier projet de loisirs, le Sudoku Solver, a ouvert la voie à des efforts ultérieurs centrés sur la résolution de ce jeu de réflexion captivant.",
+      "title": "Solveur de puzzles Sudoku"
+    },
+    "tetris": {
+      "context": "Jeu personnel à domicile en JS",
+      "text": "Améliorez votre gameplay Tetris avec la fonctionnalité MODE améliorée, offrant la possibilité de personnaliser votre expérience de jeu.",
+      "title": "Expérience Tetris améliorée"
+    },
+    "themis": {
+      "context": "Projet d'école de groupe",
+      "location": "ENSEA, Cergy",
+      "project-website": "Site Web du projet",
+      "text": "Thémis, un projet collaboratif, a mobilisé une équipe d'une vingtaine d'étudiants de l'ENSEA répartis sur différentes années d'ingénieur. \nNotre objectif était de concevoir un instrument de musique électronique complet doté des fonctionnalités d'un synthétiseur et d'une boîte à rythmes. \nPendant un semestre, je me suis concentré sur la conception de la carte principale du synthétiseur. \nLe point culminant a été la livraison de 3 conceptions de PCB méticuleusement conçues qui synthétisent les contributions de nombreux membres de l'équipe. \nLes conceptions finales ont été assemblées et rigoureusement testées, même face aux défis d’une pandémie.",
+      "title": "Carte synthétiseur analogique Themis"
+    },
+    "tyo": {
+      "context": "Festival international du court métrage (29e édition)",
+      "festival-website": "Site Web du festival",
+      "location": "TYO, Cergy",
+      "text": "Depuis sa création en 1991, TYO orchestre chaque année une extravagance de courts métrages de deux jours. \nFonctionnant comme une association étudiante de l'ENSEA, chaque année de nouveaux visages viennent compléter l'équipe. \nEn 2019, j'ai assumé diverses responsabilités, notamment la conception d'affiches sous Photoshop, la gestion, l'organisation et la coordination de la communication. \nDe plus, j'ai organisé des projections mensuelles de films sous la bannière TYO à l'école.",
+      "title": "Gestion d'équipe et direction de festivals"
+    },
+    "virtualTryOn": {
+      "context": "Stage en laboratoire",
+      "location": "Université de Ljubljana, Slovénie",
+      "text": "Intégré à l'environnement de recherche axé sur l'IA de l'Université de Ljubljana, j'ai plongé dans le domaine de l'intelligence artificielle appliquée au traitement visuel. \nMon stage s'est concentré sur l'étude, la réimplémentation et l'analyse de réseaux d'essais virtuels. \nJ'ai étudié leurs lacunes, conçu des mesures d'évaluation de la qualité, exploré des ensembles de données et mis en œuvre plus de 30 approches en utilisant à la fois Python et MATLAB, contribuant ainsi de manière significative aux recherches en cours.",
+      "title": "Exploration des réseaux d'essais virtuels"
+    },
+    "wikimpostor": {
+      "context": "Jeu personnel à domicile en C",
+      "text": "Présentation de l'application Wikimpostor, qui amène le jeu « Deux de ces personnes mentent » de la chaîne The Technical Difficulties au domaine des jeux Android.",
+      "title": "Application de jeu Wikimpostor"
+    },
+    "youtubesubs": {
+      "context": "Projet de maison personnelle à Jupyter",
+      "text": "Libérez le potentiel créatif de vos abonnements YouTube en générant des images mosaïques captivantes à l'aide de cet utilitaire.",
+      "title": "Générateur de mosaïque d'abonnements Youtube"
+    },
+    "zeta": {
+      "context": "Projet de maison personnelle à Jupyter",
+      "text": "Découvrez la beauté de la fonction Riemann Zeta à travers les visualisations dynamiques générées par ce projet de maison.",
+      "title": "Visualisation de la fonction Zeta Riemann"
+    }
   }
 }

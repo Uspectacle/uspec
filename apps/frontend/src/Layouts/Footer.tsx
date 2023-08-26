@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 import {
-  GREEN_LIGHT,
-  PURPLE_INTENSE,
+  LIGHT_ADDITIONAL_COLOR,
+  MAIN_COLOR,
   SHADOW,
   WHITE,
 } from '../Utils/DefaultStyle';
@@ -59,13 +59,13 @@ const useStyles = createStyles((theme) => ({
     left: 0,
     bottom: 0,
     width: '100%',
-    background: PURPLE_INTENSE,
+    background: MAIN_COLOR,
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    color: GREEN_LIGHT,
+    color: LIGHT_ADDITIONAL_COLOR,
     paddingTop: 10,
     paddingBottom: 10,
     [theme.fn.smallerThan(400)]: {
@@ -101,7 +101,7 @@ const useStyles = createStyles((theme) => ({
     color: WHITE,
     transition: 'color 0.3s',
     '&:hover': {
-      color: GREEN_LIGHT,
+      color: LIGHT_ADDITIONAL_COLOR,
     },
     '&:active': {
       boxShadow: 'none',

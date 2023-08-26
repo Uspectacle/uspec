@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
 import {
-  PURPLE_INTENSE,
+  MAIN_COLOR,
   SHADOW,
   WHITE,
   entranceAnimation,
@@ -76,7 +76,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: '2em',
     fontWeight: 'bold',
     marginTop: 10,
-    color: PURPLE_INTENSE,
+    color: MAIN_COLOR,
   },
   subTitle: {
     textAlign: 'center',
@@ -98,7 +98,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
   listTitle: {
-    backgroundColor: PURPLE_INTENSE,
+    backgroundColor: MAIN_COLOR,
     color: WHITE,
     textAlign: 'center',
     fontSize: '1.5em',

@@ -1,8 +1,8 @@
 import { createStyles, keyframes } from '@mantine/core';
 import {
-  GREEN_LIGHT,
-  GREEN_WHITE,
-  PURPLE_INTENSE,
+  LIGHT_ADDITIONAL_COLOR,
+  WHITE_ADDITIONAL_COLOR,
+  MAIN_COLOR,
   SHADOW,
   WHITE,
 } from '../Utils/DefaultStyle';
@@ -39,20 +39,24 @@ export const Header = ({
         </Link>
         <div className={classes.links}>
           <Link href={'/'} className={classes.link} passHref>
-            <div style={'/' === router.pathname ? { color: GREEN_LIGHT } : {}}>
+            <div
+              style={
+                '/' === router.pathname ? { color: LIGHT_ADDITIONAL_COLOR } : {}
+              }
+            >
               {t('header.blog')}
             </div>
           </Link>
           {/* <Link href={'/games'} className={classes.link} passHref>
             <div
-              style={'/games' === router.pathname ? { color: GREEN_LIGHT } : {}}
+              style={'/games' === router.pathname ? { color: LIGHT_ADDITIONAL_COLOR } : {}}
             >
               {t('header.games')}
             </div>
           </Link>
           <Link href={'/tools'} className={classes.link} passHref>
             <div
-              style={'/tools' === router.pathname ? { color: GREEN_LIGHT } : {}}
+              style={'/tools' === router.pathname ? { color: LIGHT_ADDITIONAL_COLOR } : {}}
             >
               {t('header.tools')}
             </div>
@@ -118,7 +122,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
   links: {
-    background: PURPLE_INTENSE,
+    background: MAIN_COLOR,
     boxShadow: SHADOW,
     display: 'flex',
     justifyContent: 'center',
@@ -147,7 +151,7 @@ const useStyles = createStyles((theme) => ({
     color: WHITE,
     transition: 'color 0.3s',
     '&:hover': {
-      color: GREEN_LIGHT,
+      color: LIGHT_ADDITIONAL_COLOR,
     },
     '&:active': {
       boxShadow: 'none',
@@ -170,7 +174,7 @@ const useStyles = createStyles((theme) => ({
     })} 5s ease-in-out infinite`,
   },
   summary: {
-    backgroundColor: GREEN_WHITE,
+    backgroundColor: WHITE_ADDITIONAL_COLOR,
     borderRadius: 10,
     margin: 10,
     padding: 10,

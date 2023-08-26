@@ -4,13 +4,14 @@ import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
 import { UpcomingPost } from '../src/Blog/UpcomingPost';
 import { ResumePost } from '../src/Resume/ResumePost';
+import { PortfolioPost } from '../src/Portfolio/PortfolioPost';
 
 const Blog: NextPage = () => {
   const { classes } = useStyles();
 
   const Posts = [
+    PortfolioPost,
     ResumePost,
-    UpcomingPost,
     UpcomingPost,
     UpcomingPost,
     UpcomingPost,

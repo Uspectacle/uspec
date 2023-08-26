@@ -2,7 +2,11 @@ import { createStyles } from '@mantine/core';
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { PURPLE_INTENSE, GREEN_WHITE, SHADOW } from '../Utils/DefaultStyle';
+import {
+  MAIN_COLOR,
+  WHITE_ADDITIONAL_COLOR,
+  SHADOW,
+} from '../Utils/DefaultStyle';
 
 interface Props {
   href: string;
@@ -101,14 +105,14 @@ const useStyles = createStyles(() => ({
   years: {},
   name: {
     fontWeight: 'bold',
-    color: PURPLE_INTENSE,
+    color: MAIN_COLOR,
   },
   subName: {},
   city: {},
   text: {
     width: '90%',
     alignSelf: 'center',
-    backgroundColor: GREEN_WHITE,
+    backgroundColor: WHITE_ADDITIONAL_COLOR,
     boxShadow: SHADOW,
     padding: 10,
     borderRadius: 10,

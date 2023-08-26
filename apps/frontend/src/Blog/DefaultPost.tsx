@@ -4,8 +4,8 @@ import Link from 'next/link';
 import {
   WHITE,
   SHADOW,
-  PURPLE_INTENSE,
-  GREEN_LIGHT,
+  MAIN_COLOR,
+  LIGHT_ADDITIONAL_COLOR,
   entranceAnimation,
 } from '../Utils/DefaultStyle';
 
@@ -45,7 +45,7 @@ const useStyles = createStyles((theme, { index }: { index: number }) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     margin: 10,
-    backgroundColor: GREEN_LIGHT,
+    backgroundColor: LIGHT_ADDITIONAL_COLOR,
     borderRadius: 10,
     overflow: 'hidden',
     [theme.fn.smallerThan(550)]: {
@@ -103,7 +103,7 @@ const useStyles = createStyles((theme, { index }: { index: number }) => ({
   title: {
     fontSize: '1.2em',
     fontWeight: 'bold',
-    color: PURPLE_INTENSE,
+    color: MAIN_COLOR,
   },
   text: {
     fontSize: '0.8em',

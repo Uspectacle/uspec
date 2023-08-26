@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { MyImage } from '../src/Utils/MyImage';
 import { createStyles } from '@mantine/core';
 import {
-  PURPLE_INTENSE,
+  MAIN_COLOR,
   SHADOW,
   WHITE,
   entranceAnimation,
@@ -53,7 +53,7 @@ const useStyles = createStyles(() => ({
     borderRadius: 10,
     maxWidth: '80%',
     overflow: 'wrap',
-    strong: { color: PURPLE_INTENSE, wordBreak: 'break-all' },
+    strong: { color: MAIN_COLOR, wordBreak: 'break-all' },
     animation: entranceAnimation(0.1),
   },
 }));

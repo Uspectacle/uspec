@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 // import { lookAgain } from './LookAgain';
-import { PURPLE_INTENSE } from '../Utils/DefaultStyle';
+import { MAIN_COLOR } from '../Utils/DefaultStyle';
 
 export const Interests = () => {
   const { classes } = useStyles();
@@ -42,7 +42,7 @@ const useStyles = createStyles(() => ({
     marginBottom: 20,
     marginLeft: 30,
     marginRight: 30,
-    strong: { color: PURPLE_INTENSE },
+    strong: { color: MAIN_COLOR },
     span: { fontWeight: 500 },
   },
 }));

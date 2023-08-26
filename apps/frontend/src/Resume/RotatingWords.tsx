@@ -1,5 +1,5 @@
 import { createStyles, keyframes } from '@mantine/core';
-import { PURPLE_INTENSE } from '../Utils/DefaultStyle';
+import { MAIN_COLOR } from '../Utils/DefaultStyle';
 
 export const RotatingWords = ({
   // text,
@@ -70,6 +70,6 @@ const useStyles = createStyles((theme, { length }: { length: number }) => ({
     display: 'block',
     height: '1.5em',
     paddingLeft: 10,
-    color: PURPLE_INTENSE,
+    color: MAIN_COLOR,
   },
 }));

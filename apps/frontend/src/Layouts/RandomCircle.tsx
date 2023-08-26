@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, keyframes } from '@mantine/core';
-import { PURPLE_INTENSE } from '../Utils/DefaultStyle';
+import { MAIN_COLOR } from '../Utils/DefaultStyle';
 
 export const RandomCircle = () => {
   const { classes } = useStyles();
@@ -16,7 +16,7 @@ const randomState = () => {
     opacity: scaleSeed / 3,
     boxShadow: `0px 0px ${6 - scaleSeed * 5}px ${
       scaleSeed * 5
-    }px ${PURPLE_INTENSE}`,
+    }px ${MAIN_COLOR}`,
   };
 };
 
@@ -40,6 +40,6 @@ const useStyles = createStyles(() => ({
     position: 'fixed',
     borderRadius: '50%',
     aspectRatio: '1',
-    backgroundColor: PURPLE_INTENSE,
+    backgroundColor: MAIN_COLOR,
   },
 }));

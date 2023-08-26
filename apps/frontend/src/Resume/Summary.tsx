@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MyImage } from '../Utils/MyImage';
 import { createStyles } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
-import { SHADOW, WHITE } from '../Utils/DefaultStyle';
+import { MAIN_COLOR, SHADOW, WHITE } from '../Utils/DefaultStyle';
 
 export const Summary = () => {
   const { classes } = useStyles();
@@ -41,5 +41,6 @@ const useStyles = createStyles(() => ({
     fontWeight: 500,
     borderRadius: 10,
     backgroundColor: WHITE,
+    color: MAIN_COLOR,
   },
 }));
