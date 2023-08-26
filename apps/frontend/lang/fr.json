@@ -185,7 +185,7 @@
       "title": "Simulation de formation de nuages"
     },
     "coinflip": {
-      "context": "Projet personnel à Jupyter",
+      "context": "Projet personnel en jupyter",
       "text": "Présentation d'un bot Coin Flip Cheaters conçu pour remporter des victoires dans la compétition du jeu Primer. \nMa création indépendante a brièvement remporté la première place, grâce à ses prouesses dans le jeu.",
       "title": "Bot tricheur à tirage de pièces de monnaie"
     },
@@ -216,7 +216,7 @@
       "title": "Servocommande de profondeur d'aiguille du MS4"
     },
     "nonogram": {
-      "context": "Projet personnel à Jupyter",
+      "context": "Projet personnel en jupyter",
       "text": "Dédié au décodage des énigmes Nonogram, ce projet vise à démêler leurs modèles et à construire de nouveaux défis.",
       "title": "Résolveur d'énigmes Nonogram"
     },
@@ -234,7 +234,7 @@
       "title": "Jeu de serpent multijoueur"
     },
     "solitaire": {
-      "context": "Projet personnel à Jupyter",
+      "context": "Projet personnel en jupyter",
       "text": "Pour vérifier la possibilité de gagner des jeux de Solitaire générés aléatoirement, j'ai conçu un programme pour calculer les probabilités de gain, facilitant ainsi les analyses stratégiques.",
       "title": "Évaluateur de probabilité de gain au solitaire"
     },
@@ -281,12 +281,12 @@
       "title": "Application de jeu Wikimpostor"
     },
     "youtubesubs": {
-      "context": "Projet personnel à Jupyter",
+      "context": "Projet personnel en jupyter",
       "text": "Libérez le potentiel créatif de vos abonnements YouTube en générant des images mosaïques captivantes à l'aide de cet utilitaire.",
       "title": "Générateur de mosaïque d'abonnements Youtube"
     },
     "zeta": {
-      "context": "Projet personnel à Jupyter",
+      "context": "Projet personnel en jupyter",
       "text": "Découvrez la beauté de la fonction Riemann Zeta à travers les visualisations dynamiques générées par ce Projet.",
       "title": "Visualisation de la fonction Zeta Riemann"
     }
