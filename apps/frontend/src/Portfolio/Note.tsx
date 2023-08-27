@@ -1,46 +1,24 @@
 import { createStyles } from '@mantine/core';
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { randomPop, randomize } from '../Utils/Random';
 
 interface Props {
   seed: number;
   children?: JSX.Element | undefined;
+  delay: number;
   actionable?: boolean | undefined;
   margin?: string | number | undefined;
 }
 
-export const Note = ({ seed, children, actionable, margin }: Props) => {
+export const Note = ({ seed, children, delay, actionable, margin }: Props) => {
   const { classes } = useStyles({
     seed,
+    delay,
     actionable: !!actionable,
   });
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setShow(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.5,
-        rootMargin: '50px',
-      }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, []);
 
   return (
-    <div
-      className={`${classes.container} ${show ? classes.show : ''}`}
-      style={{ margin: margin ?? 5 }}
-      ref={ref}
-    >
+    <div className={classes.container} style={{ margin: margin ?? 5 }}>
       <div className={classes.note}>
         <div className={classes.pin} />
         {children}
@@ -54,6 +32,7 @@ const pinColors = ['#e4cb2e', '#1b835f', '#db2a21', '#4141e7', '#e4dbd2'];
 
 interface StyleProps {
   seed: number;
+  delay: number;
   actionable: boolean;
 }
 
@@ -74,14 +53,7 @@ const useStyles = createStyles((theme, { seed, actionable }: StyleProps) => {
   }px`;
   return {
     container: {
-      transform: `translateX(50px)`,
-      opacity: 0,
-      transition: 'opacity 0.3s, transform 0.3s',
-    },
-    show: {
-      transform: 'translate(0px, 0px)',
-      opacity: 1,
-      transition: 'opacity 0.3s, transform 0.3s',
+      // animation: entranceAnimation(delay)
     },
     note: {
       backgroundColor: randomPop(noteColors, seed),

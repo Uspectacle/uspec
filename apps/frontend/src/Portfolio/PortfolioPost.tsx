@@ -15,7 +15,7 @@ export const PortfolioPost = ({ index }: { index: number }) => {
       text={t('posts.portfolio.text')}
       href={'/portfolio'}
       image={
-        <Note seed={7} margin={5}>
+        <Note seed={7} delay={0} margin={5}>
           <div className={classes.image}>
             {
               <MyImage

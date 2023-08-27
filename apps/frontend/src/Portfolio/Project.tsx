@@ -32,33 +32,34 @@ export const Project = ({
     <div className={classes.container}>
       <div className={classes.titleContainer}>
         <div className={classes.subContainer}>
-          <Note seed={2 + 100 * index}>
+          <Note seed={2 + 100 * index} delay={0.6 + index * 0.25}>
             <div className={classes.date}>{date}</div>
           </Note>
           {!!location && (
-            <Note seed={3 + 100 * index}>
+            <Note seed={3 + 100 * index} delay={0.6 + index * 0.25}>
               <div className={classes.location}>{location}</div>
             </Note>
           )}
-          <Note seed={4 + 100 * index} margin={15}>
+          <Note seed={4 + 100 * index} delay={0.6 + index * 0.25} margin={15}>
             <div className={classes.context}>{context}</div>
           </Note>
         </div>
-        <Note seed={1 + 100 * index} margin={15}>
+        <Note seed={1 + 100 * index} delay={0.6 + index * 0.25} margin={15}>
           <div className={classes.title}>{title}</div>
         </Note>
       </div>
-      <Note seed={5 + 100 * index} margin={15}>
+      <Note seed={5 + 100 * index} delay={0.6 + index * 0.25} margin={15}>
         <div className={classes.image}>{image}</div>
       </Note>
       {!!text && (
-        <Note seed={6 + 100 * index}>
+        <Note seed={6 + 100 * index} delay={0.6 + index * 0.25}>
           <div className={classes.text}>{text}</div>
         </Note>
       )}
       {links.map(({ link, href }, linkIndex) => (
         <Note
           seed={7 + linkIndex + 100 * index}
+          delay={0.6 + index * 0.25}
           actionable
           key={`link-note-${linkIndex}`}
         >
