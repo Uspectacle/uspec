@@ -56,17 +56,17 @@ export const MinesweeperLayout = ({
     >
       <div
         className={classes.leftContainer}
-        style={
-          !focus
-            ? {
-                opacity: 0,
-                transform: 'translateX(-100%)',
-              }
-            : {}
-        }
+        style={!focus ? { opacity: 0, transform: 'translateX(-100%)' } : {}}
       >
         <div className={classes.exit}>
+          <BackButton page={page} setPage={setPage} layout={'mobile'} />
           <ExitButton setFocus={setFocus} />
+          <NextButton
+            page={page}
+            setPage={setPage}
+            max={pages.length - 1}
+            layout={'mobile'}
+          />
         </div>
         <div className={classes.pageContainer}>
           <div className={classes.slideShow}>
@@ -84,14 +84,7 @@ export const MinesweeperLayout = ({
       </div>
       <div
         className={classes.rightContainer}
-        style={
-          !focus
-            ? {
-                opacity: 0,
-                transform: 'translateX(100%)',
-              }
-            : {}
-        }
+        style={!focus ? { opacity: 0, transform: 'translateX(100%)' } : {}}
       >
         <div className={classes.actions}>
           <div className={classes.settings}>
@@ -106,7 +99,7 @@ export const MinesweeperLayout = ({
   );
 };
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   container: {
     position: 'absolute',
     zIndex: 1,
@@ -118,6 +111,9 @@ const useStyles = createStyles(() => ({
     alignItems: 'center',
     overflow: 'hidden',
     transition: 'opacity 0.3s, padding 0.3s, margin 0.3s',
+    [theme.fn.smallerThan(750)]: {
+      flexDirection: 'column',
+    },
   },
   leftContainer: {
     height: '100%',
@@ -128,18 +124,40 @@ const useStyles = createStyles(() => ({
     boxSizing: 'border-box',
     overflow: 'hidden',
     transition: 'opacity 0.3s, transform 0.3s',
+    [theme.fn.smallerThan(750)]: {
+      flexDirection: 'column',
+      height: '50%',
+      width: '100%',
+    },
   },
   rightContainer: {
-    height: '100%',
     overflow: 'hidden',
     width: '50%',
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
     transition: 'opacity 0.3s, transform 0.3s',
+    [theme.fn.smallerThan(750)]: {
+      flexDirection: 'row',
+      height: '50%',
+      width: '100%',
+    },
+    [theme.fn.smallerThan(500)]: {
+      alignItems: 'center',
+    },
+    [theme.fn.smallerThan(400)]: {
+      flexDirection: 'column-reverse',
+    },
   },
-  exit: { margin: 10 },
+  exit: {
+    margin: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+  },
   pageContainer: {
     flex: 1,
     width: '100%',
@@ -162,6 +180,9 @@ const useStyles = createStyles(() => ({
     justifyContent: 'space-around',
     width: '100%',
     margin: 10,
+    [theme.fn.smallerThan(750)]: {
+      display: 'none',
+    },
   },
   actions: {
     display: 'flex',
@@ -172,6 +193,14 @@ const useStyles = createStyles(() => ({
     flexWrap: 'wrap',
     boxSizing: 'border-box',
     alignItems: 'center',
+    [theme.fn.smallerThan(500)]: {
+      flexDirection: 'column',
+      width: 'auto',
+      padding: 5,
+    },
+    [theme.fn.smallerThan(400)]: {
+      flexDirection: 'row',
+    },
   },
   settings: {
     display: 'flex',
@@ -181,5 +210,12 @@ const useStyles = createStyles(() => ({
     flexWrap: 'wrap',
     boxSizing: 'border-box',
     alignItems: 'center',
+    [theme.fn.smallerThan(500)]: {
+      flexDirection: 'column',
+      padding: 5,
+    },
+    [theme.fn.smallerThan(400)]: {
+      display: 'none',
+    },
   },
 }));

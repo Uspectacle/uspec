@@ -9,5 +9,4 @@ export interface CellType {
   num: number;
   highlight: boolean;
   neighbors: number[];
-  fontSize: number;
 }

@@ -7,7 +7,7 @@ export const Game = () => {
   const { classes } = useStyles({ sizeGrid });
 
   return (
-    <div className={classes.background} id="background" tabIndex={0}>
+    <div className={classes.background}>
       <div className={classes.grid}>
         {grid.map((cell, index) => (
           <Cell
@@ -26,26 +26,25 @@ const useStyles = createStyles((theme, { sizeGrid }: { sizeGrid: number }) => ({
   background: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center',
     aspectRatio: '1',
     maxWidth: '100%',
     maxHeight: '100%',
+    margin: 10,
     '& > span': {
       color: '#b38c78',
       fontSize: '30px',
     },
+    [theme.fn.smallerThan(500)]: {
+      flex: 1,
+    },
   },
   grid: {
-    padding: 10,
-    margin: 10,
     display: 'grid',
     gridTemplateColumns: `repeat(${sizeGrid}, 1fr)`,
     flex: 1,
     aspectRatio: '1',
     gap: 5,
-    overflow: 'hidden',
   },
 }));

@@ -5,14 +5,16 @@ import { MyImage } from '../Utils/MyImage';
 export const BackButton = ({
   page,
   setPage,
+  layout,
 }: {
   page: number;
   setPage: (page: number) => void;
+  layout?: string | undefined;
 }) => {
   const { classes } = useMinesweeperStyles();
   return (
     <div
-      className={`${classes.button} ${page <= 0 && 'hidden'}`}
+      className={`${classes.button} ${page <= 0 && 'hidden'} ${layout}`}
       onClick={() => setPage(Math.max(0, page - 1))}
     >
       <MyImage

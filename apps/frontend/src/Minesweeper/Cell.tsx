@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 import { CellType } from './cellType';
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   clearHighlight,
@@ -21,6 +21,23 @@ interface propsType {
 export const Cell = ({ cell, computeProb, isOver }: propsType) => {
   const { classes } = useStyles();
   const dispatch = useDispatch();
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const updateFontSize = () => {
+    if (!ref.current) return;
+    const cellWidth = ref.current.clientWidth;
+    const cellHeight = ref.current.clientHeight;
+    const fontSize = Math.min(cellWidth, cellHeight) * 0.5;
+    ref.current.style.fontSize = `${fontSize}px`;
+  };
+
+  useEffect(() => {
+    updateFontSize();
+    window.addEventListener('resize', updateFontSize);
+    return () => {
+      window.removeEventListener('resize', updateFontSize);
+    };
+  }, []);
 
   const image = cell.isFlag
     ? '🚩'
@@ -30,7 +47,7 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
       : ''
     : cell.isMine
     ? '💣'
-    : String(cell.num);
+    : String(cell.num || '');
 
   const leftClick = () => {
     if (isOver) return;
@@ -55,6 +72,7 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
 
   return (
     <div
+      ref={ref}
       className={classes.cell}
       onClick={leftClick}
       onContextMenu={rightClick}
@@ -64,11 +82,10 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
         backgroundColor: cellColor(cell),
         filter: `brightness(${cellBrightness(cell)}%)`,
         color: cellFontColor(cell),
-        fontSize: `${
-          computeProb && !cell.isShown
-            ? Math.floor(cell.fontSize / 2)
-            : cell.fontSize
-        }vmin`,
+        opacity:
+          cell.isShown && cell.num === 0 && cell.isShown && !cell.isMine
+            ? 0
+            : 1,
       }}
     >
       {image}
@@ -80,7 +97,6 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
 
 const useStyles = createStyles(() => ({
   cell: {
-    aspectRatio: '1',
     borderRadius: 8,
     display: 'flex',
     justifyContent: 'space-around',
@@ -91,8 +107,7 @@ const useStyles = createStyles(() => ({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    width: '100%',
-    height: '100%',
+    aspectRatio: '1',
     transition:
       'background-color 0.3s, opacity 0.3s, transform 0.3s, filter 0.3s',
     '&:hover': {

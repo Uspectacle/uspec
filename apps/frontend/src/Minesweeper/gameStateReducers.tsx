@@ -121,7 +121,6 @@ const initCell = (
   isFlag: false,
   highlight: false,
   neighbors: [],
-  fontSize: Math.floor(40 / sizeGrid),
 });
 
 export const initGrid = (sizeGrid: number, mineNum: number): CellType[] => {

@@ -64,8 +64,9 @@ const useStyles = createStyles(() => ({
     boxSizing: 'border-box',
   },
   slide: {
-    boxSizing: 'border-box',
-    overflow: 'hidden',
+    boxSizing: 'content-box',
+    overflowX: 'hidden',
+    overflowY: 'auto',
     height: '100%',
     borderRadius: '10px',
     backgroundSize: 'cover',
