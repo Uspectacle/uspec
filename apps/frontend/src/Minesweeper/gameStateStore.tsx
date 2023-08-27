@@ -8,6 +8,7 @@ export interface GameStateState {
   isOver: boolean;
   sizeGrid: number;
   mineNum: number;
+  mineRatio: number;
   computeProb: boolean;
 }
 
@@ -16,7 +17,8 @@ const initialState = {
   isMine: false,
   isOver: false,
   sizeGrid: 5,
-  mineNum: 15 / 100,
+  mineNum: 4,
+  mineRatio: 4 / 25,
   computeProb: false,
 };
 
@@ -32,7 +34,7 @@ export const {
   setIsMine,
   setIsOver,
   setSizeGrid,
-  setMineNum,
+  setMineRatio,
   setComputeProb,
   restart,
   gameOver,

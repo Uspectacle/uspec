@@ -1,7 +1,10 @@
 import { createStyles } from '@mantine/core';
-import React from 'react';
+import React, { useState } from 'react';
 import { MINESWEEPER_MAIN } from './MinesweeperStyle';
 import { Game } from './Game';
+import { SetSizeControl } from './SetSizeControl';
+import { SetMineControl } from './SetMineControl';
+import { RestartButton } from './RestartButton';
 
 export const MinesweeperLayout = ({
   focus,
@@ -10,7 +13,9 @@ export const MinesweeperLayout = ({
   focus: boolean;
   setFocus: (focus: boolean) => void;
 }) => {
+  const [page, setPage] = useState(1);
   const { classes } = useStyles();
+
   return (
     <div
       className={classes.container}
@@ -27,19 +32,21 @@ export const MinesweeperLayout = ({
           </div>
         </div>
         <div className={classes.navigation}>
-          <div className={classes.back}>back</div>
-          <div className={classes.next}>next</div>
+          <div className={classes.back} onClick={() => setPage(page - 1)}>
+            back
+          </div>
+          <div className={classes.next} onClick={() => setPage(page + 1)}>
+            next
+          </div>
         </div>
       </div>
       <div className={classes.rightContainer}>
         <div className={classes.settings}>
-          <div className={classes.setSize}>setSize</div>
-          <div className={classes.setDifficulty}>setDifficulty</div>
+          <SetSizeControl />
+          <SetMineControl />
+          <RestartButton />
         </div>
         <Game />
-        <div className={classes.actions}>
-          <div className={classes.restart}>restart</div>
-        </div>
       </div>
     </div>
   );

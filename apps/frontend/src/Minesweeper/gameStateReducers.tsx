@@ -79,11 +79,7 @@ export const getProb = (state: GameStateState) => {
           partialSum += cell.prob ** x;
         }
         return partialSum;
-      }, 0) -
-      Math.min(
-        Math.floor(state.mineNum * state.sizeGrid * state.sizeGrid),
-        state.sizeGrid * state.sizeGrid - 1
-      )
+      }, 0) - Math.min(state.mineNum, state.sizeGrid * state.sizeGrid - 1)
     );
   };
 
@@ -94,9 +90,9 @@ export const getProb = (state: GameStateState) => {
   });
 
   if (
-    state.grid.reduce((diffPartiel, _, index) => {
-      if (state.grid[index].isShown) return diffPartiel;
-      return diffPartiel + (state.grid[index].prob - oldProb[index]) ** 2;
+    state.grid.reduce((diffPartial, _, index) => {
+      if (state.grid[index].isShown) return diffPartial;
+      return diffPartial + (state.grid[index].prob - oldProb[index]) ** 2;
     }, 0) >
     evolution ** 2
   ) {
@@ -119,12 +115,7 @@ const initCell = (
   column: index % sizeGrid,
   index,
   isMine: false,
-  prob:
-    Math.min(
-      Math.floor(mineNum * sizeGrid * sizeGrid),
-      sizeGrid * sizeGrid - 1
-    ) /
-    (sizeGrid * sizeGrid),
+  prob: Math.min(mineNum, sizeGrid * sizeGrid - 1) / (sizeGrid * sizeGrid),
   num: 0,
   isShown: false,
   isFlag: false,
@@ -138,13 +129,13 @@ export const initGrid = (sizeGrid: number, mineNum: number): CellType[] => {
     initCell(index, sizeGrid, mineNum)
   );
   return preGrid.map((cell) => {
-    const neighbouringCells = preGrid.filter((otherCell) => {
+    const neighboringCells = preGrid.filter((otherCell) => {
       return (
         Math.abs(cell.column - otherCell.column) < 2 &&
         Math.abs(cell.row - otherCell.row) < 2
       );
     });
-    cell.neighbors = neighbouringCells.map((cell) => cell.index);
+    cell.neighbors = neighboringCells.map((cell) => cell.index);
     return cell;
   });
 };
@@ -182,13 +173,16 @@ const setSizeGrid = (
   value: { payload: number; type: string }
 ) => {
   state.sizeGrid = value.payload;
+  restart(state);
 };
 
-const setMineNum = (
+const setMineRatio = (
   state: GameStateState,
   value: { payload: number; type: string }
 ) => {
-  state.mineNum = value.payload;
+  state.mineRatio = value.payload;
+  state.mineNum = Math.round(value.payload * state.sizeGrid * state.sizeGrid);
+  restart(state);
 };
 
 const setComputeProb = (state: GameStateState) => {
@@ -198,6 +192,7 @@ const setComputeProb = (state: GameStateState) => {
 const restart = (state: GameStateState) => {
   state.isMine = false;
   state.isOver = false;
+  state.mineNum = Math.round(state.mineRatio * state.sizeGrid * state.sizeGrid);
   state.grid = initGrid(state.sizeGrid, state.mineNum);
 };
 
@@ -238,13 +233,7 @@ const dig = (
     shuffle(indexList);
 
     indexList
-      .slice(
-        0,
-        Math.min(
-          Math.floor(state.mineNum * state.sizeGrid * state.sizeGrid),
-          state.sizeGrid * state.sizeGrid - 1
-        )
-      )
+      .slice(0, Math.min(state.mineNum, state.sizeGrid * state.sizeGrid - 1))
       .forEach((otherIndex) => {
         state.grid[otherIndex].isMine = true;
       });
@@ -338,7 +327,7 @@ export const gameStateReducers = {
   setIsMine,
   setIsOver,
   setSizeGrid,
-  setMineNum,
+  setMineRatio,
   setComputeProb,
   restart,
   gameOver,
