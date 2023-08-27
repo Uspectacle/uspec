@@ -5,15 +5,17 @@ import { MyImage } from '../Utils/MyImage';
 export const NextButton = ({
   page,
   setPage,
+  max,
 }: {
   page: number;
   setPage: (page: number) => void;
+  max: number;
 }) => {
   const { classes } = useMinesweeperStyles();
   return (
     <div
-      className={classes.button}
-      onClick={() => setPage(Math.max(0, page + 1))}
+      className={`${classes.button} ${page >= max && 'hidden'}`}
+      onClick={() => setPage(Math.min(max, page + 1))}
     >
       Next
       <MyImage

@@ -12,7 +12,7 @@ export const BackButton = ({
   const { classes } = useMinesweeperStyles();
   return (
     <div
-      className={classes.button}
+      className={`${classes.button} ${page <= 0 && 'hidden'}`}
       onClick={() => setPage(Math.max(0, page - 1))}
     >
       <MyImage

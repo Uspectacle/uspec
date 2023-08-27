@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { createStyles } from '@mantine/core';
 import { BACKGROUND_COLOR } from '../Utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
+import { MINESWEEPER_BACKGROUND } from '../Minesweeper/MinesweeperStyle';
 
 export const Background = ({
   length,
-  style,
+  tag,
 }: {
   length: number;
-  style?: React.CSSProperties | undefined;
+  tag?: string | undefined;
 }) => {
   const { classes } = useStyles();
 
@@ -20,11 +21,7 @@ export const Background = ({
     );
   }, [length]);
 
-  return (
-    <div className={classes.container} style={style ?? {}}>
-      {circles}
-    </div>
-  );
+  return <div className={`${classes.container}  ${tag ?? ''}`}>{circles}</div>;
 };
 
 const useStyles = createStyles(() => ({
@@ -36,5 +33,6 @@ const useStyles = createStyles(() => ({
     transition: 'background 0.3s',
     backgroundColor: BACKGROUND_COLOR,
     overflow: 'hidden',
+    '&.minesweeper': { backgroundColor: MINESWEEPER_BACKGROUND },
   },
 }));

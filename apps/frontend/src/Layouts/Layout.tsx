@@ -7,19 +7,19 @@ import { Background } from './Background';
 export const Layout = ({
   summary,
   children,
-  backgroundStyle,
+  backgroundTag,
   reduced,
 }: {
   summary?: JSX.Element | undefined;
   children?: JSX.Element | undefined;
-  backgroundStyle?: React.CSSProperties | undefined;
+  backgroundTag?: string | undefined;
   reduced?: boolean | undefined;
 }) => {
   const { classes } = useStyles();
 
   return (
     <div className={classes.container}>
-      <Background length={20} style={backgroundStyle} />
+      <Background length={20} tag={backgroundTag} />
       <Header reduced={reduced}>{summary}</Header>
       {children}
       <Footer reduced={reduced} />

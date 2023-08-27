@@ -80,7 +80,9 @@ export const useMinesweeperStyles = createStyles(() => ({
     backgroundColor: 'transparent',
     outline: 'none',
     borderRadius: 4,
-    transition: 'background-color 0.3s ease',
+    opacity: 1,
+    transform: 'scale(1)',
+    transition: 'background-color 0.3s, opacity 0.3s, transform 0.3s',
     '&:hover': {
       backgroundColor: MINESWEEPER_MAIN_TRANSPARENT,
     },
@@ -89,6 +91,10 @@ export const useMinesweeperStyles = createStyles(() => ({
     },
     '&.active': {
       backgroundColor: MINESWEEPER_MAIN,
+    },
+    '&.hidden': {
+      opacity: 0,
+      transform: 'scale(0)',
     },
   },
   button: {
@@ -105,12 +111,18 @@ export const useMinesweeperStyles = createStyles(() => ({
     border: 'none',
     outline: 'none',
     borderRadius: 4,
-    transition: 'background-color 0.3s ease',
+    opacity: 1,
+    transform: 'scale(1)',
+    transition: 'background-color 0.3s, opacity 0.3s, transform 0.3s',
     '&:hover': {
       backgroundColor: MINESWEEPER_MAIN_TRANSPARENT,
     },
     '&:active': {
       backgroundColor: MINESWEEPER_BACKGROUND,
+    },
+    '&.hidden': {
+      opacity: 0,
+      transform: 'scale(0)',
     },
     '&.blink': {
       animation: `${keyframes({
@@ -120,7 +132,7 @@ export const useMinesweeperStyles = createStyles(() => ({
         '10%': { transform: 'rotate(5deg)' },
         '14%': { transform: 'rotate(-5deg)' },
         '16%': { transform: 'rotate(0deg)' },
-      })} 2s infinite`,
+      })} 2s 5s infinite`,
     },
   },
 }));

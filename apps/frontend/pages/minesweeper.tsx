@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { Summary } from '../src/Minesweeper/Summary';
 import { Title } from '../src/Minesweeper/Title';
 import { MinesweeperLayout } from '../src/Minesweeper/MinesweeperLayout';
-import { MINESWEEPER_BACKGROUND } from '../src/Minesweeper/MinesweeperStyle';
 import { useDispatch } from 'react-redux';
 import { restart } from '../src/Minesweeper/gameStateStore';
 
@@ -18,9 +17,7 @@ const Minesweeper: NextPage = () => {
     <Layout
       summary={<Summary />}
       reduced={focus}
-      backgroundStyle={{
-        backgroundColor: focus ? MINESWEEPER_BACKGROUND : '',
-      }}
+      backgroundTag={focus ? 'minesweeper' : ''}
     >
       <>
         <MinesweeperLayout focus={focus} setFocus={setFocus} />

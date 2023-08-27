@@ -8,6 +8,8 @@ import { RestartButton } from './RestartButton';
 import { ExitButton } from './ExitButton';
 import { BackButton } from './BackButton';
 import { NextButton } from './NextButton';
+import { Page } from './Page';
+import { useTranslation } from 'react-i18next';
 
 export const MinesweeperLayout = ({
   focus,
@@ -16,8 +18,36 @@ export const MinesweeperLayout = ({
   focus: boolean;
   setFocus: (focus: boolean) => void;
 }) => {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const { classes } = useStyles();
+  const { t } = useTranslation();
+
+  const pages = [
+    {
+      title: t('minesweeper.intro.title'),
+      text: t('minesweeper.intro.text'),
+    },
+    {
+      title: 'How To No Loose',
+      text: `Welcome to page 1`,
+    },
+    {
+      title: 'Good Morning Baltimore',
+      text: `Welcome to page 2`,
+    },
+    {
+      title: 'Hello Darkness',
+      text: `Welcome to page 3`,
+    },
+    {
+      title: 'Yo man How do you do',
+      text: `Welcome to page 4`,
+    },
+    {
+      title: 'Last Page',
+      text: `Welcome to page 5. This is the end`,
+    },
+  ];
 
   return (
     <div
@@ -29,14 +59,18 @@ export const MinesweeperLayout = ({
           <ExitButton setFocus={setFocus} />
         </div>
         <div className={classes.textContainer}>
-          <div className={classes.title}>What Is Minesweeper</div>
-          <div className={classes.text}>
-            it's a game duh here are the rules. try playing some games :
-          </div>
+          {pages.map(({ title, text }, index) => (
+            <Page
+              title={title}
+              text={text}
+              active={index === page}
+              key={`page-${index}`}
+            />
+          ))}
         </div>
         <div className={classes.navigation}>
           <BackButton page={page} setPage={setPage} />
-          <NextButton page={page} setPage={setPage} />
+          <NextButton page={page} setPage={setPage} max={pages.length - 1} />
         </div>
       </div>
       <div className={classes.rightContainer}>
@@ -81,7 +115,7 @@ const useStyles = createStyles(() => ({
     alignItems: 'center',
   },
   exit: { position: 'absolute', top: 0, left: 0, margin: 10 },
-  textContainer: { color: MINESWEEPER_MAIN },
+  textContainer: { border: 'solids black 2px' },
   title: { fontSize: '3em' },
   text: {},
   navigation: {
