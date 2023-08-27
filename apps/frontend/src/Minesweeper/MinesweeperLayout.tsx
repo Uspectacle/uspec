@@ -5,6 +5,9 @@ import { Game } from './Game';
 import { SetSizeControl } from './SetSizeControl';
 import { SetMineControl } from './SetMineControl';
 import { RestartButton } from './RestartButton';
+import { ExitButton } from './ExitButton';
+import { BackButton } from './BackButton';
+import { NextButton } from './NextButton';
 
 export const MinesweeperLayout = ({
   focus,
@@ -22,8 +25,8 @@ export const MinesweeperLayout = ({
       style={!focus ? { opacity: 0, zIndex: -1 } : {}}
     >
       <div className={classes.leftContainer}>
-        <div className={classes.exit} onClick={() => setFocus(false)}>
-          exit
+        <div className={classes.exit}>
+          <ExitButton setFocus={setFocus} />
         </div>
         <div className={classes.textContainer}>
           <div className={classes.title}>What Is Minesweeper</div>
@@ -32,12 +35,8 @@ export const MinesweeperLayout = ({
           </div>
         </div>
         <div className={classes.navigation}>
-          <div className={classes.back} onClick={() => setPage(page - 1)}>
-            back
-          </div>
-          <div className={classes.next} onClick={() => setPage(page + 1)}>
-            next
-          </div>
+          <BackButton page={page} setPage={setPage} />
+          <NextButton page={page} setPage={setPage} />
         </div>
       </div>
       <div className={classes.rightContainer}>
@@ -70,7 +69,7 @@ const useStyles = createStyles(() => ({
     width: '50%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
   rightContainer: {
@@ -81,13 +80,7 @@ const useStyles = createStyles(() => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  exitContainer: {},
-  exit: {
-    padding: 10,
-    background: MINESWEEPER_MAIN,
-    borderRadius: 20,
-    cursor: 'pointer',
-  },
+  exit: { position: 'absolute', top: 0, left: 0, margin: 10 },
   textContainer: { color: MINESWEEPER_MAIN },
   title: { fontSize: '3em' },
   text: {},

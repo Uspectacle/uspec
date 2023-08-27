@@ -21,7 +21,7 @@ export const Background = ({
   }, [length]);
 
   return (
-    <div className={classes.container} style={style}>
+    <div className={classes.container} style={style ?? {}}>
       {circles}
     </div>
   );
@@ -33,6 +33,7 @@ const useStyles = createStyles(() => ({
     position: 'fixed',
     width: '100%',
     height: '100%',
+    transition: 'background 0.3s',
     backgroundColor: BACKGROUND_COLOR,
     overflow: 'hidden',
   },

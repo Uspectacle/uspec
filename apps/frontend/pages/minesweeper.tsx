@@ -19,7 +19,6 @@ const Minesweeper: NextPage = () => {
       summary={<Summary />}
       reduced={focus}
       backgroundStyle={{
-        transition: 'background 0.3s',
         backgroundColor: focus ? MINESWEEPER_BACKGROUND : '',
       }}
     >
