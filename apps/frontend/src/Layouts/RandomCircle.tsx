@@ -6,7 +6,7 @@ export const RandomCircle = () => {
   const { classes } = useStyles();
   return <div className={classes.circle} />;
 };
-
+const color = MAIN_COLOR;
 const randomState = () => {
   const scaleSeed = Math.random();
   return {
@@ -14,9 +14,7 @@ const randomState = () => {
       Math.random() * 120 - 10
     }vw, ${Math.random() * 120 - 10}vh)`,
     opacity: scaleSeed / 3,
-    boxShadow: `0px 0px ${6 - scaleSeed * 5}px ${
-      scaleSeed * 5
-    }px ${MAIN_COLOR}`,
+    boxShadow: `0px 0px ${6 - scaleSeed * 5}px ${scaleSeed * 5}px ${color}`,
   };
 };
 
@@ -40,6 +38,7 @@ const useStyles = createStyles(() => ({
     position: 'fixed',
     borderRadius: '50%',
     aspectRatio: '1',
-    backgroundColor: MAIN_COLOR,
+    mixBlendMode: 'color-burn',
+    backgroundColor: color,
   },
 }));

@@ -18,9 +18,9 @@ const newtonsMethod = (
   f: (x: number) => number,
   guess: number = 1,
   prevGuess: number = 0,
-  numguess: number = 10
+  numGuess: number = 10
 ): number => {
-  if (Math.abs(prevGuess - guess) > precision && numguess > 0) {
+  if (Math.abs(prevGuess - guess) > precision && numGuess > 0) {
     const d = derivative(f)(guess);
     if (d === 0) return 1;
     const approx = guess - f(guess) / derivative(f)(guess);
@@ -32,7 +32,7 @@ const newtonsMethod = (
         ? almostInf
         : approx,
       guess,
-      numguess - 1
+      numGuess - 1
     );
   } else {
     return guess;
@@ -46,7 +46,7 @@ export const getProb = (state: GameStateState) => {
   state.grid.forEach((cell) => {
     if (!cell.isShown) return;
 
-    const listOfProb = cell.neighbours.map((otherIndex) => {
+    const listOfProb = cell.neighbors.map((otherIndex) => {
       const otherCell = state.grid[otherIndex];
       return otherCell.isShown ? 0 : otherCell.prob;
     });
@@ -65,7 +65,7 @@ export const getProb = (state: GameStateState) => {
 
       const newError = equationToSolve(xOptimal) ** 2;
       if (newError < oldError) {
-        cell.neighbours.forEach((otherIndex) => {
+        cell.neighbors.forEach((otherIndex) => {
           state.grid[otherIndex].prob = state.grid[otherIndex].prob ** xOptimal;
         });
       }
@@ -129,7 +129,7 @@ const initCell = (
   isShown: false,
   isFlag: false,
   highlight: false,
-  neighbours: [],
+  neighbors: [],
   fontSize: Math.floor(40 / sizeGrid),
 });
 
@@ -144,7 +144,7 @@ export const initGrid = (sizeGrid: number, mineNum: number): CellType[] => {
         Math.abs(cell.row - otherCell.row) < 2
       );
     });
-    cell.neighbours = neighbouringCells.map((cell) => cell.index);
+    cell.neighbors = neighbouringCells.map((cell) => cell.index);
     return cell;
   });
 };
@@ -250,7 +250,7 @@ const dig = (
       });
 
     state.grid = state.grid.map((cell) => {
-      cell.neighbours.forEach((otherIndex) => {
+      cell.neighbors.forEach((otherIndex) => {
         if (state.grid[otherIndex].isMine) cell.num += 1;
       });
       return cell;
@@ -277,7 +277,7 @@ const dig = (
   }
 
   if (state.grid[index].num === 0) {
-    state.grid[index].neighbours.forEach((otherIndex) =>
+    state.grid[index].neighbors.forEach((otherIndex) =>
       dig(state, { payload: otherIndex, type: value.type })
     );
   }
@@ -293,7 +293,7 @@ const neighborsCheck = (
 
   if (!state.grid[index].isShown) return;
 
-  const neighboursCount = state.grid[index].neighbours.reduce(
+  const neighborsCount = state.grid[index].neighbors.reduce(
     (count, otherIndex) => {
       if (state.grid[otherIndex].isFlag) count.flag += 1;
       if (!state.grid[otherIndex].isShown) count.cover += 1;
@@ -302,14 +302,14 @@ const neighborsCheck = (
     { flag: 0, cover: 0 }
   );
 
-  if (neighboursCount.flag === state.grid[index].num) {
-    state.grid[index].neighbours.forEach((otherIndex) =>
+  if (neighborsCount.flag === state.grid[index].num) {
+    state.grid[index].neighbors.forEach((otherIndex) =>
       dig(state, { payload: otherIndex, type: value.type })
     );
   }
 
-  if (neighboursCount.cover === state.grid[index].num) {
-    state.grid[index].neighbours.forEach((otherIndex) => {
+  if (neighborsCount.cover === state.grid[index].num) {
+    state.grid[index].neighbors.forEach((otherIndex) => {
       if (!state.grid[otherIndex].isShown && !state.grid[otherIndex].isFlag) {
         flag(state, { payload: otherIndex, type: value.type });
       }
@@ -322,7 +322,7 @@ const highlightNeighbors = (
   value: { payload: number; type: string }
 ) => {
   const index = value.payload;
-  state.grid[index].neighbours.forEach((otherIndex) => {
+  state.grid[index].neighbors.forEach((otherIndex) => {
     state.grid[otherIndex].highlight = true;
   });
 };

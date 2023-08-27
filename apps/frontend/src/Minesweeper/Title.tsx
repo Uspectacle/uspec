@@ -35,6 +35,7 @@ const useStyles = createStyles(() => ({
     boxShadow: SHADOW,
     transition: 'opacity 0.3s, padding 0.3s, margin 0.3s',
     opacity: 1,
+    cursor: 'pointer',
     '&:hover': {
       padding: 10,
       margin: 0,

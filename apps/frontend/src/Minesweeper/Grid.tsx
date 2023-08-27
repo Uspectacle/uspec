@@ -24,14 +24,12 @@ export const Grid = () => {
 
 const useStyles = createStyles((theme, sizeGrid: number) => ({
   grid: {
-    backgroundColor: '#6A381F',
     padding: '10px',
     margin: '10px',
     display: 'grid',
     gridTemplateColumns: `repeat(${sizeGrid}, 1fr)`,
     gap: sizeGrid <= 10 ? `${Math.floor(10 / sizeGrid)}vmin` : '1px',
-    width: '90vmin',
-    height: '90vmin',
+    flex: 1,
     aspectRatio: '1',
   },
 }));

@@ -8,6 +8,6 @@ export interface CellType {
   prob: number;
   num: number;
   highlight: boolean;
-  neighbours: number[];
+  neighbors: number[];
   fontSize: number;
 }

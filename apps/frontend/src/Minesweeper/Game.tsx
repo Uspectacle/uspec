@@ -30,11 +30,11 @@ const useStyles = createStyles(() => ({
   background: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#6A381F',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     justifyContent: 'space-around',
     alignItems: 'center',
+    flex: 1,
     '& > span': {
       color: '#b38c78',
       fontSize: '30px',

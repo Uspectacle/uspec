@@ -131,6 +131,7 @@ const useStyles = createStyles(() => ({
     borderRadius: 8,
     display: 'flex',
     justifyContent: 'space-around',
+    cursor: 'pointer',
     alignItems: 'center',
     fontWeight: 'bold',
     userSelect: 'none',
