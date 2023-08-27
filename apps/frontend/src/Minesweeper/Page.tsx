@@ -24,11 +24,11 @@ export const Page = ({
 const useStyles = createStyles(() => ({
   container: {
     color: MINESWEEPER_MAIN,
-    overflow: 'hidden',
+    // overflow: 'hidden',
     // transition: 'transform 0.1s',
-    position: 'relative',
+    // position: 'relative',
     // transform: 'scaleY(0)',
-    '&.active': { top: 0 },
+    // '&.active': { top: 0 },
   },
   title: {
     fontSize: '3em',

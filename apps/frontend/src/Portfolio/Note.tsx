@@ -14,9 +14,7 @@ export const Note = ({ seed, children, actionable, margin }: Props) => {
     seed,
     actionable: !!actionable,
   });
-
   const ref = useRef<HTMLDivElement | null>(null);
-
   const [show, setShow] = useState(false);
 
   useEffect(() => {

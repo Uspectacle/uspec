@@ -1,6 +1,5 @@
 import { createStyles } from '@mantine/core';
 import React, { useState } from 'react';
-import { MINESWEEPER_MAIN } from './MinesweeperStyle';
 import { Game } from './Game';
 import { SetSizeControl } from './SetSizeControl';
 import { SetMineControl } from './SetMineControl';
@@ -10,6 +9,7 @@ import { BackButton } from './BackButton';
 import { NextButton } from './NextButton';
 import { Page } from './Page';
 import { useTranslation } from 'react-i18next';
+import { SlideShow } from './SlideShow';
 
 export const MinesweeperLayout = ({
   focus,
@@ -58,15 +58,17 @@ export const MinesweeperLayout = ({
         <div className={classes.exit}>
           <ExitButton setFocus={setFocus} />
         </div>
-        <div className={classes.textContainer}>
-          {pages.map(({ title, text }, index) => (
-            <Page
-              title={title}
-              text={text}
-              active={index === page}
-              key={`page-${index}`}
-            />
-          ))}
+        <div className={classes.slideShow}>
+          <SlideShow activeId={page}>
+            {pages.map(({ title, text }, index) => (
+              <Page
+                title={title}
+                text={text}
+                active={index === page}
+                key={`page-${index}`}
+              />
+            ))}
+          </SlideShow>
         </div>
         <div className={classes.navigation}>
           <BackButton page={page} setPage={setPage} />
@@ -115,56 +117,23 @@ const useStyles = createStyles(() => ({
     alignItems: 'center',
   },
   exit: { position: 'absolute', top: 0, left: 0, margin: 10 },
-  textContainer: { border: 'solids black 2px' },
-  title: { fontSize: '3em' },
-  text: {},
+  slideShow: {
+    border: 'solid white 2px',
+    width: '100%',
+    height: '50%',
+    padding: 10,
+    // boxSizing: 'border-box',
+  },
   navigation: {
     display: 'flex',
     justifyContent: 'space-around',
     width: '100%',
     margin: 10,
   },
-  back: {
-    padding: 10,
-    background: MINESWEEPER_MAIN,
-    borderRadius: 20,
-    cursor: 'pointer',
-  },
-  next: {
-    padding: 10,
-    background: MINESWEEPER_MAIN,
-    borderRadius: 20,
-    cursor: 'pointer',
-  },
   settings: {
     display: 'flex',
     justifyContent: 'space-around',
     width: '100%',
     margin: 10,
-  },
-  setSize: {
-    padding: 10,
-    background: MINESWEEPER_MAIN,
-    borderRadius: 20,
-    cursor: 'pointer',
-  },
-  setDifficulty: {
-    padding: 10,
-    background: MINESWEEPER_MAIN,
-    borderRadius: 20,
-    cursor: 'pointer',
-  },
-  game: {},
-  actions: {
-    margin: 10,
-    display: 'flex',
-    justifyContent: 'space-around',
-    width: '100%',
-  },
-  restart: {
-    padding: 10,
-    background: MINESWEEPER_MAIN,
-    borderRadius: 20,
-    cursor: 'pointer',
   },
 }));
