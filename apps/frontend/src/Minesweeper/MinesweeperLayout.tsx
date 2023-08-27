@@ -54,7 +54,17 @@ export const MinesweeperLayout = ({
       className={classes.container}
       style={!focus ? { opacity: 0, zIndex: -1 } : {}}
     >
-      <div className={classes.leftContainer}>
+      <div
+        className={classes.leftContainer}
+        style={
+          !focus
+            ? {
+                opacity: 0,
+                transform: 'translateX(-100%)',
+              }
+            : {}
+        }
+      >
         <div className={classes.exit}>
           <ExitButton setFocus={setFocus} />
         </div>
@@ -75,10 +85,22 @@ export const MinesweeperLayout = ({
           <NextButton page={page} setPage={setPage} max={pages.length - 1} />
         </div>
       </div>
-      <div className={classes.rightContainer}>
-        <div className={classes.settings}>
-          <SetSizeControl />
-          <SetMineControl />
+      <div
+        className={classes.rightContainer}
+        style={
+          !focus
+            ? {
+                opacity: 0,
+                transform: 'translateX(100%)',
+              }
+            : {}
+        }
+      >
+        <div className={classes.actions}>
+          <div className={classes.settings}>
+            <SetSizeControl />
+            <SetMineControl />
+          </div>
           <RestartButton />
         </div>
         <Game />
@@ -106,23 +128,28 @@ const useStyles = createStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    alignItems: 'center',
+    alignItems: 'stretch',
+    overflow: 'hidden',
+    transition: 'opacity 0.3s, transform 0.3s',
   },
   rightContainer: {
     height: '100%',
+    overflow: 'hidden',
     width: '50%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'stretch',
+    transition: 'opacity 0.3s, transform 0.3s',
   },
-  exit: { position: 'absolute', top: 0, left: 0, margin: 10 },
+  exit: { position: 'absolute', zIndex: 10, top: 0, left: 0, margin: 10 },
   slideShow: {
     border: 'solid white 2px',
+    overflow: 'hidden',
     width: '100%',
-    height: '50%',
+    height: '80%',
+    boxSizing: 'border-box',
     padding: 10,
-    // boxSizing: 'border-box',
   },
   navigation: {
     display: 'flex',
@@ -130,10 +157,23 @@ const useStyles = createStyles(() => ({
     width: '100%',
     margin: 10,
   },
-  settings: {
+  actions: {
     display: 'flex',
     justifyContent: 'space-around',
     width: '100%',
-    margin: 10,
+    padding: 10,
+    gap: 10,
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+    alignItems: 'center',
+  },
+  settings: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    padding: 10,
+    gap: 10,
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+    alignItems: 'center',
   },
 }));

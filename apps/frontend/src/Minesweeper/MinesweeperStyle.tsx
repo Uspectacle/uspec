@@ -62,6 +62,7 @@ export const useMinesweeperStyles = createStyles(() => ({
   segmentedControl: {
     display: 'flex',
     overflow: 'hidden',
+    height: '2.5em',
     backgroundColor: MINESWEEPER_MAIN_TRANSPARENT,
     borderRadius: 4,
   },
@@ -69,6 +70,8 @@ export const useMinesweeperStyles = createStyles(() => ({
     flex: 1,
     padding: 5,
     width: '5em',
+    overflow: 'hidden',
+    height: '2.5em',
     fontWeight: 550,
     fontSize: '1em',
     textAlign: 'center',
@@ -99,6 +102,8 @@ export const useMinesweeperStyles = createStyles(() => ({
   },
   button: {
     width: '5em',
+    height: '2.5em',
+    overflow: 'hidden',
     fontWeight: 550,
     fontSize: '1em',
     padding: 5,

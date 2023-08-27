@@ -1,5 +1,5 @@
 import { createStyles } from '@mantine/core';
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 
 export const SlideShow = ({
   activeId,
@@ -10,34 +10,27 @@ export const SlideShow = ({
 }) => {
   const { classes } = useStyles();
   const ref = useRef<HTMLDivElement | null>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
-
-  useEffect(() => {
-    if (ref.current) {
-      setContainerWidth(ref.current.offsetWidth);
-    }
-  }, []);
 
   return (
     <div className={classes.container} ref={ref}>
-      <div className={classes.slidesContainer}>
-        <div
-          className={classes.slidesSubContainer}
-          style={{
-            width: containerWidth * children.length,
-            transform: `translateX(${-(activeId * containerWidth)}px)`,
-          }}
-        >
-          {children.map((slide, index) => (
-            <div
-              key={index}
-              className={classes.slide}
-              style={{ width: containerWidth }}
-            >
-              {slide}
-            </div>
-          ))}
-        </div>
+      <div
+        className={classes.slidesContainer}
+        style={{
+          width: (ref?.current?.offsetWidth || 0) * children.length,
+          transform: `translateX(${-(
+            activeId * (ref?.current?.offsetWidth || 0)
+          )}px)`,
+        }}
+      >
+        {children.map((slide, index) => (
+          <div
+            key={index}
+            className={classes.slide}
+            style={{ width: ref?.current?.offsetWidth || 0 }}
+          >
+            {slide}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -48,20 +41,20 @@ const useStyles = createStyles(() => ({
     border: 'solid black 2px',
     width: '100%',
     height: '100%',
+    overflow: 'hidden',
+    boxSizing: 'border-box',
   },
   slidesContainer: {
-    border: 'solid blue 2px',
-    overflow: 'hidden',
-    height: '100%',
-  },
-  slidesSubContainer: {
     border: 'solid green 2px',
     display: 'flex',
     height: '100%',
     transition: 'transform ease-out 0.3s',
+    boxSizing: 'border-box',
   },
   slide: {
     border: 'solid red 2px',
+    boxSizing: 'border-box',
+    overflow: 'hidden',
     height: '100%',
     borderRadius: '10px',
     backgroundSize: 'cover',

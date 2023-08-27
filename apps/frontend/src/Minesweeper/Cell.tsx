@@ -135,7 +135,6 @@ const useStyles = createStyles(() => ({
     alignItems: 'center',
     fontWeight: 'bold',
     userSelect: 'none',
-    // fontFamily: 'Bowlby One SC',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
