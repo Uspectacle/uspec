@@ -28,8 +28,8 @@ export const MinesweeperLayout = ({
       text: t('minesweeper.intro.text'),
     },
     {
-      title: 'How To No Loose',
-      text: `Welcome to page 1`,
+      title: t('minesweeper.rules.title'),
+      text: t('minesweeper.rules.text'),
     },
     {
       title: 'Good Morning Baltimore',
@@ -110,7 +110,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
-    transition: 'opacity 0.3s, padding 0.3s, margin 0.3s',
+    transition: 'opacity 0.5s, padding 0.5s, margin 0.5s',
     [theme.fn.smallerThan(750)]: {
       flexDirection: 'column',
     },
@@ -123,7 +123,8 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'stretch',
     boxSizing: 'border-box',
     overflow: 'hidden',
-    transition: 'opacity 0.3s, transform 0.3s',
+    transition: 'opacity 0.5s, transform 0.5s',
+    transitionDelay: '0.5s',
     [theme.fn.smallerThan(750)]: {
       flexDirection: 'column',
       height: '50%',
@@ -138,7 +139,8 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
-    transition: 'opacity 0.3s, transform 0.3s',
+    transition: 'opacity 0.5s, transform 0.5s',
+    transitionDelay: '0.5s',
     [theme.fn.smallerThan(750)]: {
       flexDirection: 'row',
       height: '50%',

@@ -2,13 +2,7 @@ import { createStyles } from '@mantine/core';
 import { CellType } from './cellType';
 import { MouseEventHandler, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import {
-  clearHighlight,
-  dig,
-  flag,
-  highlightNeighbors,
-  neighborsCheck,
-} from './gameStateStore';
+import { dig, flag, neighborsCheck } from './gameStateStore';
 import { SHADOW } from '../Utils/DefaultStyle';
 import { cellBrightness, cellColor, cellFontColor } from './MinesweeperStyle';
 
@@ -37,7 +31,7 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
     return () => {
       window.removeEventListener('resize', updateFontSize);
     };
-  }, []);
+  }, [cell.isShown, cell.isFlag]);
 
   const image = cell.isFlag
     ? '🚩'
@@ -62,13 +56,13 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
     return false;
   };
 
-  const mouseHover = () => {
-    dispatch(highlightNeighbors(cell.index));
-  };
+  // const mouseHover = () => {
+  //   dispatch(highlightNeighbors(cell.index));
+  // };
 
-  const mouseOut = () => {
-    dispatch(clearHighlight());
-  };
+  // const mouseOut = () => {
+  //   dispatch(clearHighlight());
+  // };
 
   return (
     <div
@@ -76,8 +70,8 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
       className={classes.cell}
       onClick={leftClick}
       onContextMenu={rightClick}
-      onMouseOver={mouseHover}
-      onMouseOut={mouseOut}
+      // onMouseOver={mouseHover}
+      // onMouseOut={mouseOut}
       style={{
         backgroundColor: cellColor(cell),
         filter: `brightness(${cellBrightness(cell)}%)`,
@@ -113,10 +107,12 @@ const useStyles = createStyles(() => ({
     '&:hover': {
       transform: 'scale(1.1)',
       boxShadow: SHADOW,
+      zIndex: 10,
       filter: `brightness(100%) !important`,
     },
     '&:active': {
       transform: 'scale(1.05)',
+      zIndex: 5,
       boxShadow: SHADOW,
     },
   },

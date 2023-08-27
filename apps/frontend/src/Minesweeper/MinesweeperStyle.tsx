@@ -1,7 +1,7 @@
 import { createStyles, keyframes } from '@mantine/core';
 import { CellType } from './cellType';
 
-export const MINESWEEPER_MAIN = '#DCAB6B';
+export const MINESWEEPER_MAIN = '#edbd7d';
 export const MINESWEEPER_MAIN_TRANSPARENT = '#e7aa5a4f';
 export const MINESWEEPER_BACKGROUND = '#6A381F';
 export const INVISIBLE = '#6a381f00';

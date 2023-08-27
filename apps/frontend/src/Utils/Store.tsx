@@ -9,12 +9,12 @@ import {
   REGISTER,
   REHYDRATE,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import gameStateStore from '../Minesweeper/gameStateStore';
 
 const persistConfig = {
   key: 'user',
-  storage,
+  storage: AsyncStorage,
 };
 
 const reducers = combineReducers({ gameStateStore });
