@@ -727,13 +727,13 @@ const Resume: NextPage = () => {
   return (
     <Layout
       summary={<Summary />}
-      backgroundStyle={{
-        backgroundImage: 'url(/image/Tetris/russia.jpg)',
-        backgroundColor: '#2f2d5d',
-        backgroundSize: 'cover cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'top top',
-      }}
+      // backgroundStyle={{
+      //   backgroundImage: 'url(/image/Tetris/russia.jpg)',
+      //   backgroundColor: '#2f2d5d',
+      //   backgroundSize: 'cover cover',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundPosition: 'top top',
+      // }}
     >
       <>
         <div className={classes.container} id="frame">
@@ -879,10 +879,10 @@ const Resume: NextPage = () => {
 
 const gameWidth = 10;
 const gameDepth = 20;
-const displayWidth = 5;
-const displayDepth = 6;
-const gameRatio = gameWidth / gameDepth;
-const displayRatio = displayWidth / displayDepth;
+// const displayWidth = 5;
+// const displayDepth = 6;
+// const gameRatio = gameWidth / gameDepth;
+// const displayRatio = displayWidth / displayDepth;
 
 const useStyles = createStyles(() => ({
   container: {
