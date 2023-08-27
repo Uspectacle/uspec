@@ -8,8 +8,9 @@ import {
   flag,
   highlightNeighbors,
   neighborsCheck,
-  restart,
 } from './gameStateStore';
+import { SHADOW } from '../Utils/DefaultStyle';
+import { cellBrightness, cellColor, cellFontColor } from './MinesweeperStyle';
 
 interface propsType {
   cell: CellType;
@@ -20,48 +21,6 @@ interface propsType {
 export const Cell = ({ cell, computeProb, isOver }: propsType) => {
   const { classes } = useStyles();
   const dispatch = useDispatch();
-
-  const color = !cell.isShown
-    ? '#DCAB6B'
-    : cell.isMine
-    ? '#6e0d25'
-    : cell.num === 0
-    ? '#6A381F'
-    : [
-        '#6A381F',
-        '#6E3E20',
-        '#704121',
-        '#754B23',
-        '#774E24',
-        '#754124',
-        '#733424',
-        '#722725',
-        '#701A25',
-        '#6E0D25',
-      ][cell.num] || '#774E24';
-
-  const fontColor = cell.isShown
-    ? [
-        '#6A381F',
-        '#5769f0',
-        '#2dbe71',
-        '#b8880f',
-        '#192899',
-        '#bc3838',
-        '#2f9cab',
-        '#000000',
-        '#5e5e5e',
-        '#ffffff',
-      ][cell.num] || '#000000'
-    : '#000000';
-
-  const brightness = !cell.highlight
-    ? 100
-    : !cell.isShown
-    ? 90
-    : cell.num === 0
-    ? 100
-    : 95;
 
   const image = cell.isFlag
     ? '🚩'
@@ -74,20 +33,14 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
     : String(cell.num);
 
   const leftClick = () => {
-    if (isOver) {
-      dispatch(restart());
-      return;
-    }
+    if (isOver) return;
     if (cell.isFlag) return;
     dispatch(cell.isShown ? neighborsCheck(cell.index) : dig(cell.index));
   };
 
   const rightClick: MouseEventHandler<HTMLDivElement> = (event) => {
     event.preventDefault();
-    if (isOver) {
-      dispatch(restart());
-      return;
-    }
+    if (isOver) return;
     dispatch(cell.isShown ? neighborsCheck(cell.index) : flag(cell.index));
     return false;
   };
@@ -108,9 +61,9 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
       onMouseOver={mouseHover}
       onMouseOut={mouseOut}
       style={{
-        backgroundColor: color,
-        filter: `brightness(${brightness}%)`,
-        color: fontColor,
+        backgroundColor: cellColor(cell),
+        filter: `brightness(${cellBrightness(cell)}%)`,
+        color: cellFontColor(cell),
         fontSize: `${
           computeProb && !cell.isShown
             ? Math.floor(cell.fontSize / 2)
@@ -140,5 +93,16 @@ const useStyles = createStyles(() => ({
     whiteSpace: 'nowrap',
     width: '100%',
     height: '100%',
+    transition:
+      'background-color 0.3s, opacity 0.3s, transform 0.3s, filter 0.3s',
+    '&:hover': {
+      transform: 'scale(1.1)',
+      boxShadow: SHADOW,
+      filter: `brightness(100%) !important`,
+    },
+    '&:active': {
+      transform: 'scale(1.05)',
+      boxShadow: SHADOW,
+    },
   },
 }));

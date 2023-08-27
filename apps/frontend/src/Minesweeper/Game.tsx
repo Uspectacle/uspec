@@ -45,5 +45,7 @@ const useStyles = createStyles((theme, { sizeGrid }: { sizeGrid: number }) => ({
     gridTemplateColumns: `repeat(${sizeGrid}, 1fr)`,
     flex: 1,
     aspectRatio: '1',
+    gap: 5,
+    overflow: 'hidden',
   },
 }));

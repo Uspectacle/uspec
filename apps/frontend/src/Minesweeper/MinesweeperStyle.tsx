@@ -2,6 +2,7 @@ import { createStyles, keyframes } from '@mantine/core';
 import { CellType } from './cellType';
 
 export const MINESWEEPER_MAIN = '#DCAB6B';
+export const MINESWEEPER_MAIN_HILIGHT = '#DCAB6B';
 export const MINESWEEPER_MAIN_TRANSPARENT = '#e7aa5a4f';
 export const MINESWEEPER_BACKGROUND = '#6A381F';
 
@@ -85,12 +86,13 @@ export const useMinesweeperStyles = createStyles(() => ({
     borderRadius: 4,
     opacity: 1,
     transform: 'scale(1)',
-    transition: 'background-color 0.3s, opacity 0.3s, transform 0.3s',
+    transition:
+      'background-color 0.3s, opacity 0.3s, transform 0.3s, filter 0.3s',
     '&:hover': {
       backgroundColor: MINESWEEPER_MAIN_TRANSPARENT,
     },
     '&:active': {
-      backgroundColor: MINESWEEPER_BACKGROUND,
+      backgroundColor: MINESWEEPER_MAIN,
     },
     '&.active': {
       backgroundColor: MINESWEEPER_MAIN,
@@ -120,10 +122,10 @@ export const useMinesweeperStyles = createStyles(() => ({
     transform: 'scale(1)',
     transition: 'background-color 0.3s, opacity 0.3s, transform 0.3s',
     '&:hover': {
-      backgroundColor: MINESWEEPER_MAIN_TRANSPARENT,
+      transform: 'scale(1.1)',
     },
     '&:active': {
-      backgroundColor: MINESWEEPER_BACKGROUND,
+      filter: `brightness(110%)`,
     },
     '&.hidden': {
       opacity: 0,

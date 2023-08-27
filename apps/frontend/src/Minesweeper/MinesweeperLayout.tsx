@@ -68,21 +68,18 @@ export const MinesweeperLayout = ({
         <div className={classes.exit}>
           <ExitButton setFocus={setFocus} />
         </div>
-        <div className={classes.slideShow}>
-          <SlideShow activeId={page}>
-            {pages.map(({ title, text }, index) => (
-              <Page
-                title={title}
-                text={text}
-                active={index === page}
-                key={`page-${index}`}
-              />
-            ))}
-          </SlideShow>
-        </div>
-        <div className={classes.navigation}>
-          <BackButton page={page} setPage={setPage} />
-          <NextButton page={page} setPage={setPage} max={pages.length - 1} />
+        <div className={classes.pageContainer}>
+          <div className={classes.slideShow}>
+            <SlideShow activeId={page}>
+              {pages.map(({ title, text }, index) => (
+                <Page title={title} text={text} key={`page-${index}`} />
+              ))}
+            </SlideShow>
+          </div>
+          <div className={classes.navigation}>
+            <BackButton page={page} setPage={setPage} />
+            <NextButton page={page} setPage={setPage} max={pages.length - 1} />
+          </div>
         </div>
       </div>
       <div
@@ -127,8 +124,8 @@ const useStyles = createStyles(() => ({
     width: '50%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
     alignItems: 'stretch',
+    boxSizing: 'border-box',
     overflow: 'hidden',
     transition: 'opacity 0.3s, transform 0.3s',
   },
@@ -142,14 +139,23 @@ const useStyles = createStyles(() => ({
     alignItems: 'stretch',
     transition: 'opacity 0.3s, transform 0.3s',
   },
-  exit: { position: 'absolute', zIndex: 10, top: 0, left: 0, margin: 10 },
+  exit: { margin: 10 },
+  pageContainer: {
+    flex: 1,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    boxSizing: 'border-box',
+    overflow: 'hidden',
+    transition: 'opacity 0.3s, transform 0.3s',
+  },
   slideShow: {
-    border: 'solid white 2px',
     overflow: 'hidden',
     width: '100%',
-    height: '80%',
     boxSizing: 'border-box',
-    padding: 10,
+    padding: '1em',
   },
   navigation: {
     display: 'flex',
