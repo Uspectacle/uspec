@@ -4,15 +4,20 @@ import { MouseEventHandler, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { dig, flag, neighborsCheck } from './gameStateStore';
 import { SHADOW } from '../Utils/DefaultStyle';
-import { cellBrightness, cellColor, cellFontColor } from './MinesweeperStyle';
+import {
+  cellBrightness,
+  cellColor,
+  cellFontColor,
+  cellImage,
+} from './MinesweeperStyle';
 
 interface propsType {
   cell: CellType;
-  computeProb: boolean;
+  showProb: boolean;
   isOver: boolean;
 }
 
-export const Cell = ({ cell, computeProb, isOver }: propsType) => {
+export const Cell = ({ cell, showProb, isOver }: propsType) => {
   const { classes } = useStyles();
   const dispatch = useDispatch();
   const ref = useRef<HTMLDivElement | null>(null);
@@ -33,16 +38,6 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
     };
   }, [cell.isShown, cell.isFlag]);
 
-  const image = cell.isFlag
-    ? '🚩'
-    : !cell.isShown
-    ? computeProb
-      ? `${Math.floor(cell.prob * 100)}%`
-      : ''
-    : cell.isMine
-    ? '💣'
-    : String(cell.num || '');
-
   const leftClick = () => {
     if (isOver) return;
     if (cell.isFlag) return;
@@ -56,22 +51,12 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
     return false;
   };
 
-  // const mouseHover = () => {
-  //   dispatch(highlightNeighbors(cell.index));
-  // };
-
-  // const mouseOut = () => {
-  //   dispatch(clearHighlight());
-  // };
-
   return (
     <div
       ref={ref}
       className={classes.cell}
       onClick={leftClick}
       onContextMenu={rightClick}
-      // onMouseOver={mouseHover}
-      // onMouseOut={mouseOut}
       style={{
         backgroundColor: cellColor(cell),
         filter: `brightness(${cellBrightness(cell)}%)`,
@@ -82,12 +67,10 @@ export const Cell = ({ cell, computeProb, isOver }: propsType) => {
             : 1,
       }}
     >
-      {image}
+      {cellImage(cell, showProb)}
     </div>
   );
 };
-
-// https://coolors.co/6e0d25-ffffb3-dcab6b-774e24-6a381f
 
 const useStyles = createStyles(() => ({
   cell: {

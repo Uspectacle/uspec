@@ -12,7 +12,7 @@ export const Game = () => {
         {grid.map((cell, index) => (
           <Cell
             cell={cell}
-            computeProb={computeProb}
+            showProb={computeProb}
             isOver={isOver}
             key={`cell-${index}`}
           />

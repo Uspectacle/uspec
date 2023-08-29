@@ -48,11 +48,11 @@ export const cellFontColor = (cell: CellType) =>
 export const cellBrightness = (cell: CellType) =>
   !cell.highlight ? 100 : !cell.isShown ? 90 : cell.num === 0 ? 100 : 95;
 
-export const cellImage = (cell: CellType, computeProb: boolean) =>
+export const cellImage = (cell: CellType, showProb: boolean) =>
   cell.isFlag
     ? FLAG
     : !cell.isShown
-    ? computeProb
+    ? showProb
       ? `${Math.floor(cell.prob * 100)}%`
       : ''
     : cell.isMine

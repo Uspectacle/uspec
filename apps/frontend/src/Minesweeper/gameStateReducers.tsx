@@ -184,8 +184,11 @@ const setMineRatio = (
   restart(state);
 };
 
-const setComputeProb = (state: GameStateState) => {
-  state.computeProb = !state.computeProb;
+const setComputeProb = (
+  state: GameStateState,
+  value: { payload: boolean; type: string }
+) => {
+  state.computeProb = value.payload;
 };
 
 const restart = (state: GameStateState) => {
@@ -227,7 +230,9 @@ const dig = (
     // INIT MINES
     const indexList = state.grid
       .map((_, otherIndex) => otherIndex)
-      .filter((otherIndex) => otherIndex !== index);
+      .filter(
+        (otherIndex) => !state.grid[index].neighbors.includes(otherIndex)
+      );
 
     shuffle(indexList);
 
@@ -305,22 +310,6 @@ const neighborsCheck = (
   }
 };
 
-const highlightNeighbors = (
-  state: GameStateState,
-  value: { payload: number; type: string }
-) => {
-  const index = value.payload;
-  state.grid[index].neighbors.forEach((otherIndex) => {
-    state.grid[otherIndex].highlight = true;
-  });
-};
-
-const clearHighlight = (state: GameStateState) => {
-  state.grid.forEach((cell) => {
-    cell.highlight = false;
-  });
-};
-
 export const gameStateReducers = {
   setGrid,
   setIsMine,
@@ -332,7 +321,5 @@ export const gameStateReducers = {
   gameOver,
   flag,
   dig,
-  highlightNeighbors,
-  clearHighlight,
   neighborsCheck,
 };
