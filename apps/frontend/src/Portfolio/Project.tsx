@@ -111,6 +111,8 @@ const useStyles = createStyles(() => ({
   context: { padding: 15, fontWeight: 'bold', textAlign: 'center' },
   image: {
     height: '15em',
+    maxWidth: '80vw',
+    overflow: 'hidden',
     border: 'solid 10px white',
   },
   text: { padding: 15 },
