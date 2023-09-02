@@ -4,12 +4,7 @@ import { MouseEventHandler, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { dig, flag, neighborsCheck } from './gameStateStore';
 import { SHADOW } from '../Utils/DefaultStyle';
-import {
-  cellBrightness,
-  cellColor,
-  cellFontColor,
-  cellImage,
-} from './MinesweeperStyle';
+import { cellColor, cellFontColor, cellImage } from './MinesweeperStyle';
 
 interface propsType {
   cell: CellType;
@@ -26,7 +21,9 @@ export const Cell = ({ cell, showProb, isOver }: propsType) => {
     if (!ref.current) return;
     const cellWidth = ref.current.clientWidth;
     const cellHeight = ref.current.clientHeight;
-    const fontSize = Math.min(cellWidth, cellHeight) * 0.5;
+    const fontSize =
+      Math.min(cellWidth, cellHeight) *
+      (cell.isShown || cell.isFlag ? 0.5 : 0.3);
     ref.current.style.fontSize = `${fontSize}px`;
   };
 
@@ -36,7 +33,7 @@ export const Cell = ({ cell, showProb, isOver }: propsType) => {
     return () => {
       window.removeEventListener('resize', updateFontSize);
     };
-  }, [cell.isShown, cell.isFlag]);
+  }, [cell.initDate, cell.isShown, cell.isFlag]);
 
   const leftClick = () => {
     if (isOver) return;
@@ -59,7 +56,6 @@ export const Cell = ({ cell, showProb, isOver }: propsType) => {
       onContextMenu={rightClick}
       style={{
         backgroundColor: cellColor(cell),
-        filter: `brightness(${cellBrightness(cell)}%)`,
         color: cellFontColor(cell),
         opacity:
           cell.isShown && cell.num === 0 && cell.isShown && !cell.isMine

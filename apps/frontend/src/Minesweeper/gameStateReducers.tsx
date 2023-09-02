@@ -1,110 +1,6 @@
 import { GameStateState } from './gameStateStore';
 import { CellType } from './cellType';
-
-const evolution = 0.01;
-
-const precision = 0.001;
-const h = 0.001;
-
-const almostZero = 0.0001;
-const almostInf = 10000;
-const acceptableError = 0.0001;
-
-const derivative = (f: (x: number) => number) => {
-  return (x: number) => (f(x + h) - f(x - h)) / (2 * h);
-};
-
-const newtonsMethod = (
-  f: (x: number) => number,
-  guess: number = 1,
-  prevGuess: number = 0,
-  numGuess: number = 10
-): number => {
-  if (Math.abs(prevGuess - guess) > precision && numGuess > 0) {
-    const d = derivative(f)(guess);
-    if (d === 0) return 1;
-    const approx = guess - f(guess) / derivative(f)(guess);
-    return newtonsMethod(
-      f,
-      approx < almostZero
-        ? almostZero
-        : approx > almostInf
-        ? almostInf
-        : approx,
-      guess,
-      numGuess - 1
-    );
-  } else {
-    return guess;
-  }
-};
-
-export const getProb = (state: GameStateState) => {
-  if (!state.computeProb) return;
-  const oldProb = state.grid.map((cell) => cell.prob);
-
-  state.grid.forEach((cell) => {
-    if (!cell.isShown) return;
-
-    const listOfProb = cell.neighbors.map((otherIndex) => {
-      const otherCell = state.grid[otherIndex];
-      return otherCell.isShown ? 0 : otherCell.prob;
-    });
-
-    const equationToSolve = (x: number): number => {
-      const sumProb = listOfProb.reduce(
-        (partialSum, prob) => partialSum + prob ** x,
-        0
-      );
-      return sumProb - cell.num;
-    };
-
-    const oldError = equationToSolve(1) ** 2;
-    if (oldError > acceptableError) {
-      const xOptimal = newtonsMethod(equationToSolve);
-
-      const newError = equationToSolve(xOptimal) ** 2;
-      if (newError < oldError) {
-        cell.neighbors.forEach((otherIndex) => {
-          state.grid[otherIndex].prob = state.grid[otherIndex].prob ** xOptimal;
-        });
-      }
-    }
-  });
-
-  const sumProbTotal = (x: number): number => {
-    return (
-      state.grid.reduce((partialSum, cell) => {
-        if (!cell.isShown) {
-          partialSum += cell.prob ** x;
-        }
-        return partialSum;
-      }, 0) - Math.min(state.mineNum, state.sizeGrid * state.sizeGrid - 1)
-    );
-  };
-
-  const xTotal = newtonsMethod(sumProbTotal);
-
-  state.grid.forEach((cell) => {
-    cell.prob = cell.prob ** xTotal;
-  });
-
-  if (
-    state.grid.reduce((diffPartial, _, index) => {
-      if (state.grid[index].isShown) return diffPartial;
-      return diffPartial + (state.grid[index].prob - oldProb[index]) ** 2;
-    }, 0) >
-    evolution ** 2
-  ) {
-    getProb(state);
-  }
-
-  // const digIndex = newGrid.reduce((lowestProbIndex, cell) => {
-  //     if (newGrid[lowestProbIndex].isShown) return cell.index;
-  //     if (cell.isShown) return lowestProbIndex;
-  //     return cell.prob < newGrid[lowestProbIndex].prob ? cell.index : lowestProbIndex
-  // }, 0);
-};
+import { updateProb } from './UpdateProb';
 
 const initCell = (
   index: number,
@@ -119,8 +15,8 @@ const initCell = (
   num: 0,
   isShown: false,
   isFlag: false,
-  highlight: false,
   neighbors: [],
+  initDate: new Date().toISOString(),
 });
 
 export const initGrid = (sizeGrid: number, mineNum: number): CellType[] => {
@@ -184,13 +80,6 @@ const setMineRatio = (
   restart(state);
 };
 
-const setComputeProb = (
-  state: GameStateState,
-  value: { payload: boolean; type: string }
-) => {
-  state.computeProb = value.payload;
-};
-
 const restart = (state: GameStateState) => {
   state.isMine = false;
   state.isOver = false;
@@ -212,7 +101,6 @@ const flag = (
   const index = value.payload;
   if (state.grid[index].isShown) return;
   state.grid[index].isFlag = !state.grid[index].isFlag;
-  getProb(state);
 };
 
 const dig = (
@@ -275,7 +163,7 @@ const dig = (
     );
   }
 
-  getProb(state);
+  updateProb(state);
 };
 
 const neighborsCheck = (
@@ -316,7 +204,6 @@ export const gameStateReducers = {
   setIsOver,
   setSizeGrid,
   setMineRatio,
-  setComputeProb,
   restart,
   gameOver,
   flag,

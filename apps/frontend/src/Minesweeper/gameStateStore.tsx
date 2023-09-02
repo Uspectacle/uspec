@@ -9,7 +9,6 @@ export interface GameStateState {
   sizeGrid: number;
   mineNum: number;
   mineRatio: number;
-  computeProb: boolean;
 }
 
 const initialState = {
@@ -19,7 +18,6 @@ const initialState = {
   sizeGrid: 5,
   mineNum: 4,
   mineRatio: 4 / 25,
-  computeProb: false,
 };
 
 export const gameStateSlice = createSlice({
@@ -35,7 +33,6 @@ export const {
   setIsOver,
   setSizeGrid,
   setMineRatio,
-  setComputeProb,
   restart,
   gameOver,
   flag,

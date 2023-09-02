@@ -2,8 +2,8 @@ import { createStyles } from '@mantine/core';
 import { Cell } from './Cell';
 import useGameState from './useGameState';
 
-export const Game = () => {
-  const { sizeGrid, grid, computeProb, isOver } = useGameState();
+export const Game = ({ showProb }: { showProb: boolean }) => {
+  const { sizeGrid, grid, isOver } = useGameState();
   const { classes } = useStyles({ sizeGrid });
 
   return (
@@ -12,7 +12,7 @@ export const Game = () => {
         {grid.map((cell, index) => (
           <Cell
             cell={cell}
-            showProb={computeProb}
+            showProb={showProb}
             isOver={isOver}
             key={`cell-${index}`}
           />

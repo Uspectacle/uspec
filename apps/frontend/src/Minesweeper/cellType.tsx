@@ -7,6 +7,6 @@ export interface CellType {
   isFlag: boolean;
   prob: number;
   num: number;
-  highlight: boolean;
   neighbors: number[];
+  initDate: string;
 }

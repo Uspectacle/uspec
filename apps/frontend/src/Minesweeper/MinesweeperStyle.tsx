@@ -43,17 +43,14 @@ export const cellFontColor = (cell: CellType) =>
         '#888888',
         '#ffffff',
       ][cell.num] || '#000000'
-    : '#000000';
-
-export const cellBrightness = (cell: CellType) =>
-  !cell.highlight ? 100 : !cell.isShown ? 90 : cell.num === 0 ? 100 : 95;
+    : '#000000bc';
 
 export const cellImage = (cell: CellType, showProb: boolean) =>
   cell.isFlag
     ? FLAG
     : !cell.isShown
     ? showProb
-      ? `${Math.floor(cell.prob * 100)}%`
+      ? `${Math.round(cell.prob * 100)}%`
       : ''
     : cell.isMine
     ? MINE

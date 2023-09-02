@@ -18,18 +18,18 @@ export const SetMineControl = () => {
       data={[
         {
           id: 1,
+          label: `${Math.round(sizeGrid * sizeGrid * (3 / 25))} ${MINE}`,
+          value: 3 / 25,
+        },
+        {
+          id: 2,
           label: `${Math.round(sizeGrid * sizeGrid * (4 / 25))} ${MINE}`,
           value: 4 / 25,
         },
         {
-          id: 2,
-          label: `${Math.round(sizeGrid * sizeGrid * (7 / 25))} ${MINE}`,
-          value: 7 / 25,
-        },
-        {
           id: 3,
-          label: `${Math.round(sizeGrid * sizeGrid * (10 / 25))} ${MINE}`,
-          value: 10 / 25,
+          label: `${Math.round(sizeGrid * sizeGrid * (5 / 25))} ${MINE}`,
+          value: 5 / 25,
         },
       ]}
     />

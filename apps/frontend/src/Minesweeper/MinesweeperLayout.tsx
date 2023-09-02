@@ -93,7 +93,7 @@ export const MinesweeperLayout = ({
           </div>
           <RestartButton />
         </div>
-        <Game />
+        <Game showProb={page === 2} />
       </div>
     </div>
   );
