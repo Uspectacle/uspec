@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Game } from './Game';
 import { SetSizeControl } from './SetSizeControl';
 import { SetMineControl } from './SetMineControl';
-import { RestartButton } from './RestartButton';
 import { ExitButton } from './ExitButton';
 import { BackButton } from './BackButton';
 import { NextButton } from './NextButton';
@@ -11,9 +10,7 @@ import { Page } from './Page';
 import { useTranslation } from 'react-i18next';
 import { SlideShow } from './SlideShow';
 import { MyImage } from '../Utils/MyImage';
-import { useDispatch } from 'react-redux';
-import { setCurrentIndex } from './minesweeperStateStore';
-import useMinesweeperState from './useMinesweeperState';
+import { GameNavigation } from './GameNavigation';
 
 export const MinesweeperLayout = ({
   focus,
@@ -23,11 +20,8 @@ export const MinesweeperLayout = ({
   setFocus: (focus: boolean) => void;
 }) => {
   const [page, setPage] = useState(0);
-  const dispatch = useDispatch();
-  const { currentIndex, gameStates } = useMinesweeperState();
   const { classes } = useStyles();
   const { t } = useTranslation();
-
   const pages = [
     {
       title: t('minesweeper.intro.title'),
@@ -38,20 +32,16 @@ export const MinesweeperLayout = ({
       text: t('minesweeper.rules.text'),
     },
     {
-      title: 'Good Morning Baltimore',
+      title: 'Show prob',
       text: `Welcome to page 2`,
     },
     {
-      title: 'Hello Darkness',
+      title: 'Auto play and prob',
       text: `Welcome to page 3`,
     },
     {
-      title: 'Yo man How do you do',
+      title: 'Auto Play Fast',
       text: `Welcome to page 4`,
-    },
-    {
-      title: 'Last Page',
-      text: `Welcome to page 5. This is the end`,
     },
   ];
 
@@ -137,42 +127,15 @@ export const MinesweeperLayout = ({
             <SetSizeControl />
             <SetMineControl />
           </div>
-          <div className={classes.historyNavigation}>
-            <NextButton
-              page={currentIndex}
-              max={gameStates.length - 1}
-              setPage={(currentIndex) =>
-                dispatch(setCurrentIndex(currentIndex))
-              }
-            >
-              <>
-                <MyImage
-                  src="/svg/reply-arrow.svg"
-                  width={800}
-                  height={800}
-                  style={{ width: '1em' }}
-                />
-              </>
-            </NextButton>
-            <RestartButton />
-            <BackButton
-              page={currentIndex}
-              setPage={(currentIndex) =>
-                dispatch(setCurrentIndex(currentIndex))
-              }
-            >
-              <>
-                <MyImage
-                  src="/svg/reply-arrow.svg"
-                  width={800}
-                  height={800}
-                  style={{ transform: 'scaleX(-1)', width: '1em' }}
-                />
-              </>
-            </BackButton>
-          </div>
+          <GameNavigation />
         </div>
-        <Game showProb={page === 2} />
+        <Game
+          showProb={page === 2 || page === 3}
+          autoPlayTime={
+            page === 0 ? 1000 : page === 3 ? 1000 : page === 4 ? 100 : null
+          }
+          randomPlay={page == 0}
+        />
       </div>
     </div>
   );
@@ -261,18 +224,6 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-around',
     width: '100%',
     margin: 10,
-    [theme.fn.smallerThan(750)]: {
-      display: 'none',
-    },
-  },
-  historyNavigation: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: 10,
-    width: '100%',
-    flexWrap: 'wrap',
-    boxSizing: 'border-box',
-    alignItems: 'center',
     [theme.fn.smallerThan(750)]: {
       display: 'none',
     },

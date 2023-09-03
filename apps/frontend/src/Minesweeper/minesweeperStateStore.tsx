@@ -52,6 +52,8 @@ export const {
   neighborsCheck,
   saveState,
   setCurrentIndex,
+  playBestMove,
+  playRandomMove,
 } = minesweeperStateSlice.actions;
 
 export default minesweeperStateSlice.reducer;

@@ -2,11 +2,22 @@ import { createStyles } from '@mantine/core';
 import { Cell } from './Cell';
 import useMinesweeperState from './useMinesweeperState';
 import { useEffect, useRef, useState } from 'react';
+import { useAutoBestPlay, useAutoRandomPlay } from './useAutoPlay';
 
-export const Game = ({ showProb }: { showProb: boolean }) => {
+export const Game = ({
+  showProb,
+  randomPlay,
+  autoPlayTime,
+}: {
+  showProb: boolean;
+  randomPlay: boolean;
+  autoPlayTime: number | null;
+}) => {
   const { current, currentIndex } = useMinesweeperState();
   const { sizeGrid, grid, isOver } = current;
   const { classes } = useStyles({ sizeGrid });
+  useAutoBestPlay(randomPlay ? null : autoPlayTime);
+  useAutoRandomPlay(randomPlay ? autoPlayTime : null);
 
   const ref = useRef<HTMLDivElement | null>(null);
   const [fontSize, setFontSize] = useState(10);

@@ -239,6 +239,34 @@ const setCurrentIndex = (
   state.current = state.gameStates[state.currentIndex];
 };
 
+const playBestMove = (state: MinesweeperState) => {
+  if (state.current.isOver) {
+    restart(state);
+    return;
+  }
+  const cellsNotShown = state.current.grid.filter((cell) => !cell.isShown);
+  const selectedCell = cellsNotShown.reduce(
+    (safestCell, cell) => (cell.prob < safestCell.prob ? cell : safestCell),
+    cellsNotShown[0]
+  );
+  dig(state, { payload: selectedCell.index, type: 'number' });
+  updateProb(state);
+  saveState(state);
+};
+
+const playRandomMove = (state: MinesweeperState) => {
+  if (state.current.isOver) {
+    restart(state);
+    return;
+  }
+  const cellsNotShown = state.current.grid.filter((cell) => !cell.isShown);
+  const selectedCell =
+    cellsNotShown[Math.floor(Math.random() * cellsNotShown.length)];
+  dig(state, { payload: selectedCell.index, type: 'number' });
+  updateProb(state);
+  saveState(state);
+};
+
 export const minesweeperStateReducers = {
   setGrid,
   setIsMine,
@@ -266,4 +294,6 @@ export const minesweeperStateReducers = {
   },
   saveState,
   setCurrentIndex,
+  playBestMove,
+  playRandomMove,
 };
