@@ -1,14 +1,38 @@
 import { createStyles } from '@mantine/core';
 import { Cell } from './Cell';
-import useGameState from './useGameState';
+import useMinesweeperState from './useMinesweeperState';
+import { useEffect, useRef, useState } from 'react';
 
 export const Game = ({ showProb }: { showProb: boolean }) => {
-  const { sizeGrid, grid, isOver } = useGameState();
+  const { current, currentIndex } = useMinesweeperState();
+  const { sizeGrid, grid, isOver } = current;
   const { classes } = useStyles({ sizeGrid });
+
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [fontSize, setFontSize] = useState(10);
+
+  const updateFontSize = () => {
+    if (!ref.current) return;
+    const cellWidth = ref.current.clientWidth;
+    setFontSize((0.5 * cellWidth) / sizeGrid);
+  };
+
+  useEffect(() => {
+    updateFontSize();
+    window.addEventListener('resize', updateFontSize);
+    return () => {
+      window.removeEventListener('resize', updateFontSize);
+    };
+  }, [currentIndex, sizeGrid]);
 
   return (
     <div className={classes.background}>
-      <div className={classes.grid}>
+      <div
+        ref={ref}
+        className={classes.grid}
+        style={{ fontSize: `${fontSize}px` }}
+        key={`grid-${currentIndex}`}
+      >
         {grid.map((cell, index) => (
           <Cell
             cell={cell}

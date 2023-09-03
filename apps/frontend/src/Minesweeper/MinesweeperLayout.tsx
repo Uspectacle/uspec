@@ -10,6 +10,10 @@ import { NextButton } from './NextButton';
 import { Page } from './Page';
 import { useTranslation } from 'react-i18next';
 import { SlideShow } from './SlideShow';
+import { MyImage } from '../Utils/MyImage';
+import { useDispatch } from 'react-redux';
+import { setCurrentIndex } from './minesweeperStateStore';
+import useMinesweeperState from './useMinesweeperState';
 
 export const MinesweeperLayout = ({
   focus,
@@ -19,6 +23,8 @@ export const MinesweeperLayout = ({
   setFocus: (focus: boolean) => void;
 }) => {
   const [page, setPage] = useState(0);
+  const dispatch = useDispatch();
+  const { currentIndex, gameStates } = useMinesweeperState();
   const { classes } = useStyles();
   const { t } = useTranslation();
 
@@ -59,14 +65,34 @@ export const MinesweeperLayout = ({
         style={!focus ? { opacity: 0, transform: 'translateX(-100%)' } : {}}
       >
         <div className={classes.exit}>
-          <BackButton page={page} setPage={setPage} layout={'mobile'} />
+          <BackButton page={page} setPage={setPage} layout={'mobile'}>
+            <>
+              <MyImage
+                src="/svg/chevron-arrow.svg"
+                width={800}
+                height={800}
+                style={{ transform: 'rotate(0.5turn)', width: '1em' }}
+              />
+              Back
+            </>
+          </BackButton>
           <ExitButton setFocus={setFocus} />
           <NextButton
             page={page}
             setPage={setPage}
             max={pages.length - 1}
             layout={'mobile'}
-          />
+          >
+            <>
+              Next
+              <MyImage
+                src="/svg/chevron-arrow.svg"
+                width={800}
+                height={800}
+                style={{ width: '1em' }}
+              />
+            </>
+          </NextButton>
         </div>
         <div className={classes.pageContainer}>
           <div className={classes.slideShow}>
@@ -77,8 +103,28 @@ export const MinesweeperLayout = ({
             </SlideShow>
           </div>
           <div className={classes.navigation}>
-            <BackButton page={page} setPage={setPage} />
-            <NextButton page={page} setPage={setPage} max={pages.length - 1} />
+            <BackButton page={page} setPage={setPage}>
+              <>
+                <MyImage
+                  src="/svg/chevron-arrow.svg"
+                  width={800}
+                  height={800}
+                  style={{ transform: 'rotate(0.5turn)', width: '1em' }}
+                />
+                Back
+              </>
+            </BackButton>
+            <NextButton page={page} setPage={setPage} max={pages.length - 1}>
+              <>
+                Next
+                <MyImage
+                  src="/svg/chevron-arrow.svg"
+                  width={800}
+                  height={800}
+                  style={{ width: '1em' }}
+                />
+              </>
+            </NextButton>
           </div>
         </div>
       </div>
@@ -91,7 +137,40 @@ export const MinesweeperLayout = ({
             <SetSizeControl />
             <SetMineControl />
           </div>
-          <RestartButton />
+          <div className={classes.historyNavigation}>
+            <NextButton
+              page={currentIndex}
+              max={gameStates.length - 1}
+              setPage={(currentIndex) =>
+                dispatch(setCurrentIndex(currentIndex))
+              }
+            >
+              <>
+                <MyImage
+                  src="/svg/reply-arrow.svg"
+                  width={800}
+                  height={800}
+                  style={{ width: '1em' }}
+                />
+              </>
+            </NextButton>
+            <RestartButton />
+            <BackButton
+              page={currentIndex}
+              setPage={(currentIndex) =>
+                dispatch(setCurrentIndex(currentIndex))
+              }
+            >
+              <>
+                <MyImage
+                  src="/svg/reply-arrow.svg"
+                  width={800}
+                  height={800}
+                  style={{ transform: 'scaleX(-1)', width: '1em' }}
+                />
+              </>
+            </BackButton>
+          </div>
         </div>
         <Game showProb={page === 2} />
       </div>
@@ -186,6 +265,18 @@ const useStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
+  historyNavigation: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: 10,
+    width: '100%',
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+    alignItems: 'center',
+    [theme.fn.smallerThan(750)]: {
+      display: 'none',
+    },
+  },
   actions: {
     display: 'flex',
     justifyContent: 'space-around',
@@ -206,9 +297,9 @@ const useStyles = createStyles((theme) => ({
   },
   settings: {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     padding: 10,
-    gap: 10,
+    width: '100%',
     flexWrap: 'wrap',
     boxSizing: 'border-box',
     alignItems: 'center',

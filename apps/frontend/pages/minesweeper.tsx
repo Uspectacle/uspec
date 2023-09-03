@@ -5,7 +5,7 @@ import { Summary } from '../src/Minesweeper/Summary';
 import { Title } from '../src/Minesweeper/Title';
 import { MinesweeperLayout } from '../src/Minesweeper/MinesweeperLayout';
 import { useDispatch } from 'react-redux';
-import { restart } from '../src/Minesweeper/gameStateStore';
+import { restart } from '../src/Minesweeper/minesweeperStateStore';
 
 const Minesweeper: NextPage = () => {
   const [focus, setFocus] = useState(false);

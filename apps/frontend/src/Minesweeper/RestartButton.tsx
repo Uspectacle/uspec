@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import useGameState from './useGameState';
-import { restart } from './gameStateStore';
+import useMinesweeperState from './useMinesweeperState';
+import { restart } from './minesweeperStateStore';
 import { useMinesweeperStyles } from './MinesweeperStyle';
 
 export const RestartButton = () => {
   const dispatch = useDispatch();
-  const { isOver } = useGameState();
+  const { isOver } = useMinesweeperState().current;
   const { classes } = useMinesweeperStyles();
   return (
     <div

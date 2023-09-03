@@ -1,8 +1,8 @@
 import { createStyles } from '@mantine/core';
 import { CellType } from './cellType';
-import { MouseEventHandler, useEffect, useRef } from 'react';
+import { MouseEventHandler } from 'react';
 import { useDispatch } from 'react-redux';
-import { dig, flag, neighborsCheck } from './gameStateStore';
+import { dig, flag, neighborsCheck } from './minesweeperStateStore';
 import { SHADOW } from '../Utils/DefaultStyle';
 import { cellColor, cellFontColor, cellImage } from './MinesweeperStyle';
 
@@ -15,26 +15,6 @@ interface propsType {
 export const Cell = ({ cell, showProb, isOver }: propsType) => {
   const { classes } = useStyles();
   const dispatch = useDispatch();
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  const updateFontSize = () => {
-    if (!ref.current) return;
-    const cellWidth = ref.current.clientWidth;
-    const cellHeight = ref.current.clientHeight;
-    const fontSize =
-      Math.min(cellWidth, cellHeight) *
-      (cell.isShown || cell.isFlag ? 0.5 : 0.3);
-    ref.current.style.fontSize = `${fontSize}px`;
-  };
-
-  useEffect(() => {
-    updateFontSize();
-    window.addEventListener('resize', updateFontSize);
-    return () => {
-      window.removeEventListener('resize', updateFontSize);
-    };
-  }, [cell.initDate, cell.isShown, cell.isFlag]);
-
   const leftClick = () => {
     if (isOver) return;
     if (cell.isFlag) return;
@@ -50,7 +30,6 @@ export const Cell = ({ cell, showProb, isOver }: propsType) => {
 
   return (
     <div
-      ref={ref}
       className={classes.cell}
       onClick={leftClick}
       onContextMenu={rightClick}
@@ -61,6 +40,7 @@ export const Cell = ({ cell, showProb, isOver }: propsType) => {
           cell.isShown && cell.num === 0 && cell.isShown && !cell.isMine
             ? 0
             : 1,
+        fontSize: cell.isShown || cell.isFlag ? '1em' : '0.6em',
       }}
     >
       {cellImage(cell, showProb)}

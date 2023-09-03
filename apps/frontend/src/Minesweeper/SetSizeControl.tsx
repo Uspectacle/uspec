@@ -1,12 +1,12 @@
 import React from 'react';
 import SegmentedControl from './SegmentedControl';
 import { useDispatch } from 'react-redux';
-import { setSizeGrid } from './gameStateStore';
-import useGameState from './useGameState';
+import { setSizeGrid } from './minesweeperStateStore';
+import useMinesweeperState from './useMinesweeperState';
 
 export const SetSizeControl = () => {
   const dispatch = useDispatch();
-  const { sizeGrid } = useGameState();
+  const { sizeGrid } = useMinesweeperState().current;
 
   return (
     <SegmentedControl

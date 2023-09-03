@@ -1,4 +1,5 @@
-import { GameStateState } from './gameStateStore';
+import { CellType } from './cellType';
+import { MinesweeperState } from './minesweeperStateStore';
 
 const precision = 10 ** -3;
 const h = 10 ** -3;
@@ -29,12 +30,12 @@ interface Equation {
   numberOfMines: number;
 }
 
-const getEquations = (state: GameStateState): Equation[] => [
+const getEquations = (grid: CellType[], mineNum: number): Equation[] => [
   {
-    cellIndexes: state.grid.map((cell) => cell.index),
-    numberOfMines: state.mineNum,
+    cellIndexes: grid.map((cell) => cell.index),
+    numberOfMines: mineNum,
   },
-  ...state.grid
+  ...grid
     .filter((cell) => cell.isShown)
     .map((cell) => ({
       cellIndexes: cell.neighbors.filter(
@@ -68,21 +69,21 @@ const solveEquations = (probabilities: number[], equations: Equation[]) => {
   });
 };
 
-export const updateProb = (state: GameStateState) => {
-  console.log('updateProb');
-  const probabilities = state.grid.map((cell) => {
-    if (cell.isShown && !cell.isMine) cell.prob = 0;
-    return cell.prob;
-  });
-  const equations = getEquations(state);
-  console.log('equations', equations);
-  console.log('probabilities', probabilities);
-  for (let k = 0; k < step; k++) solveEquations(probabilities, equations);
-  const error = equations.reduce(
-    (partialError, equation) =>
-      difference(probabilities, equation) + partialError,
-    0
+export const updateProb = (state: MinesweeperState) => {
+  // console.log('updateProb');
+  const { grid, mineNum } = state.current;
+  const probabilities = grid.map((cell) =>
+    cell.isShown && !cell.isMine ? 0 : 0.5
   );
-  console.log('error', error);
-  state.grid.forEach((cell) => (cell.prob = probabilities[cell.index]));
+  const equations = getEquations(grid, mineNum);
+  // console.log('equations', equations);
+  // console.log('probabilities', probabilities);
+  for (let k = 0; k < step; k++) solveEquations(probabilities, equations);
+  // const error = equations.reduce(
+  //   (partialError, equation) =>
+  //     difference(probabilities, equation) + partialError,
+  //   0
+  // );
+  // console.log('error', error);
+  grid.forEach((cell) => (cell.prob = probabilities[cell.index]));
 };
