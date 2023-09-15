@@ -16,6 +16,7 @@ export const UpcomingPost = ({ index }: { index: number }) => {
           src="/image/comingsoon.png"
           width={548}
           height={550}
+          style={{ width: '100%' }}
           objectFit="cover"
         />
       }

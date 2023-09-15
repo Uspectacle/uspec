@@ -10,26 +10,25 @@ import {
 } from '../src/Utils/DefaultStyle';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../src/Utils/MyImage';
-import { getWindow } from '../src/Utils/GetWindow';
 import { Summary } from '../src/Resume/Summary';
 import { Education, Experience } from '../src/Resume/Past';
 import { ForeignLanguages } from '../src/Resume/ForeignLanguages';
 import { Skills } from '../src/Resume/Skills';
 import { ProgrammingLanguages } from '../src/Resume/ProgrammingLanguages';
 import { Interests } from '../src/Resume/Interests';
+import { useWindowSize } from 'usehooks-ts';
 
 const Resume: NextPage = () => {
   const { classes } = useStyles();
   const { t } = useTranslation();
-
-  const { innerWidth } = getWindow();
+  const { width } = useWindowSize();
 
   return (
     <Layout summary={<Summary />}>
       <div className={classes.container}>
         <div className={classes.title}>{t('resume.mario-larsen')}</div>
         <div className={classes.subTitle}>
-          {innerWidth < 450 ? t('resume.subTitleFull') : t('resume.subTitle')}
+          {width < 450 ? t('resume.subTitleFull') : t('resume.subTitle')}
         </div>
         <MyImage
           src="/image/Resume/selfie.jpg"

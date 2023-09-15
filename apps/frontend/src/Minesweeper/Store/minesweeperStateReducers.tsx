@@ -1,5 +1,5 @@
 import { GameState, MinesweeperState } from './minesweeperStateStore';
-import { CellType } from './cellType';
+import { CellType } from '../cellType';
 import { updateProb } from './UpdateProb';
 
 const initCell = (
@@ -42,27 +42,6 @@ const shuffle = (anyArray: number[]) => {
   }
 };
 
-const setGrid = (
-  state: MinesweeperState,
-  value: { payload: CellType[]; type: string }
-) => {
-  state.current.grid = value.payload;
-};
-
-const setIsMine = (
-  state: MinesweeperState,
-  value: { payload: boolean; type: string }
-) => {
-  state.current.isMine = value.payload;
-};
-
-const setIsOver = (
-  state: MinesweeperState,
-  value: { payload: boolean; type: string }
-) => {
-  state.current.isOver = value.payload;
-};
-
 const setSizeGrid = (
   state: MinesweeperState,
   value: { payload: number; type: string }
@@ -85,6 +64,7 @@ const setMineRatio = (
 const restart = (state: MinesweeperState) => {
   state.current.isMine = false;
   state.current.isOver = false;
+  state.current.isWon = false;
   state.gameStates = [state.current];
   state.currentIndex = 0;
   state.current.mineNum = Math.round(
@@ -166,6 +146,7 @@ const dig = (
     state.current.grid.forEach((cell) => {
       if (!cell.isFlag && cell.isMine) cell.isFlag = true;
     });
+    state.current.isWon = true;
     gameOver(state); // WIN
     return;
   }
@@ -268,13 +249,9 @@ const playRandomMove = (state: MinesweeperState) => {
 };
 
 export const minesweeperStateReducers = {
-  setGrid,
-  setIsMine,
-  setIsOver,
   setSizeGrid,
   setMineRatio,
   restart,
-  gameOver,
   flag: (state: MinesweeperState, value: { payload: number; type: string }) => {
     flag(state, value);
     saveState(state);

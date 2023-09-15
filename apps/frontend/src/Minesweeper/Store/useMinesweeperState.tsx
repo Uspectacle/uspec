@@ -1,4 +1,4 @@
-import { RootState } from '../Utils/Store';
+import { RootState } from '../../Utils/Store';
 import { useSelector } from 'react-redux';
 import { MinesweeperState } from './minesweeperStateStore';
 

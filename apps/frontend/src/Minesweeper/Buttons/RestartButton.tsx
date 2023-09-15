@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import useMinesweeperState from './useMinesweeperState';
-import { restart } from './minesweeperStateStore';
-import { useMinesweeperStyles } from './MinesweeperStyle';
+import useMinesweeperState from '../Store/useMinesweeperState';
+import { restart } from '../Store/minesweeperStateStore';
+import { useMinesweeperStyles } from '../MinesweeperStyle';
 
 export const RestartButton = () => {
   const dispatch = useDispatch();

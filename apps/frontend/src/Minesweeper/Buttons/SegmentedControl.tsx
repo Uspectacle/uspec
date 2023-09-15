@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useMinesweeperStyles } from './MinesweeperStyle';
+import { useMinesweeperStyles } from '../MinesweeperStyle';
 
 type Segment = {
   id: number;

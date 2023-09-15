@@ -17,6 +17,7 @@ export const ResumePost = ({ index }: { index: number }) => {
           width={420}
           height={310}
           objectFit="cover"
+          style={{ width: '100%' }}
         />
       }
       index={index}

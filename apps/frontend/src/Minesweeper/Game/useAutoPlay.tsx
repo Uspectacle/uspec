@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { playBestMove, playRandomMove } from './minesweeperStateStore';
+import { playBestMove, playRandomMove } from '../Store/minesweeperStateStore';
 import { useInterval } from 'usehooks-ts';
 
 export const useAutoBestPlay = (timeInterval: number | null) => {

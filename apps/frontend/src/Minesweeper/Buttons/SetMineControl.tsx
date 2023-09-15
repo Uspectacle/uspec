@@ -1,9 +1,9 @@
 import React from 'react';
 import SegmentedControl from './SegmentedControl';
 import { useDispatch } from 'react-redux';
-import useMinesweeperState from './useMinesweeperState';
-import { MINE } from './MinesweeperStyle';
-import { setMineRatio } from './minesweeperStateStore';
+import useMinesweeperState from '../Store/useMinesweeperState';
+import { MINE } from '../MinesweeperStyle';
+import { setMineRatio } from '../Store/minesweeperStateStore';
 
 export const SetMineControl = () => {
   const dispatch = useDispatch();

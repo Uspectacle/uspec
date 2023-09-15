@@ -1,10 +1,10 @@
 import { createStyles } from '@mantine/core';
-import { CellType } from './cellType';
+import { CellType } from '../cellType';
 import { MouseEventHandler } from 'react';
 import { useDispatch } from 'react-redux';
-import { dig, flag, neighborsCheck } from './minesweeperStateStore';
-import { SHADOW } from '../Utils/DefaultStyle';
-import { cellColor, cellFontColor, cellImage } from './MinesweeperStyle';
+import { dig, flag, neighborsCheck } from '../Store/minesweeperStateStore';
+import { SHADOW } from '../../Utils/DefaultStyle';
+import { cellColor, cellFontColor, cellImage } from '../MinesweeperStyle';
 
 interface propsType {
   cell: CellType;

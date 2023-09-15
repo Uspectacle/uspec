@@ -1,12 +1,12 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
-import { RestartButton } from './RestartButton';
-import { BackButton } from './BackButton';
-import { NextButton } from './NextButton';
-import { MyImage } from '../Utils/MyImage';
+import { RestartButton } from '../Buttons/RestartButton';
+import { BackButton } from '../Buttons/BackButton';
+import { NextButton } from '../Buttons/NextButton';
+import { MyImage } from '../../Utils/MyImage';
 import { useDispatch } from 'react-redux';
-import { setCurrentIndex } from './minesweeperStateStore';
-import useMinesweeperState from './useMinesweeperState';
+import { setCurrentIndex } from '../Store/minesweeperStateStore';
+import useMinesweeperState from '../Store/useMinesweeperState';
 
 export const GameNavigation = () => {
   const dispatch = useDispatch();

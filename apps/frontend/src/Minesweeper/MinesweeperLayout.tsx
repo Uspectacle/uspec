@@ -1,16 +1,17 @@
 import { createStyles } from '@mantine/core';
 import React, { useState } from 'react';
-import { Game } from './Game';
-import { SetSizeControl } from './SetSizeControl';
-import { SetMineControl } from './SetMineControl';
-import { ExitButton } from './ExitButton';
-import { BackButton } from './BackButton';
-import { NextButton } from './NextButton';
-import { Page } from './Page';
+import { Game } from './Game/Game';
+import { SetSizeControl } from './Buttons/SetSizeControl';
+import { SetMineControl } from './Buttons/SetMineControl';
+import { Page } from './PageLayout/Page';
 import { useTranslation } from 'react-i18next';
-import { SlideShow } from './SlideShow';
-import { MyImage } from '../Utils/MyImage';
-import { GameNavigation } from './GameNavigation';
+import { SlideShow } from './PageLayout/SlideShow';
+import { GameNavigation } from './PageLayout/GameNavigation';
+import {
+  PageNavigationBottom,
+  PageNavigationTop,
+} from './PageLayout/PageNavigation';
+import { ConfettiControl } from './ConfettiControl';
 
 export const MinesweeperLayout = ({
   focus,
@@ -20,6 +21,7 @@ export const MinesweeperLayout = ({
   setFocus: (focus: boolean) => void;
 }) => {
   const [page, setPage] = useState(0);
+
   const { classes } = useStyles();
   const { t } = useTranslation();
   const pages = [
@@ -50,40 +52,17 @@ export const MinesweeperLayout = ({
       className={classes.container}
       style={!focus ? { opacity: 0, zIndex: -1 } : {}}
     >
+      <ConfettiControl active={page === 1 || page === 2} />
       <div
         className={classes.leftContainer}
         style={!focus ? { opacity: 0, transform: 'translateX(-100%)' } : {}}
       >
-        <div className={classes.exit}>
-          <BackButton page={page} setPage={setPage} layout={'mobile'}>
-            <>
-              <MyImage
-                src="/svg/chevron-arrow.svg"
-                width={800}
-                height={800}
-                style={{ transform: 'rotate(0.5turn)', width: '1em' }}
-              />
-              Back
-            </>
-          </BackButton>
-          <ExitButton setFocus={setFocus} />
-          <NextButton
-            page={page}
-            setPage={setPage}
-            max={pages.length - 1}
-            layout={'mobile'}
-          >
-            <>
-              Next
-              <MyImage
-                src="/svg/chevron-arrow.svg"
-                width={800}
-                height={800}
-                style={{ width: '1em' }}
-              />
-            </>
-          </NextButton>
-        </div>
+        <PageNavigationTop
+          page={page}
+          pagesLength={pages.length}
+          setPage={setPage}
+          setFocus={setFocus}
+        />
         <div className={classes.pageContainer}>
           <div className={classes.slideShow}>
             <SlideShow activeId={page}>
@@ -92,30 +71,11 @@ export const MinesweeperLayout = ({
               ))}
             </SlideShow>
           </div>
-          <div className={classes.navigation}>
-            <BackButton page={page} setPage={setPage}>
-              <>
-                <MyImage
-                  src="/svg/chevron-arrow.svg"
-                  width={800}
-                  height={800}
-                  style={{ transform: 'rotate(0.5turn)', width: '1em' }}
-                />
-                Back
-              </>
-            </BackButton>
-            <NextButton page={page} setPage={setPage} max={pages.length - 1}>
-              <>
-                Next
-                <MyImage
-                  src="/svg/chevron-arrow.svg"
-                  width={800}
-                  height={800}
-                  style={{ width: '1em' }}
-                />
-              </>
-            </NextButton>
-          </div>
+          <PageNavigationBottom
+            page={page}
+            pagesLength={pages.length}
+            setPage={setPage}
+          />
         </div>
       </div>
       <div
@@ -195,13 +155,6 @@ const useStyles = createStyles((theme) => ({
       flexDirection: 'column-reverse',
     },
   },
-  exit: {
-    margin: 10,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'stretch',
-  },
   pageContainer: {
     flex: 1,
     width: '100%',
@@ -218,15 +171,6 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     boxSizing: 'border-box',
     padding: '1em',
-  },
-  navigation: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    width: '100%',
-    margin: 10,
-    [theme.fn.smallerThan(750)]: {
-      display: 'none',
-    },
   },
   actions: {
     display: 'flex',

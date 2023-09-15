@@ -10,7 +10,7 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import minesweeperStateStore from '../Minesweeper/minesweeperStateStore';
+import minesweeperStateStore from '../Minesweeper/Store/minesweeperStateStore';
 
 const persistConfig = {
   key: 'user',

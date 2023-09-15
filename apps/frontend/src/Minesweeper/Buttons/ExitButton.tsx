@@ -1,6 +1,6 @@
 import React from 'react';
-import { useMinesweeperStyles } from './MinesweeperStyle';
-import { MyImage } from '../Utils/MyImage';
+import { useMinesweeperStyles } from '../MinesweeperStyle';
+import { MyImage } from '../../Utils/MyImage';
 
 export const ExitButton = ({
   setFocus,

@@ -12,7 +12,7 @@ import React from 'react';
 import i18n from '../Utils/i18n';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
-import { getWindow } from '../Utils/GetWindow';
+import { useWindowSize } from 'usehooks-ts';
 
 export const Header = ({
   children,
@@ -24,8 +24,7 @@ export const Header = ({
   const { classes } = useStyles();
   const router = useRouter();
   const { t } = useTranslation();
-
-  const { innerWidth } = getWindow();
+  const { width } = useWindowSize();
 
   return (
     <div
@@ -44,7 +43,7 @@ export const Header = ({
           href={'/'}
           className={classes.logo}
           style={{
-            height: innerWidth < 500 ? (154 * 3) / 4 : 154,
+            height: width < 500 ? (154 * 3) / 4 : 154,
           }}
         >
           <MyImage src="/image/logo.png" width={201} height={154} />

@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 import { Cell } from './Cell';
-import useMinesweeperState from './useMinesweeperState';
+import useMinesweeperState from '../Store/useMinesweeperState';
 import { useEffect, useRef, useState } from 'react';
 import { useAutoBestPlay, useAutoRandomPlay } from './useAutoPlay';
 

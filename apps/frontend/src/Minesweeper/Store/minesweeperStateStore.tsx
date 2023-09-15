@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { minesweeperStateReducers } from './minesweeperStateReducers';
-import { CellType } from './cellType';
+import { CellType } from '../cellType';
 
 export interface GameState {
   grid: CellType[];
   isMine: boolean;
   isOver: boolean;
+  isWon: boolean;
   sizeGrid: number;
   mineNum: number;
   mineRatio: number;
@@ -21,6 +22,7 @@ const initialGameState: GameState = {
   grid: [],
   isMine: false,
   isOver: false,
+  isWon: false,
   sizeGrid: 5,
   mineNum: 4,
   mineRatio: 4 / 25,
@@ -40,13 +42,9 @@ export const minesweeperStateSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const {
-  setGrid,
-  setIsMine,
-  setIsOver,
   setSizeGrid,
   setMineRatio,
   restart,
-  gameOver,
   flag,
   dig,
   neighborsCheck,

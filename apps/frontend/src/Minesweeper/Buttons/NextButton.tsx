@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMinesweeperStyles } from './MinesweeperStyle';
+import { useMinesweeperStyles } from '../MinesweeperStyle';
 
 export const NextButton = ({
   page,

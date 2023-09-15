@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
-import { MINESWEEPER_MAIN } from './MinesweeperStyle';
+import { MINESWEEPER_MAIN } from '../MinesweeperStyle';
 
 export const Page = ({ title, text }: { title: string; text: string }) => {
   const { classes } = useStyles();

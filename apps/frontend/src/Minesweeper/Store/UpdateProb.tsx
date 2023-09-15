@@ -1,4 +1,4 @@
-import { CellType } from './cellType';
+import { CellType } from '../cellType';
 import { MinesweeperState } from './minesweeperStateStore';
 
 const precision = 10 ** -3;
