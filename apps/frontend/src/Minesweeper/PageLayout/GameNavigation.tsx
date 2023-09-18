@@ -47,17 +47,14 @@ export const GameNavigation = () => {
   );
 };
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   container: {
     display: 'flex',
     justifyContent: 'space-between',
-    padding: 10,
+    // padding: 10,
     width: '100%',
     flexWrap: 'wrap',
     boxSizing: 'border-box',
     alignItems: 'center',
-    [theme.fn.smallerThan(750)]: {
-      display: 'none',
-    },
   },
 }));

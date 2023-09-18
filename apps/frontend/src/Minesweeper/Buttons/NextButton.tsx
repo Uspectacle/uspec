@@ -17,7 +17,8 @@ export const NextButton = ({
   const { classes } = useMinesweeperStyles();
   return (
     <div
-      className={`${classes.button} ${page >= max && 'hidden'} ${layout}`}
+      // className={`${classes.button} ${page >= max && 'hidden'} ${layout}`}
+      className={`${classes.button} ${layout}`}
       onClick={() => setPage(Math.min(max, page + 1))}
     >
       {children}

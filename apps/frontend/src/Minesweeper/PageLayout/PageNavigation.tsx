@@ -91,7 +91,7 @@ export const PageNavigationBottom = ({
 
 const useStyles = createStyles((theme) => ({
   topContainer: {
-    margin: 10,
+    padding: 10,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -101,7 +101,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-around',
     width: '100%',
-    margin: 10,
+    padding: 10,
     [theme.fn.smallerThan(750)]: {
       display: 'none',
     },

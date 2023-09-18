@@ -15,7 +15,8 @@ export const BackButton = ({
   const { classes } = useMinesweeperStyles();
   return (
     <div
-      className={`${classes.button} ${page <= 0 && 'hidden'} ${layout}`}
+      // className={`${classes.button} ${page <= 0 && 'hidden'} ${layout}`}
+      className={`${classes.button} ${layout}`}
       onClick={() => setPage(Math.max(0, page - 1))}
     >
       {children}
