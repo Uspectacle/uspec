@@ -1,5 +1,6 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
+import { ZoomAndDrag } from './ZoomAndDrag';
 
 export const MinesweeperLayout = ({
   focus, // setFocus,
@@ -14,9 +15,9 @@ export const MinesweeperLayout = ({
       className={classes.container}
       style={!focus ? { opacity: 0, zIndex: -1 } : {}}
     >
-      <div className={classes.main}>
+      <ZoomAndDrag>
         <img src={'image/Tetris/russia.jpg'} draggable="false" />
-      </div>
+      </ZoomAndDrag>
     </div>
   );
 };
@@ -31,7 +32,7 @@ const useStyles = createStyles(() => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    overflow: 'scroll',
+    overflow: 'hidden',
     transition: 'opacity 0.5s, padding 0.5s, margin 0.5s',
   },
   main: {
