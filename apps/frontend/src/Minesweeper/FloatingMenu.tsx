@@ -11,7 +11,7 @@ export const FloatingMenu = ({
   buttons,
 }: {
   buttons: {
-    key: number;
+    key: string;
     color: string;
     span: JSX.Element;
     action: () => void;
@@ -138,6 +138,7 @@ export const FloatingMenu = ({
         y,
         backgroundColor: opacity.to((o) => `rgba(0,0,0,${0.2 * o})`),
         backdropFilter: opacity.to((o) => `blur(${8 * o}px)`),
+        opacity: opacity.to([0, 0.01, 1], [0.5, 1, 1]).to((o) => o),
       }}
     >
       <animated.div
@@ -193,6 +194,7 @@ const useStyles = createStyles(() => ({
     borderRadius: '50%',
     mx: 4,
     border: 'none',
+    cursor: 'pointer',
     backgroundClip: 'content-box',
 
     '&:focus-visible': {
@@ -203,6 +205,7 @@ const useStyles = createStyles(() => ({
     '& > span': {
       borderRadius: 'inherit',
       display: 'flex',
+      fontSize: '1.5em',
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
@@ -212,6 +215,7 @@ const useStyles = createStyles(() => ({
   mainButton: {
     width: BUTTON_SIZE,
     height: BUTTON_SIZE,
+    cursor: 'grab',
     borderRadius: '50%',
     border: 'none',
     position: 'relative',

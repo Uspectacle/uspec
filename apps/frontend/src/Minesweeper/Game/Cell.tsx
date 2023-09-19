@@ -40,7 +40,6 @@ export const Cell = ({ cell, showProb, isOver }: propsType) => {
           cell.isShown && cell.num === 0 && cell.isShown && !cell.isMine
             ? 0
             : 1,
-        fontSize: cell.isShown || cell.isFlag ? '1em' : '0.6em',
       }}
     >
       {cellImage(cell, showProb)}
@@ -61,6 +60,8 @@ const useStyles = createStyles(() => ({
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     aspectRatio: '1',
+    width: '2em',
+    fontSize: '20em',
     transition:
       'background-color 0.3s, opacity 0.3s, transform 0.3s, filter 0.3s',
     '&:hover': {
