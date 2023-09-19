@@ -1,9 +1,12 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
 import { ZoomAndDrag } from './ZoomAndDrag';
+import { FloatingMenu } from './FloatingMenu';
+import Exit from '../../public/svg/exit';
 
 export const MinesweeperLayout = ({
-  focus, // setFocus,
+  focus,
+  setFocus,
 }: {
   focus: boolean;
   setFocus: (focus: boolean) => void;
@@ -15,6 +18,22 @@ export const MinesweeperLayout = ({
       className={classes.container}
       style={!focus ? { opacity: 0, zIndex: -1 } : {}}
     >
+      <FloatingMenu
+        buttons={[
+          {
+            key: 0,
+            color: 'red',
+            span: (
+              <span style={{ transform: 'rotate(0.5turn)' }}>
+                <Exit />
+              </span>
+            ),
+            action: () => {
+              setFocus(false);
+            },
+          },
+        ]}
+      />
       <ZoomAndDrag>
         <img src={'image/Tetris/russia.jpg'} draggable="false" />
       </ZoomAndDrag>

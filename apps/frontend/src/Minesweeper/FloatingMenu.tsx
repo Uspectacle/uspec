@@ -1,52 +1,42 @@
-import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useGesture } from '@use-gesture/react';
 import { animated, useSpring, useSprings } from '@react-spring/web';
 import { createStyles } from '@mantine/core';
-import { NextPage } from 'next';
-import Ellipsis from '../public/svg/ellipsis';
+import Ellipsis from '../../public/svg/ellipsis';
+import { clampToBounds } from '../Utils/NumberTools';
 
 const BUTTON_SIZE = 56;
-const COLORS = ['#669EF2', '#F9DB6D', '#DC602E', '#83BB70'];
 
-const clampToBounds = (
-  { x, y }: { x: number; y: number },
-  {
-    top,
-    left,
-    right,
-    bottom,
-  }: {
-    top: number;
-    left: number;
-    right: number;
-    bottom: number;
-  }
-) => ({
-  x: x < left ? left : x > right ? right : x,
-  y: y < top ? top : y > bottom ? bottom : y,
-});
-
-const Test: NextPage = () => {
+export const FloatingMenu = ({
+  buttons,
+}: {
+  buttons: {
+    key: number;
+    color: string;
+    span: JSX.Element;
+    action: () => void;
+  }[];
+}) => {
   const { classes } = useStyles();
   const buttonRef = useRef<HTMLDivElement>(null!);
   const avatarRefs = useRef<HTMLDivElement[]>([]);
   const containerRef = useRef<HTMLDivElement>(null!);
-  const [isVisible, setVisible] = useState(false);
+  const [isVisible, setVisible] = useState(true);
   const [avatarRefInitialPositions, setAvatarRefInitialPositions] = useState<
     number[]
   >([]);
 
   const [{ x, y, opacity }, api] = useSpring(
-    () => ({ x: 0, y: 0, opacity: 0 }),
+    () => ({ x: 0, y: 0, opacity: 1 }),
     []
   );
   const [avatarSprings, avatarApi] = useSprings(
-    COLORS.length,
+    buttons.length,
     () => ({ y: 0 }),
     []
   );
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (avatarRefInitialPositions.length === 0) {
       const { y: buttonY } = buttonRef.current.getBoundingClientRect();
       setAvatarRefInitialPositions(
@@ -137,7 +127,7 @@ const Test: NextPage = () => {
     };
   return (
     <animated.div
-      className={classes.BlurredBackground}
+      className={classes.container}
       ref={containerRef}
       onPointerEnter={onPointerEnter}
       onPointerLeave={onPointerLeave}
@@ -147,10 +137,11 @@ const Test: NextPage = () => {
         x,
         y,
         backgroundColor: opacity.to((o) => `rgba(0,0,0,${0.2 * o})`),
+        backdropFilter: opacity.to((o) => `blur(${8 * o}px)`),
       }}
     >
       <animated.div
-        className={classes.FloatingButton}
+        className={classes.mainButton}
         ref={buttonRef}
         onPointerEnter={onPointerEnter}
         onPointerDown={handlePointerDown(false)}
@@ -168,36 +159,57 @@ const Test: NextPage = () => {
       </animated.div>
       {avatarSprings.map((springs, index) => (
         <animated.div
-          className={classes.AvatarIcon}
-          key={COLORS[index]}
+          className={classes.button}
+          key={buttons[index].key}
           ref={(ref) => (avatarRefs.current[index] = ref!)}
-          style={{ ...springs, backgroundColor: COLORS[index] }}
-        />
+          style={{ ...springs, backgroundColor: buttons[index].color }}
+          onClick={buttons[index].action}
+        >
+          {buttons[index].span}
+        </animated.div>
       ))}
     </animated.div>
   );
 };
 
 const useStyles = createStyles(() => ({
-  BlurredBackground: {
+  container: {
     position: 'absolute',
+    top: 0,
+    left: 0,
     padding: 12,
     borderRadius: 8,
     display: 'flex',
     flexDirection: 'column',
     gap: 8,
-    backdropFilter: 'blur(8px)',
     alignItems: 'center',
     touchAction: 'none',
+    zIndex: 5,
   },
 
-  AvatarIcon: {
+  button: {
     width: BUTTON_SIZE,
     height: BUTTON_SIZE,
     borderRadius: '50%',
     mx: 4,
+    border: 'none',
+    backgroundClip: 'content-box',
+
+    '&:focus-visible': {
+      outlineOffset: 2,
+      outline: '#569AFF99 auto 6px',
+    },
+
+    '& > span': {
+      borderRadius: 'inherit',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+      height: '100%',
+    },
   },
-  FloatingButton: {
+  mainButton: {
     width: BUTTON_SIZE,
     height: BUTTON_SIZE,
     borderRadius: '50%',
@@ -223,5 +235,3 @@ const useStyles = createStyles(() => ({
     },
   },
 }));
-
-export default Test;
