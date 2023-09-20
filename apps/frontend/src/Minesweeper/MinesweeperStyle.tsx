@@ -1,5 +1,5 @@
 import { createStyles, keyframes } from '@mantine/core';
-import { CellType } from './cellType';
+import { CellType } from './CellType';
 
 export const MINESWEEPER_MAIN = '#edbd7d';
 export const MINESWEEPER_MAIN_TRANSPARENT = '#e7aa5a4f';

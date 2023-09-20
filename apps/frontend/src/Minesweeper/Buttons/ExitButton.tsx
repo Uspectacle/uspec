@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMinesweeperStyles } from '../MinesweeperStyle';
-import { MyImage } from '../../Utils/MyImage';
+import { SVG } from '../../Utils/Svg';
 
 export const ExitButton = ({
   setFocus,
@@ -10,12 +10,7 @@ export const ExitButton = ({
   const { classes } = useMinesweeperStyles();
   return (
     <div className={classes.button} onClick={() => setFocus(false)}>
-      <MyImage
-        src="/svg/exit.svg"
-        width={800}
-        height={800}
-        style={{ width: '1em', transform: 'rotate(0.5turn)' }}
-      />
+      <SVG.Exit style={{ width: '1em', transform: 'rotate(0.5turn)' }} />
       Exit
     </div>
   );

@@ -13,6 +13,7 @@ import i18n from '../Utils/i18n';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
 import { useWindowSize } from 'usehooks-ts';
+import { SVG } from '../Utils/Svg';
 
 export const Header = ({
   children,
@@ -84,12 +85,11 @@ export const Header = ({
             }}
           >
             {t('header.switchTo')}
-            <MyImage
-              src={t('header.otherLang.flag')}
-              width={24}
-              height={24}
-              style={{ width: '2em' }}
-            />
+            {t('header.otherLang.lang') === 'en' ? (
+              <SVG.FlagEn style={{ width: '2em' }} />
+            ) : (
+              <SVG.FlagFr style={{ width: '2em' }} />
+            )}
           </div>
         </div>
       </div>

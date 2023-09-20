@@ -3,7 +3,7 @@ import React from 'react';
 import { ExitButton } from '../Buttons/ExitButton';
 import { BackButton } from '../Buttons/BackButton';
 import { NextButton } from '../Buttons/NextButton';
-import { MyImage } from '../../Utils/MyImage';
+import { SVG } from '../../Utils/Svg';
 
 export const PageNavigationTop = ({
   page,
@@ -21,10 +21,7 @@ export const PageNavigationTop = ({
     <div className={classes.topContainer}>
       <BackButton page={page} setPage={setPage} layout={'mobile'}>
         <>
-          <MyImage
-            src="/svg/chevron-arrow.svg"
-            width={800}
-            height={800}
+          <SVG.ChevronArrow
             style={{ transform: 'rotate(0.5turn)', width: '1em' }}
           />
           Back
@@ -39,12 +36,7 @@ export const PageNavigationTop = ({
       >
         <>
           Next
-          <MyImage
-            src="/svg/chevron-arrow.svg"
-            width={800}
-            height={800}
-            style={{ width: '1em' }}
-          />
+          <SVG.ChevronArrow style={{ width: '1em' }} />
         </>
       </NextButton>
     </div>
@@ -65,10 +57,7 @@ export const PageNavigationBottom = ({
     <div className={classes.bottomContainer}>
       <BackButton page={page} setPage={setPage}>
         <>
-          <MyImage
-            src="/svg/chevron-arrow.svg"
-            width={800}
-            height={800}
+          <SVG.ChevronArrow
             style={{ transform: 'rotate(0.5turn)', width: '1em' }}
           />
           Back
@@ -77,12 +66,7 @@ export const PageNavigationBottom = ({
       <NextButton page={page} setPage={setPage} max={pagesLength - 1}>
         <>
           Next
-          <MyImage
-            src="/svg/chevron-arrow.svg"
-            width={800}
-            height={800}
-            style={{ width: '1em' }}
-          />
+          <SVG.ChevronArrow style={{ width: '1em' }} />
         </>
       </NextButton>
     </div>

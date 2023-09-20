@@ -1,8 +1,8 @@
 import { createStyles } from '@mantine/core';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MyImage } from '../Utils/MyImage';
 import { SHADOW } from '../Utils/DefaultStyle';
+import { SVG } from '../Utils/Svg';
 
 export const ForeignLanguages = () => {
   const { classes } = useStyles();
@@ -12,24 +12,14 @@ export const ForeignLanguages = () => {
     <ul className={classes.container}>
       <li>
         {t('resume.french.name')}
-        <MyImage
-          src="/svg/flag-fr.svg"
-          width={800}
-          height={800}
-          style={{ height: '5em' }}
-        />
+        <SVG.FlagFr style={{ height: '5em' }} />
         ★★★★★
         <br />
         {t('resume.french.level')}
       </li>
       <li>
         {t('resume.english.name')}
-        <MyImage
-          src="/svg/flag-en.svg"
-          width={800}
-          height={800}
-          style={{ height: '5em' }}
-        />
+        <SVG.FlagEn style={{ height: '5em' }} />
         ★★★★★
         <br />
         {t('resume.english.level')}
@@ -38,12 +28,7 @@ export const ForeignLanguages = () => {
       </li>
       <li>
         {t('resume.spanish.name')}
-        <MyImage
-          src="/svg/flag-es.svg"
-          width={800}
-          height={800}
-          style={{ height: '5em' }}
-        />
+        <SVG.FlagEs style={{ height: '5em' }} />
         ★★★☆☆
         <br />
         {t('resume.spanish.level')}

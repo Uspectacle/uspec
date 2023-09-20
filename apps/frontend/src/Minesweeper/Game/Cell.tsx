@@ -1,5 +1,5 @@
 import { createStyles } from '@mantine/core';
-import { CellType } from '../cellType';
+import { CellType } from '../CellType';
 import { MouseEventHandler } from 'react';
 import { useDispatch } from 'react-redux';
 import { dig, flag, neighborsCheck } from '../Store/minesweeperStateStore';
@@ -67,7 +67,7 @@ const useStyles = createStyles(() => ({
     '&:hover': {
       transform: 'scale(1.1)',
       boxShadow: SHADOW,
-      zIndex: 10,
+      zIndex: 6,
       filter: `brightness(100%) !important`,
     },
     '&:active': {

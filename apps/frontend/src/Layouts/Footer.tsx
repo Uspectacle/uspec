@@ -8,7 +8,7 @@ import {
 import Link from 'next/link';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MyImage } from '../Utils/MyImage';
+import { SVG } from '../Utils/Svg';
 
 export const Footer = ({ reduced }: { reduced?: boolean | undefined }) => {
   const { classes } = useStyles();
@@ -49,12 +49,7 @@ export const Footer = ({ reduced }: { reduced?: boolean | undefined }) => {
           passHref
         >
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <MyImage
-              src="/svg/github.svg"
-              width={24}
-              height={24}
-              style={{ width: '1.2em', height: '1.2em' }}
-            />
+            <SVG.Github style={{ width: '1.2em', height: '1.2em' }} />
             /Uspectacle
           </div>
         </Link>

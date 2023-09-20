@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { minesweeperStateReducers } from './minesweeperStateReducers';
-import { CellType } from '../cellType';
+import { CellType } from '../CellType';
 
 export interface GameState {
   grid: CellType[];

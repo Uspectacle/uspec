@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useGesture } from '@use-gesture/react';
 import { animated, useSpring, useSprings } from '@react-spring/web';
 import { createStyles } from '@mantine/core';
-import Ellipsis from '../../public/svg/ellipsis';
 import { clampToBounds } from '../Utils/NumberTools';
+import { SVG } from '../Utils/Svg';
 
 const BUTTON_SIZE = 56;
 
@@ -155,7 +155,7 @@ export const FloatingMenu = ({
         }}
       >
         <span>
-          <Ellipsis />
+          <SVG.Ellipsis />
         </span>
       </animated.div>
       {avatarSprings.map((springs, index) => (

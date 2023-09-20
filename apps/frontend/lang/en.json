@@ -8,7 +8,6 @@
     "tools": "Tools",
     "switchTo": "Passer en",
     "otherLang": {
-      "flag": "/svg/flag-fr.svg",
       "alt": "lang-fr",
       "lang": "fr"
     }

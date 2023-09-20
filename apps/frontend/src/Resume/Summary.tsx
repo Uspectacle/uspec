@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { MyImage } from '../Utils/MyImage';
 import { createStyles } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { MAIN_COLOR, SHADOW, WHITE } from '../Utils/DefaultStyle';
+import { SVG } from '../Utils/Svg';
 
 export const Summary = () => {
   const { classes } = useStyles();
@@ -17,12 +17,7 @@ export const Summary = () => {
         className={classes.button}
         passHref
       >
-        <MyImage
-          src="/svg/pdf.svg"
-          width={800}
-          height={800}
-          style={{ width: '1.2em' }}
-        />
+        <SVG.Pdf style={{ width: '1.2em' }} />
         &nbsp;{t('resume.downloadAsPDF')}
       </Link>
     </>

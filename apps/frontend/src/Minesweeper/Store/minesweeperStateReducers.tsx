@@ -1,5 +1,5 @@
 import { GameState, MinesweeperState } from './minesweeperStateStore';
-import { CellType } from '../cellType';
+import { CellType } from '../CellType';
 import { updateProb } from './UpdateProb';
 
 const initCell = (
