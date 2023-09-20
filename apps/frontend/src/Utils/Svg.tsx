@@ -49,5 +49,25 @@ export const SVG = mapObject(
       props: JSX.IntrinsicAttributes &
         ClassAttributes<HTMLDivElement> &
         HTMLAttributes<HTMLDivElement>
-    ) => <div {...props}> {module()}</div>
+    ) => {
+      const { style, ...otherProps } = props;
+      return (
+        <span
+          style={{
+            position: 'relative',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+            objectFit: 'contain',
+            ...style,
+          }}
+          {...otherProps}
+        >
+          {module()}
+        </span>
+      );
+    }
 );
