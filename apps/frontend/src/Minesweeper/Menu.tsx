@@ -7,8 +7,9 @@ import { Stats } from './Stats';
 import { Robot } from './Robot';
 import { Info } from './Info';
 import { SVG } from '../Utils/Svg';
+import { Modal } from './Modal';
 
-enum Modal {
+enum ModalEnum {
   NONE,
   SETTINGS,
   STATS,
@@ -16,28 +17,32 @@ enum Modal {
   INFO,
 }
 
+const selectModal = (name: ModalEnum) => {
+  switch (name) {
+    case ModalEnum.SETTINGS:
+      return <Settings />;
+    case ModalEnum.STATS:
+      return <Stats />;
+    case ModalEnum.ROBOT:
+      return <Robot />;
+    case ModalEnum.INFO:
+      return <Info />;
+  }
+  return <></>;
+};
+
 export const Menu = ({ setFocus }: { setFocus: (focus: boolean) => void }) => {
   const dispatch = useDispatch();
-  const [modal, setModal] = useState(Modal.NONE);
+  const [modal, setModal] = useState(ModalEnum.NONE);
 
   return (
     <>
-      <Settings
-        isOpen={modal === Modal.SETTINGS}
-        onClose={() => setModal(Modal.NONE)}
-      />
-      <Stats
-        isOpen={modal === Modal.STATS}
-        onClose={() => setModal(Modal.NONE)}
-      />
-      <Robot
-        isOpen={modal === Modal.ROBOT}
-        onClose={() => setModal(Modal.NONE)}
-      />
-      <Info
-        isOpen={modal === Modal.INFO}
-        onClose={() => setModal(Modal.NONE)}
-      />
+      <Modal
+        isOpen={modal !== ModalEnum.NONE}
+        onClose={() => setModal(ModalEnum.NONE)}
+      >
+        {selectModal(modal)}
+      </Modal>
       <FloatingMenu
         buttons={[
           {
@@ -58,7 +63,10 @@ export const Menu = ({ setFocus }: { setFocus: (focus: boolean) => void }) => {
                 <SVG.Restart />
               </span>
             ),
-            action: () => dispatch(restart()),
+            action: () => {
+              dispatch(restart());
+              setModal(ModalEnum.NONE);
+            },
           },
           {
             key: 'stats',
@@ -69,7 +77,9 @@ export const Menu = ({ setFocus }: { setFocus: (focus: boolean) => void }) => {
               </span>
             ),
             action: () =>
-              setModal(modal === Modal.STATS ? Modal.NONE : Modal.STATS),
+              setModal(
+                modal === ModalEnum.STATS ? ModalEnum.NONE : ModalEnum.STATS
+              ),
           },
           {
             key: 'robot',
@@ -80,7 +90,9 @@ export const Menu = ({ setFocus }: { setFocus: (focus: boolean) => void }) => {
               </span>
             ),
             action: () =>
-              setModal(modal === Modal.ROBOT ? Modal.NONE : Modal.ROBOT),
+              setModal(
+                modal === ModalEnum.ROBOT ? ModalEnum.NONE : ModalEnum.ROBOT
+              ),
           },
 
           {
@@ -92,7 +104,11 @@ export const Menu = ({ setFocus }: { setFocus: (focus: boolean) => void }) => {
               </span>
             ),
             action: () =>
-              setModal(modal === Modal.SETTINGS ? Modal.NONE : Modal.SETTINGS),
+              setModal(
+                modal === ModalEnum.SETTINGS
+                  ? ModalEnum.NONE
+                  : ModalEnum.SETTINGS
+              ),
           },
           {
             key: 'info',
@@ -103,7 +119,9 @@ export const Menu = ({ setFocus }: { setFocus: (focus: boolean) => void }) => {
               </span>
             ),
             action: () =>
-              setModal(modal === Modal.INFO ? Modal.NONE : Modal.INFO),
+              setModal(
+                modal === ModalEnum.INFO ? ModalEnum.NONE : ModalEnum.INFO
+              ),
           },
         ]}
       />
