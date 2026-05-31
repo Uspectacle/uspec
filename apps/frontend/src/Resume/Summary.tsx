@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import { useTranslation } from 'react-i18next';
 import { MAIN_COLOR, SHADOW, WHITE } from '../Utils/DefaultStyle';
 import { SVG } from '../Utils/Svg';

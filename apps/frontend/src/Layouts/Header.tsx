@@ -1,4 +1,5 @@
-import { createStyles, keyframes } from '@mantine/core';
+import { keyframes } from '@emotion/react';
+import { createStyles } from '@mantine/emotion';
 import {
   LIGHT_ADDITIONAL_COLOR,
   WHITE_ADDITIONAL_COLOR,
@@ -19,7 +20,7 @@ export const Header = ({
   children,
   reduced,
 }: {
-  children?: JSX.Element | undefined;
+  children?: React.JSX.Element | undefined;
   reduced?: boolean | undefined;
 }) => {
   const { classes } = useStyles();
@@ -108,7 +109,7 @@ const useStyles = createStyles((theme) => ({
     width: '90%',
     paddingTop: 10,
     transition: 'opacity 0.3s, transform 0.3s',
-    [theme.fn.smallerThan(950)]: {
+    '@media (max-width: 950)': {
       flexDirection: 'column',
     },
   },
@@ -121,15 +122,15 @@ const useStyles = createStyles((theme) => ({
     marginTop: 20,
     marginLeft: 20,
     marginRight: 20,
-    [theme.fn.smallerThan(600)]: {
+    '@media (max-width: 600)': {
       alignSelf: 'center',
       justifyContent: 'space-around',
       width: '100%',
     },
-    [theme.fn.smallerThan(500)]: {
+    '@media (max-width: 500)': {
       marginTop: 0,
     },
-    [theme.fn.smallerThan(360)]: {
+    '@media (max-width: 360)': {
       flexDirection: 'column',
     },
   },
@@ -143,7 +144,7 @@ const useStyles = createStyles((theme) => ({
     flexWrap: 'wrap',
     borderRadius: 10,
     marginLeft: 20,
-    [theme.fn.smallerThan(600)]: {
+    '@media (max-width: 600)': {
       flexDirection: 'column',
     },
   },
@@ -168,7 +169,7 @@ const useStyles = createStyles((theme) => ({
     '&:active': {
       boxShadow: 'none',
     },
-    [theme.fn.smallerThan(600)]: {
+    '@media (max-width: 600)': {
       padding: 5,
       width: '10em',
     },
@@ -201,7 +202,7 @@ const useStyles = createStyles((theme) => ({
       '0%': { opacity: 0, transform: 'translateX(100px)' },
       '100%': { opacity: 1, transform: 'translateX(0)' },
     })} 0.5s 0.5s both`,
-    [theme.fn.smallerThan(400)]: {
+    '@media (max-width: 400)': {
       alignSelf: 'center',
       animation: 'none',
       width: '80%',

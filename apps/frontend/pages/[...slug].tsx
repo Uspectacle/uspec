@@ -4,7 +4,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import { MyImage } from '../src/Utils/MyImage';
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import {
   MAIN_COLOR,
   SHADOW,

@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SHADOW } from '../Utils/DefaultStyle';
@@ -54,7 +54,7 @@ const useStyles = createStyles((theme) => ({
       padding: 5,
       borderRadius: 5,
       margin: 5,
-      [theme.fn.smallerThan(500)]: {
+      '@media (max-width: 500px)': {
         width: 100,
       },
     },

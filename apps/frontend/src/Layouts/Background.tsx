@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import { BACKGROUND_COLOR } from '../Utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
 
@@ -12,7 +12,7 @@ export const Background = ({
 }) => {
   const { classes } = useStyles();
 
-  const [circles, setCircles] = useState<JSX.Element[]>([]);
+  const [circles, setCircles] = useState<React.JSX.Element[]>([]);
 
   useEffect(() => {
     setCircles(
@@ -32,5 +32,5 @@ const useStyles = createStyles(() => ({
     transition: 'background 0.5s',
     backgroundColor: BACKGROUND_COLOR,
     overflow: 'hidden',
-      },
+  },
 }));

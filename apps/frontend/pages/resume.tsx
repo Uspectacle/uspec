@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
@@ -86,13 +86,13 @@ const useStyles = createStyles((theme) => ({
     marginRight: 10,
   },
   dualContainer: {
-    [theme.fn.largerThan(1000)]: {
+    '@media (min-width: 1000px)': {
       display: 'flex',
       flexDirection: 'row-reverse',
     },
   },
   columnContainer: {
-    [theme.fn.largerThan(1000)]: {
+    '@media (min-width: 1000px)': {
       width: '50%',
     },
   },

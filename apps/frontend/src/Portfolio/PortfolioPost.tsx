@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import { useTranslation } from 'react-i18next';
 import { DefaultPost } from '../Blog/DefaultPost';
 import { MyImage } from '../Utils/MyImage';

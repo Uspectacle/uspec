@@ -1,10 +1,10 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React from 'react';
 import { randomPop, randomize } from '../Utils/Random';
 
 interface Props {
   seed: number;
-  children?: JSX.Element | undefined;
+  children?: React.JSX.Element | undefined;
   delay: number;
   actionable?: boolean | undefined;
   margin?: string | number | undefined;

@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import {
   LIGHT_ADDITIONAL_COLOR,
   MAIN_COLOR,
@@ -74,7 +74,7 @@ const useStyles = createStyles((theme) => ({
     transition: 'opacity 0.3s, transform 0.3s',
     paddingTop: 10,
     paddingBottom: 10,
-    [theme.fn.smallerThan(400)]: {
+    '@media (max-width: 400px)': {
       flexDirection: 'column',
     },
   },
@@ -87,7 +87,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: 10,
     paddingLeft: 20,
     paddingRight: 20,
-    [theme.fn.smallerThan(700)]: {
+    '@media (max-width: 700px)': {
       flexDirection: 'column',
     },
   },
@@ -112,7 +112,7 @@ const useStyles = createStyles((theme) => ({
     '&:active': {
       boxShadow: 'none',
     },
-    [theme.fn.smallerThan(600)]: {
+    '@media (max-width: 600px)': {
       padding: 5,
       width: '12em',
     },

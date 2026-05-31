@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStyles, keyframes } from '@mantine/core';
+import { keyframes } from '@emotion/react';
+import { createStyles } from '@mantine/emotion';
 import { MAIN_COLOR } from '../Utils/DefaultStyle';
 
 export const RandomCircle = () => {

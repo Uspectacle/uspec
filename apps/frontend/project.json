@@ -5,21 +5,16 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/frontend",
         "outputPath": "dist/apps/frontend"
-      },
-      "configurations": {
-        "development": {},
-        "production": {}
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
-      "defaultConfiguration": "production",
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
       "options": {
         "buildTarget": "frontend:build",
         "dev": true
@@ -35,22 +30,8 @@
         }
       }
     },
-    "export": {
-      "executor": "@nrwl/next:export",
-      "options": {
-        "buildTarget": "frontend:build:production"
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/frontend"],
-      "options": {
-        "jestConfig": "apps/frontend/jest.config.ts",
-        "passWithNoTests": true
-      }
-    },
     "lint": {
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
       }

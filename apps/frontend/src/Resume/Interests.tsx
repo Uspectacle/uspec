@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 // import { lookAgain } from './LookAgain';

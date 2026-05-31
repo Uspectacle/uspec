@@ -1,6 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { MantineProvider } from '@mantine/core';
+import { MantineEmotionProvider } from '@mantine/emotion';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
@@ -10,14 +9,14 @@ import '../src/Utils/styles.css';
 import i18n from '../src/Utils/i18n';
 
 function CustomApp({ Component, pageProps }: AppProps) {
-    useEffect(() => {
+  useEffect(() => {
     const storedLanguage = localStorage.getItem('currentLanguage');
     if (storedLanguage) i18n.changeLanguage(storedLanguage);
   }, [i18n.language]);
 
   return (
-    <MantineProvider>
-      <Provider store={store}>
+    <MantineEmotionProvider>
+      <MantineProvider>
         <I18nextProvider i18n={i18n}>
           <Head>
             <title>uSPEC</title>
@@ -26,8 +25,8 @@ function CustomApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </main>
         </I18nextProvider>
-      </Provider>
-    </MantineProvider>
+      </MantineProvider>
+    </MantineEmotionProvider>
   );
 }
 

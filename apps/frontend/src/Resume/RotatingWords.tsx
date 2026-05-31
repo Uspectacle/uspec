@@ -1,4 +1,5 @@
-import { createStyles, keyframes } from '@mantine/core';
+import { keyframes } from '@emotion/react';
+import { createStyles } from '@mantine/emotion';
 import { MAIN_COLOR } from '../Utils/DefaultStyle';
 
 export const RotatingWords = ({
@@ -51,18 +52,12 @@ const useStyles = createStyles((theme, { length }: { length: number }) => ({
     justifyContent: 'center',
     overflow: 'hidden',
     fontSize: '1.2em',
-    [theme.fn.smallerThan(350)]: {
+    '@media (max-width: 350px)': {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'start',
     },
   },
-  // text: {
-  //   paddingTop: '1.5em',
-  //   [theme.fn.smallerThan(350)]: {
-  //     display: 'none',
-  //   },
-  // },
   words: {
     animation: `${animation(length)} ${length * 1.5}s infinite`,
   },

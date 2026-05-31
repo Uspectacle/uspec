@@ -1,6 +1,6 @@
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React from 'react';
 import { Background } from './Background';
 
@@ -10,8 +10,8 @@ export const Layout = ({
   backgroundTag,
   reduced,
 }: {
-  summary?: JSX.Element | undefined;
-  children?: JSX.Element | undefined;
+  summary?: React.JSX.Element | undefined;
+  children?: React.JSX.Element | undefined;
   backgroundTag?: string | undefined;
   reduced?: boolean | undefined;
 }) => {
@@ -37,10 +37,10 @@ const useStyles = createStyles((theme) => ({
     whiteSpace: 'pre-wrap',
     alignItems: 'center',
     overflow: 'hidden',
-    [theme.fn.smallerThan(500)]: {
+    '@media (max-width: 500)': {
       fontSize: '0.9em',
     },
-    [theme.fn.smallerThan(350)]: {
+    '@media (max-width: 350)': {
       fontSize: '0.8em',
     },
   },

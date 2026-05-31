@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import { NextPage } from 'next';
 import { Layout } from '../src/Layouts/Layout';
 import React from 'react';
@@ -9,7 +9,7 @@ import { PortfolioPost } from '../src/Portfolio/PortfolioPost';
 const Blog: NextPage = () => {
   const { classes } = useStyles();
 
-  const Posts = [    PortfolioPost,     ResumePost,     UpcomingPost  ];
+  const Posts = [PortfolioPost, ResumePost, UpcomingPost];
 
   return (
     <Layout>

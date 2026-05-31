@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React from 'react';
 import { Note } from './Note';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ export interface ProjectProps {
   date: string;
   location?: string | undefined;
   context: string;
-  image: JSX.Element;
+  image: React.JSX.Element;
   text?: string | undefined;
   links: {
     link: string;

@@ -7,21 +7,18 @@ on:
 jobs:
   frontend:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_NODE_ENV: production
-      NEXT_PUBLIC_API_URL: ${{ secrets.PRODUCTION_API_URL }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: 19
+          node-version: 24
 
       - name: Load Yarn cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: 'node_modules'
           key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
@@ -30,27 +27,8 @@ jobs:
       - name: Install Node Module
         run: yarn
 
-      - name: Add env variables
-        run: |
-          echo "    NEXT_PUBLIC_NODE_ENV: production" >> .ebextensions/options.config
-          echo "    NEXT_PUBLIC_API_URL: " >> .ebextensions/options.config
-
       - name: Generate build
         run: npx nx build frontend --prod
 
-      - name: Pick Procfile
-        run: mv Procfile_Frontend ./dist/apps/frontend/Procfile
-
       - name: Generate deployment package
         run: cd dist/apps/frontend && zip -r deployfrontend.zip . -x '*.git*'
-
-      - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v21
-        with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: uspec-front
-          environment_name: Uspec-front-env
-          version_label: uspec-front-${{ github.run_number }}
-          region: eu-west-3
-          deployment_package: dist/apps/frontend/deployfrontend.zip

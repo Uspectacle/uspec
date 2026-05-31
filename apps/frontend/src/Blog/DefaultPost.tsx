@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -48,12 +48,12 @@ const useStyles = createStyles((theme, { index }: { index: number }) => ({
     backgroundColor: LIGHT_ADDITIONAL_COLOR,
     borderRadius: 10,
     overflow: 'hidden',
-    [theme.fn.smallerThan(550)]: {
+    '@media (max-width: 550px)': {
       width: '95%',
       marginRight: 0,
       marginLeft: 0,
     },
-    [theme.fn.smallerThan(420)]: {
+    '@media (max-width: 420px)': {
       height: 'auto',
     },
     '&:active': {
@@ -70,7 +70,7 @@ const useStyles = createStyles((theme, { index }: { index: number }) => ({
     opacity: 1,
     transition: 'opacity 0.3s',
     color: 'black',
-    [theme.fn.smallerThan(420)]: {
+    '@media (max-width: 420px)': {
       flexDirection: 'column',
     },
     '&:hover': {
@@ -81,7 +81,7 @@ const useStyles = createStyles((theme, { index }: { index: number }) => ({
   image: {
     aspectRatio: '1',
     height: '100%',
-    [theme.fn.smallerThan(420)]: {
+    '@media (max-width: 420px)': {
       height: 'auto',
       width: '50%',
       boxShadow: SHADOW,
@@ -96,7 +96,7 @@ const useStyles = createStyles((theme, { index }: { index: number }) => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    [theme.fn.smallerThan(420)]: {
+    '@media (max-width: 420px)': {
       height: 'auto',
     },
   },

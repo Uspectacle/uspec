@@ -1,4 +1,4 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from '@mantine/emotion';
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +10,7 @@ import {
 
 interface Props {
   href: string;
-  image: JSX.Element;
+  image: React.JSX.Element;
   years: string;
   name: string;
   subName: string;

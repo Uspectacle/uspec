@@ -1,4 +1,5 @@
-import { createStyles, keyframes } from '@mantine/core';
+import { keyframes } from '@emotion/react';
+import { createStyles } from '@mantine/emotion';
 
 export const BACKGROUND_COLOR = '#F1D8F8';
 export const MAIN_COLOR = '#9933CC';
