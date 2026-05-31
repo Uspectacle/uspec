@@ -18,19 +18,8 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "epfhhqy4tuyhw9xv0tjvm0ns"
-  title = "Add blog article about chesslab"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "atmcyivqbhorjv8cizumxgp1"
-  title = "Add blog article about The sun never sleep"
+  id = "hqo91kxk1fbyeoy2i4zt06ho"
+  title = "Run modern lint and format"
   description = ""
   tag = "backlog"
   linkFiles = [ ]
@@ -51,8 +40,19 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "hqo91kxk1fbyeoy2i4zt06ho"
-  title = "Run modern lint and format"
+  id = "epfhhqy4tuyhw9xv0tjvm0ns"
+  title = "Add blog article about chesslab"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "atmcyivqbhorjv8cizumxgp1"
+  title = "Add blog article about The sun never sleep"
   description = ""
   tag = "backlog"
   linkFiles = [ ]
@@ -76,6 +76,10 @@ name = "Priority"
   priority = ""
   linkCommits = [ ]
 
+[[processes]]
+id = "process2"
+name = "In Progress"
+
   [[processes.tasks]]
   id = "gwl1wytycwfor283sur1lcrg"
   title = "Update CV"
@@ -86,33 +90,6 @@ name = "Priority"
   checkList = [ ]
   priority = ""
   linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "ab3mee0bbazkg0l3wk7xpgbu"
-  title = "Change domain name to uspec.click"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "ouf40c0ssiuw6dwcyqhlyc61"
-  title = "Deploy to Github Pages"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-[[processes]]
-id = "process2"
-name = "In Progress"
-tasks = [ ]
 
 [[processes]]
 id = "process3"
@@ -165,6 +142,28 @@ name = "Done"
   [[processes.tasks]]
   id = "e84838ed74r01g8yyadet4u5"
   title = "Upgrade all packages"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "ouf40c0ssiuw6dwcyqhlyc61"
+  title = "Deploy to Github Pages"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "ab3mee0bbazkg0l3wk7xpgbu"
+  title = "Change domain name to uspec.click"
   description = ""
   tag = "backlog"
   linkFiles = [ ]

@@ -2,22 +2,22 @@
 setlocal enabledelayedexpansion
 
 REM Remove old dir
-rd /s /q apps\frontend\public\small
+rd /s /q public\small
 
 REM Adding the dir back
-mkdir apps\frontend\public\small
+mkdir public\small
 
 REM Setting authorized format
 set "FORMATS=;.jpg;.png;.gif;.jpeg;"
 
 REM Process images in nested folders
-for /r apps\frontend\public\image %%i in (*) do (
+for /r public\image %%i in (*) do (
     set "input_file=%%i"
     set "relative_path=%%~pi"
-    set "relative_path=!relative_path:*apps\frontend\public\=!"
-    set "output_folder=apps\frontend\public\small\!relative_path!"
+    set "relative_path=!relative_path:*public\=!"
+    set "output_folder=public\small\!relative_path!"
     set "output_file=!output_folder!%%~nxi"
-    
+
     REM Create output folder if it doesn't exist
     if not exist "!output_folder!" mkdir "!output_folder!"
 

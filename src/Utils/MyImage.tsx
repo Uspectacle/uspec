@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { keyframes } from '@emotion/react';
 import { createStyles } from '@mantine/emotion';
-import { WHITE } from '../Utils/DefaultStyle';
+import { WHITE } from './DefaultStyle';
 type PropsMyImage = {
   src: string;
   width: number;

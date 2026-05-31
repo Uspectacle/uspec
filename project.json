@@ -1,15 +1,13 @@
 {
-  "name": "frontend",
+  "name": "uspec",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/frontend",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/frontend"
+        "command": "next build"
       }
     },
     "serve": {
@@ -21,11 +19,9 @@
       },
       "configurations": {
         "development": {
-          "buildTarget": "frontend:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "frontend:build:production",
           "dev": false
         }
       }
@@ -33,7 +29,7 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
