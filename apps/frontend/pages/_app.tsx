@@ -5,23 +5,12 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
-import { Provider } from 'react-redux';
 import 'dayjs/locale/fr';
 import '../src/Utils/styles.css';
 import i18n from '../src/Utils/i18n';
-import { store } from '../src/Utils/Store';
 
 function CustomApp({ Component, pageProps }: AppProps) {
-  if (
-    process.env.NEXT_PUBLIC_NODE_ENV === 'staging' ||
-    process.env.NEXT_PUBLIC_NODE_ENV === 'production'
-  ) {
-    console.log = () => {};
-    console.error = () => {};
-    console.debug = () => {};
-  }
-
-  useEffect(() => {
+    useEffect(() => {
     const storedLanguage = localStorage.getItem('currentLanguage');
     if (storedLanguage) i18n.changeLanguage(storedLanguage);
   }, [i18n.language]);

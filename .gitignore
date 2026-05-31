@@ -1,6 +1,6 @@
 apps/frontend/tsconfig.tsbuildinfo
-apps/frontend/.env
 node_modules
 dist
 .ssh
-.env
+.nx
+.next

@@ -9,14 +9,7 @@ import { PortfolioPost } from '../src/Portfolio/PortfolioPost';
 const Blog: NextPage = () => {
   const { classes } = useStyles();
 
-  const Posts = [
-    PortfolioPost,
-    ResumePost,
-    UpcomingPost,
-    UpcomingPost,
-    UpcomingPost,
-    UpcomingPost,
-  ];
+  const Posts = [    PortfolioPost,     ResumePost,     UpcomingPost  ];
 
   return (
     <Layout>

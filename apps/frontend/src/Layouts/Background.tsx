@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { createStyles } from '@mantine/core';
 import { BACKGROUND_COLOR } from '../Utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
-import { MINESWEEPER_BACKGROUND } from '../Minesweeper/MinesweeperStyle';
 
 export const Background = ({
   length,
@@ -33,6 +32,5 @@ const useStyles = createStyles(() => ({
     transition: 'background 0.5s',
     backgroundColor: BACKGROUND_COLOR,
     overflow: 'hidden',
-    '&.minesweeper': { backgroundColor: MINESWEEPER_BACKGROUND },
-  },
+      },
 }));
