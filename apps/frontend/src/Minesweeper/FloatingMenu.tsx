@@ -185,7 +185,7 @@ const useStyles = createStyles(() => ({
     gap: 8,
     alignItems: 'center',
     touchAction: 'none',
-    zIndex: 5,
+    zIndex: 21,
   },
 
   button: {
@@ -220,7 +220,7 @@ const useStyles = createStyles(() => ({
     border: 'none',
     position: 'relative',
     backgroundClip: 'content-box',
-    zIndex: 1,
+    zIndex: 20,
     touchAction: 'none',
 
     '&:focus-visible': {

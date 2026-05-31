@@ -61,18 +61,18 @@ const useStyles = createStyles(() => ({
     whiteSpace: 'nowrap',
     aspectRatio: '1',
     width: '2em',
-    fontSize: '20em',
+    fontSize: '2em',
     transition:
       'background-color 0.3s, opacity 0.3s, transform 0.3s, filter 0.3s',
     '&:hover': {
       transform: 'scale(1.1)',
       boxShadow: SHADOW,
-      zIndex: 6,
+      zIndex: 3,
       filter: `brightness(100%) !important`,
     },
     '&:active': {
       transform: 'scale(1.05)',
-      zIndex: 5,
+      zIndex: 2,
       boxShadow: SHADOW,
     },
   },

@@ -46,19 +46,20 @@ const setSizeGrid = (
   state: MinesweeperState,
   value: { payload: number; type: string }
 ) => {
-  state.current.sizeGrid = value.payload;
-  restart(state);
+  if (state.current.sizeGrid !== value.payload) {
+    state.current.sizeGrid = value.payload;
+    restart(state);
+  }
 };
 
-const setMineRatio = (
+const setMineNum = (
   state: MinesweeperState,
   value: { payload: number; type: string }
 ) => {
-  state.current.mineRatio = value.payload;
-  state.current.mineNum = Math.round(
-    value.payload * state.current.sizeGrid * state.current.sizeGrid
-  );
-  restart(state);
+  if (state.current.mineNum !== value.payload) {
+    state.current.mineNum = value.payload;
+    restart(state);
+  }
 };
 
 const restart = (state: MinesweeperState) => {
@@ -67,9 +68,6 @@ const restart = (state: MinesweeperState) => {
   state.current.isWon = false;
   state.gameStates = [state.current];
   state.currentIndex = 0;
-  state.current.mineNum = Math.round(
-    state.current.mineRatio * state.current.sizeGrid * state.current.sizeGrid
-  );
   state.current.grid = initGrid(state.current.sizeGrid, state.current.mineNum);
 };
 
@@ -250,7 +248,7 @@ const playRandomMove = (state: MinesweeperState) => {
 
 export const minesweeperStateReducers = {
   setSizeGrid,
-  setMineRatio,
+  setMineNum,
   restart,
   flag: (state: MinesweeperState, value: { payload: number; type: string }) => {
     flag(state, value);

@@ -9,7 +9,6 @@ export interface GameState {
   isWon: boolean;
   sizeGrid: number;
   mineNum: number;
-  mineRatio: number;
 }
 
 export interface MinesweeperState {
@@ -25,7 +24,6 @@ const initialGameState: GameState = {
   isWon: false,
   sizeGrid: 5,
   mineNum: 4,
-  mineRatio: 4 / 25,
 };
 
 const initialState: MinesweeperState = {
@@ -43,7 +41,7 @@ export const minesweeperStateSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const {
   setSizeGrid,
-  setMineRatio,
+  setMineNum,
   restart,
   flag,
   dig,
