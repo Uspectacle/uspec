@@ -29,17 +29,18 @@ Personal portfolio and blog — static site with interactive games, portfolio sh
 git clone https://github.com/Uspectacle/uspec
 cd uspec
 pnpm install
-pnpm start
+pnpm dev
 ```
 
-Site runs at `http://localhost:4200`
+Site runs at `http://localhost:3000`
 
 ## 🔧 Scripts
 
 ```bash
-pnpm start    # Dev server
+pnpm dev      # Dev server
 pnpm build    # Static export
-pnpm check    # Lint + Format + Fix
+pnpm lint     # Lint
+pnpm format   # Format + Fix
 ```
 
 ## 📜 License

@@ -1,8 +1,2 @@
 allowBuilds:
-  "@parcel/watcher": true
-  less: true
-  nx: true
   sharp: true
-  unrs-resolver: true
-minimumReleaseAgeExclude:
-  - tinyexec@1.2.4
