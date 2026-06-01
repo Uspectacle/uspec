@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  max-width: 80%;
+  overflow: wrap;
+  animation: entrance 0.5s 0.1s both;
+}
+
+.strong {
+  color: var(--main-color);
+  word-break: break-all;
+}

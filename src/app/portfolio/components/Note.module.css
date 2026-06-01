@@ -1,0 +1,29 @@
+.note {
+  background-color: var(--note-bg);
+  transform: var(--note-transform);
+  box-shadow: 2px 4px 7px 1px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  width: fit-content;
+  margin: 5px;
+}
+
+.actionable:hover {
+  transform: var(--note-transform-hover);
+}
+
+.actionable:active {
+  box-shadow: none;
+}
+
+.pin {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: var(--pin-transform);
+  background-color: var(--pin-color);
+  width: 10px;
+  z-index: 10;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: var(--pin-shadow);
+}

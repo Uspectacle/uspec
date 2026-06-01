@@ -1,0 +1,9 @@
+.circle {
+  position: fixed;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  mix-blend-mode: color-burn;
+  background-color: var(--main-color);
+  outline: 5px solid var(--main-color);
+  outline-offset: -2px;
+}

@@ -1,8 +1,8 @@
-import { createStyles } from '@mantine/emotion';
 import Link from 'next/link';
 import type React from 'react';
 import { mulberry32 } from '@/components/Utils/random';
 import { Note } from './Note';
+import styles from './Project.module.css';
 
 export interface ProjectProps {
   seed?: number;
@@ -28,7 +28,7 @@ export const Project = ({
   text,
   links,
 }: ProjectProps) => {
-  const { classes } = useStyles();
+  const classes = styles;
 
   const random = seed ? mulberry32(seed) : Math.random;
 
@@ -44,15 +44,15 @@ export const Project = ({
               <div className={classes.location}>{location}</div>
             </Note>
           )}
-          <Note seed={random()} margin={15}>
+          <Note seed={random()}>
             <div className={classes.context}>{context}</div>
           </Note>
         </div>
-        <Note seed={random()} margin={15}>
+        <Note seed={random()}>
           <div className={classes.title}>{title}</div>
         </Note>
       </div>
-      <Note seed={random()} margin={15}>
+      <Note seed={random()}>
         <div className={classes.image}>{image}</div>
       </Note>
       {!!text && (
@@ -78,52 +78,3 @@ export const Project = ({
     </div>
   );
 };
-
-const useStyles = createStyles(() => ({
-  container: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    alignItems: 'stretch',
-    flexFlow: 'wrap',
-    margin: 20,
-  },
-  titleContainer: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    flexDirection: 'column',
-    alignItems: 'stretch',
-  },
-  subContainer: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    flexFlow: 'wrap',
-    alignItems: 'center',
-  },
-  title: {
-    padding: 15,
-    fontSize: '1.2em',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  date: { padding: 15, textAlign: 'center' },
-  location: { padding: 15, textAlign: 'center' },
-  context: { padding: 15, fontWeight: 'bold', textAlign: 'center' },
-  image: {
-    height: '15em',
-    maxWidth: '80vw',
-    overflow: 'hidden',
-    border: 'solid 10px white',
-  },
-  text: { padding: 15 },
-  linkContainer: {
-    paddingTop: 15,
-    paddingBottom: 15,
-  },
-  link: {
-    fontFamily: 'Crayons',
-    fontSize: '1.2em',
-    textDecoration: 'none',
-    color: 'black',
-    padding: 15,
-  },
-}));

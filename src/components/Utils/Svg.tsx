@@ -14,6 +14,7 @@ import ReplyArrow from '@public/svg/ReplyArrow';
 import Restart from '@public/svg/Restart';
 import Robot from '@public/svg/Robot';
 import type { ClassAttributes, HTMLAttributes, JSX } from 'react';
+import styles from './Svg.module.css';
 
 const mapObject = <Input, Output>(
   obj: Record<string, Input>,
@@ -50,22 +51,8 @@ export const SVG = mapObject(
         ClassAttributes<HTMLDivElement> &
         HTMLAttributes<HTMLDivElement>,
     ) => {
-      const { style, ...otherProps } = props;
       return (
-        <span
-          style={{
-            position: 'relative',
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-            objectFit: 'contain',
-            ...style,
-          }}
-          {...otherProps}
-        >
+        <span {...props} className={`${styles.container} ${props.className}`}>
           {module()}
         </span>
       );

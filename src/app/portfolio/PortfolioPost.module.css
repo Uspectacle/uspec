@@ -1,0 +1,12 @@
+.image {
+  aspect-ratio: 1.1;
+  width: 130px;
+  overflow: hidden;
+  border: solid 10px white;
+}
+
+@media (max-width: 420px) {
+  .image {
+    width: 50vw;
+  }
+}

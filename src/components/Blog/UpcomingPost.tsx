@@ -1,8 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { MyImage } from '@/components/Utils/MyImage';
 import { DefaultPost } from './DefaultPost';
+import styles from './UpcomingPost.module.css';
 
 export const UpcomingPost = ({ index }: { index: number }) => {
   const { t } = useTranslation();
@@ -11,14 +12,14 @@ export const UpcomingPost = ({ index }: { index: number }) => {
     <DefaultPost
       title={t('posts.coming-soon.title')}
       text={t('posts.coming-soon.text')}
-      href={'/'}
       image={
-        <MyImage
+        <Image
           src="/image/comingsoon.png"
+          alt="comingsoon"
           width={548}
           height={550}
-          style={{ width: '100%' }}
           objectFit="cover"
+          className={styles.image}
         />
       }
       index={index}

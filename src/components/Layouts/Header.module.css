@@ -1,0 +1,165 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-self: center;
+  width: 90%;
+  padding-top: 10px;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+@media (max-width: 950px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  align-self: flex-start;
+  margin: 20px;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    align-self: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+
+.links {
+  background: var(--main-color);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .links {
+    flex-direction: column;
+  }
+}
+
+.link {
+  all: unset;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  margin: 5px;
+  height: 2em;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 10px;
+  gap: 10px;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: var(--light-additional-color);
+}
+
+.link:active {
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .link {
+    padding: 5px;
+    width: 10em;
+  }
+}
+
+.linkActive {
+  color: var(--light-additional-color);
+}
+
+.logo {
+  width: 201px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  animation: logoFloat 5s ease-in-out infinite;
+  height: 154px;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    height: 115.5px; /* 154 x 3/4 */
+  }
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.summary {
+  box-shadow: var(--shadow);
+  background-color: var(--white-additional-color);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 300px;
+  max-width: 80%;
+  overflow: warp;
+  animation: summarySlide 0.5s 0.5s both;
+}
+
+@keyframes summarySlide {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .summary {
+    align-self: center;
+    animation: none;
+    width: 80%;
+  }
+}
+
+.flag {
+  width: 2em;
+}

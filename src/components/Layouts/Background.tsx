@@ -1,20 +1,11 @@
 'use client';
 
-import { createStyles } from '@mantine/emotion';
 import type React from 'react';
 import { useEffect, useState } from 'react';
-import { BACKGROUND_COLOR } from '@/components/Utils/DefaultStyle';
+import styles from './Background.module.css';
 import { RandomCircle } from './RandomCircle';
 
-export const Background = ({
-  length,
-  tag,
-}: {
-  length: number;
-  tag?: string | undefined;
-}) => {
-  const { classes } = useStyles();
-
+export const Background = ({ length }: { length: number }) => {
   const [circles, setCircles] = useState<React.JSX.Element[]>([]);
 
   useEffect(() => {
@@ -24,17 +15,5 @@ export const Background = ({
     );
   }, [length]);
 
-  return <div className={`${classes.container}  ${tag ?? ''}`}>{circles}</div>;
+  return <div className={styles.container}>{circles}</div>;
 };
-
-const useStyles = createStyles(() => ({
-  container: {
-    zIndex: -1,
-    position: 'fixed',
-    width: '100%',
-    height: '100%',
-    transition: 'background 0.5s',
-    backgroundColor: BACKGROUND_COLOR,
-    overflow: 'hidden',
-  },
-}));

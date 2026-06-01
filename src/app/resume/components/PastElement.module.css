@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-top: 10px;
+  width: 100%;
+  overflow: warp;
+}
+
+.image {
+  width: 5em;
+  height: 5em;
+}
+
+.infos {
+  margin-left: 20px;
+  color: black;
+}
+
+.name {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.text {
+  width: 90%;
+  align-self: center;
+  background-color: var(--white-additional-color);
+  box-shadow: var(--shadow);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.text > strong {
+  margin-top: 1em;
+}

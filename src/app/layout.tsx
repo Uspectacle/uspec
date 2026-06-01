@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { BACKGROUND_COLOR } from '@/components/Utils/DefaultStyle';
 import { Providers } from '@/components/Utils/providers';
 import './globals.css';
 
@@ -26,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body style={{ backgroundColor: BACKGROUND_COLOR }}>
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>

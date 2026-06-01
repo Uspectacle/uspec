@@ -1,15 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '@/components/Utils/i18n';
+import { shuffle } from '@/components/Utils/random';
 import { RotatingWords } from './RotatingWords';
 
 export const Skills = () => {
   const { t } = useTranslation();
-
-  const [skills, setSkills] = useState<string[]>([]);
-
   const skillsList = [
     t('resume.skill.deep-learning'),
     t('resume.skill.machine-learning'),
@@ -31,10 +27,5 @@ export const Skills = () => {
     t('resume.skill.app-deployment'),
   ];
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: setSkills should only be called when the language change
-  useEffect(() => {
-    setSkills(skillsList.sort(() => Math.random() - 0.5));
-  }, [i18n.language]);
-
-  return <RotatingWords words={skills} />;
+  return <RotatingWords words={shuffle(skillsList)} />;
 };

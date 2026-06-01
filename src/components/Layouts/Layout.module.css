@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100dvh;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .container {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    font-size: 0.8em;
+  }
+}

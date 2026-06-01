@@ -19,7 +19,7 @@
   "coming-soon": "Bientôt Disponible",
   "posts": {
     "my-resume": {
-      "title": "Mon Curriculum Vitae",
+      "title": "Curriculum Vitae",
       "text": "Pour une exploration en profondeur de mon parcours et de mon potentiel en tant que candidat professionnel, plongez dans mes expériences détaillées, mon éducation et mes compétences"
     },
     "coming-soon": {
@@ -28,7 +28,7 @@
     },
     "portfolio": {
       "text": "J'ai réalisé beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\nAttention, je ne suis pas fier de tous",
-      "title": "Mon Portfolio"
+      "title": "Portfolio"
     }
   },
   "resume": {
@@ -36,7 +36,6 @@
     "downloadAsPDF": "Télécharger en PDF",
     "mario-larsen": "MARIO LARSEN",
     "subTitle": "Jeune ingénieur français à la recherche\nd'opportunités enrichissantes en recherche en IA,\ndéveloppement Web et Mobile, et conception électronique",
-    "subTitleFull": "Jeune ingénieur français à la recherche d'opportunités enrichissantes en recherche en IA, développement Web et Mobile, et conception électronique",
     "activity": "Activité : ",
     "objective": "Objectif : ",
     "result": "Résultat : ",

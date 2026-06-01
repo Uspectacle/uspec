@@ -1,22 +1,21 @@
-import { createStyles } from '@mantine/emotion';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { MyImage } from '@/components/Utils/MyImage';
+import styles from './Past.module.css';
 import { PastElement } from './PastElement';
 
 export const Education = () => {
-  const { classes } = useStyles();
   const { t } = useTranslation();
 
   return (
-    <ul className={classes.container}>
+    <ul className={styles.container}>
       <PastElement
         href={t('resume.ensea.href')}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/ensea.png"
+            alt="ensea"
             width={120}
             height={119}
-            style={imageStyle}
           />
         }
         years={'2018 - 2022'}
@@ -29,11 +28,11 @@ export const Education = () => {
       <PastElement
         href={'http://prepa.civfrance.com/prépas-scientifiques/'}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/civ.png"
+            alt="civ"
             width={202}
             height={69}
-            style={imageStyle}
           />
         }
         years={'2016 - 2018'}
@@ -46,11 +45,11 @@ export const Education = () => {
       <PastElement
         href={'https://www.leparcimperial.fr/lycee/'}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/parc.png"
+            alt="parc"
             width={475}
             height={106}
-            style={imageStyle}
           />
         }
         years={'2013 - 2016'}
@@ -64,19 +63,18 @@ export const Education = () => {
 };
 
 export const Experience = () => {
-  const { classes } = useStyles();
   const { t } = useTranslation();
 
   return (
-    <ul className={classes.container}>
+    <ul className={styles.container}>
       <PastElement
         href={'https://galadrim.fr/'}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/galadrim.png"
+            alt="galadrim"
             width={200}
             height={200}
-            style={imageStyle}
           />
         }
         years={'2022 - 2023'}
@@ -89,11 +87,11 @@ export const Experience = () => {
       <PastElement
         href={t('resume.cea.href')}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/cea.jpg"
+            alt="cea"
             width={400}
             height={400}
-            style={imageStyle}
           />
         }
         years={'2021'}
@@ -106,11 +104,11 @@ export const Experience = () => {
       <PastElement
         href={'https://www.uni-lj.si/eng/'}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/Uni-ljubljana.png"
+            alt="Uni-ljubljana"
             width={220}
             height={219}
-            style={imageStyle}
           />
         }
         years={'2020'}
@@ -123,11 +121,11 @@ export const Experience = () => {
       <PastElement
         href={'http://www-reynal.ensea.fr/?page_id=303'}
         image={
-          <MyImage
+          <Image
             src="/image/Resume/ensea.png"
+            alt="ensea"
             width={120}
             height={119}
-            style={imageStyle}
           />
         }
         years={'2019 - 2020'}
@@ -141,13 +139,3 @@ export const Experience = () => {
     </ul>
   );
 };
-
-const imageStyle = { width: '5em' };
-
-const useStyles = createStyles(() => ({
-  container: {
-    listStyleType: 'none',
-    paddingLeft: '5%',
-    paddingRight: '5%',
-  },
-}));

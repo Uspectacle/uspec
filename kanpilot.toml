@@ -40,28 +40,6 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "e4mq3ohfqumuhu9zf7e2ysr8"
-  title = "Fix/Improve images "
-  description = "also resize documentation or suppression"
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "gij445t8bdqsxdnz422roh0c"
-  title = "Fix/Improve Routing"
-  description = "<p>Things should not reload when changing pages<br>Also merge layout components maybe ?</p>"
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "ea8loqd6uuubiztmg9dtwltg"
   title = "Fix/Improve SVG"
   description = ""
@@ -98,25 +76,14 @@ name = "Priority"
   priority = ""
   linkCommits = [ ]
 
-  [[processes.tasks]]
-  id = "onha36x1l9psbhk90hdin9i8"
-  title = "Convert mantine to pure css files"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
 [[processes]]
 id = "process2"
 name = "In Progress"
 
   [[processes.tasks]]
-  id = "rzw60zy57ewzwcht7cow5x4o"
-  title = "Update achitecture"
-  description = "<p>by running create app from scratch<br>this also fixes build issues</p>"
+  id = "rlmtir8dyslu1hxyjvs6bl82"
+  title = "Remove all console error and warning"
+  description = ""
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -125,9 +92,9 @@ name = "In Progress"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "rlmtir8dyslu1hxyjvs6bl82"
-  title = "Remove all console error and warning"
-  description = ""
+  id = "gij445t8bdqsxdnz422roh0c"
+  title = "Fix/Improve Routing"
+  description = "<p>Things should not reload when changing pages<br>Also merge layout components maybe ?</p>"
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -220,6 +187,52 @@ name = "Done"
   id = "hqo91kxk1fbyeoy2i4zt06ho"
   title = "Run modern lint and format"
   description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "onha36x1l9psbhk90hdin9i8"
+  title = "Convert mantine to pure css files"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "e4mq3ohfqumuhu9zf7e2ysr8"
+  title = "Fix/Improve images "
+  description = "also resize documentation or suppression"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "rzw60zy57ewzwcht7cow5x4o"
+  title = "Update achitecture"
+  description = "<p>by running create app from scratch<br>this also fixes build issues</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "w4avgnv493gyzbrc0z3y8oc7"
+  title = "Improve Home page"
+  description = """
+- make portfoliot note go out
+- fix the width of the pictures and the text"""
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""

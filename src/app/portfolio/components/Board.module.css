@@ -1,0 +1,27 @@
+.frame {
+  max-width: 1000px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  animation: entrance 0.5s 0.1s both;
+  background-color: #602409;
+  background-image: url(/image/Portfolio/wood-texture.jpg);
+  background-size: 400px;
+  box-shadow:
+    var(--shadow),
+    inset 0px 0px 3px 15px #ffe48a38,
+    inset 1px 2px 5px 5px #9414a59c;
+  border-radius: 3px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #cfa06a;
+  background-image: url(/image/Portfolio/board-texture.jpg);
+  background-size: 350px;
+  box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}

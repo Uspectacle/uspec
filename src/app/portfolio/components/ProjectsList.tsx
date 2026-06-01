@@ -1,5 +1,5 @@
 import type { TFunction } from 'i18next';
-import { MyImage } from '@/components/Utils/MyImage';
+import Image from 'next/image';
 import type { ProjectProps } from './Project';
 
 export const ProjectList = (
@@ -11,7 +11,12 @@ export const ProjectList = (
     location: t('portfolio.mslab.location'),
     context: t('portfolio.mslab.context'),
     image: (
-      <MyImage src="/image/Portfolio/mslab.png" width={775} height={666} />
+      <Image
+        src="/image/Portfolio/mslab.png"
+        alt="mslab"
+        width={775}
+        height={666}
+      />
     ),
     text: t('portfolio.mslab.text'),
     links: [
@@ -31,7 +36,12 @@ export const ProjectList = (
     location: t('portfolio.themis.location'),
     context: t('portfolio.themis.context'),
     image: (
-      <MyImage src="/image/Portfolio/themis.jpg" width={990} height={826} />
+      <Image
+        src="/image/Portfolio/themis.jpg"
+        alt="themis"
+        width={990}
+        height={826}
+      />
     ),
     text: t('portfolio.themis.text'),
     links: [
@@ -52,7 +62,8 @@ export const ProjectList = (
     location: t('portfolio.virtualTryOn.location'),
     context: t('portfolio.virtualTryOn.context'),
     image: (
-      <MyImage
+      <Image
+        alt="virtualTryOn"
         src="/image/Portfolio/virtualTryOn.png"
         width={1350}
         height={901}
@@ -72,7 +83,12 @@ export const ProjectList = (
     location: t('portfolio.pacman.location'),
     context: t('portfolio.pacman.context'),
     image: (
-      <MyImage src="/image/Portfolio/pacman.png" width={808} height={661} />
+      <Image
+        src="/image/Portfolio/pacman.png"
+        alt="pacman"
+        width={808}
+        height={661}
+      />
     ),
     text: t('portfolio.pacman.text'),
     links: [
@@ -92,7 +108,12 @@ export const ProjectList = (
     location: t('portfolio.sorting.location'),
     context: t('portfolio.sorting.context'),
     image: (
-      <MyImage src="/image/Portfolio/sorting.jpg" width={1400} height={1050} />
+      <Image
+        src="/image/Portfolio/sorting.jpg"
+        alt="sorting"
+        width={1400}
+        height={1050}
+      />
     ),
     text: t('portfolio.sorting.text'),
     links: [
@@ -112,8 +133,9 @@ export const ProjectList = (
     location: t('portfolio.cloudModel.location'),
     context: t('portfolio.cloudModel.context'),
     image: (
-      <MyImage
+      <Image
         src="/image/Portfolio/cloudModel.png"
+        alt="cloudModel"
         width={1145}
         height={561}
       />
@@ -132,7 +154,12 @@ export const ProjectList = (
     location: t('portfolio.tyo.location'),
     context: t('portfolio.tyo.context'),
     image: (
-      <MyImage src="/image/Portfolio/tyo.jpg" width={1400} height={1981} />
+      <Image
+        src="/image/Portfolio/tyo.jpg"
+        alt="tyo"
+        width={1400}
+        height={1981}
+      />
     ),
     text: t('portfolio.tyo.text'),
     links: [
@@ -148,7 +175,12 @@ export const ProjectList = (
     location: t('portfolio.attenuator.location'),
     context: t('portfolio.attenuator.context'),
     image: (
-      <MyImage src="/image/Portfolio/attenuator.png" width={615} height={727} />
+      <Image
+        src="/image/Portfolio/attenuator.png"
+        alt="attenuator"
+        width={615}
+        height={727}
+      />
     ),
     text: t('portfolio.attenuator.text'),
     links: [
@@ -163,7 +195,12 @@ export const ProjectList = (
     date: '2022',
     context: t('portfolio.minesolver.context'),
     image: (
-      <MyImage src="/image/Portfolio/minesolver.jpg" width={878} height={882} />
+      <Image
+        src="/image/Portfolio/minesolver.jpg"
+        alt="minesolver"
+        width={878}
+        height={882}
+      />
     ),
     links: [
       {
@@ -181,7 +218,12 @@ export const ProjectList = (
     date: '2022',
     context: t('portfolio.snake.context'),
     image: (
-      <MyImage src="/image/Portfolio/snake.jpg" width={473} height={378} />
+      <Image
+        src="/image/Portfolio/snake.jpg"
+        alt="snake"
+        width={473}
+        height={378}
+      />
     ),
     text: t('portfolio.snake.text'),
     links: [
@@ -200,7 +242,12 @@ export const ProjectList = (
     date: '2016 & 2022',
     context: t('portfolio.sudoku.context'),
     image: (
-      <MyImage src="/image/Portfolio/sudoku.png" width={695} height={695} />
+      <Image
+        src="/image/Portfolio/sudoku.png"
+        alt="sudoku"
+        width={695}
+        height={695}
+      />
     ),
     text: t('portfolio.sudoku.text'),
     links: [
@@ -215,7 +262,12 @@ export const ProjectList = (
     date: '2021',
     context: t('portfolio.solitaire.context'),
     image: (
-      <MyImage src="/image/Portfolio/solitaire.png" width={727} height={414} />
+      <Image
+        src="/image/Portfolio/solitaire.png"
+        alt="solitaire"
+        width={727}
+        height={414}
+      />
     ),
     text: t('portfolio.solitaire.text'),
     links: [
@@ -230,7 +282,12 @@ export const ProjectList = (
     date: '2021',
     context: t('portfolio.nonogram.context'),
     image: (
-      <MyImage src="/image/Portfolio/nonograme.png" width={331} height={324} />
+      <Image
+        src="/image/Portfolio/nonograme.png"
+        alt="nonograme"
+        width={331}
+        height={324}
+      />
     ),
     text: t('portfolio.nonogram.text'),
     links: [
@@ -245,7 +302,12 @@ export const ProjectList = (
     date: '2022',
     context: t('portfolio.mastermind.context'),
     image: (
-      <MyImage src="/image/Portfolio/mastermind.png" width={859} height={719} />
+      <Image
+        src="/image/Portfolio/mastermind.png"
+        alt="mastermind"
+        width={859}
+        height={719}
+      />
     ),
     text: t('portfolio.mastermind.text'),
     links: [
@@ -260,7 +322,12 @@ export const ProjectList = (
     date: '2022',
     context: t('portfolio.coinflip.context'),
     image: (
-      <MyImage src="/image/Portfolio/coinflip.jpg" width={900} height={900} />
+      <Image
+        src="/image/Portfolio/coinflip.jpg"
+        alt="coinflip"
+        width={900}
+        height={900}
+      />
     ),
     text: t('portfolio.coinflip.text'),
     links: [
@@ -275,8 +342,9 @@ export const ProjectList = (
     date: '2021',
     context: t('portfolio.wikimpostor.context'),
     image: (
-      <MyImage
+      <Image
         src="/image/Portfolio/wikimpostor.jpg"
+        alt="wikimpostor"
         width={2223}
         height={2128}
       />
@@ -294,7 +362,12 @@ export const ProjectList = (
     date: '2022',
     context: t('portfolio.tetris.context'),
     image: (
-      <MyImage src="/image/Portfolio/tetris.jpg" width={948} height={836} />
+      <Image
+        src="/image/Portfolio/tetris.jpg"
+        alt="tetris"
+        width={948}
+        height={836}
+      />
     ),
     text: t('portfolio.tetris.text'),
     links: [
@@ -313,7 +386,12 @@ export const ProjectList = (
     date: '2021',
     context: t('portfolio.minecraft.context'),
     image: (
-      <MyImage src="/image/Portfolio/minecraft.gif" width={256} height={256} />
+      <Image
+        src="/image/Portfolio/minecraft.gif"
+        alt="minecraft"
+        width={256}
+        height={256}
+      />
     ),
     text: t('portfolio.minecraft.text'),
     links: [
@@ -328,7 +406,12 @@ export const ProjectList = (
     date: '2021',
     context: t('portfolio.findwater.context'),
     image: (
-      <MyImage src="/image/Portfolio/findwater.jpg" width={206} height={206} />
+      <Image
+        src="/image/Portfolio/findwater.jpg"
+        alt="findwater"
+        width={206}
+        height={206}
+      />
     ),
     text: t('portfolio.findwater.text'),
     links: [
@@ -343,7 +426,12 @@ export const ProjectList = (
     date: '2020',
     context: t('portfolio.zeta.context'),
     image: (
-      <MyImage src="/image/Portfolio/zeta.png" width={5482} height={5470} />
+      <Image
+        src="/image/Portfolio/zeta.png"
+        alt="zeta"
+        width={5482}
+        height={5470}
+      />
     ),
     text: t('portfolio.zeta.text'),
     links: [
@@ -358,8 +446,9 @@ export const ProjectList = (
     date: '2022',
     context: t('portfolio.youtubesubs.context'),
     image: (
-      <MyImage
+      <Image
         src="/image/Portfolio/youtubesubs.jpeg"
+        alt="youtubesubs"
         width={2640}
         height={1936}
       />

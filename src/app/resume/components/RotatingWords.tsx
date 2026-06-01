@@ -1,19 +1,46 @@
-import { keyframes } from '@emotion/react';
-import { createStyles } from '@mantine/emotion';
-import { MAIN_COLOR } from '@/components/Utils/DefaultStyle';
+import styles from './RotatingWords.module.css';
+
+const transform = (position: number) => `{
+  transform: translateY(${-1.5 * position}em)
+}`;
+
+const jsonKeyframes = (length: number) =>
+  Array.from(
+    { length },
+    (_, index) => `
+      ${(100 * index + 40) / length}% ${transform(index + 1.1)}
+      ${(100 * (index + 1)) / length}% ${transform(index + 1)}
+  `,
+  ).join('');
 
 export const RotatingWords = ({ words }: { words: string[] }) => {
-  const { classes } = useStyles({ length: words.length });
+  const animationName = `rotate-words-${words.length}`;
+  const keyframes = `
+    @keyframes ${animationName} {
+      ${jsonKeyframes(words.length)}
+    }
+  `;
+
+  console.log(keyframes);
+  console.log({
+    animation: `${animationName} ${words.length * 1.5}s infinite`,
+  });
+
   return (
-    <div className={classes.container}>
-      <div className={classes.words}>
+    <div className={styles.container}>
+      <style>{keyframes}</style>
+      <div
+        style={{
+          animation: `${animationName} ${words.length * 1.5}s infinite`,
+        }}
+      >
         {words.map((word) => (
-          <div className={classes.word} key={`word_${word}`}>
+          <div className={styles.word} key={`word-${word}`}>
             {word}
           </div>
         ))}
         {words.map((word) => (
-          <div className={classes.word} key={`word_copy_${word}`}>
+          <div className={styles.word} key={`word-copy-${word}`}>
             {word}
           </div>
         ))}
@@ -21,43 +48,3 @@ export const RotatingWords = ({ words }: { words: string[] }) => {
     </div>
   );
 };
-
-const animation = (length: number) => {
-  const jsonKeyframes = Array.from(
-    { length: length * 2 },
-    (_, index) =>
-      `"${
-        (50 * index + (index % 2 ? 50 : 40)) / length
-      }%": { "transform" : "translateY(-${
-        index * 0.75 + (index % 2 ? 0.75 : 1.62)
-      }em)"}`,
-  );
-  return keyframes(JSON.parse(`{${jsonKeyframes.join(', ')}}`));
-};
-
-const useStyles = createStyles((_theme, { length }: { length: number }) => ({
-  container: {
-    boxSizing: 'content-box',
-    display: 'flex',
-    width: '100%',
-    height: '17em',
-    fontWeight: 500,
-    justifyContent: 'center',
-    overflow: 'hidden',
-    fontSize: '1.2em',
-    '@media (max-width: 350px)': {
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'start',
-    },
-  },
-  words: {
-    animation: `${animation(length)} ${length * 1.5}s infinite`,
-  },
-  word: {
-    display: 'block',
-    height: '1.5em',
-    paddingLeft: 10,
-    color: MAIN_COLOR,
-  },
-}));

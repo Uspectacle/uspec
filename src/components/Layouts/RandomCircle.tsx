@@ -1,44 +1,48 @@
-import { keyframes } from '@emotion/react';
-import { createStyles } from '@mantine/emotion';
-import { MAIN_COLOR } from '@/components/Utils/DefaultStyle';
+import styles from './RandomCircle.module.css';
+
+const randomScale = (focus: number) => `scale(${1 + focus / 3})`;
+const randomTranslate = () =>
+  `translate(${Math.random() * 120 - 10}vw, ${Math.random() * 120 - 10}vh)`;
+const randomTransform = (focus: number) =>
+  `${randomScale(focus)} ${randomTranslate()}`;
+const randomShadow = (focus: number) =>
+  `0px 0px ${6 - focus * 5}px ${focus * 5}px var(--main-color)`;
+
+const randomState = () => {
+  const focus = Math.random();
+
+  return `{
+    transform: ${randomTransform(focus)};
+    opacity: ${focus / 3};
+    box-shadow: ${randomShadow(focus)};
+  }`;
+};
 
 export const RandomCircle = () => {
-  const { classes } = useStyles();
-  return <div className={classes.circle} />;
-};
-const color = MAIN_COLOR;
-const randomState = () => {
-  const scaleSeed = Math.random();
-  return {
-    transform: `scale(${1 + scaleSeed / 3}) translate(${
-      Math.random() * 120 - 10
-    }vw, ${Math.random() * 120 - 10}vh)`,
-    opacity: scaleSeed / 3,
-    boxShadow: `0px 0px ${6 - scaleSeed * 5}px ${scaleSeed * 5}px ${color}`,
-  };
-};
+  const defaultState = randomState();
+  const animationName = `random-circle-${Math.random().toString(36).slice(2)}`;
+  const duration = Math.random() * 100 + 200;
 
-const randomKeyframes = () => {
-  const DefaultState = randomState();
-  return keyframes({
-    '0%': DefaultState,
-    '25%': randomState(),
-    '50%': randomState(),
-    '75%': randomState(),
-    '100%': DefaultState,
-  });
-};
+  const keyframes = `
+    @keyframes ${animationName} {
+      0% ${defaultState}
+      25% ${randomState()}
+      50% ${randomState()}
+      75% ${randomState()}
+      100% ${defaultState}
+    }
+  `;
 
-const useStyles = createStyles(() => ({
-  circle: {
-    animation: `${randomKeyframes()} ${
-      Math.random() * 100 + 200
-    }s cubic-bezier(0.4, 0.1, 0.7, 1) infinite`,
-    width: Math.random() * 200,
-    position: 'fixed',
-    borderRadius: '50%',
-    aspectRatio: '1',
-    mixBlendMode: 'color-burn',
-    backgroundColor: color,
-  },
-}));
+  return (
+    <>
+      <style>{keyframes}</style>
+      <div
+        className={styles.circle}
+        style={{
+          animation: `${animationName} ${duration}s cubic-bezier(0.4, 0.1, 0.7, 1) infinite`,
+          width: Math.random() * 200,
+        }}
+      />
+    </>
+  );
+};

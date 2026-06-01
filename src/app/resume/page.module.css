@@ -1,0 +1,53 @@
+.container {
+  max-width: 1000px;
+  background-color: var(--white);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: entrance 0.5s 0.1s both;
+  box-shadow: var(--shadow);
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--main-color);
+}
+
+.subTitle {
+  text-align: center;
+  font-size: 1em;
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.dualContainer {
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .dualContainer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .columnContainer {
+    width: 50%;
+  }
+}
+
+.listTitle {
+  background-color: var(--main-color);
+  color: var(--white);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.picture {
+  width: 100%;
+}

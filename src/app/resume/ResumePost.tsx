@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { DefaultPost } from '@/components/Blog/DefaultPost';
-import { MyImage } from '@/components/Utils/MyImage';
 
 export const ResumePost = ({ index }: { index: number }) => {
   const { t } = useTranslation();
@@ -13,12 +13,12 @@ export const ResumePost = ({ index }: { index: number }) => {
       text={t('posts.my-resume.text')}
       href={'/resume'}
       image={
-        <MyImage
-          src="/image/Resume/resumeImage.jpg"
+        <Image
+          src="/image/Resume/resumeImage.png"
+          alt="resume"
           width={420}
           height={310}
           objectFit="cover"
-          style={{ width: '100%' }}
         />
       }
       index={index}

@@ -19,7 +19,7 @@
   "coming-soon": "Coming Soon",
   "posts": {
     "my-resume": {
-      "title": "My Resume",
+      "title": "Resume",
       "text": "For an in-depth exploration of my background and potential as a professional candidate, delve into my detailed experiences, education, and skills"
     },
     "coming-soon": {
@@ -27,8 +27,8 @@
       "text": "Stay tuned for an array of engaging articles on games, tools, and more! Anticipate new content, possibly delivered on a weekly basis"
     },
     "portfolio": {
-      "title": "My Portfolio",
-      "text": "I have done lots of projects before this blog and I will try to list them all here.\nCarfull, I'm not proud of all of them"
+      "title": "Portfolio",
+      "text": "I have done lots of projects before this blog and I will try to list them all here.\nCareful, I'm not proud of all of them"
     }
   },
   "resume": {
@@ -36,7 +36,6 @@
     "downloadAsPDF": "Download as PDF",
     "mario-larsen": "MARIO LARSEN",
     "subTitle": "Youthful and motivated French Engineer,\nactively seeking enriching opportunities in AI research,\nWeb and Mobile Development, and Electronic Design",
-    "subTitleFull": "Youthful and motivated French Engineer, actively seeking enriching opportunities in AI research, Web and Mobile Development, and Electronic Design",
     "activity": "Activity: ",
     "objective": "Objective: ",
     "result": "Result: ",
@@ -170,7 +169,7 @@
     "interest": "PERSONAL INTERESTS"
   },
   "portfolio": {
-    "summary": "I have done lots of projects before this blog and I will try to list them all here. \n\nAt some point, some may received there own page\n\nUntil then, be carefull, I'm not proud of all of them",
+    "summary": "I have done lots of projects before this blog and I will try to list them all here. \n\nAt some point, some may received there own page\n\nUntil then, be careful, I'm not proud of all of them",
     "read-report": "Read Report",
     "see-slides": "See Slides",
     "mslab": {

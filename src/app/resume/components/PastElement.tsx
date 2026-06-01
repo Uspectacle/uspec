@@ -1,12 +1,7 @@
-import { createStyles } from '@mantine/emotion';
 import Link from 'next/link';
 import type React from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  MAIN_COLOR,
-  SHADOW,
-  WHITE_ADDITIONAL_COLOR,
-} from '@/components/Utils/DefaultStyle';
+import styles from './PastElement.module.css';
 
 interface Props {
   href: string;
@@ -33,27 +28,26 @@ export const PastElement = ({
   objective,
   result,
 }: Props) => {
-  const { classes } = useStyles();
   const { t } = useTranslation();
 
   return (
-    <li className={classes.container}>
+    <li className={styles.container}>
       <Link
         href={href}
         target={'_blank'}
         rel={'noreferrer'}
-        className={classes.link}
+        className={styles.link}
         passHref
       >
-        <div className={classes.image}>{image}</div>
-        <div className={classes.infos}>
-          <div className={classes.years}>{years}</div>
-          <div className={classes.name}>{name}</div>
-          <div className={classes.subName}>{subName}</div>
-          <div className={classes.city}>{city}</div>
+        <div className={styles.image}>{image}</div>
+        <div className={styles.infos}>
+          <div className={styles.years}>{years}</div>
+          <div className={styles.name}>{name}</div>
+          <div className={styles.subName}>{subName}</div>
+          <div className={styles.city}>{city}</div>
         </div>
       </Link>
-      <div className={classes.text}>
+      <div className={styles.text}>
         {!!text && <>{text}</>}
         {!!activity && (
           <>
@@ -80,45 +74,3 @@ export const PastElement = ({
     </li>
   );
 };
-
-const useStyles = createStyles(() => ({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  link: {
-    display: 'flex',
-    alignItems: 'center',
-    textDecoration: 'none',
-    paddingTop: 10,
-    width: '100%',
-    overflow: 'warp',
-  },
-  image: {
-    width: '5em',
-    height: '5em',
-  },
-  infos: {
-    marginLeft: 20,
-    color: 'black',
-  },
-  years: {},
-  name: {
-    fontWeight: 'bold',
-    color: MAIN_COLOR,
-  },
-  subName: {},
-  city: {},
-  text: {
-    width: '90%',
-    alignSelf: 'center',
-    backgroundColor: WHITE_ADDITIONAL_COLOR,
-    boxShadow: SHADOW,
-    padding: 10,
-    borderRadius: 10,
-    marginTop: 10,
-    marginBottom: 20,
-    fontSize: '0.9em',
-    '& > strong': { marginTop: '1em' },
-  },
-}));
