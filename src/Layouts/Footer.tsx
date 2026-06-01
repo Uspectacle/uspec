@@ -1,13 +1,13 @@
 import { createStyles } from '@mantine/emotion';
+import Link from 'next/link';
+
+import { useTranslation } from 'react-i18next';
 import {
   LIGHT_ADDITIONAL_COLOR,
   MAIN_COLOR,
   SHADOW,
   WHITE,
 } from '../Utils/DefaultStyle';
-import Link from 'next/link';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { SVG } from '../Utils/Svg';
 
 export const Footer = ({ reduced }: { reduced?: boolean | undefined }) => {
@@ -58,7 +58,7 @@ export const Footer = ({ reduced }: { reduced?: boolean | undefined }) => {
   );
 };
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   footer: {
     position: 'relative',
     left: 0,

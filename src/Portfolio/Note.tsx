@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
-import { randomPop, randomize } from '../Utils/Random';
+import type React from 'react';
+import { randomize, randomPop } from '../Utils/Random';
 
 interface Props {
   seed: number;
@@ -36,7 +36,7 @@ interface StyleProps {
   actionable: boolean;
 }
 
-const useStyles = createStyles((theme, { seed, actionable }: StyleProps) => {
+const useStyles = createStyles((_theme, { seed, actionable }: StyleProps) => {
   const noteRotate = (randomize(seed * 26) - 0.5) / 40;
   const noteTranslate = `translate(${(randomize(seed * 3) - 0.5) * 1.5}em, ${
     (randomize(seed * 4) - 0.5) * 1.5
@@ -52,9 +52,7 @@ const useStyles = createStyles((theme, { seed, actionable }: StyleProps) => {
     randomize(seed * 10) * 4
   }px`;
   return {
-    container: {
-      // animation: entranceAnimation(delay)
-    },
+    container: {},
     note: {
       backgroundColor: randomPop(noteColors, seed),
       transform: noteTransform,

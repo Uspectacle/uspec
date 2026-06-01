@@ -1,7 +1,6 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { DefaultPost } from './DefaultPost';
 import { MyImage } from '../Utils/MyImage';
+import { DefaultPost } from './DefaultPost';
 
 export const UpcomingPost = ({ index }: { index: number }) => {
   const { t } = useTranslation();

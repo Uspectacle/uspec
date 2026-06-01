@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { RotatingWords } from './RotatingWords';
 import i18n from '../Utils/i18n';
+import { RotatingWords } from './RotatingWords';
 
 export const Skills = () => {
   const { t } = useTranslation();
@@ -18,7 +18,6 @@ export const Skills = () => {
     t('resume.skill.signal-processing'),
     t('resume.skill.video-processing'),
     t('resume.skill.telecommunication'),
-    // t('resume.skill.modeling-languages'),
     t('resume.skill.optimization'),
     t('resume.skill.noise-reduction'),
     t('resume.skill.database-handling'),
@@ -26,11 +25,11 @@ export const Skills = () => {
     t('resume.skill.web-development'),
     t('resume.skill.mobile-development'),
     t('resume.skill.agile-methods'),
-    // t('resume.skill.managing-a-team'),
     t('resume.skill.managing-a-project'),
     t('resume.skill.app-deployment'),
   ];
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: setSkills should only be called when the language change
   useEffect(() => {
     setSkills(skillsList.sort(() => Math.random() - 0.5));
   }, [i18n.language]);

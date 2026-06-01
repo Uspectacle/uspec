@@ -1,7 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
 import { keyframes } from '@emotion/react';
 import { createStyles } from '@mantine/emotion';
+import type React from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { WHITE } from './DefaultStyle';
+
 type PropsMyImage = {
   src: string;
   width: number;
@@ -20,6 +22,7 @@ export const MyImage = ({
   const { classes } = useStyles();
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [loaded, setLoaded] = useState(false);
+  // biome-ignore lint/correctness/useExhaustiveDependencies: setLoaded must be added when imgRef change
   useEffect(() => {
     if (imgRef.current?.complete) setLoaded(true);
     else imgRef.current?.addEventListener('load', () => setLoaded(true));

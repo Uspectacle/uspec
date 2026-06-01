@@ -1,5 +1,4 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SHADOW } from '../Utils/DefaultStyle';
 import { SVG } from '../Utils/Svg';
@@ -37,7 +36,7 @@ export const ForeignLanguages = () => {
   );
 };
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   container: {
     listStyleType: 'none',
     padding: 0,

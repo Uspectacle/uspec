@@ -1,6 +1,6 @@
 {
   "name": "uspec",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "targets": {
     "build": {
@@ -14,7 +14,7 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "frontend:build",
+        "buildTarget": "uspec:build",
         "dev": true
       },
       "configurations": {
@@ -24,12 +24,6 @@
         "production": {
           "dev": false
         }
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "lintFilePatterns": ["**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

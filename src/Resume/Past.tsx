@@ -1,5 +1,4 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
 import { PastElement } from './PastElement';

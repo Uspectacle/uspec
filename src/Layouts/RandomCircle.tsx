@@ -1,4 +1,3 @@
-import React from 'react';
 import { keyframes } from '@emotion/react';
 import { createStyles } from '@mantine/emotion';
 import { MAIN_COLOR } from '../Utils/DefaultStyle';

@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
-import { Note } from './Note';
 import Link from 'next/link';
+import type React from 'react';
+import { Note } from './Note';
 
 export interface ProjectProps {
   title: string;
@@ -61,7 +61,7 @@ export const Project = ({
           seed={7 + linkIndex + 100 * index}
           delay={0.6 + index * 0.25}
           actionable
-          key={`link-note-${linkIndex}`}
+          key={link}
         >
           <div className={classes.linkContainer}>
             <Link

@@ -1,13 +1,9 @@
-const withNx = require('@nx/next/plugins/with-nx');
+const withNx = require("@nx/next/plugins/with-nx");
 
 const nextConfig = {
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
-  },
-  nx: {
-    svgr: false,
-    output: 'export',
   },
 };
 

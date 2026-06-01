@@ -2,25 +2,18 @@ import { keyframes } from '@emotion/react';
 import { createStyles } from '@mantine/emotion';
 import { MAIN_COLOR } from '../Utils/DefaultStyle';
 
-export const RotatingWords = ({
-  // text,
-  words,
-}: {
-  // text: string;
-  words: string[];
-}) => {
+export const RotatingWords = ({ words }: { words: string[] }) => {
   const { classes } = useStyles({ length: words.length });
   return (
     <div className={classes.container}>
-      {/* <div className={classes.text}>{text}</div> */}
       <div className={classes.words}>
-        {words.map((word, index) => (
-          <div className={classes.word} key={'word_' + index}>
+        {words.map((word) => (
+          <div className={classes.word} key={`word_${word}`}>
             {word}
           </div>
         ))}
-        {words.map((word, index) => (
-          <div className={classes.word} key={'word_copy_' + index}>
+        {words.map((word) => (
+          <div className={classes.word} key={`word_copy_${word}`}>
             {word}
           </div>
         ))}
@@ -37,12 +30,12 @@ const animation = (length: number) => {
         (50 * index + (index % 2 ? 50 : 40)) / length
       }%": { "transform" : "translateY(-${
         index * 0.75 + (index % 2 ? 0.75 : 1.62)
-      }em)"}`
+      }em)"}`,
   );
   return keyframes(JSON.parse(`{${jsonKeyframes.join(', ')}}`));
 };
 
-const useStyles = createStyles((theme, { length }: { length: number }) => ({
+const useStyles = createStyles((_theme, { length }: { length: number }) => ({
   container: {
     boxSizing: 'content-box',
     display: 'flex',

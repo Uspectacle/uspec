@@ -27,6 +27,6 @@
     "types": ["node"],
     "moduleResolution": "Bundler"
   },
-  "exclude": ["node_modules", "tmp"],
+  "exclude": ["node_modules", "tmp", "out", ".next", ".nx"],
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"]
 }

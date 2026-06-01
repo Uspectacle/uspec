@@ -1,5 +1,3 @@
-import React from 'react';
-
 function FlagFr() {
   return (
     <svg
@@ -9,6 +7,7 @@ function FlagFr() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>FlagFr</title>
       <g clipPath="url(#clip0_503_2485)">
         <rect
           x="0.25"

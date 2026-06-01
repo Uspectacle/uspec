@@ -17,9 +17,11 @@ export const entranceAnimation = (delay: number) =>
   })} 0.5s ${delay}s both`;
 
 export const entranceClass = (delay: number) => {
-  const entranceStyle = createStyles((theme, { delay }: { delay: number }) => ({
-    anime: { animation: entranceAnimation(delay) },
-  }));
+  const entranceStyle = createStyles(
+    (_theme, { delay }: { delay: number }) => ({
+      anime: { animation: entranceAnimation(delay) },
+    }),
+  );
   return entranceStyle({ delay }).classes.anime;
 };
 
@@ -30,7 +32,7 @@ export const exitAnimation = (delay: number) =>
   })} 0.5s ${delay}s both`;
 
 export const exitClass = (delay: number) => {
-  const exitStyle = createStyles((theme, { delay }: { delay: number }) => ({
+  const exitStyle = createStyles((_theme, { delay }: { delay: number }) => ({
     anime: { animation: exitAnimation(delay) },
   }));
   return exitStyle({ delay }).classes.anime;

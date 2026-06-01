@@ -1,5 +1,3 @@
-import React from 'react';
-
 function FlagEs() {
   return (
     <svg
@@ -11,6 +9,7 @@ function FlagEs() {
       role="img"
       preserveAspectRatio="xMidYMid meet"
     >
+      <title>FlagEs</title>
       <path
         fill="#C60A1D"
         d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z"

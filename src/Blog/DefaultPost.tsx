@@ -1,12 +1,12 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
 import Link from 'next/link';
+import type React from 'react';
 import {
-  WHITE,
-  SHADOW,
-  MAIN_COLOR,
-  LIGHT_ADDITIONAL_COLOR,
   entranceAnimation,
+  LIGHT_ADDITIONAL_COLOR,
+  MAIN_COLOR,
+  SHADOW,
+  WHITE,
 } from '../Utils/DefaultStyle';
 
 interface Prop {
@@ -33,7 +33,7 @@ export const DefaultPost = ({ title, text, href, image, index }: Prop) => {
   );
 };
 
-const useStyles = createStyles((theme, { index }: { index: number }) => ({
+const useStyles = createStyles((_theme, { index }: { index: number }) => ({
   container: {
     animation: entranceAnimation(index * 0.25),
     display: 'flex',

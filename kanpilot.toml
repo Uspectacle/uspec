@@ -18,17 +18,6 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "hqo91kxk1fbyeoy2i4zt06ho"
-  title = "Run modern lint and format"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "rlmtir8dyslu1hxyjvs6bl82"
   title = "Remove all console error and warning"
   description = ""
@@ -54,6 +43,39 @@ name = "To Do"
   id = "atmcyivqbhorjv8cizumxgp1"
   title = "Add blog article about The sun never sleep"
   description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "eam81kibn8grrg1otshg8zgh"
+  title = "Fix/Improve i18n"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "e4mq3ohfqumuhu9zf7e2ysr8"
+  title = "Fix/Improve images "
+  description = "also resize documentation or suppression"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "gij445t8bdqsxdnz422roh0c"
+  title = "Fix/Improve Routing"
+  description = "Things should not reload when changing pages"
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -164,6 +186,17 @@ name = "Done"
   [[processes.tasks]]
   id = "ab3mee0bbazkg0l3wk7xpgbu"
   title = "Change domain name to uspec.click"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "hqo91kxk1fbyeoy2i4zt06ho"
+  title = "Run modern lint and format"
   description = ""
   tag = "backlog"
   linkFiles = [ ]

@@ -1,11 +1,10 @@
-import React from 'react';
+import type { TFunction } from 'i18next';
 import { MyImage } from '../Utils/MyImage';
-import { ProjectProps } from './Project';
-import { TFunction } from 'i18next';
 import { randomShuffle } from '../Utils/Random';
+import type { ProjectProps } from './Project';
 
 export const ProjectList = (
-  t: TFunction<'translation', undefined>
+  t: TFunction<'translation', undefined>,
 ): ProjectProps[] => {
   return randomShuffle(
     [
@@ -413,6 +412,6 @@ export const ProjectList = (
         ],
       },
     ],
-    4
+    4,
   );
 };

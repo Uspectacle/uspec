@@ -1,8 +1,8 @@
+import { createStyles } from '@mantine/emotion';
+import type React from 'react';
+import { Background } from './Background';
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { createStyles } from '@mantine/emotion';
-import React from 'react';
-import { Background } from './Background';
 
 export const Layout = ({
   summary,
@@ -27,7 +27,7 @@ export const Layout = ({
   );
 };
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   container: {
     display: 'flex',
     flexDirection: 'column',

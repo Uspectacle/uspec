@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Pdf() {
   return (
     <svg
@@ -8,6 +6,7 @@ function Pdf() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
     >
+      <title>Pdf</title>
       <g>
         <polygon
           style={{ fill: '#B12A27' }}
@@ -59,7 +58,7 @@ function Pdf() {
         </g>
         <polygon
           style={{ opacity: 0.08, fill: '#040000' }}
-          points="475.435,117.825 475.435,512 47.791,512 47.791,419.581 247.705,219.667 
+          points="475.435,117.825 475.435,512 47.791,512 47.791,419.581 247.705,219.667
 		259.54,207.832 266.098,201.273 277.029,190.343 289.995,177.377 412.491,54.881 	"
         />
         <polygon

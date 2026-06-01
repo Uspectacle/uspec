@@ -32,16 +32,14 @@ pnpm install
 pnpm start
 ```
 
-Site runs at `http://localhost:3000`
+Site runs at `http://localhost:4200`
 
 ## 🔧 Scripts
 
 ```bash
-pnpm start           # Dev server
-pnpm build           # Static export
-pnpm lint            # Lint
-pnpm lint-and-fix    # Lint + fix
-pnpm prettier-format # Format
+pnpm start    # Dev server
+pnpm build    # Static export
+pnpm check    # Lint + Format + Fix
 ```
 
 ## 📜 License

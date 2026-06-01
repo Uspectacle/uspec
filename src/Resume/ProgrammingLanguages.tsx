@@ -1,8 +1,7 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MyImage } from '../Utils/MyImage';
 import { SHADOW } from '../Utils/DefaultStyle';
+import { MyImage } from '../Utils/MyImage';
 
 export const ProgrammingLanguages = () => {
   const { classes } = useStyles();

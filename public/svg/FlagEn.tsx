@@ -1,5 +1,3 @@
-import React from 'react';
-
 function FlagEn() {
   return (
     <svg
@@ -9,6 +7,7 @@ function FlagEn() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>FlagEn</title>
       <g clipPath="url(#clip0_503_2952)">
         <rect width="28" height="20" rx="2" fill="white" />
         <mask

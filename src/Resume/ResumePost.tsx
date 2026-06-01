@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { DefaultPost } from '../Blog/DefaultPost';
 import { MyImage } from '../Utils/MyImage';

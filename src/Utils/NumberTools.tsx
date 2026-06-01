@@ -13,7 +13,7 @@ export const clampToBounds = (
     left: number;
     right: number;
     bottom: number;
-  }
+  },
 ) => ({
   x: clamp(x, left, right),
   y: clamp(y, top, bottom),

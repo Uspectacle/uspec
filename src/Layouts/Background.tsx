@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { createStyles } from '@mantine/emotion';
+import type React from 'react';
+import { useEffect, useState } from 'react';
 import { BACKGROUND_COLOR } from '../Utils/DefaultStyle';
 import { RandomCircle } from './RandomCircle';
 
@@ -16,7 +17,8 @@ export const Background = ({
 
   useEffect(() => {
     setCircles(
-      Array.from({ length }, (_, index) => <RandomCircle key={index} />)
+      // biome-ignore lint/suspicious/noArrayIndexKey: Circles are defined by their index
+      Array.from({ length }, (_, index) => <RandomCircle key={index} />),
     );
   }, [length]);
 

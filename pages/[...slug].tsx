@@ -1,16 +1,16 @@
-import { NextPage } from 'next';
-import { Layout } from '../src/Layouts/Layout';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useRouter } from 'next/router';
-import { MyImage } from '../src/Utils/MyImage';
 import { createStyles } from '@mantine/emotion';
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+
+import { useTranslation } from 'react-i18next';
+import { Layout } from '../src/Layouts/Layout';
 import {
+  entranceAnimation,
   MAIN_COLOR,
   SHADOW,
   WHITE,
-  entranceAnimation,
 } from '../src/Utils/DefaultStyle';
+import { MyImage } from '../src/Utils/MyImage';
 
 const Page404: NextPage = () => {
   const { t } = useTranslation();

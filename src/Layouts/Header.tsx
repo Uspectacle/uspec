@@ -1,19 +1,19 @@
 import { keyframes } from '@emotion/react';
 import { createStyles } from '@mantine/emotion';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import type React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useWindowSize } from 'usehooks-ts';
 import {
   LIGHT_ADDITIONAL_COLOR,
-  WHITE_ADDITIONAL_COLOR,
   MAIN_COLOR,
   SHADOW,
   WHITE,
+  WHITE_ADDITIONAL_COLOR,
 } from '../Utils/DefaultStyle';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React from 'react';
 import i18n from '../Utils/i18n';
-import { useTranslation } from 'react-i18next';
 import { MyImage } from '../Utils/MyImage';
-import { useWindowSize } from 'usehooks-ts';
 import { SVG } from '../Utils/Svg';
 
 export const Header = ({
@@ -60,28 +60,15 @@ export const Header = ({
               {t('header.blog')}
             </div>
           </Link>
-          {/* <Link href={'/games'} className={classes.link} passHref>
-            <div
-              style={'/games' === router.pathname ? { color: LIGHT_ADDITIONAL_COLOR } : {}}
-            >
-              {t('header.games')}
-            </div>
-          </Link>
-          <Link href={'/tools'} className={classes.link} passHref>
-            <div
-              style={'/tools' === router.pathname ? { color: LIGHT_ADDITIONAL_COLOR } : {}}
-            >
-              {t('header.tools')}
-            </div>
-          </Link> */}
-          <div
+          <button
+            type="button"
             key={t('header.otherLang.alt')}
             className={classes.link}
             onClick={() => {
               i18n.changeLanguage(t('header.otherLang.lang') || 'en');
               localStorage.setItem(
                 'currentLanguage',
-                t('header.otherLang.lang') || 'en'
+                t('header.otherLang.lang') || 'en',
               );
             }}
           >
@@ -91,7 +78,7 @@ export const Header = ({
             ) : (
               <SVG.FlagFr style={{ width: '2em' }} />
             )}
-          </div>
+          </button>
         </div>
       </div>
       {!!children && <div className={classes.summary}>{children}</div>}
@@ -99,7 +86,7 @@ export const Header = ({
   );
 };
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   header: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -149,6 +136,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
   link: {
+    all: 'unset',
     boxShadow: SHADOW,
     padding: 10,
     margin: 5,

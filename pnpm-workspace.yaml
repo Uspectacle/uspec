@@ -1,9 +1,8 @@
 allowBuilds:
-  '@parcel/watcher': true
+  "@parcel/watcher": true
   less: true
   nx: true
   sharp: true
   unrs-resolver: true
 minimumReleaseAgeExclude:
-  - lint-staged@17.0.7
   - tinyexec@1.2.4

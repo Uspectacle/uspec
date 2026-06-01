@@ -1,22 +1,22 @@
 import { createStyles } from '@mantine/emotion';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
+
+import { useTranslation } from 'react-i18next';
+import { useWindowSize } from 'usehooks-ts';
 import { Layout } from '../src/Layouts/Layout';
-import React from 'react';
+import { ForeignLanguages } from '../src/Resume/ForeignLanguages';
+import { Interests } from '../src/Resume/Interests';
+import { Education, Experience } from '../src/Resume/Past';
+import { ProgrammingLanguages } from '../src/Resume/ProgrammingLanguages';
+import { Skills } from '../src/Resume/Skills';
+import { Summary } from '../src/Resume/Summary';
 import {
+  entranceAnimation,
   MAIN_COLOR,
   SHADOW,
   WHITE,
-  entranceAnimation,
 } from '../src/Utils/DefaultStyle';
-import { useTranslation } from 'react-i18next';
 import { MyImage } from '../src/Utils/MyImage';
-import { Summary } from '../src/Resume/Summary';
-import { Education, Experience } from '../src/Resume/Past';
-import { ForeignLanguages } from '../src/Resume/ForeignLanguages';
-import { Skills } from '../src/Resume/Skills';
-import { ProgrammingLanguages } from '../src/Resume/ProgrammingLanguages';
-import { Interests } from '../src/Resume/Interests';
-import { useWindowSize } from 'usehooks-ts';
 
 const Resume: NextPage = () => {
   const { classes } = useStyles();
@@ -59,7 +59,7 @@ const Resume: NextPage = () => {
   );
 };
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   container: {
     maxWidth: 1000,
     backgroundColor: WHITE,

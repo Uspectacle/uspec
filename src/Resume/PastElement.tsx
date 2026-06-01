@@ -1,11 +1,11 @@
 import { createStyles } from '@mantine/emotion';
-import React from 'react';
 import Link from 'next/link';
+import type React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   MAIN_COLOR,
-  WHITE_ADDITIONAL_COLOR,
   SHADOW,
+  WHITE_ADDITIONAL_COLOR,
 } from '../Utils/DefaultStyle';
 
 interface Props {

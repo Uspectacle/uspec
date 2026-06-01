@@ -7,7 +7,7 @@ export const randomPop = <T,>(array: T[], seed?: number | undefined): T => {
 
 export const randomShuffle = <T,>(
   array: T[],
-  seed?: number | undefined
+  seed?: number | undefined,
 ): T[] => {
   const shuffledArray = [...array];
   for (let i = shuffledArray.length - 1; i > 0; i--) {
