@@ -4,8 +4,6 @@
   },
   "header": {
     "blog": "Blog",
-    "games": "Jeux",
-    "tools": "Outils",
     "switchTo": "Switch to",
     "otherLang": {
       "alt": "lang-en",
@@ -16,7 +14,6 @@
     "contactMe": "Contactez-Moi :",
     "resume": "Curriculum Vitae"
   },
-  "coming-soon": "Bientôt Disponible",
   "posts": {
     "my-resume": {
       "title": "Curriculum Vitae",
@@ -44,7 +41,7 @@
       "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses Applications",
       "subName": "Programme de Master de 3 ans",
       "city": "France, Cergy",
-      "text": "Institution spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé de nombreux projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classifieur Vidéo en Réseaux de Relations",
+      "text": "Institution spécialisée en génie électrique, informatique et réseaux de communication.\nJ'y ai dirigé de nombreux projets ambitieux, dont un Solveur en Apprentissage par Renforcement et un Classificateur Vidéo en Réseaux de Relations",
       "result": "Diplômé avec mention, spécialisation en traitement du signal et en intelligence artificielle",
       "href": "https://www.ensea.fr"
     },
@@ -73,7 +70,7 @@
       "name": "CEA-LIST / DIASI : Laboratoire du Département en IA",
       "subName": "Stage de 6 mois",
       "city": "France, Saclay",
-      "objective": "Conduite de l'unification de la détection et de la ré-identification au sein d'une architecture innovante de réseau profond pour le suivi d'objets multifacettes",
+      "objective": "Conduite de l'unification de la détection et de la ré-identification au sein d'une architecture innovante de réseau profond pour le suivi d'objets multi-facettes",
       "result": "Réalisation d'un algorithme de 'transformer visuel' révolutionnaire, surpassant les modèles de base en performance",
       "href": "https://list.cea.fr/fr/"
     },
@@ -82,7 +79,7 @@
       "subName": "Stage de 4 mois",
       "city": "Slovénie, Ljubljana",
       "objective": "Étude et mise en œuvre indépendantes approfondies de Réseaux d'Essayage Virtuel",
-      "result": "Rédaction de rapport technique méticuleusement détaillé notament de CP-VTON abordant les échecs, les évaluations de qualité, les analyses de jeu de données et les mises à jour novatrices"
+      "result": "Rédaction de rapport technique méticuleusement détaillé notamment de CP-VTON abordant les échecs, les évaluations de qualité, les analyses de jeu de données et les mises à jour novatrices"
     },
     "themis": {
       "name": "Laboratoires ENSEA, Themis",
@@ -109,22 +106,9 @@
     "skills": "COMPÉTENCES TECHNIQUES",
     "programming": "LANGAGES DE PROGRAMMATION",
     "interest": "INTÉRÊTS PERSONNELS",
-    "interests": {
-      "look-at-it-again": "Regardez y de nouveau ",
-      "text": "car passionné par l'apprentissage continu, la création proactive et le partage efficace des connaissances, mes intérêts diversifiés incluent :"
-    },
-    "interestsList": {
-      "implementation": "Implémentation d'IA, prospective futuriste et prédiction apocalyptique",
-      "development": "Conception, développement et innovation de jeux mobiles et d'applications Web",
-      "psl": "Présentations PSL engageantes et éclairantes",
-      "film": "Participation à la réalisation, à la production, à la critique et à la collaboration cinématographiques pour des projets académiques et personnels",
-      "delegate": "Leadership en tant que délégué scolaire dévoué et secrétaire",
-      "running": "Maintien d'une routine rigoureuse de course à pied et de cyclisme",
-      "association": "Participation active à des rôles clés pour diverses associations, couvrant président, gestionnaire d'équipe, organisateur d'événements et maître de débats pour vie étudiante, festivals de cinéma internationaux, conventions, débats publics, conférences internationales et hackathons",
-      "courses": "Poursuite de cours avancés allant de la neurologie et des mathématiques avancées, à la physique fondamentale, à la poésie et à l'épistémologie"
-    },
+    "interests": {},
+    "interestsList": {},
     "skill": {
-      "i-am-good-at": "Je suis expert en",
       "excel": "Excel",
       "docker": "Docker",
       "python": "Python",
@@ -146,14 +130,12 @@
       "telecommunication": "Télécommunications",
       "optimization": "Optimisation",
       "noise-reduction": "Réduction de Bruit",
-      "modeling-languages": "Langages de Modélisation",
       "database-handling": "Gestion de Bases de Données",
       "git-handling": "Maîtrise de Git",
       "web-development": "Développement Web",
       "mobile-development": "Développement Mobile",
       "agile-methods": "Méthodologies Agiles",
       "app-deployment": "Stratégies de Déploiement",
-      "managing-a-team": "Leadership d'Équipe",
       "managing-a-project": "Gestion de Projet",
       "video-processing": "Traitement Vidéo",
       "SQL": "SQL",
@@ -179,7 +161,7 @@
     "cloudModel": {
       "context": "Projet Indépendant Encadré (TIPE)",
       "location": "CIV, Sophia Antipolis",
-      "text": "Un projet crucial au cours de mon mandat à l’école préparatoire consistait à explorer les subtilités de la formation des nuages. \nGrâce à un programme Python, j'ai introduit une nouvelle perspective sur l'évolution des macroparticules d'eau lors de leur passage de la mer à la stratosphère. \nCet effort m'a valu une note louable aux examens nationaux.",
+      "text": "Un projet crucial au cours de mon mandat à l’école préparatoire consistait à explorer les subtilités de la formation des nuages. \nGrâce à un programme Python, j'ai introduit une nouvelle perspective sur l'évolution des macro-particules d'eau lors de leur passage de la mer à la stratosphère. \nCet effort m'a valu une note louable aux examens nationaux.",
       "title": "Simulation de formation de nuages"
     },
     "coinflip": {
@@ -238,7 +220,7 @@
     },
     "sorting": {
       "context": "Projet d'équipe Hackathon 24h",
-      "event-website": "Site Web de l'evenement",
+      "event-website": "Site Web de l'événement",
       "location": "Enseack, Cergy",
       "text": "Un effort de collaboration au sein d'une équipe de quatre personnes a donné naissance à un prototype qui révolutionne le recyclage en le rendant attrayant et convivial. \nNotre innovation comprend une caméra équipée d'un algorithme de deep learning, capable d'identifier le type et la matière des déchets. \nDes instructions claires d’élimination sont ensuite présentées. \nUne unité Arduino orchestre l’ouverture des bacs concernés. \nNotre prototype entièrement fonctionnel nous a valu la reconnaissance et les distinctions du jury.",
       "title": "Assistant de recyclage interactif"
@@ -270,7 +252,7 @@
     "virtualTryOn": {
       "context": "Stage en laboratoire",
       "location": "Université de Ljubljana, Slovénie",
-      "text": "Intégré à l'environnement de recherche axé sur l'IA de l'Université de Ljubljana, j'ai plongé dans le domaine de l'intelligence artificielle appliquée au traitement visuel. \nMon stage s'est concentré sur l'étude, la réimplémentation et l'analyse de réseaux d'essais virtuels. \nJ'ai étudié leurs lacunes, conçu des mesures d'évaluation de la qualité, exploré des ensembles de données et mis en œuvre plus de 30 approches en utilisant à la fois Python et MATLAB, contribuant ainsi de manière significative aux recherches en cours.",
+      "text": "Intégré à l'environnement de recherche axé sur l'IA de l'Université de Ljubljana, j'ai plongé dans le domaine de l'intelligence artificielle appliquée au traitement visuel. \nMon stage s'est concentré sur l'étude, la ré-implémentation et l'analyse de réseaux d'essais virtuels. \nJ'ai étudié leurs lacunes, conçu des mesures d'évaluation de la qualité, exploré des ensembles de données et mis en œuvre plus de 30 approches en utilisant à la fois Python et MATLAB, contribuant ainsi de manière significative aux recherches en cours.",
       "title": "Exploration des réseaux d'essais virtuels"
     },
     "wikimpostor": {
@@ -281,12 +263,12 @@
     "youtubesubs": {
       "context": "Projet personnel en jupyter",
       "text": "Libérez le potentiel créatif de vos abonnements YouTube en générant des images mosaïques captivantes à l'aide de cet utilitaire.",
-      "title": "Générateur de mosaïque d'abonnements Youtube"
+      "title": "Générateur de mosaïque d'abonnements YouTube"
     },
     "zeta": {
       "context": "Projet personnel en jupyter",
-      "text": "Découvrez la beauté de la fonction Riemann Zeta à travers les visualisations dynamiques générées par ce Projet.",
-      "title": "Visualisation de la fonction Zeta Riemann"
+      "text": "Découvrez la beauté de la fonction Riemann Zêta à travers les visualisations dynamiques générées par ce Projet.",
+      "title": "Visualisation de la fonction Zêta Riemann"
     }
   }
 }

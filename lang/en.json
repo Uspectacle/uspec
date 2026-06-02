@@ -4,8 +4,6 @@
   },
   "header": {
     "blog": "Blog",
-    "games": "Games",
-    "tools": "Tools",
     "switchTo": "Passer en",
     "otherLang": {
       "alt": "lang-fr",
@@ -16,7 +14,6 @@
     "contactMe": "Contact Me:",
     "resume": "Resume"
   },
-  "coming-soon": "Coming Soon",
   "posts": {
     "my-resume": {
       "title": "Resume",
@@ -109,22 +106,7 @@
     "skills": "TECHNICAL SKILLS",
     "programming": "PROGRAMMING LANGUAGES",
     "interestText": "Passionate about continuous learning, AI implementation, filmmaking, app development, neurology, mathematics, poetry, and associations",
-    "interests": {
-      "look-at-it-again": "Look at it again ",
-      "text": "because passionate about continuous learning, proactive creation, and effective knowledge sharing, my diverse interests include :"
-    },
-    "interestsList": {
-      "implementation": "AI implementation, futurism, and doomsday prediction",
-      "development": "Mobile game and web-app design, development, and innovation",
-      "psl": "Conducting engaging and enlightening PSL presentations",
-      "film": "Engaging in film direction, production, critique, and collaboration for academic and personal projects",
-      "delegate": "Exemplifying leadership as a dedicated school delegate and secretary",
-      "running": "Maintaining a rigorous routine of running and cycling",
-      "association": "Active participation in pivotal roles for various associations, spanning president, team manager, event organizer, and debate master for student life, international film festivals, gaming events, public debates, international conferences, and hackathons",
-      "courses": "Pursuing advanced coursework ranging from neurology and advanced mathematics to fundamental physics, poetry, and epistemology"
-    },
     "skill": {
-      "i-am-good-at": "I excel at",
       "excel": "Excel",
       "docker": "Docker",
       "python": "Python",
@@ -146,14 +128,12 @@
       "telecommunication": "Telecommunication",
       "optimization": "Optimization",
       "noise-reduction": "Noise Reduction",
-      "modeling-languages": "Modeling Languages",
       "database-handling": "Database Management",
       "git-handling": "Git Proficiency",
       "web-development": "Web Development",
       "mobile-development": "Mobile App Development",
       "agile-methods": "Agile Methodologies",
       "app-deployment": "App Deployment Strategies",
-      "managing-a-team": "Team Leadership",
       "managing-a-project": "Project Management",
       "video-processing": "Video Processing",
       "SQL": "SQL",
@@ -287,16 +267,6 @@
       "title": "Youtube Subs Mosaic Generator",
       "text": "Unleash the creative potential of your YouTube subscriptions by generating captivating mosaic images using this utility.",
       "context": "Personal Project in Jupyter"
-    }
-  },
-  "minesweeper": {
-    "intro": {
-      "title": "What Is Minesweeper",
-      "text": "Welcome to the captivating world of Minesweeper! \n\nThis classic puzzle game challenges your logic and deduction skills as you navigate through a grid full of hidden mines. \n\nYour task is to uncover the safe tiles while avoiding the explosive mines lurking beneath. \n\nExercise caution and strategic thinking to reveal the numbers that indicate the nearby mines, and clear the board to emerge as the victorious Minesweeper! "
-    },
-    "rules": {
-      "title": "How to play",
-      "text": "The game is played on a grid of covered tiles. \n\nYour objective is to uncover all the safe tiles without detonating any mines. \n\nClicking on a tile reveals either a number, indicating the number of mines adjacent to it, or a mine, which ends the game. \n\nUse the numbers as clues to deduce the locations of the mines. \n\nRight-click on tiles to place flags where you suspect mines are located. \n\nTo win, uncover all safe tiles, flag all mines correctly, and avoid clicking on any mines."
     }
   }
 }
