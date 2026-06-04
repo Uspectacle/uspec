@@ -11,6 +11,9 @@
   --black: #000000;
 
   --shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+  --entrance: entrance;
+  --dangling: dangling;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -92,14 +95,36 @@ img {
   }
 }
 
-@keyframes exit {
+@keyframes dangling {
   0% {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(0deg) translate(-10px, 10px);
+  }
+
+  15% {
+    transform: rotate(3deg) translate(-10px, 10px);
+  }
+
+  30% {
+    transform: rotate(-3deg) translate(-10px, 10px);
+  }
+
+  45% {
+    transform: rotate(2deg) translate(-10px, 10px);
+  }
+
+  60% {
+    transform: rotate(-2deg) translate(-10px, 10px);
+  }
+
+  75% {
+    transform: rotate(1deg) translate(-10px, 10px);
+  }
+
+  90% {
+    transform: rotate(-1deg) translate(-10px, 10px);
   }
 
   100% {
-    opacity: 0;
-    transform: translateY(100px);
+    transform: rotate(0deg) translate(-10px, 10px);
   }
 }

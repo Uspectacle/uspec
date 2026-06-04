@@ -1,18 +1,22 @@
 .button {
-  align-self: flex-start;
+  all: unset;
   box-shadow: var(--shadow);
   padding: 10px;
-  text-decoration: none;
-  font-size: 1em;
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
   border-radius: 10px;
   background-color: var(--white);
   color: var(--main-color);
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
-.pdf {
-  width: 1.2em;
+.button:hover {
+  background-color: var(--hover-background);
+}
+
+.button:active {
+  box-shadow: none;
 }

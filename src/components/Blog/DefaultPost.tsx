@@ -6,8 +6,8 @@ interface Prop {
   title: string;
   text: string;
   href?: string;
-  image: React.JSX.Element;
-  index: number;
+  image?: React.JSX.Element;
+  index?: number;
 }
 
 export const DefaultPost: React.ComponentType<Prop> = ({
@@ -15,9 +15,13 @@ export const DefaultPost: React.ComponentType<Prop> = ({
   text,
   href = '',
   image,
+  index,
 }) => {
   return (
-    <li key={title} className={styles.container}>
+    <li
+      className={styles.container}
+      style={{ '--i': index } as React.CSSProperties}
+    >
       <Link href={href} rel={'noreferrer'} className={styles.link} passHref>
         <div className={styles.image}>{image}</div>
         <div className={styles.infos}>

@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type React from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '@/components/Utils/i18n';
-import { SVG } from '@/components/Utils/Svg';
+import i18n from '@/utils/i18n';
 import styles from './Header.module.css';
 
 export const Header = ({
@@ -21,7 +20,13 @@ export const Header = ({
     <div className={styles.header}>
       <div className={styles.menu}>
         <Link href="/" className={styles.logo}>
-          <Image src="/image/logo.png" alt="USPEC" width={201} height={154} />
+          <Image
+            src="/image/logo.png"
+            alt="USPEC"
+            width={201}
+            height={154}
+            loading="eager"
+          />
         </Link>
 
         <div className={styles.links}>
@@ -44,11 +49,25 @@ export const Header = ({
             }}
           >
             {t('header.switchTo')}
-            {t('header.otherLang.lang') === 'en' ? (
-              <SVG.FlagEn className={styles.flag} />
-            ) : (
-              <SVG.FlagFr className={styles.flag} />
-            )}
+            <div className={styles.flag}>
+              {t('header.otherLang.lang') === 'fr' ? (
+                <Image
+                  src="/image/fr.svg"
+                  alt="fr"
+                  className={styles.flag}
+                  width={1000}
+                  height={1000}
+                />
+              ) : (
+                <Image
+                  src="/image/en.svg"
+                  alt="en"
+                  className={styles.flag}
+                  width={1000}
+                  height={1000}
+                />
+              )}
+            </div>
           </button>
         </div>
       </div>

@@ -7,6 +7,7 @@ export const ProgrammingLanguages = () => {
 
   return (
     <ul className={styles.container}>
+      {/* ── Languages ── */}
       <li>
         <div className={styles.image}>
           <Image
@@ -21,13 +22,63 @@ export const ProgrammingLanguages = () => {
       <li>
         <div className={styles.image}>
           <Image
-            src="/image/Resume/matlab.png"
-            alt="matlab"
-            width={897}
-            height={806}
+            src="/image/Resume/js.png"
+            alt="js"
+            width={1052}
+            height={1052}
           />
         </div>
-        {t('resume.skill.matlab')}
+        {t('resume.skill.javascript')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/ts.png"
+            alt="ts"
+            width={2048}
+            height={2048}
+          />
+        </div>
+        {t('resume.skill.typescript')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/html.png"
+            alt="html"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.html')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/css.png"
+            alt="css"
+            width={800}
+            height={800}
+          />
+        </div>
+        {t('resume.skill.css')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image src="/image/Resume/c.png" alt="c" width={360} height={405} />
+        </div>
+        {t('resume.skill.c')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/csharp.png"
+            alt="csharp"
+            width={1200}
+            height={1350}
+          />
+        </div>
+        {t('resume.skill.csharp')}
       </li>
       <li>
         <div className={styles.image}>
@@ -43,52 +94,24 @@ export const ProgrammingLanguages = () => {
       <li>
         <div className={styles.image}>
           <Image
-            src="/image/Resume/js.png"
-            alt="js"
-            width={1052}
-            height={1052}
+            src="/image/Resume/sql.png"
+            alt="sql"
+            width={320}
+            height={394}
           />
         </div>
-        {t('resume.skill.JavaScript')}
+        {t('resume.skill.sql')}
       </li>
       <li>
         <div className={styles.image}>
           <Image
-            src="/image/Resume/html.png"
-            alt="html"
-            width={512}
-            height={512}
+            src="/image/Resume/matlab.png"
+            alt="matlab"
+            width={897}
+            height={806}
           />
         </div>
-        {t('resume.skill.HTML')}
-      </li>
-      <li>
-        <div className={styles.image}>
-          <Image
-            src="/image/Resume/css.png"
-            alt="css"
-            width={800}
-            height={800}
-          />
-        </div>
-        {t('resume.skill.CSS')}
-      </li>
-      <li>
-        <div className={styles.image}>
-          <Image src="/image/Resume/c.png" alt="c" width={360} height={405} />
-        </div>
-        {t('resume.skill.C')}
-      </li>
-      <li>
-        <div className={styles.image}>
-          <Image
-            src="/image/Resume/csharp.png"
-            alt="csharp"
-            width={1200}
-            height={1350}
-          />
-        </div>
-        {t('resume.skill.Csharp')}
+        {t('resume.skill.matlab')}
       </li>
       <li>
         <div className={styles.image}>
@@ -99,18 +122,18 @@ export const ProgrammingLanguages = () => {
             height={128}
           />
         </div>
-        {t('resume.skill.VHDL')}
+        {t('resume.skill.vhdl')}
       </li>
       <li>
         <div className={styles.image}>
           <Image
-            src="/image/Resume/bash.png"
-            alt="bash"
-            width={2048}
-            height={2048}
+            src="/image/Resume/assembly.png"
+            alt="assembly"
+            width={512}
+            height={512}
           />
         </div>
-        {t('resume.skill.bash-unix')}
+        {t('resume.skill.assembly')}
       </li>
       <li>
         <div className={styles.image}>
@@ -126,14 +149,27 @@ export const ProgrammingLanguages = () => {
       <li>
         <div className={styles.image}>
           <Image
-            src="/image/Resume/assembly.png"
-            alt="assembly"
+            src="/image/Resume/bash.png"
+            alt="bash"
+            width={2048}
+            height={2048}
+          />
+        </div>
+        {t('resume.skill.bash-unix')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/latex.png"
+            alt="latex"
             width={512}
             height={512}
           />
         </div>
-        {t('resume.skill.assembly')}
+        {t('resume.skill.latex')}
       </li>
+
+      {/* ── Frameworks & Libraries ── */}
       <li>
         <div className={styles.image}>
           <Image
@@ -159,6 +195,85 @@ export const ProgrammingLanguages = () => {
       <li>
         <div className={styles.image}>
           <Image
+            src="/image/Resume/Vue.png"
+            alt="vue"
+            width={256}
+            height={221}
+          />
+        </div>
+        {t('resume.skill.vue-js')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="image/Resume/Nest.png"
+            alt="nestjs"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.nestjs')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/express.svg"
+            alt="expressjs"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.expressjs')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/jest.svg"
+            alt="jestjs"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.jestjs')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/Selenium.png"
+            alt="selenium"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.selenium')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/PyTorch.png"
+            alt="pytorch"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.pytorch')}
+      </li>
+
+      {/* ── Tools & Platforms ── */}
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/git.png"
+            alt="git"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.git')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
             src="/image/Resume/aws.png"
             alt="aws"
             width={1024}
@@ -170,28 +285,6 @@ export const ProgrammingLanguages = () => {
       <li>
         <div className={styles.image}>
           <Image
-            src="/image/Resume/ts.png"
-            alt="ts"
-            width={2048}
-            height={2048}
-          />
-        </div>
-        {t('resume.skill.TypeScript')}
-      </li>
-      <li>
-        <div className={styles.image}>
-          <Image
-            src="/image/Resume/sql.png"
-            alt="sql"
-            width={320}
-            height={394}
-          />
-        </div>
-        {t('resume.skill.SQL')}
-      </li>
-      <li>
-        <div className={styles.image}>
-          <Image
             src="/image/Resume/docker.png"
             alt="docker"
             width={256}
@@ -199,6 +292,17 @@ export const ProgrammingLanguages = () => {
           />
         </div>
         {t('resume.skill.docker')}
+      </li>
+      <li>
+        <div className={styles.image}>
+          <Image
+            src="/image/Resume/ollama.png"
+            alt="ollama"
+            width={512}
+            height={512}
+          />
+        </div>
+        {t('resume.skill.ollama')}
       </li>
       <li>
         <div className={styles.image}>

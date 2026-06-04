@@ -1,6 +1,7 @@
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { SVG } from '@/components/Utils/Svg';
 import styles from './Summary.module.css';
 
 export const Summary = () => {
@@ -15,7 +16,7 @@ export const Summary = () => {
         className={styles.button}
         passHref
       >
-        <SVG.Pdf className={styles.pdf} />
+        <FontAwesomeIcon icon={faFilePdf} size="lg" />
         &nbsp;{t('resume.downloadAsPDF')}
       </Link>
     </>

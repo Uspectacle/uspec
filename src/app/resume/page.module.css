@@ -5,7 +5,7 @@
   margin: 10px;
   display: flex;
   flex-direction: column;
-  animation: entrance 0.5s 0.1s both;
+  animation: var(--entrance) 0.5s 0.1s both;
   box-shadow: var(--shadow);
 }
 
@@ -21,9 +21,7 @@
   text-align: center;
   font-size: 1em;
   font-style: italic;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .dualContainer {
@@ -50,4 +48,5 @@
 
 .picture {
   width: 100%;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 100px);
 }

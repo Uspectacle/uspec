@@ -11,7 +11,7 @@
   border-radius: 10px;
   max-width: 80%;
   overflow: wrap;
-  animation: entrance 0.5s 0.1s both;
+  animation: var(--entrance) 0.5s 0.1s both;
 }
 
 .strong {

@@ -4,7 +4,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  animation: entrance 0.5s 0.1s both;
+  animation: var(--entrance) 0.5s 0.1s both;
   background-color: #602409;
   background-image: url(/image/Portfolio/wood-texture.jpg);
   background-size: 400px;
@@ -13,6 +13,7 @@
     inset 0px 0px 3px 15px #ffe48a38,
     inset 1px 2px 5px 5px #9414a59c;
   border-radius: 3px;
+  transition: all 0.3s;
 }
 
 .board {
@@ -24,4 +25,5 @@
   background-size: 350px;
   box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
+  transition: all 0.3s;
 }

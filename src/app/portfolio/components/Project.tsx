@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type React from 'react';
-import { mulberry32 } from '@/components/Utils/random';
+import { mulberry32 } from '@/utils/random';
 import { Note } from './Note';
 import styles from './Project.module.css';
 

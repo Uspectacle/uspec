@@ -2,6 +2,8 @@
 
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import Markdown from 'react-markdown';
+import { PortfolioPost } from '@/app/portfolio/PortfolioPost';
 import styles from './Interests.module.css';
 
 export const Interests = () => {
@@ -11,7 +13,8 @@ export const Interests = () => {
 
   return (
     <div className={styles.container} ref={interestRef}>
-      {t('resume.interestText')}
+      <Markdown>{t('resume.interestText')}</Markdown>
+      <PortfolioPost />
     </div>
   );
 };

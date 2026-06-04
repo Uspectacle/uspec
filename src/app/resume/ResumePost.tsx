@@ -22,7 +22,6 @@ export const ResumePost = ({ index }: { index: number }) => {
         />
       }
       index={index}
-      key={`post-${index}`}
     />
   );
 };

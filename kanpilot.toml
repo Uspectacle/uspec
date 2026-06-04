@@ -29,17 +29,6 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "eam81kibn8grrg1otshg8zgh"
-  title = "Fix/Improve i18n"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "ea8loqd6uuubiztmg9dtwltg"
   title = "Fix/Improve SVG"
   description = ""
@@ -57,17 +46,6 @@ name = "Priority"
   [[processes.tasks]]
   id = "rsgpkc7nvlboid02qq4nt54q"
   title = "Update Portfolio"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
-  id = "gwl1wytycwfor283sur1lcrg"
-  title = "Update CV"
   description = ""
   tag = "backlog"
   linkFiles = [ ]
@@ -95,6 +73,17 @@ name = "In Progress"
   id = "gij445t8bdqsxdnz422roh0c"
   title = "Fix/Improve Routing"
   description = "<p>Things should not reload when changing pages<br>Also merge layout components maybe ?</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "gwl1wytycwfor283sur1lcrg"
+  title = "Update CV"
+  description = ""
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -233,6 +222,17 @@ name = "Done"
   description = """
 - make portfoliot note go out
 - fix the width of the pictures and the text"""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "eam81kibn8grrg1otshg8zgh"
+  title = "Fix/Improve i18n"
+  description = ""
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""

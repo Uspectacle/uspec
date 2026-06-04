@@ -45,6 +45,7 @@
 
 .image {
   height: 15em;
+  max-height: 35vw;
   max-width: 80vw;
   overflow: hidden;
   border: solid 10px white;

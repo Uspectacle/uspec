@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type React from 'react';
-import { useTranslation } from 'react-i18next';
+import Markdown from 'react-markdown';
 import styles from './PastElement.module.css';
 
 interface Props {
@@ -11,9 +11,6 @@ interface Props {
   subName: string;
   city: string;
   text?: string | undefined;
-  activity?: string | undefined;
-  objective?: string | undefined;
-  result?: string | undefined;
 }
 
 export const PastElement = ({
@@ -24,12 +21,7 @@ export const PastElement = ({
   subName,
   city,
   text,
-  activity,
-  objective,
-  result,
 }: Props) => {
-  const { t } = useTranslation();
-
   return (
     <li className={styles.container}>
       <Link
@@ -47,30 +39,11 @@ export const PastElement = ({
           <div className={styles.city}>{city}</div>
         </div>
       </Link>
-      <div className={styles.text}>
-        {!!text && <>{text}</>}
-        {!!activity && (
-          <>
-            {!!text && <br />}
-            <strong>{t('resume.activity')}</strong>
-            {activity}
-          </>
-        )}
-        {!!objective && (
-          <>
-            {!!(text || activity) && <br />}
-            <strong>{t('resume.objective')}</strong>
-            {objective}
-          </>
-        )}
-        {!!result && (
-          <>
-            {!!(text || activity || objective) && <br />}
-            <strong>{t('resume.result')}</strong>
-            {result}
-          </>
-        )}
-      </div>
+      {!!text && (
+        <div className={styles.text}>
+          <Markdown>{text}</Markdown>
+        </div>
+      )}
     </li>
   );
 };

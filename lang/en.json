@@ -32,62 +32,53 @@
     "summary": "Greetings, I am Mario Larsen.\nWelcome to my online blog.\nWould you like to gain deeper insights into my journey ?",
     "downloadAsPDF": "Download as PDF",
     "mario-larsen": "MARIO LARSEN",
-    "subTitle": "Youthful and motivated French Engineer,\nactively seeking enriching opportunities in AI research,\nWeb and Mobile Development, and Electronic Design",
-    "activity": "Activity: ",
-    "objective": "Objective: ",
-    "result": "Result: ",
+    "subTitle": "R&D Engineer specialized in Full-Stack Development, Data Analysis and AI implementation\nLooking for new challenging problems within an ethical and inquisitive team",
     "education": "EDUCATION",
     "ensea": {
       "name": "ENSEA, École Nationale Supérieure de l'Électronique et de ses Applications",
-      "subName": "3-year Master's Program",
-      "city": "France, Cergy",
-      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks. Spearheaded lots of ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier",
-      "result": "Graduated with honors, majoring in signal processing and artificial intelligence",
+      "subName": "3-year Master",
+      "city": "Cergy, France",
+      "text": "Prestigious institution specializing in electrical engineering, computer science, and communication networks.\nLed multiple ambitious projects, including a Reinforcement Learning Solver and a Relation Network Video Classifier.\n**Graduated with honours, majoring in Signal Processing and Artificial Intelligence**",
       "href": "https://www.ensea.fr/en"
     },
     "civ": {
       "name": "CIV, Centre International de Valbonne",
-      "subName": "2-year Preparatory Program",
-      "city": "France, Valbonne",
-      "text": "Intensive preparatory program dedicated for competitive exams at top-tier French engineering schools (Grandes Écoles)",
-      "result": "Attained qualification for Centrale-Supélec, Mines-Télécom, and Concours Communs Polytechniques schools"
+      "subName": "2-year Program",
+      "city": "Valbonne, France",
+      "text": "Intensive preparatory program dedicated to competitive exams at top-tier French engineering schools (Grandes Écoles)."
     },
     "parc": {
       "name": "Parc Impérial",
       "subName": "High School",
-      "city": "France, Nice",
-      "result": "Received Baccalaureate specializing in sciences with an emphasis on advanced mathematics, achieving honors equivalent to A-levels"
+      "city": "Nice, France",
+      "text": "Baccalaureate with honours, specializing in sciences with advanced mathematics."
     },
     "experience": "EXPERIENCE",
+    "intersec": {
+      "name": "INTERSEC",
+      "subName": "2-Year Contract",
+      "city": "Puteaux, France",
+      "text": "**Advanced R&D Engineer**\nSpearheaded front-end development of critical, globally deployed location-based public warning systems.\nUtilized specialized proprietary frameworks bridging React and Vue.js to meet strict national security and low-latency requirements.\nIntegrated custom AI agents into the geolocated alert pipeline, streamlining emergency secure context operations.",
+      "href": "https://www.intersec.com/"
+    },
     "galadrim": {
       "name": "GALADRIM",
       "subName": "6-Month Contract",
-      "city": "France, Paris",
-      "activity": "Full-Stack Web and Mobile Developer",
-      "result": "Developed and deployed 7 sophisticated web and mobile applications, showcasing versatility and proficiency"
+      "city": "Paris, France",
+      "text": "**Full-Stack Web and Mobile Developer**\nDeveloped and deployed 7 sophisticated web and mobile applications, showcasing versatility and proficiency."
     },
     "cea": {
-      "name": "CEA-LIST / DIASI: AI Department in Laboratory",
+      "name": "CEA-LIST / DIASI: AI Laboratory",
       "subName": "6-Month Internship",
-      "city": "France, Saclay",
-      "objective": "Led the unification of detection and re-identification within an innovative deep network architecture for multifaceted object tracking",
-      "result": "Championed a groundbreaking 'visual transformer' algorithm, surpassing baseline models in performance",
+      "city": "Saclay, France",
+      "text": "Led the unification of detection and re-identification within an innovative deep network architecture for multifaceted tracking.\nChampioned a groundbreaking visual transformer algorithm, surpassing baseline models in performance.",
       "href": "https://list.cea.fr/en/"
     },
     "ljubljana": {
       "name": "University of Ljubljana",
       "subName": "4-Month Internship",
-      "city": "Slovenia, Ljubljana",
-      "objective": "Conducted an independent, comprehensive study and implementation of Virtual Try-On Networks",
-      "result": "Generated a meticulously detailed technical report addressing CP-VTON failures, quality assessments, dataset analyses, and innovative updates"
-    },
-    "themis": {
-      "name": "ENSEA Laboratories, Themis",
-      "subName": "7-Month Research Project",
-      "city": "France, Cergy",
-      "text": "Distinguished collaborative project assigned to a cohort of ENSEA students across three years of the engineering cycle",
-      "objective": "Championed the end-to-end design of an innovative electronic musical instrument, encompassing synthesizer and drum-machine functionalities",
-      "result": "Independently executed three PCB designs for the synthesizer's core board, demonstrating technical prowess and autonomous initiative"
+      "city": "Ljubljana, Slovenia",
+      "text": "Conducted an independent, comprehensive study and implementation of Virtual Try-On Networks.\nGenerated a detailed technical report addressing CP-VTON failures, dataset analyses, and possible updates."
     },
     "foreign": "FOREIGN LANGUAGES",
     "french": {
@@ -104,105 +95,126 @@
       "level": "Intermediate"
     },
     "skills": "TECHNICAL SKILLS",
-    "programming": "PROGRAMMING LANGUAGES",
-    "interestText": "Passionate about continuous learning, AI implementation, filmmaking, app development, neurology, mathematics, poetry, and associations",
+    "programming": "TOOLS & LANGUAGES",
+    "interestText": "I publish on links between AI and collective intelligence as an **independent researcher**\nI am passionate about social choice, filmmaking, neurology, mathematics, associations and my new Linux Home Lab",
     "skill": {
-      "excel": "Excel",
-      "docker": "Docker",
       "python": "Python",
-      "matlab": "Matlab",
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "html": "HTML",
+      "css": "CSS",
+      "c": "C",
+      "csharp": "C#",
       "java": "Java",
-      "bash-unix": "Bash - Unix",
-      "mathematica": "Mathematica",
+      "sql": "SQL",
+      "matlab": "Matlab",
+      "vhdl": "VHDL",
       "assembly": "Assembly",
+      "mathematica": "Mathematica",
+      "bash-unix": "Bash / Unix",
       "react": "React",
       "react-native": "React Native",
-      "aws-console": "AWS Console",
+      "vue-js": "Vue.js",
+      "nestjs": "Nest.js",
+      "expressjs": "Express.js",
+      "jestjs": "Jest.js",
+      "selenium": "Selenium",
+      "pytorch": "PyTorch",
+      "aws-console": "AWS",
+      "docker": "Docker",
+      "git": "Git",
+      "ollama": "Ollama",
+      "excel": "Excel",
       "deep-learning": "Deep Learning",
       "machine-learning": "Machine Learning",
-      "chip-design": "PCB Design",
-      "schematic-design": "Schematic Design",
+      "computer-vision": "Computer Vision",
+      "signal-processing": "Signal Processing",
       "image-processing": "Image Processing",
       "audio-processing": "Audio Processing",
-      "signal-processing": "Signal Processing",
+      "video-processing": "Video Processing",
       "telecommunication": "Telecommunication",
       "optimization": "Optimization",
       "noise-reduction": "Noise Reduction",
-      "database-handling": "Database Management",
-      "git-handling": "Git Proficiency",
+      "chip-design": "PCB Design",
+      "schematic-design": "Schematic Design",
       "web-development": "Web Development",
-      "mobile-development": "Mobile App Development",
-      "agile-methods": "Agile Methodologies",
-      "app-deployment": "App Deployment Strategies",
+      "mobile-development": "Mobile Development",
+      "agile-methods": "Agile / Scrum",
       "managing-a-project": "Project Management",
-      "video-processing": "Video Processing",
-      "SQL": "SQL",
-      "TypeScript": "TypeScript",
-      "VHDL": "VHDL",
-      "C": "C",
-      "CSS": "CSS",
-      "HTML": "HTML",
-      "JavaScript": "JavaScript",
-      "Csharp": "C#"
+      "app-deployment": "App Deployment",
+      "scientific-publication": "Scientific Publication",
+      "database-handling": "Database Management",
+      "team-management": "Team Management",
+      "test-coverage-and-qa": "Test Coverage & QA",
+      "advanced-git-workflows": "Advanced Git Workflows",
+      "ai-implementation": "AI Implementation",
+      "data-analysis": "Data Analysis",
+      "technical-documentation": "Technical Documentation",
+      "technical-presentation": "Technical Presentation",
+      "geolocation-systems": "Geolocation Systems",
+      "networks-protocols": "Networks & Protocols",
+      "dev-ops": "DevOps & Linux",
+      "rest-api-design": "REST API Design",
+      "latex": "LaTeX"
     },
-    "pdf": "/doc/Resume/LARSEN_Mario_resume_EN_2023.pdf",
+    "pdf": "/doc/Resume/LARSEN_Mario_Resume_EN_2026.pdf",
     "interest": "PERSONAL INTERESTS"
   },
   "portfolio": {
-    "summary": "I have done lots of projects before this blog and I will try to list them all here. \n\nAt some point, some may received there own page\n\nUntil then, be careful, I'm not proud of all of them",
+    "summary": "I have done lots of projects before this blog and I will try to list them all here.\n\nAt some point, some may received there own page\n\nUntil then, be careful, I'm not proud of all of them",
     "read-report": "Read Report",
     "see-slides": "See Slides",
     "mslab": {
       "title": "MS4's Needle Depth Servo-Control",
       "location": "MS Laboratory, Osny",
       "context": "R&D Internship",
-      "text": "During my first professional experience, an internship, I gained profound insights into a company's operations. Immersed in the role of an R&D engineer, I undertook a project to design, construct, and test a control board for adjusting the sampling needle depth in their MS4 blood analyzer. Over a span of 5 weeks, I autonomously produced a functional analysis report, an Eagle board, a Spice simulation, a functional prototype, and a comprehensive test report.",
+      "text": "During my first professional experience, an internship, I gained profound insights into a company's operations.\nImmersed in the role of an R&D engineer, I undertook a project to design, construct, and test a control board for adjusting the sampling needle depth in their MS4 blood analyzer.\nOver a span of 5 weeks, I autonomously produced a functional analysis report, an Eagle board, a Spice simulation, a functional prototype, and a comprehensive test report.",
       "product-website": "Product Website"
     },
     "themis": {
       "title": "Themis Analog Synthesizer Board",
       "location": "ENSEA, Cergy",
       "context": "Group School Project",
-      "text": "Themis, a collaborative project, engaged a team of around twenty ENSEA students across different engineering years. Our objective was to design a complete electronic musical instrument with features of a synthesizer and a drum machine. My focus during a semester was on the main board design for the synthesizer. The culmination was the delivery of 3 meticulously crafted PCB designs that synthesized the contributions of numerous team members. The final designs were assembled and rigorously tested even amid the challenges of a pandemic.",
+      "text": "Themis, a collaborative project, engaged a team of around twenty ENSEA students across different engineering years.\nOur objective was to design a complete electronic musical instrument with features of a synthesizer and a drum machine.\nMy focus during a semester was on the main board design for the synthesizer.\nThe culmination was the delivery of 3 meticulously crafted PCB designs that synthesized the contributions of numerous team members.\nThe final designs were assembled and rigorously tested even amid the challenges of a pandemic.",
       "project-website": "Project Website"
     },
     "virtualTryOn": {
       "title": "Exploration of Virtual Try-On Networks",
       "location": "University of Ljubljana, Slovenia",
       "context": "Laboratory Internship",
-      "text": "Embedded in the AI-focused research environment of the University of Ljubljana, I delved into the realm of artificial intelligence applied to visual processing. My internship concentrated on the study, reimplementation, and analysis of Virtual Try-On Networks. I researched their shortcomings, devised quality assessment measures, explored datasets, and implemented over 30 approaches using both Python and MATLAB, thus contributing significantly to the ongoing research."
+      "text": "Embedded in the AI-focused research environment of the University of Ljubljana, I delved into the realm of artificial intelligence applied to visual processing.\nMy internship concentrated on the study, reimplementation, and analysis of Virtual Try-On Networks.\nI researched their shortcomings, devised quality assessment measures, explored datasets, and implemented over 30 approaches using both Python and MATLAB, thus contributing significantly to the ongoing research."
     },
     "pacman": {
       "title": "AI-Driven Pac-Man",
       "location": "ENSEA, Cergy",
       "context": "Personal School Project",
-      "text": "As part of my pursuit of AI expertise, I developed 12 iterations of a Python-based Pac-Man environment. These iterations catered to human players and facilitated OpenAI training. To gain a profound understanding of reinforcement learning, I reengineered the entire codebase using TensorFlow. Through environment rendering, I observed successful learning outcomes, as the AI adeptly avoided obstacles and ghosts, albeit with certain limitations."
+      "text": "As part of my pursuit of AI expertise, I developed 12 iterations of a Python-based Pac-Man environment.\nThese iterations catered to human players and facilitated OpenAI training.\nTo gain a profound understanding of reinforcement learning, I reengineered the entire codebase using TensorFlow.\nThrough environment rendering, I observed successful learning outcomes, as the AI adeptly avoided obstacles and ghosts, albeit with certain limitations."
     },
     "sorting": {
       "title": "Interactive Recycling Assistant",
       "location": "Enseack, Cergy",
       "context": "24h Hackathon Team Project",
-      "text": "A collaborative effort among a team of four yielded a prototype that revolutionizes recycling by making it engaging and user-friendly. Our innovation comprises a camera equipped with a deep learning algorithm, capable of identifying the type and material of waste. Clear disposal instructions are then presented. An Arduino unit orchestrates the opening of relevant bins. Our fully functional prototype earned us recognition and accolades from the judging panel.",
+      "text": "A collaborative effort among a team of four yielded a prototype that revolutionizes recycling by making it engaging and user-friendly.\nOur innovation comprises a camera equipped with a deep learning algorithm, capable of identifying the type and material of waste.\nClear disposal instructions are then presented.\nAn Arduino unit orchestrates the opening of relevant bins.\nOur fully functional prototype earned us recognition and accolades from the judging panel.",
       "event-website": "Event Website"
     },
     "cloudModel": {
       "title": "Cloud Formation Simulation",
       "location": "CIV, Sophia Antipolis",
       "context": "Supervised Independent Project (TIPE)",
-      "text": "A pivotal project during my preparatory school tenure involved exploring the intricacies of cloud formation. Through a Python program, I introduced a novel perspective on the evolution of macro water particles as they traverse from the sea to the stratosphere. This effort earned me a commendable score in national exams."
+      "text": "A pivotal project during my preparatory school tenure involved exploring the intricacies of cloud formation.\nThrough a Python program, I introduced a novel perspective on the evolution of macro water particles as they traverse from the sea to the stratosphere.\nThis effort earned me a commendable score in national exams."
     },
     "tyo": {
       "title": "Team Management and Festival Leadership",
       "location": "TYO, Cergy",
       "context": "International Short Films Festival (29th Edition)",
-      "text": "Since its inception in 1991, TYO has annually orchestrated a two-day short film extravaganza. Operating as an ENSEA student association, each year brought fresh faces to the team. In 2019, I undertook diverse responsibilities, including poster design using Photoshop, management, organization, and communication coordination. Additionally, I curated monthly film screenings under the TYO banner at the school.",
+      "text": "Since its inception in 1991, TYO has annually orchestrated a two-day short film extravaganza.\nOperating as an ENSEA student association, each year brought fresh faces to the team.\nIn 2019, I undertook diverse responsibilities, including poster design using Photoshop, management, organization, and communication coordination.\nAdditionally, I curated monthly film screenings under the TYO banner at the school.",
       "festival-website": "Festival Website"
     },
     "attenuator": {
       "title": "LM1971 M Audio Attenuator",
       "location": "ENSEA, Cergy",
       "context": "Initial Year Project",
-      "text": "A brief yet insightful endeavor, this project involved a pair of students collaborating over half a semester. Our mission centered around fundamental sound manipulations – amplification and attenuation. Using the LM1971 M chip, we developed a system divided into phases: computer-controlled chip manipulation via Arduino, PCB communication setup, DIY fabrication encompassing ordering, printing, drilling, and welding, and finally, rigorous testing accompanied by iterative enhancements."
+      "text": "A brief yet insightful endeavor, this project involved a pair of students collaborating over half a semester.\nOur mission centered around fundamental sound manipulations, amplification and attenuation.\nUsing the LM1971 M chip, we developed a system divided into phases: computer-controlled chip manipulation via Arduino, PCB communication setup, DIY fabrication encompassing ordering, printing, drilling, and welding, and finally, rigorous testing accompanied by iterative enhancements."
     },
     "minesolver": {
       "title": "Automated Minesweeper Solver",
@@ -211,7 +223,7 @@
     "snake": {
       "title": "Multiplayer Snake Game",
       "context": "Personal Project in JS",
-      "text": "Enjoy a multiplayer rendition of the classic Snake game, allowing online play with a friend. Developed based on the HungryTurtleCode project."
+      "text": "Enjoy a multiplayer rendition of the classic Snake game, allowing online play with a friend.\nDeveloped based on the HungryTurtleCode project."
     },
     "sudoku": {
       "title": "Sudoku Puzzle Solver",
@@ -235,7 +247,7 @@
     },
     "coinflip": {
       "title": "Coin Flip Cheaters Bot",
-      "text": "Presenting a Coin Flip Cheaters bot designed to secure victories in the Primer game competition. My independent creation briefly claimed the top spot, thanks to its prowess in the game.",
+      "text": "Presenting a Coin Flip Cheaters bot designed to secure victories in the Primer game competition.\nMy independent creation briefly claimed the top spot, thanks to its prowess in the game.",
       "context": "Personal Project in Jupyter"
     },
     "wikimpostor": {
@@ -255,7 +267,7 @@
     },
     "findwater": {
       "title": "Find Water - The Geo Quiz",
-      "text": "Engage in a 3D quiz game app, primed for enhancing your geographical knowledge. While currently focused on identifying bodies of water, the app's evolution is promising.",
+      "text": "Engage in a 3D quiz game app, primed for enhancing your geographical knowledge.\nWhile currently focused on identifying bodies of water, the app's evolution is promising.",
       "context": "Personal Project in C#"
     },
     "zeta": {
@@ -268,5 +280,11 @@
       "text": "Unleash the creative potential of your YouTube subscriptions by generating captivating mosaic images using this utility.",
       "context": "Personal Project in Jupyter"
     }
-  }
+  },
+  "2018-2022": "2018 - 2022",
+  "website-civ": "http://prepa.civfrance.com/prépas-scientifiques/",
+  "2016-2018": "2016 - 2018",
+  "2013-2016": "2013 - 2016",
+  "2023-2025": "2023 - 2025",
+  "2022-2023": "2022 - 2023"
 }

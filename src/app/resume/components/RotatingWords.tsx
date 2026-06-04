@@ -21,11 +21,6 @@ export const RotatingWords = ({ words }: { words: string[] }) => {
     }
   `;
 
-  console.log(keyframes);
-  console.log({
-    animation: `${animationName} ${words.length * 1.5}s infinite`,
-  });
-
   return (
     <div className={styles.container}>
       <style>{keyframes}</style>

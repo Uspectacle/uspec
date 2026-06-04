@@ -8,7 +8,7 @@ import { PortfolioPost } from './portfolio/PortfolioPost';
 import { ResumePost } from './resume/ResumePost';
 
 const Blog: NextPage = () => {
-  const Posts = [PortfolioPost, ResumePost, UpcomingPost];
+  const Posts = [ResumePost, PortfolioPost, UpcomingPost];
 
   return (
     <Layout>

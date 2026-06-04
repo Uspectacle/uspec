@@ -22,15 +22,15 @@ const Resume: NextPage = () => {
         <div className={styles.subTitle}>{t('resume.subTitle')}</div>
         <Image
           className={styles.picture}
-          src="/image/Resume/selfie.jpg"
+          src="/image/Resume/selfie.png"
           alt="selfie"
           width={3941}
           height={2556}
         />
-        <div className={styles.listTitle}>{t('resume.education')}</div>
-        <Education />
         <div className={styles.listTitle}>{t('resume.experience')}</div>
         <Experience />
+        <div className={styles.listTitle}>{t('resume.education')}</div>
+        <Education />
         <div className={styles.dualContainer}>
           <div className={styles.columnContainer}>
             <div className={styles.listTitle}>{t('resume.foreign')}</div>

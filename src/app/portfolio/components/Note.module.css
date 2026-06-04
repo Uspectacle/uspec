@@ -1,10 +1,18 @@
-.note {
-  background-color: var(--note-bg);
+.container {
+  transform-origin: top center;
   transform: var(--note-transform);
-  box-shadow: 2px 4px 7px 1px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
-  width: fit-content;
+  transition: all 0.3s;
   margin: 5px;
+}
+
+.note {
+  transform-origin: top center;
+  box-shadow: 2px 4px 7px 1px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+  width: fit-content;
+  background-color: var(--note-bg);
+  animation: var(--dangling) 100s ease-in-out infinite;
+  animation-delay: var(--note-delay);
 }
 
 .actionable:hover {
@@ -26,4 +34,5 @@
   aspect-ratio: 1;
   border-radius: 50%;
   box-shadow: var(--pin-shadow);
+  transition: all 0.3s;
 }

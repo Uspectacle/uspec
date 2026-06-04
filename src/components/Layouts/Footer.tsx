@@ -1,9 +1,9 @@
 'use client';
 
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { SVG } from '@/components/Utils/Svg';
-
 import styles from './Footer.module.css';
 
 export const Footer = () => {
@@ -35,7 +35,7 @@ export const Footer = () => {
           className={styles.link}
           passHref
         >
-          <SVG.Github className={styles.logo} />
+          <FontAwesomeIcon icon={faGithub} size="lg" />
           /Uspectacle
         </Link>
       </div>
