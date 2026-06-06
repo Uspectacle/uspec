@@ -16,6 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'uSPEC',
   description: 'uSPEC application',
+  icons: [
+    {
+      url: 'favicon.ico',
+      sizes: '64x64 32x32 24x24 16x16',
+      type: 'image/x-icon',
+    },
+  ],
 };
 
 export default function RootLayout({

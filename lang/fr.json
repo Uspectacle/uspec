@@ -15,21 +15,21 @@
     "resume": "Curriculum Vitae"
   },
   "posts": {
-    "my-resume": {
-      "title": "Curriculum Vitae",
-      "text": "Pour une exploration en profondeur de mon parcours et de mon potentiel en tant que candidat professionnel, plongez dans mes expériences détaillées, mon éducation et mes compétences"
-    },
     "coming-soon": {
-      "title": "Contenu à Venir",
-      "text": "Restez à l'écoute pour une gamme d'articles captivants sur les jeux, les outils et bien plus encore ! Attendez-vous à de nouveaux contenus, potentiellement publiés chaque semaine"
+      "text": "Ce site est en rénovation\nRevenez bientôt pour en voir plus",
+      "title": "Contenu à venir"
+    },
+    "my-resume": {
+      "text": "Salutations, je suis Mario Larsen\nBienvenue sur mon blog en ligne\nSouhaitez-vous en savoir plus sur mon parcours ?",
+      "title": "CV"
     },
     "portfolio": {
-      "text": "J'ai réalisé beaucoup de projets avant ce blog et je vais essayer de tous les lister ici.\nAttention, je ne suis pas fier de tous",
+      "text": "J'ai réalisé de nombreux projets\nJe vais essayer de tous les lister ici\nAttention, je ne suis pas fier de tous",
       "title": "Portfolio"
     }
   },
   "resume": {
-    "summary": "Bonjour, je suis Mario Larsen.\nBienvenue sur mon blog.\nSouhaitez-vous obtenir des informations approfondies sur mon parcours ?",
+    "summary": "Bonjour, je suis Mario Larsen\nBienvenue sur mon blog\nSouhaitez-vous obtenir des informations approfondies sur mon parcours ?",
     "downloadAsPDF": "Télécharger en PDF",
     "mario-larsen": "MARIO LARSEN",
     "subTitle": "Ingénieur R&D spécialisé en Développement Full-Stack, Analyse de Données et implémentation d'IA\nÀ la recherche de nouveaux défis stimulants au sein d'une équipe éthique et curieuse",
@@ -279,6 +279,46 @@
       "context": "Projet personnel en jupyter",
       "text": "Découvrez la beauté de la fonction Riemann Zêta à travers les visualisations dynamiques générées par ce Projet.",
       "title": "Visualisation de la fonction Zêta Riemann"
+    },
+    "chesslab": {
+      "context": "Projet de recherche en Python",
+      "text": "Un cadre de test et d'évaluation de moteur d'échecs modulaire et open source avec stockage PostgreSQL, exécution de jeux parallèles et outils d'analyse statistique complets.",
+      "title": "Cadre de test du moteur ChessLab"
+    },
+    "historical-basemaps-cleaned": {
+      "context": "Contribution au projet en Python",
+      "text": "Un pipeline de nettoyage, de correction et de normalisation pour les données GeoJSON des fonds de carte historiques.",
+      "title": "Fond de carte historique nettoyé"
+    },
+    "psl-institute": {
+      "context": "Projet collectif en JS",
+      "text": "Une plateforme moderne et open source pour la publication d'articles de recherche universitaire et de réflexions scientifiques.",
+      "title": "Plateforme de publications de l'Institut PSL"
+    },
+    "psyco-quizz": {
+      "context": "Projet personnel en JS",
+      "text": "Une application web permettant de remplir des questionnaires d'évaluation psychologique au format numérique.",
+      "title": "Plateforme d'évaluation PsychoQuizz"
+    },
+    "tap-loop-game": {
+      "context": "Projet personnel en JS",
+      "text": "Un jeu de puzzle de tracé de chemin basé sur une grille dans lequel vous devez créer des boucles qui traversent chaque bloc.",
+      "title": "Jeu de puzzle en boucle Tap"
+    },
+    "the-sun-never-set": {
+      "context": "Projet personnel en JS",
+      "text": "Une carte interactive qui visualise les territoires historiques et leur relation avec le soleil, avec une visualisation jour/nuit en temps réel.",
+      "title": "Le soleil ne se couche jamais"
+    },
+    "truel": {
+      "context": "Projet personnel en Python",
+      "text": "Un simulateur de stratégie Python pour un scénario de fusillade entre trois individus, calculant des stratégies optimales et générant des tracés de probabilité.",
+      "title": "Simulateur de stratégie Truel"
+    },
+    "uninteresting": {
+      "context": "Projet personnel en JS",
+      "text": "Une exploration ludique du « paradoxe des nombres intéressants », documentant les nombres qui ont réussi d'une manière ou d'une autre à échapper à la curiosité humaine.",
+      "title": "Galerie de nombres sans intérêt"
     }
   },
   "2013-2016": "2013 - 2016",

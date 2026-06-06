@@ -460,5 +460,180 @@ export const ProjectList = (
         href: 'https://github.com/Uspectacle/Draw-Youtube-Subs',
       },
     ],
+  }, // === NEW PROJECTS ADDED 2026-06-06 ===
+  {
+    title: t('portfolio.chesslab.title'),
+    date: '2026',
+    context: t('portfolio.chesslab.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/chesslab.png"
+        alt="chesslab"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.chesslab.text'),
+    links: [
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/chesslab',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.psyco-quizz.title'),
+    date: '2025',
+    context: t('portfolio.psyco-quizz.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/psyco-quizz.png"
+        alt="psyco-quizz"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.psyco-quizz.text'),
+    links: [
+      { link: 'Live Demo', href: 'https://uspectacle.github.io/psyco-quizz' },
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/psyco-quizz',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.psl-institute.title'),
+    date: '2026',
+    context: t('portfolio.psl-institute.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/psl-institute.png"
+        style={{ backgroundColor: '#4e300a' }}
+        alt="psl-institute"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.psl-institute.text'),
+    links: [
+      { link: 'Live Demo', href: 'https://psl.institute/' },
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/psl-institute',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.tap-loop-game.title'),
+    date: '2025',
+    context: t('portfolio.tap-loop-game.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/tap-loop-game.png"
+        alt="tap-loop-game"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.tap-loop-game.text'),
+    links: [
+      {
+        link: 'Play Game',
+        href: 'https://uspectacle.github.io/tap-loop-game/play?p=37&b=67%7E37%7E56-06-00-50%7E05_06-04_05-03_04-02_03-01_02-10_20-20_30-30_40-40_50-61_62-62_63-63_64-64_65-65_66-00_01-00_10-50_60-60_61-66_67-06_07',
+      },
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/tap-loop-game',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.the-sun-never-set.title'),
+    date: '2025',
+    context: t('portfolio.the-sun-never-set.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/the-sun-never-set.png"
+        alt="the-sun-never-set"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.the-sun-never-set.text'),
+    links: [
+      {
+        link: 'Live Demo',
+        href: 'https://uspectacle.github.io/the-sun-never-set/',
+      },
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/the-sun-never-set',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.historical-basemaps-cleaned.title'),
+    date: '2025',
+    context: t('portfolio.historical-basemaps-cleaned.context'),
+    image: (
+      <Image
+        src="image/Portfolio/historical-basemap.png"
+        alt="historical-basemaps-cleaned"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.historical-basemaps-cleaned.text'),
+    links: [
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/historical-basemaps-cleaned',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.uninteresting.title'),
+    date: '2024',
+    context: t('portfolio.uninteresting.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/uninteresting.png"
+        alt="uninteresting"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.uninteresting.text'),
+    links: [
+      {
+        link: 'Live Demo',
+        href: 'https://uspectacle.github.io/uninteresting/',
+      },
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/uninteresting',
+      },
+    ],
+  },
+  {
+    title: t('portfolio.truel.title'),
+    date: '2024',
+    context: t('portfolio.truel.context'),
+    image: (
+      <Image
+        src="/image/Portfolio/truel.png"
+        alt="truel"
+        width={800}
+        height={400}
+      />
+    ),
+    text: t('portfolio.truel.text'),
+    links: [
+      {
+        link: 'GitHub Repository',
+        href: 'https://github.com/Uspectacle/Truel',
+      },
+    ],
   },
 ];

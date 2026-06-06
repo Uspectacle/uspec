@@ -17,19 +17,19 @@
   "posts": {
     "my-resume": {
       "title": "Resume",
-      "text": "For an in-depth exploration of my background and potential as a professional candidate, delve into my detailed experiences, education, and skills"
+      "text": "Greetings, I am Mario Larsen\nWelcome to my online blog\nWould you like to gain deeper insights into my journey ?"
     },
     "coming-soon": {
       "title": "Upcoming Content",
-      "text": "Stay tuned for an array of engaging articles on games, tools, and more! Anticipate new content, possibly delivered on a weekly basis"
+      "text": "This website is under renovation\nCome back soon to see more"
     },
     "portfolio": {
       "title": "Portfolio",
-      "text": "I have done lots of projects before this blog and I will try to list them all here.\nCareful, I'm not proud of all of them"
+      "text": "I have done lots of projects\nI will try to list them all here\nCareful, I'm not proud of all of them"
     }
   },
   "resume": {
-    "summary": "Greetings, I am Mario Larsen.\nWelcome to my online blog.\nWould you like to gain deeper insights into my journey ?",
+    "summary": "Greetings, I am Mario Larsen\nWelcome to my online blog\nWould you like to gain deeper insights into my journey ?",
     "downloadAsPDF": "Download as PDF",
     "mario-larsen": "MARIO LARSEN",
     "subTitle": "R&D Engineer specialized in Full-Stack Development, Data Analysis and AI implementation\nLooking for new challenging problems within an ethical and inquisitive team",
@@ -279,6 +279,46 @@
       "title": "Youtube Subs Mosaic Generator",
       "text": "Unleash the creative potential of your YouTube subscriptions by generating captivating mosaic images using this utility.",
       "context": "Personal Project in Jupyter"
+    },
+    "chesslab": {
+      "title": "ChessLab Engine Testing Framework",
+      "context": "Research Project in Python",
+      "text": "A modular, open-source chess engine testing and evaluation framework with PostgreSQL storage, parallel game execution, and comprehensive statistical analysis tools."
+    },
+    "psyco-quizz": {
+      "title": "PsycoQuizz Assessment Platform",
+      "context": "Personal Project in JS",
+      "text": "A web application for completing psychological assessment questionnaires in a digital format."
+    },
+    "psl-institute": {
+      "title": "PSL Institute Publications Platform",
+      "context": "Collective Project in JS",
+      "text": "A modern, open-source platform for publishing academic research papers and scientific reflections."
+    },
+    "tap-loop-game": {
+      "title": "Tap Loop Puzzle Game",
+      "context": "Personal Project in JS",
+      "text": "A grid-based path-drawing puzzle game where you must create loops that pass through every block."
+    },
+    "the-sun-never-set": {
+      "title": "The Sun Never Set",
+      "context": "Personal Project in JS",
+      "text": "An interactive map that visualizes historical territories and their relationship to the sun, with real-time day/night visualization."
+    },
+    "historical-basemaps-cleaned": {
+      "title": "Historical Basemaps Cleaned",
+      "context": "Project contribution in Python",
+      "text": "A cleaning, correction, and normalization pipeline for historical basemaps GeoJSON data."
+    },
+    "uninteresting": {
+      "title": "Gallery of Uninteresting Numbers",
+      "context": "Personal Project in JS",
+      "text": "A playful exploration of the 'Interesting Number Paradox', documenting numbers that have somehow managed to escape human curiosity."
+    },
+    "truel": {
+      "title": "Truel Strategy Simulator",
+      "context": "Personal Project in Python",
+      "text": "A Python strategy simulator for a shootout scenario between three individuals, calculating optimal strategies and generating probability plots."
     }
   },
   "2018-2022": "2018 - 2022",
